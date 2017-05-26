@@ -37,7 +37,7 @@ gulp.task('css', function() {
   gulp.src(sass_dir)
   .pipe(plumber())
   .pipe(compass({
-    // config_file: './config.rb',
+    config_file: './config.rb',
     css: 'static/css',
     sass: 'src/sass'
   }))

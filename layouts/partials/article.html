@@ -25,18 +25,19 @@
       {{ end }}
     </div>
     <div class="clearfix"></div>
+    {{ if $.renderFull }}
     <div class="article_resources">
       <span>Resources</span>
       <ul>
         {{ range $index, $element := .content.Params.resources }}
         <li>
           {{ range $k, $v := $element }}
-            <a href="{{$v}}">{{$k}}</a>
-          {{ end }}
+          <a href="{{$v}}">{{$k}}</a> {{ end }}
         </li>
         {{ end }}
       </ul>
     </div>
+    {{ end }}
     <div class="article-footer">
       {{ if not $.renderFull }}
       <a class="read-more-button pure-button" href="{{.content.URL}}">Read More</a> {{ end }}

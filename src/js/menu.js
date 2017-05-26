@@ -1,18 +1,18 @@
 jQuery(document).ready(function($) {
   /*
-  * Expandable Search Bar
-  */
+   * Expandable Search Bar
+   */
   var $ntsearch = $('#nt-search'),
-  $ntsearchinput = $ntsearch.find('input.nt-search-input'),
-  $body = $('html,body'),
-  openSearch = function() {
-    $ntsearch.data('open', true).addClass('nt-search-open');
-    $ntsearchinput.focus();
-    return false;
-  },
-  closeSearch = function() {
-    $ntsearch.data('open', false).removeClass('nt-search-open');
-  };
+    $ntsearchinput = $ntsearch.find('input.nt-search-input'),
+    $body = $('html,body'),
+    openSearch = function() {
+      $ntsearch.data('open', true).addClass('nt-search-open');
+      $ntsearchinput.focus();
+      return false;
+    },
+    closeSearch = function() {
+      $ntsearch.data('open', false).removeClass('nt-search-open');
+    };
 
   $ntsearchinput.on('click', function(e) {
     e.stopPropagation();
@@ -34,14 +34,14 @@ jQuery(document).ready(function($) {
     }
   });
 });
-(function (window, document) {
+(function(window, document) {
   var menu = document.getElementById('menu'),
-  WINDOW_CHANGE_EVENT = ('onorientationchange' in window) ? 'orientationchange':'resize';
+    WINDOW_CHANGE_EVENT = ('onorientationchange' in window) ? 'orientationchange' : 'resize';
 
   function toggleHorizontal() {
     [].forEach.call(
       document.getElementById('menu').querySelectorAll('.custom-can-transform'),
-      function(el){
+      function(el) {
         el.classList.toggle('pure-menu-horizontal');
       }
     );
@@ -52,8 +52,7 @@ jQuery(document).ready(function($) {
     // before the menu switches states
     if (menu.classList.contains('open')) {
       setTimeout(toggleHorizontal, 500);
-    }
-    else {
+    } else {
       toggleHorizontal();
     }
     menu.classList.toggle('open');
@@ -66,7 +65,7 @@ jQuery(document).ready(function($) {
     }
   }
 
-  document.getElementById('toggle').addEventListener('click', function (e) {
+  document.getElementById('toggle').addEventListener('click', function(e) {
     toggleMenu();
   });
 

@@ -2,7 +2,6 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-@import "https://fonts.googleapis.com/css?family=Lato:400,900";
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -78,7 +77,9 @@ html {
   color: #333;
 }
 
-.m-detail-background, span.nt.fa-search, .pure-menu-active > .pure-menu-link, .pure-menu-link:hover, .pure-menu-link:focus, .lang_selector.selected, .sidebar .widget-title > h2 {
+.m-detail-background, span.nt.fa-search, .pure-menu-active > .pure-menu-link,
+.pure-menu-link:focus,
+.pure-menu-link:hover, .lang_selector.selected, .sidebar .widget-title > h2 {
   background-color: #ff3030 !important;
 }
 
@@ -91,7 +92,8 @@ html {
   display: block;
 }
 
-.m-uppercase, .pure-menu-link, .pure-menu-item .fa, h1, .sidebar .widget-title > h2, .popular-posts .item-content, .widget.currently-reading .book-title, .footer-container h2 {
+.m-uppercase, .pure-menu-item .fa,
+.pure-menu-link, h1, .sidebar .widget-title > h2, .popular-posts .item-content, .widget.currently-reading .book-title, .footer-container h2 {
   text-transform: uppercase;
 }
 
@@ -2412,6 +2414,18 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     width: 100%;
   }
 }
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Lato-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 900;
+  src: url("/fonts/Lato-Black.ttf") format("truetype");
+}
 a, a:visited, a:hover {
   text-decoration: none;
 }
@@ -2481,7 +2495,9 @@ nav {
   height: 34px;
 }
 
-.pure-menu-link, .pure-menu-disabled, .pure-menu-heading {
+.pure-menu-disabled,
+.pure-menu-heading,
+.pure-menu-link {
   padding: 4px 10px;
 }
 
@@ -2495,7 +2511,7 @@ div#nt-search {
   width: 36px;
   height: 32px;
   z-index: 10;
-  margin-top: 0px;
+  margin-top: 0;
   line-height: 1 !important;
 }
 
@@ -2522,7 +2538,7 @@ input[type="text"].nt-search-input {
   padding: 5px 15px;
   letter-spacing: 2px;
   font-weight: normal;
-  transition: all .1s ease-in-out;
+  transition: all 0.1s ease-in-out;
   box-sizing: border-box;
 }
 
@@ -2552,7 +2568,8 @@ span.nt.fa-search {
   color: #fff;
 }
 
-input#go, span.nt.fa-search {
+input#go,
+span.nt.fa-search {
   right: 0;
   top: 0;
   width: 35px;
@@ -2592,7 +2609,8 @@ input#go, span.nt.fa-search {
   line-height: 2em;
 }
 
-.pure-menu-link, .pure-menu-item .fa {
+.pure-menu-item .fa,
+.pure-menu-link {
   color: white;
 }
 

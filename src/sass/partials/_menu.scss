@@ -1,4 +1,4 @@
-nav{
+nav {
   position: fixed;
   width: 100%;
   z-index: 20;
@@ -7,208 +7,212 @@ nav{
 }
 
 .menu-wrapper {
-    @extend .m-max-width;
-    @extend .m-centered;
-    -webkit-font-smoothing: antialiased;
-    height: 32px;
-    overflow: hidden;
-    transition: height 0.5s;
+  @extend .m-max-width;
+  @extend .m-centered;
+  -webkit-font-smoothing: antialiased;
+  height: 32px;
+  overflow: hidden;
+  transition: height 0.5s;
 }
 
 .custom-wrapper.open {
-    height: 14em;
+  height: 14em;
 }
 
 .custom-menu-3 {
-    text-align: right;
+  text-align: right;
 }
 
 .custom-toggle {
-    width: 34px;
-    height: 34px;
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: none;
-    cursor: pointer;
+  width: 34px;
+  height: 34px;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  cursor: pointer;
 }
 
 .custom-toggle .bar {
-    background-color: #777;
-    display: block;
-    width: 20px;
-    height: 2px;
-    border-radius: 100px;
-    position: absolute;
-    top: 18px;
-    right: 7px;
-    transition: all 0.5s;
+  background-color: #777;
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 100px;
+  position: absolute;
+  top: 18px;
+  right: 7px;
+  transition: all 0.5s;
 }
 
 .custom-toggle .bar:first-child {
-    transform: translateY(-6px);
+  transform: translateY(-6px);
 }
 
 .custom-toggle.x .bar {
-    transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .custom-toggle.x .bar:first-child {
-    transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
-
-.menu-toogle-container{
+.menu-toogle-container {
   height: 34px;
 }
 
-.pure-menu-link, .pure-menu-disabled, .pure-menu-heading{
+.pure-menu-disabled,
+.pure-menu-heading,
+.pure-menu-link {
   // padding: 0.85em 1em;
   padding: 4px 10px;
 }
 
-li.flag{
+li.flag {
   margin-right: 10px;
 }
 
 div#nt-search {
-    position: relative;
-    float: right;
-    width: 36px;
-    height: 32px;
-    z-index: 10;
-    margin-top: 0px;
-    line-height: 1!important;
+  position: relative;
+  float: right;
+  width: 36px;
+  height: 32px;
+  z-index: 10;
+  margin-top: 0;
+  line-height: 1!important;
 }
 
-
 .nt-search-input-wrap {
-    // position: absolute;
-    // right: 36px;
-    height: 35px;
-    width: 35px;
-    border: 0;
-    overflow: hidden;
-    -webkit-transition: width 200ms;
-    -moz-transition: width 200ms;
-    transition: width 200ms;
+  // position: absolute;
+  // right: 36px;
+  height: 35px;
+  width: 35px;
+  border: 0;
+  overflow: hidden;
+  -webkit-transition: width 200ms;
+  -moz-transition: width 200ms;
+  transition: width 200ms;
 }
 
 input[type="text"].nt-search-input {
-    border: none!important;
-    outline: none;
-    width: 270px;
-    height: 35px;
-    margin: 0;
-    padding: 2px 7px;
-    /*padding-left: 40px !important;*/
+  border: none!important;
+  outline: none;
+  width: 270px;
+  height: 35px;
+  margin: 0;
+  padding: 2px 7px;
+  /*padding-left: 40px !important;*/
 }
 
 #s {
-    font-size: 12px;
-    padding: 5px 15px;
-    letter-spacing: 2px;
-    font-weight: normal;
-    transition: all .1s ease-in-out;
-    box-sizing: border-box;
+  font-size: 12px;
+  padding: 5px 15px;
+  letter-spacing: 2px;
+  font-weight: normal;
+  transition: all 0.1s ease-in-out;
+  box-sizing: border-box;
 }
 
 input#s {
-    display: block;
-    position: relative;
-    width: 100%;
-    margin-bottom: 0;
-    border: 0;
-    outline: 0;
-    color: black;
-    // padding-left: 40px;
+  display: block;
+  position: relative;
+  width: 100%;
+  margin-bottom: 0;
+  border: 0;
+  outline: 0;
+  color: black;
+  // padding-left: 40px;
 }
 
 #s:focus {
-    outline: none;
+  outline: none;
 }
 
 input#go {
-    line-height: 1;
-    background: transparent;
-    box-shadow: none;
-    border: 0;
-    opacity: 0;
+  line-height: 1;
+  background: transparent;
+  box-shadow: none;
+  border: 0;
+  opacity: 0;
 }
 
 span.nt.fa-search {
-    color: #fff;
-    @extend .m-detail-background;
+  color: #fff;
+  @extend .m-detail-background;
 }
 
-input#go, span.nt.fa-search {
-    right: 0;
-    top: 0;
-    width: 35px;
-    height: 35px;
-    line-height: 32px;
-    // padding: 8px 0;
-    display: block;
-    position: absolute;
-    text-align: center;
-    cursor: pointer;
-    margin: 0!important;
+input#go,
+span.nt.fa-search {
+  right: 0;
+  top: 0;
+  width: 35px;
+  height: 35px;
+  line-height: 32px;
+  // padding: 8px 0;
+  display: block;
+  position: absolute;
+  text-align: center;
+  cursor: pointer;
+  margin: 0 !important;
 }
 
 .nt.fa-search:before {
-    font-family: "FontAwesome";
-    content: '\f002';
-    color: #fff;
-    font-size: 14px;
+  font-family: "FontAwesome";
+  content: '\f002';
+  color: #fff;
+  font-size: 14px;
 }
 
 .nt-search.nt-search-open .nt-search-input-wrap {
-    width: 238px;
-    opacity: 1!important;
+  width: 238px;
+  opacity: 1!important;
 }
 
 .nt-search-open .nt.fa-search {
-    color: #fff;
+  color: #fff;
 }
 
 .nt-search-open input#go {
-    opacity: 1;
+  opacity: 1;
 }
 
-.pure-menu-link{
+.pure-menu-link {
   font-family: $base-font;
   color: white;
   @include adjust-font-size-to(12px);
 }
 
-.pure-menu-link, .pure-menu-item .fa{
+.pure-menu-item .fa,
+.pure-menu-link {
   color: white;
   @extend .m-uppercase;
 }
 
-.pure-menu-active > .pure-menu-link, .pure-menu-link:hover, .pure-menu-link:focus{
+.pure-menu-active > .pure-menu-link,
+.pure-menu-link:focus,
+.pure-menu-link:hover {
   // background-color: $details-color;
   @extend .m-detail-background;
 }
 
-.lang_selector.selected{
+.lang_selector.selected {
   @extend .m-detail-background
 }
+ @media (max-width: 47.999em){
+  .custom-menu-3 {
+    text-align: left;
+  }
 
-@media (max-width: 47.999em) {
-    .custom-menu-3 {
-        text-align: left;
-    }
+  .custom-toggle {
+    display: block;
+  }
 
-    .custom-toggle {
-        display: block;
-    }
+  .menu-wrapper.open {
+    height: auto;
+  }
 
-    .menu-wrapper.open{
-      height: auto;
-    }
-    .menu-wrapper >div:first-child{
-      display: block !important;
-    }
+  .menu-wrapper > div:first-child {
+    display: block !important;
+  }
 }
