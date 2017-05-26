@@ -1,0 +1,50 @@
+@mixin absolute_bottom($bottom_margin){
+  position: absolute;
+  bottom: $bottom_margin;
+  left: 0;
+  right: 0;
+  // left: 50%;
+  // transform: translate(-50%, 0);
+}
+
+%image{
+  width: 100%;
+  height: auto;
+}
+
+@mixin pulse-image($container-selector){
+  transition: transform .45s,filter .45s,opacity .54s;
+  #{$container-selector}:hover &{
+    transform: scale(1.1);
+    opacity: 0.95;
+  }
+}
+
+.m-reset-font-color{
+  color: $font-color;
+}
+
+.m-detail-background{
+  background-color: $details-color !important;
+}
+
+.m-max-width{
+  max-width: $max-width;
+}
+
+.m-centered{
+  margin: 0 auto;
+  display: block;
+}
+
+.m-uppercase{
+  text-transform: uppercase;
+}
+
+.m-text-centered{
+  text-align: center;
+}
+
+.m-bold{
+  font-weight: $bold;
+}

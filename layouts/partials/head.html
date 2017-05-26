@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- title -->
+    {{ if isset . "Title" }}
+      <title>{{ .Title }}: jarboleda.me</title>
+    {{ else }}
+      <title>jarboleda.me</title>
+    {{ end }}
+    <meta name="robots" content="noindex">
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+		<!-- <meta name="description" content="<?php echo $page->site_description; ?>"> -->
+		<meta name=viewport content="width=device-width, initial-scale=1">
+    <link href="/css/global.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  </head>

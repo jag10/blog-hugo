@@ -1,0 +1,83 @@
+.soc-sharing{
+  float: right;
+}
+.soc-sharing ul li{
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.soc-sharing li a{
+  height: 32px;
+  width: 32px;
+  line-height: 32px;
+  color: $fa-base-color;
+  text-align: center;
+  // padding: 5px 0;
+  border: 1px solid $fa-base-color;
+  border-radius: 50%;
+  transition: all .2s ease-in-out;
+
+}
+
+.soc-sharing li .fa-google-plus:hover,
+#footer .widget-social .btn-gplus:hover {
+    background-color: #d53824 !important;
+}
+
+.soc-sharing li .fa-vimeo:hover,
+#footer .widget-social .btn-vimeo:hover {
+    background-color: #4c8ab0 !important;
+}
+
+.soc-sharing li .fa-behance:hover,
+#footer .widget-social .btn-behance:hover {
+    background-color: #1769ff !important;
+}
+
+.soc-sharing li .fa-twitter:hover,
+#footer .widget-social .btn-twitter:hover {
+    background-color: #3bc1ed !important;
+}
+
+.soc-sharing li .fa-youtube:hover,
+#footer .widget-social .btn-youtube:hover {
+    background-color: #bf2f29 !important;
+}
+
+.soc-sharing li .fa-dribbble:hover,
+#footer .widget-social .btn-dribbble:hover {
+    background-color: #ef5a92 !important;
+}
+
+.soc-sharing li .fa-facebook:hover,
+#footer .widget-social .btn-facebook:hover {
+    background-color: #4a6d9d !important;
+}
+
+.soc-sharing li .fa-linkedin:hover,
+#footer .widget-social .btn-linkedin:hover {
+    background-color: #0b7bb5 !important;
+}
+
+.soc-sharing li .fa-pinterest:hover,
+#footer .widget-social .btn-pinterest:hover {
+    background-color: #cb1f25 !important;
+}
+
+.soc-sharing li .fa-instagram:hover,
+#footer .widget-social .btn-instagram:hover {
+    background-color: #3f6f94 !important;
+}
+
+.fa-google-plus:hover,
+.fa-vimeo:hover,
+.fa-behance:hover,
+.fa-twitter:hover,
+.fa-youtube:hover,
+.fa-dribbble:hover,
+.fa-facebook:hover,
+.fa-linkedin:hover,
+.fa-pinterest:hover,
+.fa-instagram:hover {
+    color: #ffffff !important;
+}

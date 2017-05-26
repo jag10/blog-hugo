@@ -1,0 +1,30 @@
+.article-tags {
+    float: right;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.article-tags a:after {
+    content: '';
+    position: absolute;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 8px 6px 0px 0px;
+    border-top-color: $details-color;
+    left: 0px;
+    top: 100%;
+}
+.article-tags a {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    padding: 4px 10px 5px;
+    line-height: 10px;
+    text-transform: uppercase;
+    background: $details-color;
+    margin-right: 13px;
+}
+
+.article-tags a:nth-child(n+4) {
+    display: none;
+}

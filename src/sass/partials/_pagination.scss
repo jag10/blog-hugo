@@ -1,0 +1,111 @@
+.MarkupPagerNav li a,
+.MarkupPagerNav li.MarkupPagerNavSeparator {
+  display: block;
+  float: left;
+  padding: 2px 9px;
+  color: #fff;
+  background: $details-color;
+  margin-right: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+.MarkupPagerNav li.MarkupPagerNavOn a,
+.MarkupPagerNav li a:hover {
+  color: #fff;
+  background: #282828;
+  text-decoration: none;
+}
+
+.MarkupPagerNav li.MarkupPagerNavSeparator {
+  // display: inline;
+  // color: #777;
+  // background: #d2e4ea;
+  // padding-left: 3px;
+  // padding-right: 3px;
+}
+/* post navigation */
+#blog-pager {
+    display: inline-block;
+    overflow: visible;
+    width: 100%;
+}
+
+.showpageOf, .home-link {
+    display: none;
+}
+
+.showpagePoint {
+    background: #333;
+    color: #FFFFFF;
+    margin: 0 10px 0 0;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+.showpage a, .showpageNum a {
+    background: #FF3030;
+    color: #FFFFFF;
+    margin: 0 10px 0 0;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+.showpage a:hover, .showpageNum a:hover {
+    background: #FF3030;
+    color: #fff;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    text-decoration: none;
+}
+
+#blog-pager-newer-link {
+    padding: 20px 0%;
+    position: relative;
+    text-align: left;
+    width: 45%;
+}
+
+#blog-pager-older-link {
+    // padding: 20px 2%;
+    position: relative;
+    text-align: right;
+    // width: 45%;
+    float: right;
+}
+
+#blog-pager-newer-link .newer-text, #blog-pager-older-link .older-text {
+    display: block;
+    color: #999;
+}
+
+a#Blog1_blog-pager-older-link, a#Blog1_blog-pager-newer-link {
+    text-transform: uppercase;
+    font-weight: bold;
+    background: none;
+    border-width: 2px !important;
+    border-style: solid !important;
+    border-color: $details-color;
+    background-color: $details-color;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1;
+    padding: 12px 14px;
+    position: relative;
+    text-decoration: none;
+    font-size: 12px;
+    transition: all 0.3s ease 0s;
+    border-radius: 3px;
+}

@@ -1,0 +1,15 @@
+<div class='widget label-list'>
+  <div class="widget-title">
+    <h2>Tag Cloud</h2></div>
+  <div class='widget-content'>
+    <ul>
+      {{ range $key, $value := .Site.Taxonomies.tags.ByCount }}
+      <li>
+        <a dir='ltr' href="url goes here">{{ $value.Name }}
+            <span class='detail-span'>[{{ $value.Count }}]</span>
+          </a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</div>

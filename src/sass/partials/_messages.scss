@@ -1,0 +1,31 @@
+.status-msg-wrap{
+  font-size:110%;
+  margin:10px auto;
+  position:relative
+}
+
+.status-msg-border{
+  border:1px solid #000;
+}
+
+.status-msg-bg{
+  background-color:#ccc;
+}
+
+.status-msg-body{
+  text-align:center;
+  padding:.3em 0;
+  width:100%;
+  position:absolute;
+  z-index:4
+}
+
+.status-msg-hidden{
+  visibility:hidden;
+  padding:.3em 0
+}
+
+.status-msg-wrap a{
+  padding-left:.4em;
+  text-decoration:underline
+}

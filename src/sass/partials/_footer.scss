@@ -1,0 +1,116 @@
+.footer-container{
+  @extend .m-max-width;
+  @extend .m-centered;
+  padding: 10px 0;
+}
+
+.footer-container h2{
+  @include adjust-font-size-to(16px);
+  @extend .m-uppercase;
+}
+
+.footer-credits{
+  background-color: $body-color;
+  padding: 20px 0;
+}
+
+.footer-credits a, .footer-credits p, .footer-credits span{
+  color: $font-color;
+  text-align: center;
+}
+
+.footer-container .popular-posts .item-title a{
+  color: white;
+}
+
+.footer-container .widget .item-content{
+  margin: 10px 0;
+}
+
+.footer-container input, .footer-container textarea{
+  background-color: lighten($footer-color, 5);
+  color: lighten($footer-color, 40);
+  border: none;
+}
+
+
+.footer-credits a {
+    color: #555;
+}
+
+.footer-credits a:hover {
+    color: #333;
+}
+
+.footer_social-icons {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.footer_social-icons li {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.footer_social-icons li a {
+    display: block;
+    color: white;
+}
+
+.footer_social-icons li a i{
+  line-height: 40px;
+}
+
+.btn-gplus {
+    background-color: #d53824 !important;
+}
+
+.btn-vimeo {
+    background-color: #4c8ab0 !important;
+}
+
+.btn-behance {
+    background-color: #1769ff !important;
+}
+
+.btn-twitter {
+    background-color: #3bc1ed !important;
+}
+
+.btn-youtube {
+    background-color: #bf2f29 !important;
+}
+
+.btn-dribbble {
+    background-color: #ef5a92 !important;
+}
+
+.btn-facebook {
+    background-color: #4a6d9d !important;
+}
+
+.btn-linkedin {
+    background-color: #0b7bb5 !important;
+}
+
+.btn-pinterest {
+    background-color: #cb1f25 !important;
+}
+
+.btn-instagram {
+    background-color: #3f6f94 !important;
+}
+
+.btn-gplus:hover, .btn-vimeo:hover, .btn-behance:hover, .btn-twitter:hover,
+.btn-youtube:hover, .btn-dribbble:hover, .btn-facebook:hover,
+.btn-linkedin:hover, .btn-pinterest:hover, .btn-instagram:hover {
+    color: white !important;
+}
+
+footer .attribution_logo{
+  @extend .m-centered;
+  width: 80px;
+}

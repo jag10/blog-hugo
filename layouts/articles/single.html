@@ -1,0 +1,16 @@
+{{ $renderFull := true }}
+{{partial "head" .}} {{partial "header" .}}
+<body>
+  <div class="main-container">
+    <section id="main" class="pure-u-1 pure-u-md-3-4">
+      <article>
+        {{partial "article" (dict "content" . "renderFull" $renderFull)}}
+      </article>
+    </section><aside class='sidebar-wrapper pure-u-1 pure-u-md-1-4'>
+      {{partial "aside" .}}
+    </aside>
+    <div class='clearfix'></div>
+  </div>
+  {{partial "footer" .}}
+</body>
+<html>

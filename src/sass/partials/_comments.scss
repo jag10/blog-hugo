@@ -1,0 +1,78 @@
+.comments{
+  margin: 20px 0;
+}
+
+.CommentList {
+  margin: 1em 0 0 0;
+}
+
+.CommentListItem {
+  list-style: none;
+  margin: 0;
+  border-left: 5px solid #ddd;
+  border-top: 1px dotted #ccc;
+  padding: 1em 0 1px 1em;
+  background: #fff;
+
+}
+.CommentListItem p {
+  margin-top: 0;
+}
+.CommentHeader,
+#CommentForm label {
+  margin: 0;
+  font-weight: bold;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #3786bc;
+}
+.CommentText {
+  color: #666;
+}
+
+#CommentForm {
+  display: none;
+}
+
+#CommentForm h2 {
+  margin-bottom: 0;
+  border: none;
+}
+
+#CommentForm label {
+  display: block;
+  color: #999;
+}
+
+#CommentForm p {
+  margin: 0.5em 0;
+}
+
+#CommentForm .error {
+  background: #a30000;
+  color: #fff;
+  padding: 0.25em 0.5em;
+}
+
+#CommentForm .success {
+  font-weight: bold;
+}
+
+.CommentForm_cite,
+.CommentForm_email {
+  float: left;
+}
+.CommentForm_cite input,
+.CommentForm_email input {
+  width: 200px;
+  margin-right: 1em;
+}
+
+.CommentForm_text {
+  clear: both;
+}
+.CommentForm_text textarea {
+  padding: 2px;
+  width: 75%;
+  height: 100px;
+}

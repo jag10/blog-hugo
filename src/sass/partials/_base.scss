@@ -1,0 +1,77 @@
+@import "compass/reset";
+@import "compass/utilities";
+@import "compass/typography/vertical_rhythm";
+$base-font-size: 16px; // Sets the base font size
+$base-line-height: 24px; // Sets the base line height
+@include establish-baseline;
+
+// @import "blueprint";
+
+@import "modules/defines";
+@import "modules/tools";
+
+@import "vendor/pure.scss";
+@import "vendor/grids-responsive.scss";
+@import "https://fonts.googleapis.com/css?family=Lato:400,900";
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css";
+
+// base css
+@import "partials/links";
+@import "partials/menu";
+@import "partials/preloader";
+
+.float-left{
+  @include float(left);
+}
+
+.float-right{
+  @include float(right);
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body{
+  background-color: $body-color;
+}
+
+article ul{
+  list-style: square;
+  margin-left: 20px;
+}
+
+h1 {
+  @include adjust-font-size-to(30px);
+  @extend .m-uppercase;
+  font-weight: $bold;
+  color: black;
+}
+
+a {
+    color: $details-color;
+    outline: 0;
+    text-decoration: none;
+}
+
+p{
+  @extend .m-reset-font-color;
+  text-align: justify;
+  @include adjust-font-size-to(16px);
+}
+
+footer{
+  background-color: $footer-color;
+}
+
+footer a, footer p, footer span, footer h2{
+  color: white;
+}
+
+.clearfix{
+  clear: both;
+}
+
+.ajax-content-hidden{
+  display: none;
+}

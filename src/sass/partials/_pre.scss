@@ -1,0 +1,29 @@
+.highlight, pre{
+  border-radius: 8px;
+  margin: 15px 0;
+}
+
+pre code {
+  line-height: 1.6em;
+  font-size: 11px;
+}
+
+pre {
+  background: #263238;
+  padding: 16px 24px;
+  color: #FFFFFF;
+  // font-family: consolas;
+}
+/* target IE7 and IE6 */
+*:first-child+html pre {
+  padding-bottom: 2em;
+  overflow-y: hidden;
+  overflow: visible;
+  overflow-x: auto;
+}
+
+* html pre {
+  padding-bottom: 2em;
+  overflow: visible;
+  overflow-x: auto;
+}

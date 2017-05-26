@@ -1,0 +1,84 @@
+.sidebar-wrapper{
+  padding: 0 10px;
+}
+
+.sidebar .widget{
+  margin-bottom: 40px;
+  background: top repeat-x white url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKUAAAAOAQMAAAB0Pk60AAAABlBMVEUAAAAAAAClZ7nPAAAAAnRSTlMAgJsrThgAAAAdSURBVBjTY5jkqYKBFBhUsAh7MGBRqjKBYcSZAACscGF+7a9QpwAAAABJRU5ErkJggg==')
+}
+
+.sidebar .widget-title{
+  text-align: center;
+  margin-top: -20px;
+  // margin-bottom: 20px;
+}
+
+.sidebar .widget-title>h2{
+  @extend .m-detail-background;
+  @extend .m-uppercase;
+  display: inline-block;
+  height: 38px;
+  line-height: 38px;
+  padding: 10px 20px;
+  color: #fff;
+  font-weight: $bold;
+  @include adjust-font-size-to(14px);
+}
+
+.popular-posts .item-content{
+  @extend .m-uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin: 30px 0;
+}
+
+.popular-posts .item-title{
+  display: table;
+  height: 72px;
+}
+
+.popular-posts .item-title a{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.popular-posts .item-thumbnail img{
+  display: block;
+  float: left;
+  height: 72px;
+  width: 72px;
+  border-radius: 50%;
+  padding: 0;
+  margin-right: 5px;
+}
+
+.popular-posts .item-title>a, .sidebar ul li a{
+  @extend .m-reset-font-color;
+}
+
+.sidebar .widget.label-list ul li {
+  border-bottom: 1px solid #f1f4f9;
+  padding: 0 0 10px 10px;
+}
+
+.widget{
+  padding: 20px;
+}
+
+.mostVisitedLink>span{
+  display: none;
+}
+
+.sidebar-book{
+  @extend %image;
+}
+
+.widget.currently-reading p{
+  @extend .m-text-centered;
+}
+
+.widget.currently-reading .book-title{
+  @extend .m-uppercase;
+  @extend .m-bold;
+  margin: 10px 0;
+}
