@@ -6,8 +6,9 @@
   </div>
   <div class="article_summary">
     <div class="article-date">
-      <i class="fa fa-bookmark"></i>
-      <span class="day">{{ .content.Date.Format "2 March 2006" }}</span>
+      <p class="day"><i class="fa fa-bookmark"></i>{{ .content.Date.Format "2 March 2006" }}</p>
+      <p><i class="fa fa-clock-o"></i>{{ add .content.ReadingTime 1 }} min read</p>
+      <p><i class="fa fa-align-left"></i>~ {{ .content.FuzzyWordCount }} words</p>
     </div>
     <div class="article-tags">
       {{ range first 5 .content.Params.tags }}
@@ -21,6 +22,8 @@
       {{ if not $.renderFull }}
       <p>{{.content.Summary}}</p>
       {{ else }}
+      <p>Table Of Contents:</p>
+      {{.content.TableOfContents}}
       <p>{{.content.Content}}</p>
       {{ end }}
     </div>

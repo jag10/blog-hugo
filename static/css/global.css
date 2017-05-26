@@ -568,6 +568,7 @@ th {
     NOTE: Firefox (as of 25) does not currently support flex-wrap, so the
     `-moz-` prefix version is omitted.
     */
+  display: -webkit-flex;
   /* IE10 uses display: flexbox */
   display: -ms-flexbox;
   /* Prevents distributing space between rows */
@@ -2429,7 +2430,7 @@ a, a:visited, a:hover {
   text-decoration: none;
 }
 
-nav {
+nav.top-menu {
   position: fixed;
   width: 100%;
   z-index: 20;
