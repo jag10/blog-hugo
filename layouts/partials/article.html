@@ -1,8 +1,12 @@
 <div class="post-container">
   <div class="post-image-container">
+    {{ if not $.renderFull }}
     <a href="{{.content.URL}}">
       <img src="/articles/img/{{.content.Params.article_image}}" alt="article image" class="pulse-image" width="100%" height="100%">
     </a>
+    {{ else }}
+    <img src="/articles/img/{{.content.Params.article_image}}" alt="article image" class="pulse-image" width="100%" height="100%">
+    {{ end }}
   </div>
   <div class="article_summary">
     <div class="article-date">
@@ -17,9 +21,12 @@
     <div class="clearfix"></div>
     {{ if not $.renderFull }}
     <a href="{{ .content.URL }}" title="{{ .Title }}">
-    {{ end}}
       <h1 class="article_title title">{{ .content.Title }}</h1>
     </a>
+    {{ else }}
+    <h1 class="article_title title">{{ .content.Title }}</h1>
+    {{ end}}
+
     <div class="article_excerpt">
       {{ if not $.renderFull }}
       <p>{{.content.Summary}}</p>

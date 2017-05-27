@@ -1,13 +1,14 @@
-#TableOfContents ul{
+#TableOfContents ul {
   list-style: none;
   margin: 0;
 }
-#TableOfContents>ul{
+
+#TableOfContents > ul {
   margin-left: 10px;
 }
 
-#TableOfContents ul li ul a::before{
+#TableOfContents ul li ul a::before {
   content: '#';
   margin-right: 5px;
   color: black;
- }
+}

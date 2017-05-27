@@ -3,16 +3,14 @@ menu:                   "main"
 taxonomies:
   tag:                  "tags"
   pinned:               "pinned"
-  # author:               "author"
-params:                 locale = "en-US"
-disqusShortname :       "jarboleda-me"
 baseURL:                "/"
 languages:
   en:
     weight :            0
     languageName :      "English"
-    baseURL:                "/"
-    title:                  "jarboleda.me"
+    baseURL:            "/"
+    title:              "jarboleda.me"
+    email:              "me@jarboleda.me"
     menu:
       main:
       - Name:           "home"
@@ -30,10 +28,14 @@ languages:
       - Name:           "gitlab"
         URL:            "https://gitlab.com/jag7"
         weight:         5
-    disqusShortname :       "jarboleda-me"
+    disqusShortname :   "jarboleda-me"
+    params:             locale = "en-US"
   es:
     weight :            1
     languageName :      "Spanish"
+    baseURL:            "/"
+    title:              "jarboleda.me"
+    email:              "me@jarboleda.me"
     menu:
       main:
       - Name:           "home"

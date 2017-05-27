@@ -1,5 +1,19 @@
+article h2::before {
+  content: "## ";
+  color: #ccc;
+}
+
+article h3::before {
+  content: "### ";
+  color: #ccc;
+}
+
+article ul {
+  list-style: square;
+  margin-left: 20px;
+}
+
 .post-container {
-  // margin: 40px 0;
   margin-bottom: 40px;
 }
 
@@ -46,7 +60,6 @@
 
 .article_resources span {
   display: block;
-  // margin: 4rem 0 2.5rem;
   color: #ccc;
 }
 

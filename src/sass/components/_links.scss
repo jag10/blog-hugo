@@ -1,4 +1,9 @@
+a {
+  color: $details-color;
+  outline: 0;
+  text-decoration: none;
+}
+
 a, a:visited, a:hover{
   text-decoration: none;
-  // color: $font-color;
 }
