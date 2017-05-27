@@ -15,7 +15,9 @@
       <a href="search tag" rel="tag">{{.}}</a> {{ end }}
     </div>
     <div class="clearfix"></div>
+    {{ if not $.renderFull }}
     <a href="{{ .content.URL }}" title="{{ .Title }}">
+    {{ end}}
       <h1 class="article_title title">{{ .content.Title }}</h1>
     </a>
     <div class="article_excerpt">

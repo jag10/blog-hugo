@@ -45,8 +45,22 @@ time, mark, audio, video {
 
 #main, .blog-pager{
   padding: 0 10px;
+  // padding-right: 15px;
 }
 
 .detail-span{
   color: $details-color;
 }
+#TableOfContents ul{
+  list-style: none;
+  margin: 0;
+}
+#TableOfContents>ul{
+  margin-left: 10px;
+}
+
+#TableOfContents ul li ul a::before{
+  content: '#';
+  margin-right: 5px;
+  color: black;
+ }

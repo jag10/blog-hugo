@@ -25,7 +25,7 @@ nav.top-menu {
 
 .custom-toggle {
   width: 34px;
-  height: 34px;
+  height: 32px;
   display: block;
   position: absolute;
   top: 0;
@@ -59,7 +59,7 @@ nav.top-menu {
 }
 
 .menu-toogle-container {
-  height: 34px;
+  height: 32px;
 }
 
 .pure-menu-disabled,
@@ -76,7 +76,7 @@ li.flag {
 div#nt-search {
   position: relative;
   float: right;
-  width: 36px;
+  width: 32px;
   height: 32px;
   z-index: 10;
   margin-top: 0;
@@ -86,7 +86,7 @@ div#nt-search {
 .nt-search-input-wrap {
   // position: absolute;
   // right: 36px;
-  height: 35px;
+  height: 32px;
   width: 35px;
   border: 0;
   overflow: hidden;
@@ -99,7 +99,7 @@ input[type="text"].nt-search-input {
   border: none!important;
   outline: none;
   width: 270px;
-  height: 35px;
+  height: 32px;
   margin: 0;
   padding: 2px 7px;
   /*padding-left: 40px !important;*/
@@ -147,7 +147,7 @@ span.nt.fa-search {
   right: 0;
   top: 0;
   width: 35px;
-  height: 35px;
+  height: 32px;
   line-height: 32px;
   // padding: 8px 0;
   display: block;

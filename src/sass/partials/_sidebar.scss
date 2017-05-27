@@ -1,19 +1,24 @@
-.sidebar-wrapper{
+.sidebar-wrapper {
   padding: 0 10px;
 }
-
-.sidebar .widget{
-  margin-bottom: 40px;
-  background: top repeat-x white url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKUAAAAOAQMAAAB0Pk60AAAABlBMVEUAAAAAAAClZ7nPAAAAAnRSTlMAgJsrThgAAAAdSURBVBjTY5jkqYKBFBhUsAh7MGBRqjKBYcSZAACscGF+7a9QpwAAAABJRU5ErkJggg==')
+@media (min-width: 1200px) {
+  .sidebar-wrapper {
+    padding: 0 0 0 20px;
+  }
 }
 
-.sidebar .widget-title{
+.sidebar .widget {
+  margin-bottom: 40px;
+  background: top repeat-x white url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKUAAAAOAQMAAAB0Pk60AAAABlBMVEUAAAAAAAClZ7nPAAAAAnRSTlMAgJsrThgAAAAdSURBVBjTY5jkqYKBFBhUsAh7MGBRqjKBYcSZAACscGF+7a9QpwAAAABJRU5ErkJggg==');
+}
+
+.sidebar .widget-title {
   text-align: center;
   margin-top: -20px;
   // margin-bottom: 20px;
 }
 
-.sidebar .widget-title>h2{
+.sidebar .widget-title > h2 {
   @extend .m-detail-background;
   @extend .m-uppercase;
   display: inline-block;
@@ -25,24 +30,24 @@
   @include adjust-font-size-to(14px);
 }
 
-.popular-posts .item-content{
+.popular-posts .item-content {
   @extend .m-uppercase;
   font-size: 12px;
   letter-spacing: 1px;
   margin: 30px 0;
 }
 
-.popular-posts .item-title{
+.popular-posts .item-title {
   display: table;
   height: 72px;
 }
 
-.popular-posts .item-title a{
+.popular-posts .item-title a {
   display: table-cell;
   vertical-align: middle;
 }
 
-.popular-posts .item-thumbnail img{
+.popular-posts .item-thumbnail img {
   display: block;
   float: left;
   height: 72px;
@@ -52,7 +57,8 @@
   margin-right: 5px;
 }
 
-.popular-posts .item-title>a, .sidebar ul li a{
+.popular-posts .item-title > a,
+.sidebar ul li a {
   @extend .m-reset-font-color;
 }
 
@@ -61,23 +67,23 @@
   padding: 0 0 10px 10px;
 }
 
-.widget{
+.widget {
   padding: 20px;
 }
 
-.mostVisitedLink>span{
+.mostVisitedLink > span {
   display: none;
 }
 
-.sidebar-book{
+.sidebar-book {
   @extend %image;
 }
 
-.widget.currently-reading p{
+.widget.currently-reading p {
   @extend .m-text-centered;
 }
 
-.widget.currently-reading .book-title{
+.widget.currently-reading .book-title {
   @extend .m-uppercase;
   @extend .m-bold;
   margin: 10px 0;

@@ -73,7 +73,8 @@ html {
   height: auto;
 }
 
-.m-reset-font-color, p, .popular-posts .item-title > a, .sidebar ul li a {
+.m-reset-font-color, p, .popular-posts .item-title > a,
+.sidebar ul li a {
   color: #333;
 }
 
@@ -93,7 +94,7 @@ html {
 }
 
 .m-uppercase, .pure-menu-item .fa,
-.pure-menu-link, h1, .sidebar .widget-title > h2, .popular-posts .item-content, .widget.currently-reading .book-title, .footer-container h2 {
+.pure-menu-link, h1, h2, .sidebar .widget-title > h2, .popular-posts .item-content, .widget.currently-reading .book-title, .footer-container h2 {
   text-transform: uppercase;
 }
 
@@ -2455,7 +2456,7 @@ nav.top-menu {
 
 .custom-toggle {
   width: 34px;
-  height: 34px;
+  height: 32px;
   display: block;
   position: absolute;
   top: 0;
@@ -2492,7 +2493,7 @@ nav.top-menu {
 }
 
 .menu-toogle-container {
-  height: 34px;
+  height: 32px;
 }
 
 .pure-menu-disabled,
@@ -2508,7 +2509,7 @@ li.flag {
 div#nt-search {
   position: relative;
   float: right;
-  width: 36px;
+  width: 32px;
   height: 32px;
   z-index: 10;
   margin-top: 0;
@@ -2516,7 +2517,7 @@ div#nt-search {
 }
 
 .nt-search-input-wrap {
-  height: 35px;
+  height: 32px;
   width: 35px;
   border: 0;
   overflow: hidden;
@@ -2527,7 +2528,7 @@ input[type="text"].nt-search-input {
   border: none !important;
   outline: none;
   width: 270px;
-  height: 35px;
+  height: 32px;
   margin: 0;
   padding: 2px 7px;
   /*padding-left: 40px !important;*/
@@ -2573,7 +2574,7 @@ span.nt.fa-search {
   right: 0;
   top: 0;
   width: 35px;
-  height: 35px;
+  height: 32px;
   line-height: 32px;
   display: block;
   position: absolute;
@@ -2731,6 +2732,24 @@ h1 {
   line-height: 1.6em;
   font-weight: 600;
   color: black;
+}
+
+h2 {
+  font-size: 1.25em;
+  line-height: 1.2em;
+  font-weight: 600;
+  color: black;
+  margin: 0.33em 0;
+}
+
+h2::before {
+  content: "## ";
+  color: #ccc;
+}
+
+h3::before {
+  content: "### ";
+  color: #ccc;
 }
 
 a {
@@ -2983,6 +3002,11 @@ pre {
   padding: 0 10px;
 }
 
+@media (min-width: 1200px) {
+  .sidebar-wrapper {
+    padding: 0 0 0 20px;
+  }
+}
 .sidebar .widget {
   margin-bottom: 40px;
   background: top repeat-x white url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKUAAAAOAQMAAAB0Pk60AAAABlBMVEUAAAAAAAClZ7nPAAAAAnRSTlMAgJsrThgAAAAdSURBVBjTY5jkqYKBFBhUsAh7MGBRqjKBYcSZAACscGF+7a9QpwAAAABJRU5ErkJggg==");
@@ -3613,4 +3637,19 @@ time, mark, audio, video {
 
 .detail-span {
   color: #ff3030;
+}
+
+#TableOfContents ul {
+  list-style: none;
+  margin: 0;
+}
+
+#TableOfContents > ul {
+  margin-left: 10px;
+}
+
+#TableOfContents ul li ul a::before {
+  content: '#';
+  margin-right: 5px;
+  color: black;
 }

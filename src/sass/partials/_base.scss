@@ -60,6 +60,29 @@ h1 {
   color: black;
 }
 
+h2{
+  @include adjust-font-size-to(20px);
+  @extend .m-uppercase;
+  font-weight: $bold;
+  color: black;
+  margin: 0.33em 0;
+}
+
+// h1::before {
+//     content: "# ";
+//     color: #ccc;
+// }
+
+h2::before {
+    content: "## ";
+    color: #ccc;
+}
+
+h3::before {
+    content: "### ";
+    color: #ccc;
+}
+
 a {
     color: $details-color;
     outline: 0;
