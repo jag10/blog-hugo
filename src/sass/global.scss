@@ -1,66 +1,38 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@charset 'utf-8';
+// see https://sass-guidelin.es/#the-7-1-pattern
 
-@import "partials/base";
-@import "partials/article";
-@import "partials/tags";
-@import "partials/buttons";
-@import "partials/social";
-@import "partials/pre";
-@import "partials/sidebar";
-@import "partials/comments";
-@import "partials/pagination";
-@import "partials/footer";
-@import "partials/author";
-@import "partials/messages";
-@import "partials/loader";
+@import "abstracts/variables";
+@import "abstracts/tools";
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  font-family: $base-font;
-}
+@import "vendors/pure";
+@import "vendors/grids-responsive";
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css";
 
-.top-image-container{
-  height: 300px;
-}
+@import 'base/reset';
+@import 'base/typography';
 
+@import "layout/base";
+@import "layout/article";
+@import "layout/author";
+@import "layout/comments";
+@import "layout/footer";
+@import "layout/header";
+@import "layout/main";
+@import "layout/menu";
+@import "layout/messages";
+@import "layout/pagination";
+@import "layout/sidebar";
 
-.main-container{
-  @extend .m-max-width;
-  margin: 40px auto;
-}
+@import "components/buttons";
+@import "components/links";
+@import "components/loader";
+@import "components/pager";
+@import "components/pre";
+@import "components/preloader";
+@import "components/social";
+@import "components/table_of_contents";
+@import "components/tags";
 
-#main, .blog-pager{
-  padding: 0 10px;
-  // padding-right: 15px;
-}
+// @import "pages/home"
 
-.detail-span{
-  color: $details-color;
-}
-#TableOfContents ul{
-  list-style: none;
-  margin: 0;
-}
-#TableOfContents>ul{
-  margin-left: 10px;
-}
-
-#TableOfContents ul li ul a::before{
-  content: '#';
-  margin-right: 5px;
-  color: black;
- }
+// @import "themes/default"

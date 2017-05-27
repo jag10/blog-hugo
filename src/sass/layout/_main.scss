@@ -1,0 +1,8 @@
+.main-container{
+  @extend .m-max-width;
+  margin: 40px auto;
+}
+
+#main{
+  padding: 0 10px;
+}
