@@ -1,18 +1,18 @@
 <div class="post-container">
   <div class="post-image-container">
     {{ if not $.renderFull }}
-    <a href="{{.content.URL}}">
+    <a href="{{.content.URL}}#article_summary">
       <img src="/articles/img/{{.content.Params.article_image}}" alt="article image" class="pulse-image" width="100%" height="100%">
     </a>
     {{ else }}
     <img src="/articles/img/{{.content.Params.article_image}}" alt="article image" class="pulse-image" width="100%" height="100%">
     {{ end }}
   </div>
-  <div class="article_summary">
+  <div id='article_summary' class="article_summary">
     <div class="article-date">
       <p class="day"><i class="fa fa-bookmark"></i>{{ .content.Date.Format "2 March 2006" }}</p>
-      <p><i class="fa fa-clock-o"></i>{{ add .content.ReadingTime 1 }} min read</p>
-      <p><i class="fa fa-align-left"></i>~ {{ .content.FuzzyWordCount }} words</p>
+      <p><i class="fa fa-clock-o"></i>{{ add .content.ReadingTime 1 }} min read  ~ {{ .content.FuzzyWordCount }} words</p>
+      {{/* <p><i class="fa fa-align-left"></i>~ {{ .content.FuzzyWordCount }} words</p> */}}
     </div>
     <div class="article-tags">
       {{ range first 5 .content.Params.tags }}
@@ -20,19 +20,23 @@
     </div>
     <div class="clearfix"></div>
     {{ if not $.renderFull }}
-    <a href="{{ .content.URL }}" title="{{ .Title }}">
+    <a href="{{ .content.URL }}#article_summary" title="{{ .Title }}">
       <h1 class="article_title title">{{ .content.Title }}</h1>
     </a>
     {{ else }}
     <h1 class="article_title title">{{ .content.Title }}</h1>
     {{ end}}
 
+    {{ if $.renderFull }}
+    <div class='table_of_contents'>
+      <p>Table Of Contents:</p>
+      {{.content.TableOfContents}}
+    </div>
+    {{ end }}
     <div class="article_excerpt">
       {{ if not $.renderFull }}
       <p>{{.content.Summary}}</p>
       {{ else }}
-      <p>Table Of Contents:</p>
-      {{.content.TableOfContents}}
       <p>{{.content.Content}}</p>
       {{ end }}
     </div>
@@ -52,7 +56,7 @@
     {{ end }}
     <div class="article-footer">
       {{ if not $.renderFull }}
-      <a class="read-more-button pure-button" href="{{.content.URL}}">Read More</a> {{ end }}
+      <a class="read-more-button pure-button" href="{{.content.URL}}#article_summary">Read More</a> {{ end }}
       <div class="soc-sharing">
         <ul id="share_articles" class="article_share_items">
           <li>

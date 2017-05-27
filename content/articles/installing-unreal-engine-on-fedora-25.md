@@ -38,6 +38,7 @@ make
 {{<highlight sh>}}
 $ ./UE4Editor "/home/user/Documents/Unreal\ Projects/MyProject/MyProject.uproject"
 {{</highlight>}}
-Further info:
-Building on linux
-Running on linux
+
+## Installing clang
+## Installing clang
+## Installing clang
