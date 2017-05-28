@@ -1,14 +1,16 @@
 ---
 article_image: "unreal_engine.jpg"
-author: "Jeferson Arboleda"
-author_description: "Computer engineer, interested in Linux, server technologies and eCommerce platforms, learning everyday."
-author_photo: "jag.jpg"
+author: Jeferson
+#author_description: "Computer engineer, interested in Linux, server technologies and eCommerce platforms, learning everyday."
+#author_photo: "jag.jpg"
 date: "2017-03-17T21:33:19+02:00"
+description: "here goes description"
+news_keywords: ["skynet", "terminator", "john connor"]
 pinned: "pinned"
 resources:
   - "Building on linux": "https://wiki.unrealengine.com/Building_On_Linux"
   - "Running on linux": "https://wiki.unrealengine.com/Running_On_Linux"
-series: ""
+series: ["serie1"]
 tags: ["unrealengine", "fedora25"]
 title: "installing unreal engine on fedora 25"
 ---

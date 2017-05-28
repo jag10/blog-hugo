@@ -2,7 +2,6 @@
 /* Font weights */
 /* Fonts */
 /* Headings */
-@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css";
 .post-container .post-image-container img, .sidebar-book {
   width: 100%;
   height: auto;
@@ -3258,6 +3257,7 @@ a#Blog1_blog-pager-older-link, a#Blog1_blog-pager-newer-link {
 .sidebar .widget-title {
   text-align: center;
   margin-top: -20px;
+  margin-bottom: 10px;
 }
 
 .sidebar .widget-title > h2 {
@@ -3267,6 +3267,7 @@ a#Blog1_blog-pager-older-link, a#Blog1_blog-pager-newer-link {
   padding: 10px 20px;
   color: #fff;
   font-weight: 600;
+  margin: 0;
   font-size: 0.875em;
   line-height: 1.71429em;
 }
@@ -3274,7 +3275,7 @@ a#Blog1_blog-pager-older-link, a#Blog1_blog-pager-newer-link {
 .popular-posts .item-content {
   font-size: 12px;
   letter-spacing: 1px;
-  margin: 30px 0;
+  margin: 15px 0;
 }
 
 .popular-posts .item-title {

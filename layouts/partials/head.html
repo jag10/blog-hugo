@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- title -->
-    {{ if isset . "Title" }}
-      <title>{{ .Title }}: jarboleda.me</title>
-    {{ else }}
-      <title>jarboleda.me</title>
-    {{ end }}
-    <meta name="robots" content="noindex">
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    {{ if isset . "Title" -}}<title>{{ .Title }}: jarboleda.me</title>{{ else }}
+    <title>jarboleda.me</title>
+    {{ end -}}
+    <meta name="description" content="{{ .Site.Params.description}}">
+    <meta name="robots" content="noindex">
     <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
-		<!-- <meta name="description" content="<?php echo $page->site_description; ?>"> -->
-		<meta name=viewport content="width=device-width, initial-scale=1">
-    
+    {{ partial "seo" . }}
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="/css/global.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
   </head>

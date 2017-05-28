@@ -1,0 +1,9 @@
+    <!-- Schema.org markup -->
+    <meta itemprop="name" content="{{ .Title }}">
+    <meta itemprop="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ end }}{{ end }}">
+    <!-- Output images -->
+    {{ with .Params.article_image -}}<meta itemprop="image" content="{{ . }}">{{ end -}}
+    <!-- Output all taxonomies as schema.org keywords -->
+    {{/* TODO: check if its better to print tags in keywords instead of all taxonomies */}}
+    <meta itemprop="keywords" content="{{ range $plural, $terms := .Site.Taxonomies }}{{ range $term, $val := $terms }}{{ printf "%s," $term }}{{ end }}{{ end }}" />
+    {{ if .IsPage -}}<meta itemprop="wordCount" content="{{ .WordCount }}">{{ end -}}

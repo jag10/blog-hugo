@@ -1,0 +1,21 @@
+	<!-- Twitter summary card with large image must be at least 280x150px -->
+	{{ if isset .Params "article_image" -}}
+	<meta name="twitter:card" content="summary_large_image"/>
+	<meta name="twitter:image:src" content="{{ .Site.Params.baseURL }}/articles/img/{{.Params.article_image}}"/>
+	{{ else -}}
+		<meta name="twitter:card" content="summary"/>
+	{{ end -}}
+	<!-- Twitter Card data -->
+	<meta name="twitter:title" content="{{ .Title }}"/>
+	<meta name="twitter:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ end }}{{ end }}"/>
+	{{ with .Site.Params.social.twitter }}<meta name="twitter:site" content="@{{ . }}"/>{{ end -}}
+	{{ with .Site.Params.social.twitter_domain }}<meta name="twitter:domain" content="{{ . }}"/>{{ end -}}
+
+	{{/* TODO: get author from authors array with .Params.author as index */}}
+	{{/* {{ if isset .Params "author" }}
+		{{ $author_name := lower .Params.author }}
+		{{ $author := index .Site.Params.authors "jeferson" }}
+		{{ with $author.social.twitter }}<meta name="twitter:creator" content="@{{ $author.social.twitter }}"/>{{ end }}
+	{{ end }} */}}
+	{{ $author := .Site.Params.authors.jeferson -}}
+	<meta name="twitter:creator" content="@{{ $author.social.twitter }}"/>

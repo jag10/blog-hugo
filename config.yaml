@@ -3,6 +3,7 @@ menu:                   "main"
 taxonomies:
   tag:                  "tags"
   pinned:               "pinned"
+  serie: "series"
 baseURL:                "/"
 languages:
   en:
@@ -11,6 +12,8 @@ languages:
     baseURL:            "/"
     title:              "jarboleda.me"
     email:              "me@jarboleda.me"
+    locale: "en-US"
+    description: "site description goes here"
     menu:
       main:
       - Name:           "home"
@@ -29,7 +32,37 @@ languages:
         URL:            "https://gitlab.com/jag7"
         weight:         5
     disqusShortname :   "jarboleda-me"
-    params:             locale = "en-US"
+    # params:
+    social: #web social
+      github: jag10
+      facebook: nozzleio
+      facebook_admin: '17807199'
+      twitter: j_a_g_x
+      twitter_domain: nozzle.io
+      googleplus: NozzleIo
+      pinterest: nozzleio
+      instagram: nozzleio
+      youtube: nozzleio
+      linkedin: nozzleio
+    authors:
+      Jeferson:
+        name: Jeferson Arboleda
+        thumbnail: 'jag.jpg'
+        images:
+          - 'http://www.mirf.ru/Articles/29/5857/T2.jpg'
+          - 'http://img2.wikia.nocookie.net/__cb20090810001437/terminator/images/d/dc/John_conor_05.jpg'
+        bio: 'John Connor is the son of Sarah Connor and Kyle Reese, and the leader of the worldwide human resistance...'
+        email: me@jarboleda.me
+        social:
+          github: killskynet
+          facebook: killskynet
+          twitter: killskynet
+          googleplus: killskynet
+          pinterest: killskynet
+          instagram: killskynet
+          youtube: killskynet
+          linkedin: killskynet
+      Sarah: {}
   es:
     weight :            1
     languageName :      "Spanish"
@@ -56,5 +89,5 @@ languages:
     taxonomies:
         tag:            "tags"
         pinned:         "pinned"
-    params:             locale = "es-ES"
+    # params:             locale : "es-ES"
 # pygmentsuseclasses:   true # see https://github.com/richleland/pygments-css
