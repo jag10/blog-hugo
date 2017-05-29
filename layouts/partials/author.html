@@ -1,12 +1,11 @@
 {{/* TODO: get author from authors array with .Params.author as index */}}
 {{ $author := .Site.Params.authors.jeferson }}
 <div class='authorboxwrap'>
+<h4>Author</h4>
   {{/* <div class='authorboxfull'> */}}
     <div class='avatar-container'>
       <img alt='' class='author_avatar' height='96' src="/img/{{ $author.thumbnail }}" width='96' />
-      <h4>
-        <a href='#' rel='author'>{{ $author.name }}</a>
-      </h4>
+      <h4 rel='author'>{{ $author.name }}</h4>
     </div>
     <div class='author_description_container'>
       <p>{{ $author.bio }}</p>

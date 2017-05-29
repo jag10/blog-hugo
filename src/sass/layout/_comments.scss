@@ -1,9 +1,9 @@
-.comments{
+.comments {
   margin: 20px 0;
 }
 
 .CommentList {
-  margin: 1em 0 0 0;
+  margin: 1em 0 0;
 }
 
 .CommentListItem {
@@ -13,19 +13,21 @@
   border-top: 1px dotted #ccc;
   padding: 1em 0 1px 1em;
   background: #fff;
-
 }
+
 .CommentListItem p {
   margin-top: 0;
 }
-.CommentHeader,
-#CommentForm label {
+
+#CommentForm label,
+.CommentHeader {
   margin: 0;
   font-weight: bold;
   font-size: 11px;
   text-transform: uppercase;
   color: #3786bc;
 }
+
 .CommentText {
   color: #666;
 }
@@ -62,6 +64,7 @@
 .CommentForm_email {
   float: left;
 }
+
 .CommentForm_cite input,
 .CommentForm_email input {
   width: 200px;
@@ -71,6 +74,7 @@
 .CommentForm_text {
   clear: both;
 }
+
 .CommentForm_text textarea {
   padding: 2px;
   width: 75%;

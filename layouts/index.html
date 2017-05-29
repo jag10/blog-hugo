@@ -1,5 +1,5 @@
 {{/* {{ .Site | printf "%+v" }} */}}
-{{partial "head" .}} {{partial "header" .}}
+{{partial "head" .}} {{partial "header" (dict "content" . "renderTopImage" true)}}
 {{/* <body> */}}
   <div class="main-container">
     <section id="main" class="pure-u-1 pure-u-md-3-4">
@@ -8,7 +8,7 @@
         {{partial "article" (dict "content" .)}}
       </article>
       {{ end }} {{ end }}
-    </section><aside class='sidebar-wrapper pure-u-1 pure-u-md-1-4'>
+    </section><aside class='sidebar-wrapper pure-u-1 pure-u-md-1-4 sticky'>
       {{partial "aside" .}}
     </aside>
     <div class='clearfix'></div>

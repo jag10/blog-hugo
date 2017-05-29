@@ -4,8 +4,8 @@
     <a href="{{.content.URL}}#article_summary">
       <img src="/articles/img/{{.content.Params.article_image}}" alt="article image" class="pulse-image" width="100%" height="100%">
     </a>
-    {{ else }}
-    <img src="/articles/img/{{.content.Params.article_image}}" alt="article image" class="pulse-image" width="100%" height="100%">
+    {{/* {{ else }}
+    <img src="/articles/img/{{.content.Params.article_image}}" alt="article image" class="pulse-image" width="100%" height="100%"> */}}
     {{ end }}
   </div>
   <div id='article_summary' class="article_summary">
@@ -27,12 +27,12 @@
     <h1 class="article_title title">{{ .content.Title }}</h1>
     {{ end}}
 
-    {{ if $.renderFull }}
+    {{/* {{ if $.renderFull }}
     <div class='table_of_contents'>
       <p>Table Of Contents:</p>
       {{.content.TableOfContents}}
     </div>
-    {{ end }}
+    {{ end }} */}}
     <div class="article_excerpt">
       {{ if not $.renderFull }}
       <p>{{.content.Summary}}</p>
@@ -88,7 +88,10 @@
     </div>
 
     <div class='post-footer'>
-      {{ if $.renderFull }} {{ partial "author.html" .content}} {{ partial "disqus.html" .content}} {{ end }}
+      {{ if $.renderFull }}
+       {{/* {{ partial "author.html" .content}}  */}}
+       {{ partial "disqus.html" .content}}
+     {{ end }}
     </div>
   </div>
 </div>

@@ -1,48 +1,48 @@
-@mixin absolute_bottom($bottom_margin){
+@mixin absolute_bottom($bottom_margin) {
   position: absolute;
   bottom: $bottom_margin;
   left: 0;
   right: 0;
 }
 
-%image{
+%image {
   width: 100%;
   height: auto;
 }
+@mixin pulse-image($container-selector) {
+  transition: transform 0.45s,filter 0.45s,opacity 0.54s;
 
-@mixin pulse-image($container-selector){
-  transition: transform .45s,filter .45s,opacity .54s;
-  #{$container-selector}:hover &{
+  #{$container-selector}:hover & {
     transform: scale(1.1);
     opacity: 0.95;
   }
 }
 
-.m-reset-font-color{
+.m-reset-font-color {
   color: $font-color;
 }
 
-.m-detail-background{
+.m-detail-background {
   background-color: $details-color !important;
 }
 
-.m-max-width{
+.m-max-width {
   max-width: $max-width;
 }
 
-.m-centered{
+.m-centered {
   margin: 0 auto;
   display: block;
 }
 
-.m-uppercase{
+.m-uppercase {
   text-transform: uppercase;
 }
 
-.m-text-centered{
+.m-text-centered {
   text-align: center;
 }
 
-.m-bold{
+.m-bold {
   font-weight: $bold;
 }
