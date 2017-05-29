@@ -17,8 +17,11 @@
   }
 }
 
-.sidebar .widget {
+.sidebar .widget:not(:last-child) {
   margin-bottom: 40px;
+}
+
+.sidebar .widget {
   background: top repeat-x white url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKUAAAAOAQMAAAB0Pk60AAAABlBMVEUAAAAAAAClZ7nPAAAAAnRSTlMAgJsrThgAAAAdSURBVBjTY5jkqYKBFBhUsAh7MGBRqjKBYcSZAACscGF+7a9QpwAAAABJRU5ErkJggg==');
 }
 

@@ -3,9 +3,7 @@
   <head>
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
     <meta name=viewport content="width=device-width, initial-scale=1">
-    {{ if isset . "Title" -}}<title>{{ .Title }}: jarboleda.me</title>{{ else }}
-    <title>jarboleda.me</title>
-    {{ end -}}
+    <title>{{ .Site.Params.title }} - {{ .Title }}</title>
     <meta name="description" content="{{ .Site.Params.description}}">
     <meta name="robots" content="noindex">
     <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />

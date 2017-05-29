@@ -13,7 +13,7 @@ article ul {
   margin-left: 20px;
 }
 
-.post-container {
+#main article:not(:last-child) .post-container {
   margin-bottom: 40px;
 }
 

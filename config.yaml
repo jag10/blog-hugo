@@ -4,16 +4,17 @@ taxonomies:
   tag:                  "tags"
   pinned:               "pinned"
   serie: "series"
-baseURL:                "/"
+baseURL:                "https://www.jarboleda.me"
 languages:
   en:
     weight :            0
     languageName :      "English"
-    baseURL:            "/"
-    title:              "jarboleda.me"
+    baseURL:            "https://www.jarboleda.me"
+    title:              "J Arboleda"
     email:              "me@jarboleda.me"
     locale: "en-US"
     description: "site description goes here"
+    article_images :    "/content/articles/img/"
     menu:
       main:
       - Name:           "home"
@@ -66,7 +67,7 @@ languages:
   es:
     weight :            1
     languageName :      "Spanish"
-    baseURL:            "/"
+    baseURL:            "https://www.jarboleda.me"
     title:              "jarboleda.me"
     email:              "me@jarboleda.me"
     menu:
