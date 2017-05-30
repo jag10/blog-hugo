@@ -14,7 +14,6 @@
               {{ range .content.Site.Menus.main }}
               <li class="pure-menu-item"><a class='pure-menu-link' href={{ .URL }}>{{ .Name }}</a></li>
               {{end}}
-              <li class='pure-menu-item flag'><i class='fa fa-flag-o' aria-hidden='true'></i></li>
               <li class='pure-menu-item lang_selector selected'>
                 {{ if eq .content.Lang "en" }}
                 <a class='pure-menu-link' href="#">English</a>
@@ -22,9 +21,10 @@
                 <a class='pure-menu-link' href="#">Spanish</a>
                 {{ end }}
               </li>
+              <li class='pure-menu-item flag'><i class='fa fa-language' aria-hidden='true'></i></li>
               {{ if .content.IsTranslated }} {{ range .content.Translations }}
               <li class='pure-menu-item lang_selector'>
-                <a class='pure-menu-link' href="{{ .Permalink }}">{{ i18n (default .Lang .Site.Language.LanguageName) }}{{ if .IsPage }} {{ i18n "wordCount" . }}{{ end }}</a>
+                <a class='pure-menu-link' href="{{ .URL }}">{{ i18n (default .Lang .Site.Language.LanguageName) }}{{ if .IsPage }} {{ i18n "wordCount" . }}{{ end }}</a>
               </li>
               {{ end}} {{ end }}
             </ul>

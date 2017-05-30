@@ -2943,7 +2943,7 @@ nav.top-menu {
 }
 
 li.flag {
-  margin-right: 10px;
+  margin: 0 10px;
 }
 
 div#nt-search {
