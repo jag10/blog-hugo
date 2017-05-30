@@ -3,7 +3,7 @@ menu:                   "main"
 taxonomies:
   tag:                  "tags"
   pinned:               "pinned"
-  serie: "series"
+  serie:                "series"
 baseURL:                "https://www.jarboleda.me"
 languages:
   en:
@@ -12,8 +12,8 @@ languages:
     baseURL:            "https://www.jarboleda.me"
     title:              "J Arboleda"
     email:              "me@jarboleda.me"
-    locale: "en-US"
-    description: "site description goes here"
+    locale:             "en-US"
+    description:        "site description goes here"
     article_images :    "/content/articles/img/"
     menu:
       main:
@@ -21,7 +21,7 @@ languages:
         URL:            "/"
         weight:         1
       - Name:           "about me"
-        URL:            "/resume/"
+        URL:            "/extras/cv/"
         weight:         2
       - Name:           "projects"
         URL:            "/projects-info/"
@@ -34,36 +34,36 @@ languages:
         weight:         5
     disqusShortname :   "jarboleda-me"
     # params:
-    social: #web social
-      github: jag10
-      facebook: nozzleio
-      facebook_admin: '17807199'
-      twitter: j_a_g_x
-      twitter_domain: nozzle.io
-      googleplus: NozzleIo
-      pinterest: nozzleio
-      instagram: nozzleio
-      youtube: nozzleio
-      linkedin: nozzleio
+    social:             #web social
+      github:           jag10
+      facebook:         nozzleio
+      facebook_admin:   '17807199'
+      twitter:          j_a_g_x
+      twitter_domain:   nozzle.io
+      googleplus:       NozzleIo
+      pinterest:        nozzleio
+      instagram:        nozzleio
+      youtube:          nozzleio
+      linkedin:         nozzleio
     authors:
       Jeferson:
-        name: Jeferson Arboleda
-        thumbnail: 'me_car2.png'
+        name:           Jeferson Arboleda
+        thumbnail:      'me_car2.min.png'
         images:
           - 'http://www.mirf.ru/Articles/29/5857/T2.jpg'
           - 'http://img2.wikia.nocookie.net/__cb20090810001437/terminator/images/d/dc/John_conor_05.jpg'
-        bio: 'John Connor is the son of Sarah Connor and Kyle Reese, and the leader of the worldwide human resistance...'
-        email: me@jarboleda.me
+        bio:            'John Connor is the son of Sarah Connor and Kyle Reese, and the leader of the worldwide human resistance...'
+        email:          me@jarboleda.me
         social:
-          github: killskynet
-          facebook: killskynet
-          twitter: killskynet
-          googleplus: killskynet
-          pinterest: killskynet
-          instagram: killskynet
-          youtube: killskynet
-          linkedin: killskynet
-      Sarah: {}
+          github:       killskynet
+          facebook:     killskynet
+          twitter:      killskynet
+          googleplus:   killskynet
+          pinterest:    killskynet
+          instagram:    killskynet
+          youtube:      killskynet
+          linkedin:     killskynet
+      Sarah:            {}
   es:
     weight :            1
     languageName :      "Spanish"

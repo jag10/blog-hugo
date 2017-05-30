@@ -503,7 +503,6 @@ th {
     NOTE: Firefox (as of 25) does not currently support flex-wrap, so the
     `-moz-` prefix version is omitted.
     */
-  display: -webkit-flex;
   /* IE10 uses display: flexbox */
   display: -ms-flexbox;
   /* Prevents distributing space between rows */
@@ -2556,6 +2555,7 @@ article ul {
 .authorboxwrap {
   display: inline-block;
   width: 100%;
+  margin-bottom: 40px;
 }
 
 .avatar-container {
@@ -2951,7 +2951,7 @@ div#nt-search {
   height: 32px;
   z-index: 10;
   margin-top: 0;
-  line-height: 1 !important;
+  line-height: 1;
 }
 
 .nt-search-input-wrap {
@@ -2963,13 +2963,12 @@ div#nt-search {
 }
 
 input[type="text"].nt-search-input {
-  border: none !important;
+  border: none;
   outline: none;
   width: 270px;
   height: 32px;
   margin: 0;
   padding: 2px 7px;
-  /*padding-left: 40px !important;*/
 }
 
 #s {
@@ -3009,16 +3008,16 @@ span.nt.fa-search {
 
 input#go,
 span.nt.fa-search {
-  right: 0;
+  right: -1px;
   top: 0;
-  width: 35px;
+  width: 36px;
   height: 32px;
   line-height: 32px;
   display: block;
   position: absolute;
   text-align: center;
   cursor: pointer;
-  margin: 0 !important;
+  margin: 0;
 }
 
 .nt.fa-search:before {
@@ -3030,7 +3029,7 @@ span.nt.fa-search {
 
 .nt-search.nt-search-open .nt-search-input-wrap {
   width: 238px;
-  opacity: 1 !important;
+  opacity: 1;
 }
 
 .nt-search-open .nt.fa-search {
@@ -3067,7 +3066,7 @@ span.nt.fa-search {
   }
 
   .menu-wrapper > div:first-child {
-    display: block !important;
+    display: block;
   }
 }
 .status-msg-wrap {
@@ -3194,8 +3193,8 @@ a#Blog1_blog-pager-older-link {
   text-transform: uppercase;
   font-weight: bold;
   background: none;
-  border-width: 2px !important;
-  border-style: solid !important;
+  border-width: 2px;
+  border-style: solid;
   border-color: #1fac61;
   background-color: #1fac61;
   color: white;
@@ -3545,52 +3544,52 @@ pre {
 
 #footer .widget-social .btn-gplus:hover,
 .soc-sharing li .fa-google-plus:hover {
-  background-color: #d53824 !important;
+  background-color: #d53824;
 }
 
 #footer .widget-social .btn-vimeo:hover,
 .soc-sharing li .fa-vimeo:hover {
-  background-color: #4c8ab0 !important;
+  background-color: #4c8ab0;
 }
 
 #footer .widget-social .btn-behance:hover,
 .soc-sharing li .fa-behance:hover {
-  background-color: #1769ff !important;
+  background-color: #1769ff;
 }
 
 #footer .widget-social .btn-twitter:hover,
 .soc-sharing li .fa-twitter:hover {
-  background-color: #3bc1ed !important;
+  background-color: #3bc1ed;
 }
 
 #footer .widget-social .btn-youtube:hover,
 .soc-sharing li .fa-youtube:hover {
-  background-color: #bf2f29 !important;
+  background-color: #bf2f29;
 }
 
 #footer .widget-social .btn-dribbble:hover,
 .soc-sharing li .fa-dribbble:hover {
-  background-color: #ef5a92 !important;
+  background-color: #ef5a92;
 }
 
 #footer .widget-social .btn-facebook:hover,
 .soc-sharing li .fa-facebook:hover {
-  background-color: #4a6d9d !important;
+  background-color: #4a6d9d;
 }
 
 #footer .widget-social .btn-linkedin:hover,
 .soc-sharing li .fa-linkedin:hover {
-  background-color: #0b7bb5 !important;
+  background-color: #0b7bb5;
 }
 
 #footer .widget-social .btn-pinterest:hover,
 .soc-sharing li .fa-pinterest:hover {
-  background-color: #cb1f25 !important;
+  background-color: #cb1f25;
 }
 
 #footer .widget-social .btn-instagram:hover,
 .soc-sharing li .fa-instagram:hover {
-  background-color: #3f6f94 !important;
+  background-color: #3f6f94;
 }
 
 .fa-behance:hover,
@@ -3603,7 +3602,7 @@ pre {
 .fa-twitter:hover,
 .fa-vimeo:hover,
 .fa-youtube:hover {
-  color: #ffffff !important;
+  color: #ffffff;
 }
 
 .table_of_contents {

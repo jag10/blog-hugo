@@ -1,0 +1,10 @@
+@charset 'utf-8';
+// see https://sass-guidelin.es/#the-7-1-pattern
+
+@import "abstracts/variables";
+@import "abstracts/tools";
+
+@import "vendors/pure";
+@import "vendors/grids-responsive";
+
+@import "layout/cv";

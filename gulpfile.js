@@ -15,17 +15,15 @@ var gulp = require('gulp'),
 var sass_dir = './src/sass/**/*.scss',
     js_dir   = './src/js/**/*.js';
 
-gulp.task('default', function() {
-  // place code for your default task here
-});
+gulp.task('default', ['live']);
 
 gulp.task('live', function(){
   livereload.listen();
   gulp.watch(sass_dir, ['css']);
 	gulp.watch(js_dir, ['js']);
 
-  //reload when a template file, the minified css, or the minified js file changes
-	gulp.watch(['layouts/**/*.html',  'static/css/*.css', 'static/js/*.js'], function(event) {
+  //reload when files change
+	gulp.watch(['config.yaml', 'layouts/**/*.html',  'static/css/*.css', 'static/js/*.js'], function(event) {
 		gulp.src(event.path)
 			.pipe(plumber())
 			.pipe(livereload())

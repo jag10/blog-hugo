@@ -65,7 +65,6 @@ nav.top-menu {
 .pure-menu-disabled,
 .pure-menu-heading,
 .pure-menu-link {
-  // padding: 0.85em 1em;
   padding: 4px 10px;
 }
 
@@ -80,12 +79,10 @@ div#nt-search {
   height: 32px;
   z-index: 10;
   margin-top: 0;
-  line-height: 1!important;
+  line-height: 1;
 }
 
 .nt-search-input-wrap {
-  // position: absolute;
-  // right: 36px;
   height: 32px;
   width: 35px;
   border: 0;
@@ -96,13 +93,12 @@ div#nt-search {
 }
 
 input[type="text"].nt-search-input {
-  border: none!important;
+  border: none;
   outline: none;
   width: 270px;
   height: 32px;
   margin: 0;
   padding: 2px 7px;
-  /*padding-left: 40px !important;*/
 }
 
 #s {
@@ -122,7 +118,6 @@ input#s {
   border: 0;
   outline: 0;
   color: black;
-  // padding-left: 40px;
 }
 
 #s:focus {
@@ -144,17 +139,16 @@ span.nt.fa-search {
 
 input#go,
 span.nt.fa-search {
-  right: 0;
+  right: -1px;
   top: 0;
-  width: 35px;
+  width: 36px;
   height: 32px;
   line-height: 32px;
-  // padding: 8px 0;
   display: block;
   position: absolute;
   text-align: center;
   cursor: pointer;
-  margin: 0 !important;
+  margin: 0;
 }
 
 .nt.fa-search:before {
@@ -166,7 +160,7 @@ span.nt.fa-search {
 
 .nt-search.nt-search-open .nt-search-input-wrap {
   width: 238px;
-  opacity: 1!important;
+  opacity: 1;
 }
 
 .nt-search-open .nt.fa-search {
@@ -192,7 +186,6 @@ span.nt.fa-search {
 .pure-menu-active > .pure-menu-link,
 .pure-menu-link:focus,
 .pure-menu-link:hover {
-  // background-color: $details-color;
   @extend .m-detail-background;
 }
 
@@ -213,6 +206,6 @@ span.nt.fa-search {
   }
 
   .menu-wrapper > div:first-child {
-    display: block !important;
+    display: block;
   }
 }
