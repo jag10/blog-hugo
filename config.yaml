@@ -4,6 +4,7 @@ taxonomies:
   tag:                  "tags"
   pinned:               "pinned"
   serie:                "series"
+  project:              "project"
 baseURL:                "https://www.jarboleda.me"
 languages:
   en:
@@ -24,7 +25,7 @@ languages:
         URL:            "/extras/cv/"
         weight:         2
       - Name:           "projects"
-        URL:            "/projects-info/"
+        URL:            "/projects/"
         weight:         3
       - Name:           "github"
         URL:            "https://github.com/jag10"

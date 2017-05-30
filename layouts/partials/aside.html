@@ -1,19 +1,18 @@
-{{ if .IsHome }}
+{{ if .content.IsHome }}
 <div class='sidebar'>
-  {{ partial "author" .}}
-  {{partial "widgets/pinned-posts" .}}
+  {{ partial "author" .content}}
   {{/* {{partial "widgets/tag-cloud" .}} */}}
   {{partial "widgets/reading" .}}
+  {{partial "widgets/pinned-posts" .}}
 </div>
 {{ else }}
 <div class='sidebar'>
-  {{/* {{partial "widgets/pinned-posts" .}}
-  {{partial "widgets/tag-cloud" .}}
-  {{partial "widgets/reading" .}} */}}
+  {{ if $.renderTOC }}
   <h4>On This Page</h4>
   <div class='table_of_contents'>
-    {{.TableOfContents}}
+    {{.content.TableOfContents}}
   </div>
-  {{ partial "author" .}}
+  {{ end }}
+  {{ partial "author" .content}}
 </div>
 {{ end }}

@@ -32,8 +32,9 @@
 }
 
 .sidebar .widget-title > h2 {
-  @extend .m-detail-background;
+  // @extend .m-detail-background;
   @extend .m-uppercase;
+  background-color: $menu-color;
   display: inline-block;
   height: 38px;
   line-height: 38px;

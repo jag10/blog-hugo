@@ -7,6 +7,7 @@ date : ""
 description : ""
 news_keywords: []
 pinned : "notpinned"
+project: false
 resources : []
 series : []
 tags : []
