@@ -3234,6 +3234,27 @@ a#Blog1_blog-pager-older-link {
   height: auto !important;
 }
 
+.project_image {
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  color: #1fac61;
+  font-size: 30px;
+  z-index: 1;
+}
+
+.arrow-left {
+  top: 50%;
+  left: 0;
+}
+
+.arrow-right {
+  top: 50%;
+  right: 0;
+}
+
 .sticky {
   position: -webkit-sticky;
   position: sticky;
