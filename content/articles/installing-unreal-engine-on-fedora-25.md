@@ -1,5 +1,5 @@
 ---
-article_image: "unreal_engine.jpg"
+article_image: "unreal_engine.min.jpg"
 author: Jeferson
 #author_description: "Computer engineer, interested in Linux, server technologies and eCommerce platforms, learning everyday."
 #author_photo: "jag.jpg"

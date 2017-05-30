@@ -1,4 +1,4 @@
 ---
 ---
 {{/* DO NOT REMOVE THIS FILE */}}
-{{/* this file is here so hugo renders /projects/  */}}
+{{/* this file is here to make hugo render /projects/  */}}

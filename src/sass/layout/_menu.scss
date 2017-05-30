@@ -183,6 +183,10 @@ span.nt.fa-search {
   @extend .m-uppercase;
 }
 
+.pure-menu-item .fa{
+   line-height: 32px;
+}
+
 .pure-menu-active > .pure-menu-link,
 .pure-menu-link:focus,
 .pure-menu-link:hover {

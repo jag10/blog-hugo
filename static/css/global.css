@@ -3054,6 +3054,10 @@ span.nt.fa-search {
   color: white;
 }
 
+.pure-menu-item .fa {
+  line-height: 32px;
+}
+
 @media (max-width: 47.999em) {
   .custom-menu-3 {
     text-align: left;
@@ -3345,6 +3349,12 @@ a#Blog1_blog-pager-older-link {
 .read-more-button {
   background-color: #263238;
   color: white;
+}
+
+.cc_container .cc_btn,
+.cc_container .cc_btn:visited {
+  background-color: #263238 !important;
+  color: #fff !important;
 }
 
 a {

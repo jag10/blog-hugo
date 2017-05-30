@@ -1,5 +1,5 @@
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
-{{partial "head" .}} {{partial "header" (dict "content" . "renderTopImage" true)}}
+{{partial "head" .}} {{partial "header" (dict "content" . "renderTopImage" false)}}
 {{/* <body> */}}
   <div class="main-container">
     <section id="main" class="pure-u-1 pure-u-md-3-4">
@@ -23,7 +23,7 @@
     <div class='clearfix'></div>
   </div>
   {{partial "footer" .}}
-  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+  <script defer type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
   <script type="text/javascript">
     $(document).ready(function() {
       $('.projects-container').slick({
