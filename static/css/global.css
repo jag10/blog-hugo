@@ -2556,7 +2556,6 @@ article ul {
 .authorboxwrap {
   display: inline-block;
   width: 100%;
-  margin-bottom: 40px;
 }
 
 .avatar-container {
@@ -2587,8 +2586,10 @@ img.author_avatar {
   border-color: transparent;
   border-bottom-color: #263238;
   border-width: 0 22px 22px 22px;
-  right: 118px;
   top: -22px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .author_description_container p {
@@ -3275,7 +3276,7 @@ a#Blog1_blog-pager-older-link {
     padding: 0 0 0 20px;
   }
 }
-.sidebar .widget:not(:last-child) {
+.sidebar > div:not(:last-child) {
   margin-bottom: 40px;
 }
 
@@ -3656,7 +3657,6 @@ pre {
   background-color: #263238;
   border-radius: 5px;
   padding: 4px;
-  margin-bottom: 20px;
 }
 
 #TableOfContents a,

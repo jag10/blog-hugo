@@ -2,17 +2,17 @@
 <div class='sidebar'>
   {{ partial "author" .content}}
   {{/* {{partial "widgets/tag-cloud" .}} */}}
-  {{partial "widgets/reading" .}}
-  {{partial "widgets/pinned-posts" .}}
+  {{partial "widgets/reading" .content}}
+  {{partial "widgets/pinned-posts" .content}}
 </div>
 {{ else }}
 <div class='sidebar'>
+  {{ partial "author" .content}}
   {{ if $.renderTOC }}
   <h4>On This Page</h4>
   <div class='table_of_contents'>
     {{.content.TableOfContents}}
   </div>
   {{ end }}
-  {{ partial "author" .content}}
 </div>
 {{ end }}

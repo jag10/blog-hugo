@@ -1,7 +1,7 @@
 .authorboxwrap {
   display: inline-block;
   width: 100%;
-  margin-bottom: 40px;
+  // margin-bottom: 40px;
 }
 
 .avatar-container {
@@ -32,8 +32,9 @@ img.author_avatar {
   border-color: transparent;
   border-bottom-color: $menu-color;
   border-width: 0 22px 22px 22px;
-  right: 118px;
   top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .author_description_container p {
