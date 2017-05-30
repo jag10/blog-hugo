@@ -3010,9 +3010,9 @@ span.nt.fa-search {
 
 input#go,
 span.nt.fa-search {
-  right: -1px;
+  right: 0;
   top: 0;
-  width: 36px;
+  width: 35px;
   height: 32px;
   line-height: 32px;
   display: block;
@@ -3031,7 +3031,7 @@ span.nt.fa-search {
 
 .nt-search.nt-search-open .nt-search-input-wrap {
   width: 238px;
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 .nt-search-open .nt.fa-search {
@@ -3054,10 +3054,6 @@ span.nt.fa-search {
   color: white;
 }
 
-.pure-menu-item .fa {
-  line-height: 32px;
-}
-
 @media (max-width: 47.999em) {
   .custom-menu-3 {
     text-align: left;
@@ -3072,7 +3068,7 @@ span.nt.fa-search {
   }
 
   .menu-wrapper > div:first-child {
-    display: block;
+    display: block !important;
   }
 }
 .status-msg-wrap {
