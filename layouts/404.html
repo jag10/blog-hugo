@@ -1,0 +1,10 @@
+{{partial "head" .}} {{partial "header" (dict "content" . "renderTopImage" false)}}
+  <div class="main-container">
+    <section id="main" class="pure-u-1 not_found">
+      <img src="/img/404.png" />
+      <h1 class=''>Oops... we couldn't find that :( </h1>
+      <a onclick="window.history.back();" href="#">Go back</a>
+    </section>
+  </div>
+  {{partial "footer" .}}
+<html>

@@ -1,5 +1,10 @@
 .projects-container img {
   width: 100%;
+  opacity: 0.8;
+}
+
+.project-container img:hover {
+  opacity: 1;
 }
 
 .slick-slider {
@@ -17,7 +22,7 @@
 }
 
 .project_image{
-  position: relative;
+  // position: relative;
 }
 
 .arrow{

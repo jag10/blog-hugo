@@ -1,5 +1,5 @@
 +++
-article_image = "unreal_engine.jpg"
+article_image = "unreal_engine.min.jpg"
 author = "Jeferson Arboleda"
 author_photo = "jag.jpg"
 date = "2017-03-17T18:34:31+02:00"

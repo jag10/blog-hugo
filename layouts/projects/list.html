@@ -1,21 +1,18 @@
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
 {{partial "head" .}} {{partial "header" (dict "content" . "renderTopImage" false)}}
 {{/* <body> */}}
-  <div class="main-container">
+  <div class="main-container pure-g">
     <section id="main" class="pure-u-1 pure-u-md-3-4">
       <div class="projects-container">
-      {{ range .Site.Taxonomies.project.true }}
-        <div class="project-container">
-          <a href="{{ .Permalink }}">
-            <h1 class='project-title'>{{ .Title }}</h1>
-          </a>
+      {{- range .Site.Taxonomies.project.true -}}
+        <div class="project-container pure-u-1 pure-u-md-1-2">
           <div class="project_image">
             <a class="attach_arrow" href="{{ .Permalink }}">
               <img class="project_image" src="/articles/img/{{ .Params.article_image }}" />
             </a>
           </div>
         </div>
-      {{ end }}
+      {{- end -}}
       </div>
     </section><aside class='sidebar-wrapper pure-u-1 pure-u-md-1-4 sticky'>
       {{partial "aside" (dict "content" . "renderTOC" false)}}
@@ -23,16 +20,3 @@
     <div class='clearfix'></div>
   </div>
   {{partial "footer" .}}
-  <script defer type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('.projects-container').slick({
-        // setting-name: setting-value
-        // appendArrows: '.project_image',
-        adaptiveHeight: true,
-        arrows: true,
-        prevArrow: '<i class="fa fa-chevron-left arrow arrow-left" aria-hidden="true"></i>',
-        nextArrow: '<i class="fa fa-chevron-right arrow arrow-right" aria-hidden="true"></i>'
-      });
-    });
-  </script>

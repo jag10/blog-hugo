@@ -5,6 +5,7 @@ taxonomies:
   pinned:               "pinned"
   serie:                "series"
   project:              "project"
+paginate:               2
 baseURL:                "https://www.jarboleda.me"
 languages:
   en:
