@@ -16,6 +16,7 @@ languages:
     email:              "me@jarboleda.me"
     locale:             "en-US"
     description:        "site description goes here"
+    formspree:          "https://formspree.io/reg@jarboleda.me"
     article_images :    "/content/articles/img/"
     menu:
       main:

@@ -2764,6 +2764,10 @@ footer span {
   margin: 10px 0;
 }
 
+.ContactForm .email, .ContactForm span {
+  color: #1fac61;
+}
+
 .footer-container input,
 .footer-container textarea {
   background-color: #353535;

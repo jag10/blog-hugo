@@ -41,6 +41,10 @@ footer span {
   margin: 10px 0;
 }
 
+.ContactForm .email, .ContactForm span {
+  color: $details-color;
+}
+
 .footer-container input,
 .footer-container textarea {
   background-color: lighten($footer-color, 5);
