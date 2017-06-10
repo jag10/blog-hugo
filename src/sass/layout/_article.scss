@@ -21,6 +21,10 @@ article ul {
   overflow: hidden;
 }
 
+.post-container img{
+  max-width: 100%;
+}
+
 .post-container .post-image-container img {
   @extend %image;
 }

@@ -35,3 +35,8 @@ p {
   text-align: justify;
   @include adjust-font-size-to(16px);
 }
+
+::selection {
+  background-color: $details-color;
+  color: #fff;
+}
