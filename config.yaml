@@ -37,7 +37,6 @@ languages:
         URL:            "https://gitlab.com/jag7"
         weight:         5
     disqusShortname :   "jarboleda-me"
-    # params:
     social:             #web social
       github:           jag10
       facebook:         nozzleio
@@ -52,7 +51,65 @@ languages:
     authors:
       Jeferson:
         name:           Jeferson Arboleda
-        thumbnail:      'me2.png'
+        thumbnail:      'me2.min.png'
+        images:
+          - 'http://www.mirf.ru/Articles/29/5857/T2.jpg'
+          - 'http://img2.wikia.nocookie.net/__cb20090810001437/terminator/images/d/dc/John_conor_05.jpg'
+        bio:            'John Connor is the son of Sarah Connor and Kyle Reese, and the leader of the worldwide human resistance...'
+        email:          me@jarboleda.me
+        social:
+          github:       killskynet
+          facebook:     killskynet
+          twitter:      killskynet
+          googleplus:   killskynet
+          pinterest:    killskynet
+          instagram:    killskynet
+          youtube:      killskynet
+          linkedin:     killskynet
+      # Sarah:            {}
+  es:
+    weight :            1
+    languageName :      "Spanish"
+    baseURL:            "https://www.jarboleda.me"
+    title:              "J Arboleda"
+    email:              "me@jarboleda.me"
+    locale:             "es-ES"
+    description:        "site description goes here"
+    formspree:          "https://formspree.io/me@jarboleda.me"
+    article_images :    "/content/articles/img/"
+    menu:
+      main:
+      - Name:           "home"
+        URL:            "/"
+        weight:         1
+      - Name:           "sobre mi"
+        URL:            "/extras/cv/"
+        weight:         2
+      - Name:           "proyectos"
+        URL:            "/projects/"
+        weight:         3
+      - Name:           "github"
+        URL:            "https://github.com/jag10"
+        weight:         4
+      - Name:           "gitlab"
+        URL:            "https://gitlab.com/jag7"
+        weight:         5
+    disqusShortname :   "jarboleda-me"
+    social:             #web social
+      github:           jag10
+      facebook:         nozzleio
+      facebook_admin:   '17807199'
+      twitter:          j_a_g_x
+      twitter_domain:   nozzle.io
+      googleplus:       NozzleIo
+      pinterest:        nozzleio
+      instagram:        nozzleio
+      youtube:          nozzleio
+      linkedin:         nozzleio
+    authors:
+      Jeferson:
+        name:           Jeferson Arboleda
+        thumbnail:      'me2.min.png'
         images:
           - 'http://www.mirf.ru/Articles/29/5857/T2.jpg'
           - 'http://img2.wikia.nocookie.net/__cb20090810001437/terminator/images/d/dc/John_conor_05.jpg'
@@ -68,31 +125,10 @@ languages:
           youtube:      killskynet
           linkedin:     killskynet
       Sarah:            {}
-  es:
-    weight :            1
-    languageName :      "Spanish"
-    baseURL:            "https://www.jarboleda.me"
-    title:              "jarboleda.me"
-    email:              "me@jarboleda.me"
-    menu:
-      main:
-      - Name:           "home"
-        URL:            "/"
-        weight:         1
-      - Name:           "sobre mi"
-        URL:            "/resume/"
-        weight:         2
-      - Name:           "proyectos"
-        URL:            "/projects-info/"
-        weight:         3
-      - Name:           "github"
-        URL:            "https://github.com/jag10"
-        weight:         4
-      - Name:           "gitlab"
-        URL:            "https://gitlab.com/jag7"
-        weight:         5
     taxonomies:
-        tag:            "tags"
-        pinned:         "pinned"
+      tag:                  "tags"
+      pinned:               "pinned"
+      serie:                "series"
+      project:              "project"
     # params:             locale : "es-ES"
 # pygmentsuseclasses:   true # see https://github.com/richleland/pygments-css
