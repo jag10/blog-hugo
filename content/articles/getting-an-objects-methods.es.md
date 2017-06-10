@@ -9,11 +9,11 @@ project = ""
 resources = []
 series = []
 tags = ["php"]
-title = "Getting an object's (reflected) methods"
+title = "Obteniendo los métodos (reflejados) de un objeto"
 
 +++
-## The problem
-Sometimes we don't have access to the platform docs on which we are working, it's incomplete or we just don't feel like looking for it. In those situations, we usually need more than the typical object's var_dump, which only shows us the object properties but not its methods, which usually gives us that function we are working on without having to dive into the object's properties. Here you'll see the function I use for this task. This function uses the ReflectionMethod class, which gives us info about a method. It needs the classname and method's name as params for its constructor.
+## El problema
+Algunas veces no tenemos acceso a la documentación de una plataforma, es incompleta o simplemente no nos apetece buscarla. En esos casos, es conveniente tener algo más que el típico var_dump de un objeto, que sólo nos muestra las propiedades del objeto pero no sus métodos, que en muchos casos nos dan la funcionalidad que buscamos sin tener que navegar entre miles de propiedades. A continuación expongo la función que uso, utiliza la clase ReflectionMethod, la cual nos muestra información acerca de un método, y necesita como parámetros del constructor el nombre de la clase y el método.
 {{<highlight php>}}
 <?php
 function get_object_info($object){
@@ -27,31 +27,31 @@ function get_object_info($object){
 }
 {{</highlight>}}
 
-In order to keep this function short, php5.4+ is needed because we're acceding a class member while we instantiate it. To achieve this, we have to use an extra parenthesis:
+Para mantener esta función corta, es necesario utilizar php 5.4+, pues estamos accediendo a un miembro de la clase (getParameters) en la instanciación, para lo cual necesitamos un paréntesis extra:
 {{<highlight php>}}
 <?php
 (new ReflectionMethod($class, $method))->getParameters())
 {{</highlight>}}
 
-Is correct in php 5.4
+Es correcto en php 5.4+
 {{<highlight php>}}
 <?php
 new ReflectionMethod($class, $method))->getParameters()
 {{</highlight>}}
 
-Is not correct in any PHP versión, so if we use php < 5.4, we have to separate this line:
+No es correcto en ninguna versión de PHP, por lo que si utilizamos php <5.4, esta línea debería separarse en dos:
 {{<highlight php>}}
 <?php
 $method  = new ReflectionMethod($class, $method);
 $params = $method->getParameters();
 {{</highlight>}}
 
-## Example
-Let's see an example on ProcessWire platform. We want to get data about the current user, but the properties that docs shows are not enough:
+## Ejemplo práctico
+Vamos a ver un ejemplo práctico en la plataforma ProcessWire. Queremos obtener datos acerca del usuario actual, sin embargo las propiedades que indica la documentación no son suficientes:
 
 ![pw cheatsheet](/articles/img/getting-an-objects-methods-1.png)
 
-So, if we want to see the methods for the $user object, we'll see something like this:
+Si listamos los métodos del objeto $user, veremos algo así:
 {{<highlight php>}}
 <?php
 hasRole(Parameter #0 [ $role ], )
@@ -73,4 +73,4 @@ parentsUntil(Parameter #0 [ $selector = '' ], Parameter #1 [ $filter = '' ], )
 closest(Parameter #0 [ $selector ], )
 {{</highlight>}}
 
-Some methods give us the same data as the properties, but we can see new methods that could be really useful. The main advantage of obtaining these methods is that we don't depend on docs and we also see the full list of methods for the object.
+Algunos métodos coinciden con las propiedades, pero también vemos que aparecen muchos más métodos (he recortado la lista) que podrían sernos útiles en muchas situaciones. La ventaja de obtener los métodos así es que no dependemos de la documentación y que vemos cuáles son realmente todos los métodos que podemos utilizar.

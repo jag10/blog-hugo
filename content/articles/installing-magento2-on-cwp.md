@@ -12,7 +12,7 @@ tags = ["magento2", "cwp", "php7"]
 title = "Installing magento2 on cwp"
 
 +++
-
+## Getting started
 In this post I'll explain how to install magento2 in CWP, using php7 and mysql 5.6. Firstly, we need to compile php with the correct extensions magento2 needs. If you use this configure command with php7, magento2 will work like a charm:
 {{<highlight sh>}}
 ./configure
@@ -56,8 +56,13 @@ In this post I'll explain how to install magento2 in CWP, using php7 and mysql 5
 --with-xsl
 {{</highlight>}}
 Of course you can change paths, but you need at least these extensions.
+
+## Instalando magento2
+
 Then, you can proceed to download and install magento2, it's pretty straight forward if your server meets the requirements:
+
 https://www.magentocommerce.com/download
+
 After you install magento2, it will complain about permissions. Magento2 ask permissions on directories to be set as 0700, but this won't work with many hosting plans (those using plesk, cPanel, etc). So we have to change all folder and files permissions with this command:
 {{<highlight sh>}}
 find /path/to/magento -type f -exec chmod 644 {} \;
@@ -74,4 +79,4 @@ Then, we'll tell magento2 to create files with these permissions. We can do that
 (directory_mode and file_mode)
 {{</highlight>}}
 
- And the're you have it, a magento2 install running in a 3€ VPS. For me, it loads in about 3-4 seconds after caché is working, which is good for just 3€/month.
+ And there you have it, a magento2 install running in a 3€ VPS. For me, it loads in about 3-4 seconds after caché is working, which is good for just 3€/month.

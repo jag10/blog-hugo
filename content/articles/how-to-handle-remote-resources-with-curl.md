@@ -12,7 +12,7 @@ tags = ["curl", "php", "fopen"]
 title = "How to handle remote resources with curl"
 
 +++
-
+## The problem
 When you need to get remote files to handle its content (i.e. csv files) you may find out that accesing them isn't as easy as using fopen:
 {{<highlight php>}}
 <?php
@@ -20,8 +20,11 @@ $handle = fopen($filename, "r") or die('could not open .' $filename);
 {{</highlight>}}
 
 If this sentence works, we could then use the handle to parse the file with different php functions like fgetcsv(). Usually, a lot of functions use a Resource param to handle files, so it's important to know how to get a handle from a file. Fopen gives us this functionality, but it can fail in some scenarios:
-If the "allow_url_fopen" is disabled in php settings, we won't be able to open remote files
-If the url we are using makes any redirection, fopen WILL NOT follow that redirección and we'll get a timeout error.
+
+* If the "allow_url_fopen" is disabled in php settings, we won't be able to open remote files
+* If the url we are using makes any redirection, fopen WILL NOT follow that redirección and we'll get a timeout error.
+
+## The solution
 In this case, we should use cURL, so we can follow redirections and get over the "allow_url_fopen" directive. In order to get a resource from a remote url we're going to use php streams. php://temp stream allows us to create a temporal file in memory so we don't need to write in disk, which is slow and forces us to handle the path to the file. So, with the following function we'll be able to get a handle from a remote url and use it as if it was a local file on our disk:
 
 {{<highlight php>}}

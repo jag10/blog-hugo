@@ -14,6 +14,7 @@ title = "Web development environment"
 +++
 
 In this post we'll configure an advanced web development environment. For that, we'll have our web hosted on a server (we will NOT use that server for development), and in our station we'll have a virtual machine. For this vm we'll use vagrant with the  scotch box, which allows us to host a web without extra work
+## Prerequisites
 We'll use the following tecnologies for our environment. You should review them before going on:
 
 * Vagrant. Vagrant makes creating dev environments easy and fast
@@ -27,6 +28,7 @@ We'll use the following tecnologies for our environment. You should review them 
 * livereload. With livereload we'll be able to reload automatically the browser when we make changes on sass, js or .php files
 * git
 
+## Installing vagrant
 Well, the first thing we need to do is install vagrant with virtualbox. Here I'll show you how to do it on Fedora, but it's almost the same on other distros. In first place, we have to install dropbox repo:
 {{<highlight sh>}}
 cd /etc/yum.repos.d/
@@ -66,7 +68,9 @@ If the database dump is larger than 2M, we need to edit the file /etc/php5/apach
 * Database Password	root
 * Database Host	localhost
 
-We can also log in adminer and create a new database
+We can also log in adminer and create a new database.
+
+## Dir structure
 The dir structure I use for development is the following:
 {{<highlight cirru>}}
 /templates/
@@ -85,6 +89,8 @@ The dir structure I use for development is the following:
 |----js < source js files
 .php < templates (header.php, footer.php. etc.)
 {{</highlight>}}
+
+## Automating tasks
 
 Now we have the dev environment prepared, the next step is to use gulp and compass in order to automatize some tasks like compile sass or minify js files. For that, we need to install ruby in the virtual machine:
 {{<highlight sh>}}
@@ -198,6 +204,6 @@ Now, with git, you can work in the best way you feel comfortable. Personally, I 
 * dev. Here I have all source code, including sass files, gulpfile, nodejs modules, etc.
 This repo doesn't contain the whole website, only the directory I use for the theme/plugin I'm working on
 
-Some notes:
+## Notes:
 
 * nodejs, npm, gulp, livereload... all these packages should be installed on the virtual machine, although you can install them in the real machine too, except the livereload extension, which has to be on the server (virtual machine)

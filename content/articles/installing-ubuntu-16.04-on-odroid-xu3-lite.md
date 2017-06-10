@@ -13,6 +13,7 @@ title = "Installing ubuntu 16.04 on odroid xu3 lite"
 
 +++
 
+## Choosing an image
 Ubuntu 16.04 mate has just been released by odroid team, including support for xu3/xu4 boards and their lite versions. In this case we're going to test Ubuntu 16.04 on odroid xu3 lite, which is the board I own. We'll install it on an eMMC module, which is something like an small ssd (not really the same, eMMC isn't as fast as ssd is). This module will give us a boost on performance, although we can also install Ubuntu on a SD card (class 10).
 Firslty, we need to download the image we want to install:
 http://de.eu.odroid.in/ubuntu_16.04lts/
@@ -20,6 +21,7 @@ From the list above I took the image I was looking for, which is the complete ve
 
 * [ubuntu-16.04-mate-odroid-xu3-20160708.img.xz](http://de.eu.odroid.in/ubuntu_16.04lts/ubuntu-16.04-mate-odroid-xu3-20160708.img.xz)
 
+## Writing the image on odroid board
 The next step will be to uncompress the image. This is very important because if we try to write a compressed image into the eMMC module, it won't work at all. So, to uncompress it, use the following command:
  [jag@2ndChance distros]$ unxz ubuntu-16.04-mate-odroid-xu3-20160708.img.xz
 Ok, now we are ready to install the linux image. The easiest way to do it is using the dd command:
@@ -30,6 +32,7 @@ Ok, now we are ready to install the linux image. The easiest way to do it is usi
 [jag@2ndChance distros]$ sync
 [jag@2ndChance distros]$ sync
 {{</highlight>}}
+## Checking the result
 It is very important to use the sync command multiple times after dd so we make sure we flush all the cache content and write the complete image into the eMMC module.
 Now we need to verify the image was correctly written into the eMMC module, we'll use the dd command again:
 {{<highlight sh>}}
@@ -54,6 +57,6 @@ root:odroid
 
 I've been testing Ubuntu on the board and the first impression was really good. They've solved some issues with the hdmi output. In previous versions I had a lot of trouble to make it work, but now it was Plug & Play. On the other hand, I've detected an issue with Ethernet connection, which doesn't work always as expected.
 
-UPDATE:
+## UPDATE
 
 * After some updates and checking the wires, the Ethernet connection works just fine.

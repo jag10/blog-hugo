@@ -9,10 +9,11 @@ project = ""
 resources = []
 series = []
 tags = ["processwire", "piwik"]
-title = "Using piwik's API locally with ProcessWire"
+title = "Utilizando la API de piwik en local con PW"
 
 +++
-To track jglab.me visits I use Piwik. Why? The main reason is because it allows to keep info private, moreover, Piwik offers a powerful API which can be queried locally, and that is important for performance as we can obtain stats about the website without having to query external server. To make local queries I use the following class:
+Para hacer el tracking de visitas de jglab.me utilizo Piwik. ¿Por qué? El principal motivo es que permite mantener la información de manera privada, sin que terceros lleguen a saberla, pero además, piwik ofrece una API muy potente que puede ser utilizada de manera __local__, lo que es muy importante para el rendimiento, pues me permite obtener estadísticas de la web sin realizar ninguna petición. Para las peticiones locales utilizo la siguiente clase:
+
 ## Show me the code
 {{<highlight php>}}
 <?php
@@ -60,7 +61,7 @@ class localPiwik{
 ?>
 {{</highlight>}}
 
-We can use that class in the following way:
+Con esa clase definida, podemos utilizarla de la siguiente manera:
 {{<highlight php>}}
 <?php
 include_once('localPiwik.php');
@@ -68,8 +69,8 @@ $piwik = new localPiwik();
 $visits = $piwik->getUniqueVisits('http://example.org');
 {{</highlight>}}
 
-## The example
-To sum up, I'll show you an example of how to get an ordered list of the most visited posts on a ProcessWire website.
+## El ejemplo
+Para acabar, dejo un ejemplo algo más completo de cómo conseguir una lista ordenada de los posts más visitados en ProcessWire
 {{<highlight php>}}
 <?php
 function top_posts($posts_PW){
