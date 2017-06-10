@@ -2444,6 +2444,16 @@ p {
   line-height: 1.5em;
 }
 
+::-moz-selection {
+  background-color: #1fac61;
+  color: #fff;
+}
+
+::selection {
+  background-color: #1fac61;
+  color: #fff;
+}
+
 .float-left {
   float: left;
 }
@@ -2491,6 +2501,10 @@ article ul {
 
 .post-image-container {
   overflow: hidden;
+}
+
+.post-container img {
+  max-width: 100%;
 }
 
 .pulse-image {
@@ -3290,6 +3304,11 @@ span.nt.fa-search {
 .cc_container .cc_btn:visited {
   background-color: #263238 !important;
   color: #fff !important;
+}
+
+code {
+  background-color: #dedede;
+  padding: 0 5px;
 }
 
 a {

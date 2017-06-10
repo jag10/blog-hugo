@@ -5,8 +5,9 @@ taxonomies:
   pinned:               "pinned"
   serie:                "series"
   project:              "project"
-paginate:               2
+paginate:               3
 baseURL:                "https://www.jarboleda.me"
+MetaDataFormat:         "YAML"
 languages:
   en:
     weight :            0
@@ -16,7 +17,7 @@ languages:
     email:              "me@jarboleda.me"
     locale:             "en-US"
     description:        "site description goes here"
-    formspree:          "https://formspree.io/reg@jarboleda.me"
+    formspree:          "https://formspree.io/me@jarboleda.me"
     article_images :    "/content/articles/img/"
     menu:
       main:
@@ -51,7 +52,7 @@ languages:
     authors:
       Jeferson:
         name:           Jeferson Arboleda
-        thumbnail:      'me_car2.min.png'
+        thumbnail:      'me2.png'
         images:
           - 'http://www.mirf.ru/Articles/29/5857/T2.jpg'
           - 'http://img2.wikia.nocookie.net/__cb20090810001437/terminator/images/d/dc/John_conor_05.jpg'
