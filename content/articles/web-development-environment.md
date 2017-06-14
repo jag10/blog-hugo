@@ -3,7 +3,7 @@ article_image : "web-development-environment.jpg"
 author : "Jeferson"
 date : "2016-07-27T13:50:40+02:00"
 news_keywords : ["sass", "vagrant", "nodejs"]
-pinned : "notpinned"
+pinned : "pinned"
 project : ""
 resources :
   - "VirtualBox 5.1 on Fedora 25/24, CentOS/RHEL 7.3/6.9/5.11": "https://www.if-not-true-then-false.com/2010/install-virtualbox-with-yum-on-fedora-centos-red-hat-rhel/"
@@ -85,7 +85,7 @@ The dir structure I use for development is the following:
 |-- partials < These files contain some parts of the template itself (widgets, comments...)
 |-- src < source code
 |----sass < sass files
-|------modules < sass utilites, they don't output any css code (variavles, placeholders...)
+|------modules < sass utilites, they don't output any css code (variables, placeholders...)
 |------partials < partial sass files (menu.sass, article.sass,...)
 |------vendor < 3rd party libraries (bootstrap, purecss, foundation...)
 |----js < source js files

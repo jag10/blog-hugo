@@ -3,7 +3,7 @@ article_image : "web-development-environment.jpg"
 author : "Jeferson"
 date : "2016-07-27T13:50:40+02:00"
 news_keywords : ["sass", "vagrant", "nodejs"]
-pinned : "notpinned"
+pinned : "pinned"
 project : ""
 resources :
   - "VirtualBox 5.1 en Fedora 25/24, CentOS/RHEL 7.3/6.9/5.11": "https://www.if-not-true-then-false.com/2010/install-virtualbox-with-yum-on-fedora-centos-red-hat-rhel/"
