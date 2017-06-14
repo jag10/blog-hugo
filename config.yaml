@@ -16,7 +16,7 @@ languages:
     title:              "Arboleda"
     email:              "me@jarboleda.me"
     locale:             "en-US"
-    description:        "site description goes here"
+    description:        "The blog of Jeferson Arboleda, software engineer. It's focused on self improvement and overcoming challenges I find everyday"
     formspree:          "https://formspree.io/me@jarboleda.me"
     article_images :    "/content/articles/img/"
     menu:
