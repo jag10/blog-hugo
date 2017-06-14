@@ -54,27 +54,26 @@
   <div class='footer-credits'>
     <div class='footer_social-icons'>
       <ul>
+        {{ with .Site.Params.social.linkedin }}
         <li>
-          <a class='btn-facebook' href='#' title='Facebook'><i class='fa fa-facebook'></i></a>
+          <a class="btn-linkedin" href='https://www.linkedin.com/in/{{ . }}' target='_blank'><i class='fa fa-linkedin'></i></a>
         </li>
+        {{ end }}
+        {{ with .Site.Params.social.github }}
         <li>
-          <a class='btn-twitter' href='#' title='Twitter'><i class='fa fa-twitter'></i></a>
+          <a class="btn-github" href='https://github.com/{{ . }}' target='_blank'><i class='fa fa-github'></i></a>
         </li>
+        {{ end }}
+        {{ with .Site.Params.social.gitlab }}
         <li>
-          <a class='btn-gplus' href='#' title='Google Plus'><i class='fa fa-google-plus'></i></a>
+          <a class="btn-gitlab" href='https://gitlab.com/{{ . }}' target='_blank'><i class='fa fa-gitlab'></i></a>
         </li>
+        {{ end }}
+        {{ with .Site.Params.social.twitter }}
         <li>
-          <a class='btn-youtube' href='#' title='Youtube'><i class='fa fa-youtube-play'></i></a>
+          <a class="btn-twitter" href='https://twitter.com/{{ . }}' target='_blank'><i class='fa fa-twitter'></i></a>
         </li>
-        <li>
-          <a class='btn-behance' href='#' title='Behance'><i class='fa fa-behance'></i></a>
-        </li>
-        <li>
-          <a class='btn-dribbble' href='#' title='Dribbble'><i class='fa fa-dribbble'></i></a>
-        </li>
-        <li>
-          <a class='btn-pinterest' href='#' title='Pinterest'><i class='fa fa-pinterest'></i></a>
-        </li>
+        {{ end }}
       </ul>
     </div>
     <div class='clr'></div>

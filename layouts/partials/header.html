@@ -30,18 +30,26 @@
             </ul>
             <div class="float-right">
               <ul class="pure-menu-list">
+                {{ with .content.Site.Params.social.linkedin }}
                 <li class="pure-menu-item social_menu_entry">
-                  <a href='/' target='_blank'><i class='fa fa-facebook'></i></a>
+                  <a href='https://www.linkedin.com/in/{{ . }}' target='_blank'><i class='fa fa-linkedin'></i></a>
                 </li>
+                {{ end }}
+                {{ with .content.Site.Params.social.github }}
                 <li class="pure-menu-item social_menu_entry">
-                  <a href='/' target='_blank'><i class='fa fa-twitter'></i></a>
+                  <a href='https://github.com/{{ . }}' target='_blank'><i class='fa fa-github'></i></a>
                 </li>
+                {{ end }}
+                {{ with .content.Site.Params.social.gitlab }}
                 <li class="pure-menu-item social_menu_entry">
-                  <a href='/' target='_blank'><i class='fa fa-instagram'></i></a>
+                  <a href='https://gitlab.com/{{ . }}' target='_blank'><i class='fa fa-gitlab'></i></a>
                 </li>
+                {{ end }}
+                {{ with .content.Site.Params.social.twitter }}
                 <li class="pure-menu-item social_menu_entry">
-                  <a href='/' target='_blank'><i class='fa fa-linkedin'></i></a>
+                  <a href='https://twitter.com/{{ . }}' target='_blank'><i class='fa fa-twitter'></i></a>
                 </li>
+                {{ end }}
                 <li class='pure-menu-item nt-search' id='nt-search'>
                   <form action='/search/' id='searchform' method='get'>
                     <div class='nt-search-input-wrap'>

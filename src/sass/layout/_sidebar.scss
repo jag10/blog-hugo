@@ -94,12 +94,16 @@
   @extend %image;
 }
 
-.widget.currently-reading p {
-  @extend .m-text-centered;
-}
+// .widget.currently-reading p {
+//   @extend .m-text-centered;
+// }
+//
+// .widget.currently-reading .book-title {
+//   @extend .m-uppercase;
+//   @extend .m-bold;
+//   margin: 10px 0;
+// }
 
-.widget.currently-reading .book-title {
-  @extend .m-uppercase;
-  @extend .m-bold;
-  margin: 10px 0;
+.widget.currently-reading a>img{
+  @extend .m-centered;
 }

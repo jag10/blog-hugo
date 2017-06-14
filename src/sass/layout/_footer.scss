@@ -86,40 +86,48 @@ footer span {
   background-color: #d53824 !important;
 }
 
-.btn-vimeo {
-  background-color: #4c8ab0 !important;
-}
-
-.btn-behance {
-  background-color: #1769ff !important;
-}
+// .btn-vimeo {
+//   background-color: #4c8ab0 !important;
+// }
+//
+// .btn-behance {
+//   background-color: #1769ff !important;
+// }
 
 .btn-twitter {
   background-color: #3bc1ed !important;
 }
 
-.btn-youtube {
-  background-color: #bf2f29 !important;
-}
+// .btn-youtube {
+//   background-color: #bf2f29 !important;
+// }
 
-.btn-dribbble {
-  background-color: #ef5a92 !important;
-}
-
-.btn-facebook {
-  background-color: #4a6d9d !important;
-}
+// .btn-dribbble {
+//   background-color: #ef5a92 !important;
+// }
+//
+// .btn-facebook {
+//   background-color: #4a6d9d !important;
+// }
+//
+// .btn-pinterest {
+//   background-color: #cb1f25 !important;
+// }
+//
+// .btn-instagram {
+//   background-color: #3f6f94 !important;
+// }
 
 .btn-linkedin {
   background-color: #0b7bb5 !important;
 }
 
-.btn-pinterest {
-  background-color: #cb1f25 !important;
+.btn-github {
+  background-color: #24292e !important;
 }
 
-.btn-instagram {
-  background-color: #3f6f94 !important;
+.btn-gitlab {
+  background-color: #30353E !important;
 }
 
 .btn-behance:hover,
@@ -131,7 +139,8 @@ footer span {
 .btn-pinterest:hover,
 .btn-twitter:hover,
 .btn-vimeo:hover,
-.btn-youtube:hover {
+.btn-youtube:hover,
+.btn-github:hover {
   color: white !important;
 }
 

@@ -22,21 +22,21 @@
   max-width: 1200px;
 }
 
-.m-centered, .footer-container, footer .attribution_logo, .menu-wrapper {
+.m-centered, .footer-container, footer .attribution_logo, .menu-wrapper, .widget.currently-reading a > img {
   margin: 0 auto;
   display: block;
 }
 
 .m-uppercase, .footer-container h2, .pure-menu-item .fa,
-.pure-menu-link, .sidebar .widget-title > h2, .popular-posts .item-content, .widget.currently-reading .book-title, h1, h2 {
+.pure-menu-link, .sidebar .widget-title > h2, .popular-posts .item-content, h1, h2 {
   text-transform: uppercase;
 }
 
-.m-text-centered, .widget.currently-reading p {
+.m-text-centered {
   text-align: center;
 }
 
-.m-bold, .widget.currently-reading .book-title {
+.m-bold {
   font-weight: 600;
 }
 
@@ -2627,7 +2627,7 @@ img.author_avatar {
   color: #FFF;
   position: relative;
   margin-right: 2px;
-  background: #FF3030;
+  background: #1fac61;
   padding: 1px 0;
   border-radius: 2px;
   -moz-border-radius: 2px;
@@ -2823,40 +2823,20 @@ footer span {
   background-color: #d53824 !important;
 }
 
-.btn-vimeo {
-  background-color: #4c8ab0 !important;
-}
-
-.btn-behance {
-  background-color: #1769ff !important;
-}
-
 .btn-twitter {
   background-color: #3bc1ed !important;
-}
-
-.btn-youtube {
-  background-color: #bf2f29 !important;
-}
-
-.btn-dribbble {
-  background-color: #ef5a92 !important;
-}
-
-.btn-facebook {
-  background-color: #4a6d9d !important;
 }
 
 .btn-linkedin {
   background-color: #0b7bb5 !important;
 }
 
-.btn-pinterest {
-  background-color: #cb1f25 !important;
+.btn-github {
+  background-color: #24292e !important;
 }
 
-.btn-instagram {
-  background-color: #3f6f94 !important;
+.btn-gitlab {
+  background-color: #30353E !important;
 }
 
 .btn-behance:hover,
@@ -2868,7 +2848,8 @@ footer span {
 .btn-pinterest:hover,
 .btn-twitter:hover,
 .btn-vimeo:hover,
-.btn-youtube:hover {
+.btn-youtube:hover,
+.btn-github:hover {
   color: white !important;
 }
 
@@ -3289,10 +3270,6 @@ span.nt.fa-search {
 
 .mostVisitedLink > span {
   display: none;
-}
-
-.widget.currently-reading .book-title {
-  margin: 10px 0;
 }
 
 .read-more-button {
