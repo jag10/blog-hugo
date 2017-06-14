@@ -39,6 +39,7 @@ languages:
     disqusShortname :   "jarboleda-me"
     social:             #web social
       github:           jag10
+      gitlab:           jag7
       # facebook:         nozzleio
       # facebook_admin:   '17807199'
       twitter:          j_a_g_x
@@ -47,7 +48,7 @@ languages:
       # pinterest:        nozzleio
       # instagram:        nozzleio
       # youtube:          nozzleio
-      linkedin:         167429134
+      linkedin:         "jeferson-arboleda-167429134"
     authors:
       Jeferson:
         name:           Jeferson Arboleda
@@ -59,6 +60,7 @@ languages:
         email:          me@jarboleda.me
         social:
           github:       jag10
+          gitlab:       jag7
           # facebook:     killskynet
           twitter:      j_a_g_x
           # googleplus:   killskynet
@@ -97,6 +99,7 @@ languages:
     disqusShortname :   "jarboleda-me"
     social:             #web social
       github:           jag10
+      gitlab:           jag7
       twitter:          j_a_g_x
       linkedin:         167429134
     authors:
