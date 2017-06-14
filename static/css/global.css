@@ -3321,6 +3321,13 @@ a, a:visited, a:hover {
   text-decoration: none;
 }
 
+h2[id] {
+  padding-top: 34px;
+  margin-top: -1em;
+  display: inline-block;
+  /* required for webkit browsers */
+}
+
 .cover {
   position: fixed;
   top: 0;
@@ -3633,6 +3640,7 @@ pre {
   content: '#';
   margin-right: 5px;
   color: black;
+  color: #1fac61;
 }
 
 .article-tags {
@@ -3679,7 +3687,6 @@ h2 {
   line-height: 1.2em;
   font-weight: 600;
   color: black;
-  margin: 0.33em 0;
 }
 
 h4 {
