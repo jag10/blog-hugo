@@ -40,7 +40,7 @@
         {{ range $index, $element := .content.Params.resources }}
         <li>
           {{ range $k, $v := $element }}
-          <a href="{{$v}}">{{$k}}</a> {{ end }}
+          <a target="_blank" href="{{$v}}">{{$k}}</a> {{ end }}
         </li>
         {{ end }}
       </ul>
