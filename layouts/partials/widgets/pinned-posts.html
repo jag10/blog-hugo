@@ -6,12 +6,12 @@
         <li>
           <div class='item-content'>
             <div class='item-thumbnail'>
-              <a href='/' target=''>
-                <img alt='' border='0' height='72' src="/articles/img/thumbs/{{ .Page.Params.article_image }} " alt="alt goes here" width='72'/>
+              <a href='{{ .URL }}' target='_blank'>
+                <img alt='{{ .Page.Title }}' width='72' height='72' src="/articles/img/thumbs/{{ .Page.Params.article_image }}" />
               </a>
             </div>
             <div class='item-title'>
-              <a href='url goes here' class="mostVisitedLink">{{ .Page.Title }}
+              <a href='{{ .URL }}' class="mostVisitedLink">{{ .Page.Title }}
                 <span class="detail-span">[0]</span>
               </a>
             </div>

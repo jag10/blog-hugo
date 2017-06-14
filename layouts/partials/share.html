@@ -4,7 +4,7 @@
 {{ $gplus_share_link := ( print "https://plus.google.com/share?url=" .Permalink )}}
 {{ $pinterest_share_link := ( print "https://pinterest.com/pin/create/button/?url=" .Permalink "&media=" .Site.Params.baseURL .Params.article_image "&description=" .Summary )}}
 <div class="soc-sharing">
-  <ul id="share_articles" class="article_share_items">
+  <ul class="article_share_items">
     <li>
       <a class="fa fa-linkedin" href="{{ $linkedin_share_link}}" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
     </li>

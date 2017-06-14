@@ -11,7 +11,7 @@
               <div class='item-content'>
                 <div class='item-thumbnail'>
                   <a href='{{ .URL }}' target='_blank'>
-                    <img alt='' border='0' height='72' src="/articles/img/thumbs/{{ .Params.article_image }}" alt="" width='72' />
+                    <img alt='{{ .Title }}' width='72' height='72' src="/articles/img/thumbs/{{ .Params.article_image }}" />
                   </a>
                 </div>
                 <div class='item-title'>
@@ -49,8 +49,6 @@
     </div>
   </div>
   <!-- /ct-wrapper -->
-  </div>
-  <!-- footer -->
   <div class='footer-credits'>
     <div class='footer_social-icons'>
       <ul>
@@ -82,7 +80,7 @@
     </p>
     <p class='attribution'>Powered by</p>
     <a href='https://gohugo.io/'>
-      <img class='attribution_logo' src="/img/hugo-logo.png" />
+      <img alt="hugo" class='attribution_logo' src="/img/hugo-logo.png" />
     </a>
   </div>
 </footer>
@@ -100,3 +98,5 @@
 </script>
 <script defer type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js"></script>
 <!-- End Cookie Consent plugin -->
+</body>
+</html>
