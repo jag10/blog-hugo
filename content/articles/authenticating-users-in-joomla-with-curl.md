@@ -1,17 +1,16 @@
-+++
-article_image = "authenticating-users-in-joomla-with-curl.jpg"
-author = "Jeferson"
-date = "2016-01-16T11:07:16+02:00"
-description = ""
-news_keywords = []
-pinned = "notpinned"
-project = ""
-resources = []
-series = []
-tags = ["curl"]
-title = "Authenticating users with cURL"
-
-+++
+---
+article_image: "authenticating-users-in-joomla-with-curl.jpg"
+author: "Jeferson"
+date: "2016-01-16T11:07:16+02:00"
+news_keywords: ["curl"]
+pinned: "notpinned"
+project: ""
+resources:
+  - "Basic cURL example": "http://php.net/manual/en/curl.examples-basic.php"
+series: []
+tags: ["curl"]
+title: "Authenticating users with cURL"
+---
 
 In this post I'll explain how to log in a user with cURL. This can be useful if you want to integrate joomla login with an external app. For example, you could have a dual installation of wordpress and joomla and use wordpress joomla to log in joomla users as well.
 

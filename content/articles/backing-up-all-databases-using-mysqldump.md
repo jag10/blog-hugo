@@ -1,17 +1,16 @@
-+++
-article_image = "backing-up-all-databases-using-mysqldump.png"
-author = "Jeferson"
-date = "2015-08-30T11:05:36+02:00"
-description = ""
-news_keywords = []
-pinned = "notpinned"
-project = ""
-resources = []
-series = []
-tags = ["mysqldump", "bash"]
-title = "Backing up all databases using mysqldump"
+---
+article_image : "backing-up-all-databases-using-mysqldump.png"
+author : "Jeferson"
+date : "2015-08-30T11:05:36+02:00"
+news_keywords : ["mysqldump", "bash"]
+pinned : "notpinned"
+project : ""
+resources : []
+series : []
+tags : ["mysqldump", "bash"]
+title : "Backing up all databases using mysqldump"
 
-+++
+---
 In this post I'll explain how I backup all databases in servers I work with. When you face trouble with those servers it'll be pretty useful to have daily database dumps.
 So, I use mysqldump utiliy to backup database and an script I wrote myself to transfer files, which you can find here
 Backing up all databases with mysqldumpo is pretty easy, just use it in this way in bash:

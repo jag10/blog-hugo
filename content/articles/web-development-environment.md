@@ -1,17 +1,16 @@
-+++
-article_image = "web-development-environment.jpg"
-author = "Jeferson"
-date = "2016-07-27T13:50:40+02:00"
-description = ""
-news_keywords = []
-pinned = "notpinned"
-project = ""
-resources = []
-series = []
-tags = ["sass", "vagrant", "nodejs"]
-title = "Web development environment"
+---
+article_image : "web-development-environment.jpg"
+author : "Jeferson"
+date : "2016-07-27T13:50:40+02:00"
+news_keywords : ["sass", "vagrant", "nodejs"]
+pinned : "notpinned"
+project : ""
+resources : []
+series : []
+tags : ["sass", "vagrant", "nodejs"]
+title : "Web development environment"
 
-+++
+---
 
 In this post we'll configure an advanced web development environment. For that, we'll have our web hosted on a server (we will NOT use that server for development), and in our station we'll have a virtual machine. For this vm we'll use vagrant with the  scotch box, which allows us to host a web without extra work
 ## Prerequisites

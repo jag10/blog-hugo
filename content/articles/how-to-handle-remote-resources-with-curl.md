@@ -1,17 +1,16 @@
-+++
-article_image = "how-to-handle-remote-resources-with-curl.png"
-author = "Jeferson"
-date = "2016-07-17T13:34:28+02:00"
-description = ""
-news_keywords = []
-pinned = "notpinned"
-project = ""
-resources = []
-series = []
-tags = ["curl", "php", "fopen"]
-title = "How to handle remote resources with curl"
+---
+article_image : "how-to-handle-remote-resources-with-curl.png"
+author : "Jeferson"
+date : "2016-07-17T13:34:28+02:00"
+news_keywords : ["curl", "php", "fopen"]
+pinned : "notpinned"
+project : ""
+resources : []
+series : []
+tags : ["curl", "php", "fopen"]
+title : "How to handle remote resources with curl"
 
-+++
+---
 ## The problem
 When you need to get remote files to handle its content (i.e. csv files) you may find out that accesing them isn't as easy as using fopen:
 {{<highlight php>}}

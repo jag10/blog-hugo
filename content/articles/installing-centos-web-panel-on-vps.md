@@ -1,17 +1,16 @@
-+++
-article_image = "installing-centos-web-panel-on-vps.jpg"
-author = "Jeferson"
-date = "2016-03-24T12:28:50+02:00"
-description = ""
-news_keywords = []
-pinned = "notpinned"
-project = ""
-resources = []
-series = []
-tags = ["magento", "cwp", "php7"]
-title = "Centos web panel with php7 and mysql5.6"
+---
+article_image : "installing-centos-web-panel-on-vps.jpg"
+author : "Jeferson"
+date : "2016-03-24T12:28:50+02:00"
+news_keywords : ["magento", "cwp", "php7"]
+pinned : "notpinned"
+project : ""
+resources : []
+series : []
+tags : ["magento", "cwp", "php7"]
+title : "Centos web panel with php7 and mysql5.6"
 
-+++
+---
 
 Firstly, we'll install centOS Web Panel, just follow the instructions in the CWP website: http://centos-webpanel.com/installation-instructions
 After a fresh install, we'll stop CWP to perform the mysqld update:

@@ -1,17 +1,16 @@
-+++
-article_image = "using-piwik-api-locally-with-pw.jpg"
-author = "Jeferson"
-date = "2016-05-01T12:37:41+02:00"
-description = ""
-news_keywords = []
-pinned = "notpinned"
-project = ""
-resources = []
-series = []
-tags = ["processwire", "piwik"]
-title = "Using piwik's API locally with ProcessWire"
+---
+article_image : "using-piwik-api-locally-with-pw.jpg"
+author : "Jeferson"
+date : "2016-05-01T12:37:41+02:00"
+news_keywords : ["processwire", "piwik"]
+pinned : "notpinned"
+project : ""
+resources : []
+series : []
+tags : ["processwire", "piwik"]
+title : "Using piwik's API locally with ProcessWire"
 
-+++
+---
 To track jglab.me visits I use Piwik. Why? The main reason is because it allows to keep info private, moreover, Piwik offers a powerful API which can be queried locally, and that is important for performance as we can obtain stats about the website without having to query external server. To make local queries I use the following class:
 ## Show me the code
 {{<highlight php>}}

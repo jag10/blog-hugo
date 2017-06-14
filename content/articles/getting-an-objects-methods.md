@@ -1,17 +1,16 @@
-+++
-article_image = "getting-an-objects-methods.jpg"
-author = "Jeferson"
-date = "2016-05-01T13:28:37+02:00"
-description = ""
-news_keywords = []
-pinned = "notpinned"
-project = ""
-resources = []
-series = []
-tags = ["php"]
-title = "Getting an object's (reflected) methods"
+---
+article_image : "getting-an-objects-methods.jpg"
+author : "Jeferson"
+date : "2016-05-01T13:28:37+02:00"
+news_keywords : ["php", "ReflectionMethod"]
+pinned : "notpinned"
+project : ""
+resources : []
+series : []
+tags : ["php", "ReflectionMethod"]
+title : "Getting an object's (reflected) methods"
 
-+++
+---
 ## The problem
 Sometimes we don't have access to the platform docs on which we are working, it's incomplete or we just don't feel like looking for it. In those situations, we usually need more than the typical object's var_dump, which only shows us the object properties but not its methods, which usually gives us that function we are working on without having to dive into the object's properties. Here you'll see the function I use for this task. This function uses the ReflectionMethod class, which gives us info about a method. It needs the classname and method's name as params for its constructor.
 {{<highlight php>}}

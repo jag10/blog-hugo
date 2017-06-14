@@ -1,17 +1,16 @@
-+++
-article_image = "web-development-environment.jpg"
-author = "Jeferson"
-date = "2016-07-27T13:50:40+02:00"
-description = ""
-news_keywords = []
-pinned = "notpinned"
-project = ""
-resources = []
-series = []
-tags = ["sass", "vagrant", "nodejs"]
-title = "Entorno para desarrollo web"
+---
+article_image : "web-development-environment.jpg"
+author : "Jeferson"
+date : "2016-07-27T13:50:40+02:00"
+news_keywords : ["sass", "vagrant", "nodejs"]
+pinned : "notpinned"
+project : ""
+resources : []
+series : []
+tags : ["sass", "vagrant", "nodejs"]
+title : "Entorno para desarrollo web"
 
-+++
+---
 En este post vamos a ver un entorno avanzado de desarrollo web. Tendremos nuestra web alojada en un servidor (que NO utilizaremos para nada durante el desarrollo), y en nuestra máquina local tendremos una máquina virtual para el sitio web en el que estemos trabajando. Para la máquina virtual utilizaremos vagrant con el stack de [scotch](https://box.scotch.io/), que nos viene preparado para montar directamente el sitio web sin trabajo extra.
 
 ## Requisitos previos

@@ -1,17 +1,16 @@
-+++
-article_image = "getting-1.5s-page-load-time-on-a-basic-vps.png"
-author = "Jeferson"
-date = "2016-02-27T12:21:32+02:00"
-description = ""
-news_keywords = []
-pinned = "notpinned"
-project = ""
-resources = []
-series = []
-tags = ["performance", "vps", "processwire"]
-title = "Getting 1.5s page load time on a basic vps"
+---
+article_image : "getting-1.5s-page-load-time-on-a-basic-vps.png"
+author : "Jeferson"
+date : "2016-02-27T12:21:32+02:00"
+news_keywords : ["performance", "vps", "processwire"]
+pinned : "notpinned"
+project : ""
+resources : []
+series : []
+tags : ["performance", "vps", "processwire"]
+title : "Getting 1.5s page load time on a basic vps"
 
-+++
+---
 As you can see on the graphics, I had 5s load time for my home page, which is kind of basic. It wasn't that bad if you look at the packages my server runs: gitlab, Roundcube's webmail, sentora (open source control panel) and piwik (stats management).
 Note: Those 11s peaks you see there were produced while I was doing load tests on my server.
 My environment's specs are:
@@ -29,7 +28,7 @@ performance before tuning up
 ![performance before tuning up](/articles/img/getting-1.5s-page-load-time-on-a-basic-vps-1.png)
 First thing I did was go to gtmetrix.com to find out why my site was slow. These were the firsts conclusions:
 
-* Optimizing images is important to save bandwidth. ProcessWire is great for this as it allows to resize images in an easy way. For example, for the images on each blog post, I used the 'size' method on image files to resize the image: echo $post->post_image->size(573, 0, array('quality' => 70))->url; That simple line outputs the post image, resized and with a quality of 70% (yup, PW is awesome).
+* Optimizing images is important to save bandwidth. ProcessWire is great for this as it allows to resize images in an easy way. For example, for the images on each blog post, I used the 'size' method on image files to resize the image: echo $post->post_image->size(573, 0, array('quality' :> 70))->url; That simple line outputs the post image, resized and with a quality of 70% (yup, PW is awesome).
 * Gzip compression is an easy way to get huge improvements on performance. I enabled this through .htaccess with the following line:
 AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/x-javascript text/javascript
 * This allows me to gzip html, xl, css, JS, etc.

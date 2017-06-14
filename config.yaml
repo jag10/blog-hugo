@@ -39,33 +39,33 @@ languages:
     disqusShortname :   "jarboleda-me"
     social:             #web social
       github:           jag10
-      facebook:         nozzleio
-      facebook_admin:   '17807199'
+      # facebook:         nozzleio
+      # facebook_admin:   '17807199'
       twitter:          j_a_g_x
-      twitter_domain:   nozzle.io
-      googleplus:       NozzleIo
-      pinterest:        nozzleio
-      instagram:        nozzleio
-      youtube:          nozzleio
-      linkedin:         nozzleio
+      # twitter_domain:   nozzle.io
+      # googleplus:       NozzleIo
+      # pinterest:        nozzleio
+      # instagram:        nozzleio
+      # youtube:          nozzleio
+      linkedin:         167429134
     authors:
       Jeferson:
         name:           Jeferson Arboleda
         thumbnail:      'me2.min.png'
         images:
-          - 'http://www.mirf.ru/Articles/29/5857/T2.jpg'
-          - 'http://img2.wikia.nocookie.net/__cb20090810001437/terminator/images/d/dc/John_conor_05.jpg'
-        bio:            'John Connor is the son of Sarah Connor and Kyle Reese, and the leader of the worldwide human resistance...'
+          - 'me2.png'
+        bio:            'Looking for a challenge :) | Currently interested in [Docker](https://docker.com), [kubernetes](https://kubernetes.io/),
+                          and [IBM bluemix](https://www.ibm.com/cloud-computing/bluemix/)'
         email:          me@jarboleda.me
         social:
-          github:       killskynet
-          facebook:     killskynet
-          twitter:      killskynet
-          googleplus:   killskynet
-          pinterest:    killskynet
-          instagram:    killskynet
-          youtube:      killskynet
-          linkedin:     killskynet
+          github:       jag10
+          # facebook:     killskynet
+          twitter:      j_a_g_x
+          # googleplus:   killskynet
+          # pinterest:    killskynet
+          # instagram:    killskynet
+          # youtube:      killskynet
+          linkedin:     167429134
       # Sarah:            {}
   es:
     weight :            1
@@ -80,7 +80,7 @@ languages:
     menu:
       main:
       - Name:           "home"
-        URL:            "/"
+        URL:            "/es"
         weight:         1
       - Name:           "sobre mi"
         URL:            "/extras/cv/"
@@ -97,38 +97,24 @@ languages:
     disqusShortname :   "jarboleda-me"
     social:             #web social
       github:           jag10
-      facebook:         nozzleio
-      facebook_admin:   '17807199'
       twitter:          j_a_g_x
-      twitter_domain:   nozzle.io
-      googleplus:       NozzleIo
-      pinterest:        nozzleio
-      instagram:        nozzleio
-      youtube:          nozzleio
-      linkedin:         nozzleio
+      linkedin:         167429134
     authors:
       Jeferson:
         name:           Jeferson Arboleda
         thumbnail:      'me2.min.png'
         images:
-          - 'http://www.mirf.ru/Articles/29/5857/T2.jpg'
-          - 'http://img2.wikia.nocookie.net/__cb20090810001437/terminator/images/d/dc/John_conor_05.jpg'
+          - 'me2.png'
         bio:            'John Connor is the son of Sarah Connor and Kyle Reese, and the leader of the worldwide human resistance...'
         email:          me@jarboleda.me
         social:
-          github:       killskynet
-          facebook:     killskynet
-          twitter:      killskynet
-          googleplus:   killskynet
-          pinterest:    killskynet
-          instagram:    killskynet
-          youtube:      killskynet
-          linkedin:     killskynet
-      Sarah:            {}
+          github:       jag10
+          twitter:      j_a_g_x
+          linkedin:     167429134
+      # Sarah:            {}
     taxonomies:
       tag:                  "tags"
       pinned:               "pinned"
       serie:                "series"
       project:              "project"
-    # params:             locale : "es-ES"
 # pygmentsuseclasses:   true # see https://github.com/richleland/pygments-css

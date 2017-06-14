@@ -4,20 +4,19 @@
     <a href="{{.content.URL}}">
       <img src="/articles/img/{{.content.Params.article_image}}" alt="article image" class="pulse-image" width="100%" height="100%">
     </a>
-    {{/* {{ else }}
-    <img src="/articles/img/{{.content.Params.article_image}}" alt="article image" class="pulse-image" width="100%" height="100%"> */}}
     {{ end }}
   </div>
   <div id='article_summary' class="article_summary">
     <div class="article-date">
       <p class="day"><i class="fa fa-calendar"></i>{{ .content.Date.Format "2 Jan 2006" }}</p>
       <p><i class="fa fa-clock-o"></i>{{ add .content.ReadingTime 1 }} min read  ~ {{ .content.FuzzyWordCount }} words</p>
-      {{/* <p><i class="fa fa-align-left"></i>~ {{ .content.FuzzyWordCount }} words</p> */}}
     </div>
+    {{ with .content.Params.tags }}
     <div class="article-tags">
-      {{ range first 5 .content.Params.tags }}
+      {{ range first 5 . }}
       <a href="search tag" rel="tag">{{.}}</a> {{ end }}
     </div>
+    {{ end }}
     <div class="clearfix"></div>
     {{ if not $.renderFull }}
     <a href="{{ .content.URL }}" title="{{ .Title }}">
@@ -26,13 +25,6 @@
     {{ else }}
     <h1 class="article_title title">{{ .content.Title }}</h1>
     {{ end}}
-
-    {{/* {{ if $.renderFull }}
-    <div class='table_of_contents'>
-      <p>Table Of Contents:</p>
-      {{.content.TableOfContents}}
-    </div>
-    {{ end }} */}}
     <div class="article_excerpt">
       {{ if not $.renderFull }}
       <p>{{.content.Summary | markdownify}}</p>
@@ -58,20 +50,10 @@
       {{ if not $.renderFull }}
       <a class="read-more-button pure-button" href="{{.content.URL}}">Read More</a> {{ end }}
       {{ partial "share" .content}}
-      {{/*
-      <div class='blog-pager' id='blog-pager'>
-        <span id='blog-pager-newer-link'>
-              <a class='blog-pager-newer-link' href="url goes here" id='Blog1_blog-pager-newer-link' title='Newer Posts'>&lt; Newer Posts</a>
-            </span>
-        <span id='blog-pager-older-link'>
-                <a class='blog-pager-older-link' href="url goes here" id='Blog1_blog-pager-older-link' title='Older Posts'>Older Posts &gt;</a>
-              </span>
-      </div> */}}
     </div>
 
     <div class='post-footer'>
       {{ if $.renderFull }}
-       {{/* {{ partial "author.html" .content}}  */}}
        {{ partial "disqus.html" .content}}
      {{ end }}
     </div>

@@ -1,17 +1,16 @@
-+++
-article_image = "transferring-files-with-ftp-through-bash-expect-script.png"
-author = "Jeferson"
-date = "2015-08-30T11:03:31+02:00"
-description = ""
-news_keywords = []
-pinned = "notpinned"
-project = ""
-resources = []
-series = []
-tags = ["backups", "ftp", "bash"]
-title = "Transferring files with FTP through bash expect script"
+---
+article_image : "transferring-files-with-ftp-through-bash-expect-script.png"
+author : "Jeferson"
+date : "2015-08-30T11:03:31+02:00"
+news_keywords : ["backups", "ftp", "bash"]
+pinned : "notpinned"
+project : ""
+resources : []
+series : []
+tags : ["backups", "ftp", "bash"]
+title : "Transferring files with FTP through bash expect script"
 
-+++
+---
 
 If you use to transfer backups through ftp, it can be very handy to write a bash script to put a file in a remote server in an easy way. With this script, transferring a file will be as easy as this:
 {{<highlight sh>}}

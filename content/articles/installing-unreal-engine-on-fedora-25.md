@@ -1,11 +1,8 @@
 ---
 article_image: "unreal_engine.min.jpg"
 author: Jeferson
-#author_description: "Computer engineer, interested in Linux, server technologies and eCommerce platforms, learning everyday."
-#author_photo: "jag.jpg"
 date: "2017-03-17T21:33:19+02:00"
-description: "here goes description"
-news_keywords: ["skynet", "terminator", "john connor"]
+news_keywords: ["unrealengine", "fedora25"]
 pinned: "pinned"
 project: "true"
 resources:
@@ -16,7 +13,7 @@ tags: ["unrealengine", "fedora25"]
 title: "installing unreal engine on fedora 25"
 ---
 ## Linking GitHub with EpicGames
-Firstly, you need to signup in github and then link your github account with your epic games account:
+In this article you'll find a way to get unreal engine and make it work on fedora 25. Firstly, you need to signup in github and then link your github account with your epic games account:
 https://www.unrealengine.com/ue4-on-github
 Then you should receive an email confirming you joined up to the epic games organization. Once you receive it, you can clone the source code of unreal engine:
 {{<highlight sh>}}
@@ -41,7 +38,3 @@ make
 {{<highlight sh>}}
 $ ./UE4Editor "/home/user/Documents/Unreal\ Projects/MyProject/MyProject.uproject"
 {{</highlight>}}
-
-## Installing clang
-## Installing clang
-## Installing clang

@@ -2,8 +2,7 @@
 article_image : "zipping-and-unzipping-websites-with-php.png"
 author : "Jeferson"
 date : "2015-08-24T11:00:53+02:00"
-description : ""
-news_keywords : []
+news_keywords : ["php", "backup", "zip"]
 pinned : "notpinned"
 project : ""
 resources:

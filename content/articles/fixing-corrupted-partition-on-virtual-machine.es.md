@@ -1,17 +1,16 @@
-+++
-article_image = "fixing-corrupted-partition-on-virtual-machine.jpg"
-author = "Jeferson"
-date = "2016-07-28T14:07:04+02:00"
-description = ""
-news_keywords = []
-pinned = "notpinned"
-project = ""
-resources = []
-series = []
-tags = ["vagrant", "vm", "ubuntu"]
-title = "Arreglando una partición corrupta de una máquina virtual"
+---
+article_image : "fixing-corrupted-partition-on-virtual-machine.jpg"
+author : "Jeferson"
+date : "2016-07-28T14:07:04+02:00"
+news_keywords : ["vagrant", "vm", "ubuntu"]
+pinned : "notpinned"
+project : ""
+resources : []
+series : []
+tags : ["vagrant", "vm", "ubuntu"]
+title : "Arreglando una partición corrupta de una máquina virtual"
 
-+++
+---
 ## Detección del error
 Si alguna vez encuentras el siguiente error al utilizar vagrant o simplemente al arrancar una máquina virtual, más abajo veremos cómo solucionarlo:
 {{<highlight sh>}}

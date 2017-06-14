@@ -8,7 +8,7 @@
       <h4 rel='author'>{{ $author.name }}</h4>
     </div>
     <div class='author_description_container'>
-      <p>{{ $author.bio }}</p>
+      <p>{{ $author.bio | markdownify }}</p>
       <div class='authorsocial'>
         <a class='' href='http://facebook.com/' target='_blank'><i class='fa fa-facebook'></i></a>
         <a class='' href='http://twitter.com/' target='_blank'><i class='fa fa-twitter'></i></a>

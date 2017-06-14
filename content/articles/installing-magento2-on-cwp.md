@@ -1,17 +1,16 @@
-+++
-article_image = "installing-magento2-on-cwp.jpg"
-author = "Jeferson"
-date = "2016-03-24T12:34:39+02:00"
-description = ""
-news_keywords = []
-pinned = "notpinned"
-project = ""
-resources = []
-series = []
-tags = ["magento2", "cwp", "php7"]
-title = "Installing magento2 on cwp"
+---
+article_image : "installing-magento2-on-cwp.jpg"
+author : "Jeferson"
+date : "2016-03-24T12:34:39+02:00"
+news_keywords : ["magento2", "cwp", "php7"]
+pinned : "notpinned"
+project : ""
+resources : []
+series : []
+tags : ["magento2", "cwp", "php7"]
+title : "Installing magento2 on cwp"
 
-+++
+---
 ## Getting started
 In this post I'll explain how to install magento2 in CWP, using php7 and mysql 5.6. Firstly, we need to compile php with the correct extensions magento2 needs. If you use this configure command with php7, magento2 will work like a charm:
 {{<highlight sh>}}

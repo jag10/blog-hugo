@@ -2,7 +2,6 @@
 article_image: "unreal_engine.min.jpg"
 author: Jeferson
 date: "2017-03-17T21:33:19+02:00"
-description: "here goes description"
 news_keywords:  ["unrealengine", "fedora25"]
 pinned: "pinned"
 project: "true"

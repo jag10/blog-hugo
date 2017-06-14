@@ -1,17 +1,16 @@
-+++
-article_image = "how-to-handle-remote-resources-with-curl.png"
-author = "Jeferson"
-date = "2016-07-17T13:34:28+02:00"
-description = ""
-news_keywords = []
-pinned = "notpinned"
-project = ""
-resources = []
-series = []
-tags = ["curl", "php", "fopen"]
-title = "Cómo manejar recursos remotos con curl"
+---
+article_image : "how-to-handle-remote-resources-with-curl.png"
+author : "Jeferson"
+date : "2016-07-17T13:34:28+02:00"
+news_keywords : ["curl", "php", "fopen"]
+pinned : "notpinned"
+project : ""
+resources : []
+series : []
+tags : ["curl", "php", "fopen"]
+title : "Cómo manejar recursos remotos con curl"
 
-+++
+---
 ## El problema
 Cuando necesitas obtener ficheros remotos para manejar su contenido (ejemplo: ficheros csv) es posible que su acceso no sea tan sencillo como utilizar fopen:
 {{<highlight php>}}
