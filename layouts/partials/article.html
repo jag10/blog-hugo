@@ -2,7 +2,7 @@
   <div class="post-image-container">
     {{ if not $.renderFull }}
     <a href="{{.content.URL}}">
-      <img src="/articles/img/{{.content.Params.article_image}}" alt="article image" class="pulse-image">
+      <img src="/articles/img/{{.content.Params.article_image}}" alt="{{ .content.Title }}" class="pulse-image">
     </a>
     {{ end }}
   </div>

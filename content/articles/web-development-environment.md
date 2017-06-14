@@ -63,6 +63,7 @@ By default, scotchbox makes the dir where we installed the vm (~/vagrant/dev) sh
 cd ~/vagrant/dev/public/
 wget https://www.adminer.org/static/download/4.2.5/adminer-4.2.5.php
 {{</highlight>}}
+
 If the database dump is larger than 2M, we need to edit the file /etc/php5/apache2/php.ini and modify the upload_max_filesize directive (256M for example). Once the web is migrated, we should check the .htaccess file in case we need to make any modification (disable ssl, for example). Also, we have to modify the connection data for the database:
 * Key	          Value
 * Database Name	scotchbox
@@ -114,6 +115,7 @@ npm install --global gulp-cli
 npm install --save-dev gulp
 compass create <project_name>
 {{</highlight>}}
+
 Ok, now we have gulp and compass. Now we need to tell gulp which tasks we want to automatize. For that, we have to use a gulpfile.js in our project. Here is the one I use, you can modify it to fit your needs. This file:
 
 * Imports neeeded deps
@@ -198,6 +200,7 @@ Now we are set, we can use gulp to automatize tasks. From our project directory:
 {{<highlight js>}}
 gulp live
 {{</highlight>}}
+
 Ok, now we can modify code on ~/vagrant/dev and watch the changes automatically on Chrome (using the livereload chrome extension). This gives us an agile development environment, where we can develop without touching the live site
 Now, with git, you can work in the best way you feel comfortable. Personally, I use 3 "infinite" branches:
 

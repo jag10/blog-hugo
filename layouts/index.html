@@ -1,6 +1,5 @@
 {{/* {{ .Site | printf "%+v" }} */}}
 {{partial "head" .}} {{partial "header" (dict "content" . "renderTopImage" false)}}
-{{/* <body> */}}
   <div class="main-container">
     <section id="main" class="pure-u-1 pure-u-md-3-4">
     {{ range (.Paginate (where .Data.Pages "Type" "articles")).Pages }}
@@ -15,5 +14,3 @@
     <div class='clearfix'></div>
   </div>
   {{partial "footer" .}}
-{{/* </body> */}}
-{{/* <html> */}}
