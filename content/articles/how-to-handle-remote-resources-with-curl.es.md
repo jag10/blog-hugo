@@ -5,7 +5,8 @@ date : "2016-07-17T13:34:28+02:00"
 news_keywords : ["curl", "php", "fopen"]
 pinned : "notpinned"
 project : ""
-resources : []
+resources:
+  - "Ejemplo básico de cURL": "http://php.net/manual/en/curl.examples-basic.php"
 series : []
 tags : ["curl", "php", "fopen"]
 title : "Cómo manejar recursos remotos con curl"

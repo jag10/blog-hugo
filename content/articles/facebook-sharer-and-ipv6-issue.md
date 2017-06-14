@@ -5,7 +5,8 @@ date : "2015-08-11T10:58:34+02:00"
 news_keywords : ["facebook", "ipv6", "plesk"]
 pinned : "notpinned"
 project : ""
-resources : []
+resources:
+  - "IPv6 - Are you connected?": "https://ip6.nl/"
 series : []
 tags : ["facebook", "ipv6", "plesk"]
 title : "Facebook sharer and IPv6 issue"

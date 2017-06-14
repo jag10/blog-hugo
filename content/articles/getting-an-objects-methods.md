@@ -5,7 +5,10 @@ date : "2016-05-01T13:28:37+02:00"
 news_keywords : ["php", "ReflectionMethod"]
 pinned : "notpinned"
 project : ""
-resources : []
+resources:
+  - "get_class_methods on php.net": "http://php.net/manual/en/function.get-class-methods.php"
+  - "get_class on php.net": "http://php.net/manual/en/function.get-class.php"
+  - "The ReflectionMethod class on php.net": "http://php.net/manual/en/class.reflectionmethod.php"
 series : []
 tags : ["php", "ReflectionMethod"]
 title : "Getting an object's (reflected) methods"

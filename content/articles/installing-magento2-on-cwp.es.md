@@ -5,7 +5,10 @@ date : "2016-03-24T12:34:39+02:00"
 news_keywords : ["magento2", "cwp", "php7"]
 pinned : "notpinned"
 project : ""
-resources : []
+resources:
+  - "Compilando PHP 7 en CentOS": "http://www.shaunfreeman.name/compiling-php-7-on-centos/"
+  - "Descarga magento2": "https://www.magentocommerce.com/download"
+  - "Magento 2 permisos de ficheros/directorios": "https://magento.stackexchange.com/questions/91870/magento-2-folder-file-permissions"
 series : []
 tags : ["magento2", "cwp", "php7"]
 title : "Instalando magento2 en cwp"

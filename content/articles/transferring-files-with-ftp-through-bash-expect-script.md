@@ -5,7 +5,8 @@ date : "2015-08-30T11:03:31+02:00"
 news_keywords : ["backups", "ftp", "bash"]
 pinned : "notpinned"
 project : ""
-resources : []
+resources:
+  - "Expect on linux.die.net": "https://linux.die.net/man/1/expect"
 series : []
 tags : ["backups", "ftp", "bash"]
 title : "Transferring files with FTP through bash expect script"

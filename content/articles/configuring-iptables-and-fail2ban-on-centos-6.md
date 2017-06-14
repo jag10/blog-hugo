@@ -5,7 +5,8 @@ date : "2015-08-10T10:56:10+02:00"
 news_keywords : ["iptables", "fail2ban", "centos6"]
 pinned : "notpinned"
 project : ""
-resources : []
+resources:
+  - "iptables script on bash.cyberciti.biz": "https://bash.cyberciti.biz/firewall/linux-iptables-firewall-shell-script-for-standalone-server/"
 series : []
 tags : ["iptables", "fail2ban", "centos6"]
 title : "Configuring IPTABLES and fail2ban on centOS 6"

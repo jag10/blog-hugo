@@ -6,8 +6,8 @@ news_keywords: ["unrealengine", "fedora25"]
 pinned: "pinned"
 project: "true"
 resources:
-  - "Building on linux": "https://wiki.unrealengine.com/Building_On_Linux"
-  - "Running on linux": "https://wiki.unrealengine.com/Running_On_Linux"
+  - "Building UnrealEngine on linux": "https://wiki.unrealengine.com/Building_On_Linux"
+  - "Running UnrealEngine on linux": "https://wiki.unrealengine.com/Running_On_Linux"
 series: ["serie1"]
 tags: ["unrealengine", "fedora25"]
 title: "installing unreal engine on fedora 25"

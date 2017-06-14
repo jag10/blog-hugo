@@ -5,7 +5,9 @@ date : "2016-02-27T12:21:32+02:00"
 news_keywords : ["performance", "vps", "processwire"]
 pinned : "notpinned"
 project : ""
-resources : []
+resources:
+  - "Analyze Performance of your website on gtmetrix.com": "https://gtmetrix.com/"
+  - "Check GZIP compression": "https://checkgzipcompression.com/"
 series : []
 tags : ["performance", "vps", "processwire"]
 title : "Getting 1.5s page load time on a basic vps"

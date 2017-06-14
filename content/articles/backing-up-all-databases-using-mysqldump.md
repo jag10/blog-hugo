@@ -5,7 +5,8 @@ date : "2015-08-30T11:05:36+02:00"
 news_keywords : ["mysqldump", "bash"]
 pinned : "notpinned"
 project : ""
-resources : []
+resources:
+  - "mysqldump on dev.mysql.com": "https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html"
 series : []
 tags : ["mysqldump", "bash"]
 title : "Backing up all databases using mysqldump"

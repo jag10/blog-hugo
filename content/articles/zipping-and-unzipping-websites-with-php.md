@@ -95,4 +95,4 @@ if ($res === TRUE) {
 The script takes the file "data.zip" in the current dir and extract its contents to the current dir. You can specify a subdir uncommenting the line $path .= '/subdir';
 You should delete these scripts as soon as you use them, they could break your website if someone discovers them.
 ## BONUS
-If you surf the internet you'll find php scripts to backup databases as well. You can find some links in Resources:
+If you surf the internet you'll find php scripts to backup databases as well. You can find some links in Resources.

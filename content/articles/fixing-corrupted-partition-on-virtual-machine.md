@@ -5,7 +5,9 @@ date : "2016-07-28T14:07:04+02:00"
 news_keywords : ["vagrant", "vm", "ubuntu"]
 pinned : "notpinned"
 project : ""
-resources : []
+resources:
+  - "Ubuntu ISOs": "https://www.ubuntu.com/download/desktop"
+  - "fsck on linux.die.net": "https://linux.die.net/man/8/fsck"
 series : []
 tags : ["vagrant", "vm", "ubuntu"]
 title : "Fixing a corrupted partition on a virtual machine"

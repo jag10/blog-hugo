@@ -5,7 +5,10 @@ date : "2016-07-27T13:50:40+02:00"
 news_keywords : ["sass", "vagrant", "nodejs"]
 pinned : "notpinned"
 project : ""
-resources : []
+resources :
+  - "VirtualBox 5.1 en Fedora 25/24, CentOS/RHEL 7.3/6.9/5.11": "https://www.if-not-true-then-false.com/2010/install-virtualbox-with-yum-on-fedora-centos-red-hat-rhel/"
+  - "Scotch box": "https://box.scotch.io/"
+  - "adminer en adminer.org": "https://www.adminer.org/static/download/4.2.5/adminer-4.2.5.php"
 series : []
 tags : ["sass", "vagrant", "nodejs"]
 title : "Entorno para desarrollo web"
@@ -202,5 +205,6 @@ En cuanto a la metodología a utilizar en git, queda a elección del desarrollad
 * dev. Aquí se incluye todo el código del template, incluyendo ficheros sass, js, gulpfile, package.json, etc.
 
 Este repositorio no contiene toda la web, sólo el directorio que contiene el tema/plugin que se esté desarrollando.
-## Aclaraciones:
+## Aclaraciones
+
 nodejs, npm, gulp, livereload... todos estos paquetes deben instalarse en la máquina virtual, aunque por comodidad también pueden instalarse en la máquina real, excepto livereload, que tiene que estar en el servidor (máquina virtual)

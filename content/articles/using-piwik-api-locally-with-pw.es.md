@@ -5,7 +5,9 @@ date : "2016-05-01T12:37:41+02:00"
 news_keywords : ["processwire", "piwik"]
 pinned : "notpinned"
 project : ""
-resources : []
+resources:
+  - "Call the Piwik API in PHP": "https://developer.piwik.org/guides/querying-the-reporting-api#call-the-piwik-api-in-php"
+  - "asort en php.net": "http://php.net/manual/en/function.asort.php"
 series : []
 tags : ["processwire", "piwik"]
 title : "Utilizando la API de piwik en local con PW"

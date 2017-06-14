@@ -5,7 +5,8 @@ date : "2015-08-09T10:48:45+02:00"
 news_keywords : ["httpd", "mysql", "php", "centos6"]
 pinned : "notpinned"
 project : ""
-resources : []
+resources:
+  - "LAMP server on linux.com": "https://www.linux.com/learn/easy-lamp-server-installation"
 series : []
 tags : ["httpd", "mysql", "php", "centos6"]
 title : "configuring a LAMP server on CentOS 6"

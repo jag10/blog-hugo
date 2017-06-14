@@ -5,7 +5,10 @@ date : "2016-07-27T13:50:40+02:00"
 news_keywords : ["sass", "vagrant", "nodejs"]
 pinned : "notpinned"
 project : ""
-resources : []
+resources :
+  - "VirtualBox 5.1 on Fedora 25/24, CentOS/RHEL 7.3/6.9/5.11": "https://www.if-not-true-then-false.com/2010/install-virtualbox-with-yum-on-fedora-centos-red-hat-rhel/"
+  - "Scotch box": "https://box.scotch.io/"
+  - "adminer on adminer.org": "https://www.adminer.org/static/download/4.2.5/adminer-4.2.5.php"
 series : []
 tags : ["sass", "vagrant", "nodejs"]
 title : "Web development environment"
@@ -203,6 +206,6 @@ Now, with git, you can work in the best way you feel comfortable. Personally, I 
 * dev. Here I have all source code, including sass files, gulpfile, nodejs modules, etc.
 This repo doesn't contain the whole website, only the directory I use for the theme/plugin I'm working on
 
-## Notes:
+## Notes
 
 * nodejs, npm, gulp, livereload... all these packages should be installed on the virtual machine, although you can install them in the real machine too, except the livereload extension, which has to be on the server (virtual machine)

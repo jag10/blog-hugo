@@ -5,7 +5,10 @@ date : "2016-05-01T13:28:37+02:00"
 news_keywords : ["php", "ReflectionMethod"]
 pinned : "notpinned"
 project : ""
-resources : []
+resources:
+  - "get_class_methods en php.net": "http://php.net/manual/es/function.get-class-methods.php"
+  - "get_class en php.net": "http://php.net/manual/es/function.get-class.php"
+  - "The ReflectionMethod class en php.net": "http://php.net/manual/es/class.reflectionmethod.php"
 series : []
 tags : ["php", "ReflectionMethod"]
 title : "Obteniendo los métodos (reflejados) de un objeto"

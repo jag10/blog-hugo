@@ -5,7 +5,10 @@ date : "2016-03-24T12:28:50+02:00"
 news_keywords : ["magento", "cwp", "php7"]
 pinned : "notpinned"
 project : ""
-resources : []
+resources:
+  - "CWP installation": "http://centos-webpanel.com/installation-instructions"
+  - "Installing MySQL on Linux Using the MySQL Yum Repository": "https://dev.mysql.com/doc/mysql-repo-excerpt/5.6/en/linux-installation-yum-repo.html"
+  - "Compiling PHP 7 on CentOS": "http://www.shaunfreeman.name/compiling-php-7-on-centos/"
 series : []
 tags : ["magento", "cwp", "php7"]
 title : "Centos web panel with php7 and mysql5.6"

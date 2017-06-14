@@ -5,7 +5,10 @@ date : "2016-07-18T13:37:52+02:00"
 news_keywords : ["ubuntu", "odroid", "mate"]
 pinned : "notpinned"
 project : ""
-resources : []
+resources :
+  - "Ubuntu ISOs para odroid xu3 lite": "http://de.eu.odroid.in/ubuntu_16.04lts/"
+  - "odroid flashing tools": "http://odroid.com/dokuwiki/doku.php?id=en:odroid_flashing_tools"
+  - "dd en linux.die.net": "https://linux.die.net/man/1/dd"
 series : []
 tags : ["ubuntu", "odroid", "mate"]
 title : "Instalando ubuntu 16.04 en odroid xu3 lite"
