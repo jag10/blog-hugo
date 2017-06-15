@@ -23,6 +23,8 @@ From the list above I took the image I was looking for, which is the complete ve
 
 * [ubuntu-16.04-mate-odroid-xu3-20160708.img.xz](http://de.eu.odroid.in/ubuntu_16.04lts/ubuntu-16.04-mate-odroid-xu3-20160708.img.xz)
 
+<!--more-->
+
 ## Writing the image on odroid board
 The next step will be to uncompress the image. This is very important because if we try to write a compressed image into the eMMC module, it won't work at all. So, to uncompress it, use the following command:
  [jag@2ndChance distros]$ unxz ubuntu-16.04-mate-odroid-xu3-20160708.img.xz

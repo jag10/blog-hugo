@@ -14,6 +14,8 @@ title : "Zipping and unzipping websites with php"
 
 ---
 Sometimes you need to work with only FTP access, and it takes a lot of time to backup a website through FTP because usually there are a lot of files and listing them is a long process. I made these php scripts to avoid wasting time when I only have FTP access. For example, when a mate wants to work on a website but he/she want to backup it up first just in case they break something. They use these scripts below:
+<!--more-->
+## Zipping files
 {{<highlight php>}}
 <?php
 $zip = new ZipArchive();
@@ -56,7 +58,10 @@ echo "&lt;h1&gt;OK.&lt;/h1&gt;";
 {{</highlight>}}
 
 
-This script will take all the content in the current directory, iterate directories recursively and create a file named "data1.zip". There you have it. It's is important to make sure all files are included, you don't want to trust in your backups just to find later that they aren't 100% correct. Let's check it. How could we do that? We're going to use our beloved terminal for this task. We'll compare the number of files in both zip.file and the directory we zipped.
+This script will take all the content in the current directory, iterate directories recursively and create a file named "data1.zip". There you have it.
+
+## Checking the result
+It's is important to make sure all files are included, you don't want to trust in your backups just to find later that they aren't 100% correct. Let's check it. How could we do that? We're going to use our beloved terminal for this task. We'll compare the number of files in both zip.file and the directory we zipped.
 Look at this:
 {{<highlight sh>}}
 $zipinfo /var/www/vhosts/jglab.me/httpdocs/data1.zip | grep files
@@ -66,6 +71,9 @@ $find /var/www/vhosts/jglab.me/httpdocs/ -type f | wc -l
 {{</highlight>}}
 
 Our zip contains 10132 files, and find command says there are 10124 in our directory, which makes sense: there were 10132 files before we started, then we added the script zip.php (which doesn't zip itself) and it output data1.zip file, adding up to 10134 files.
+
+## Unzipping files
+
 Sometimes we also need to unzip files with FTP access. The next script will take care of that:
 {{<highlight php>}}
 <?php
@@ -94,5 +102,5 @@ if ($res === TRUE) {
 
 The script takes the file "data.zip" in the current dir and extract its contents to the current dir. You can specify a subdir uncommenting the line $path .= '/subdir';
 You should delete these scripts as soon as you use them, they could break your website if someone discovers them.
-## BONUS
+## Bonus
 If you surf the internet you'll find php scripts to backup databases as well. You can find some links in Resources.

@@ -15,7 +15,9 @@ title : "Instalando magento2 en cwp"
 
 ---
 ## Empezando
-En este post explicaré cómo instalar magento2 sobre Centos Web Panel, utilizando php7 y mysql 5.6. Para empezar, tenemos que compilar php con las extensiones que magento2 necesita. Con el siguiente comando podremos configurar php7 para luego compilarlo y conseguir que funcione con magento2:./configure
+En este post explicaré cómo instalar magento2 sobre Centos Web Panel, utilizando php7 y mysql 5.6. Para empezar, tenemos que compilar php con las extensiones que magento2 necesita. Con el siguiente comando podremos configurar php7 para luego compilarlo y conseguir que funcione con magento2.
+<!--more-->
+
 {{<highlight sh>}}
 ./configure
 --prefix=/opt/alt/php7/usr

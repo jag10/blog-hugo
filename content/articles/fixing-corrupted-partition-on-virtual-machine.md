@@ -20,6 +20,9 @@ Couldn't remount RDWR because of unprocessed orphan inode list.
 {{</highlight>}}
 Download an Ubuntu ISO
 Boot the virtualmachine from the ISO file: Settings -> Storage -> Add CD/DVD Device -> Choose disk
+
+<!--more-->
+
 Umount /dev/sda1:
 {{<highlight sh>}}
 sudo umount /dev/sda1

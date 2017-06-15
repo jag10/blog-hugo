@@ -22,6 +22,9 @@ Couldn't remount RDWR because of unprocessed orphan inode list.
 Descargar ISO de ubuntu
 
 Arrancar la máquina virtual con la ISO: Settings -> Storage -> Add CD/DVD Device -> Choose disk
+
+<!--more-->
+
 Desmontar /dev/sda1:
 {{<highlight sh>}}
 sudo umount /dev/sda1

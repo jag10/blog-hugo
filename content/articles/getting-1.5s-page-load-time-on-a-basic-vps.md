@@ -13,9 +13,14 @@ tags : ["performance", "vps", "processwire"]
 title : "Getting 1.5s page load time on a basic vps"
 
 ---
+## The problem
 As you can see on the graphics, I had 5s load time for my home page, which is kind of basic. It wasn't that bad if you look at the packages my server runs: gitlab, Roundcube's webmail, sentora (open source control panel) and piwik (stats management).
-Note: Those 11s peaks you see there were produced while I was doing load tests on my server.
+
+__Note:__ Those 11s peaks you see there were produced while I was doing load tests on my server.
+
 My environment's specs are:
+<!--more-->
+
 
 * 1 GB RAM VPS
 * CentOS Linux release 7.2.1511 (Core)
@@ -24,7 +29,7 @@ My environment's specs are:
 * 10 GB ssd
 * 1000 Mbps bandwith
 
-
+## Stats before tuning up
 This were my stats before tuning up ProcessWire:
 performance before tuning up
 ![performance before tuning up](/articles/img/getting-1.5s-page-load-time-on-a-basic-vps-1.png)
@@ -36,6 +41,8 @@ AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application
 * This allows me to gzip html, xl, css, JS, etc.
 * Avoiding redirections on landing page is also very good for performance (I was redirecting jglab.me to jglab.me/home, wasting about 600ms)
 * Defer parsing of JS allows the browser to load the visible content faster. This was easy, I only use a couple of JS and I moved them into the footer.
+
+## Stats after tuning up
 
 These modifications allowed my server to load the page in 3s, which was good but it could be better. So I thought those awesome sidebars I use must consume a lot of resources. This is how they work:
 

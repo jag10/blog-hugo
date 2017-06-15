@@ -16,6 +16,8 @@ title : "Utilizando la API de piwik en local con PW"
 Para hacer el tracking de visitas de jglab.me utilizo Piwik. ¿Por qué? El principal motivo es que permite mantener la información de manera privada, sin que terceros lleguen a saberla, pero además, piwik ofrece una API muy potente que puede ser utilizada de manera __local__, lo que es muy importante para el rendimiento, pues me permite obtener estadísticas de la web sin realizar ninguna petición. Para las peticiones locales utilizo la siguiente clase:
 
 ## Show me the code
+<!--more-->
+
 {{<highlight php>}}
 <?php
 use Piwik\API\Request;

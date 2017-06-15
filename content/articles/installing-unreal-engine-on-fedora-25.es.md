@@ -22,6 +22,8 @@ cd UnrealEngine/
 ./Setup.sh
 ./GenerateProjectFiles.sh
 {{</highlight>}}
+<!--more-->
+
 ## Instalando clang
 En mi caso (Fedora 25), este último comando falló. Para arreglarlo tuve que instalar clang:
 {{<highlight sh>}}

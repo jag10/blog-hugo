@@ -16,18 +16,21 @@ title : "Centos web panel with php7 and mysql5.6"
 ---
 
 Firstly, we'll install centOS Web Panel, just follow the instructions in the CWP website: http://centos-webpanel.com/installation-instructions
-After a fresh install, we'll stop CWP to perform the mysqld update:
+After a fresh install, we'll stop CWP to perform the mysqld update.
 {{<highlight sh>}}
 service cwpsrv stop
 {{</highlight>}}
 
-Then, we'll install mysql server repo:
+Then, we'll install mysql server repo.
+<!--more-->
+
 {{<highlight sh>}}
 yum install -y wget
 wget http://dev.mysql.com/get/mysql57-community-release-el6-7.noarch.rpm
 yum localinstall mysql57-community-release-el6-7.noarch.rpm
 vim /etc/yum.repos.d/mysql-community.repo
 {{</highlight>}}
+
 Now we've installed mysql yum repository, we have to enable the version we want to install. In this case we're installing mysql 5.6, so the repo configuration file should look like this:
 {{<highlight sh>}}
 yum

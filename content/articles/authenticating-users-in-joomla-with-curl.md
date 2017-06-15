@@ -13,6 +13,7 @@ title: "Authenticating users with cURL"
 ---
 
 In this post I'll explain how to log in a user with cURL. This can be useful if you want to integrate joomla login with an external app. For example, you could have a dual installation of wordpress and joomla and use wordpress joomla to log in joomla users as well.
+<!--more-->
 
 Joomla outputs two values for each login form and those values have to be valid. So, in first place we need to get those values with cURL. Also, joomla stores a cookie when we visit the website. We need to save it and pass it to the user's browser. Then, with this data we send a POST request with cURL to log the user in. Then, joomla returns another cookie. We have to send this cookie as well to the user's navigation. After this, the user is logged into the joomla app.
 

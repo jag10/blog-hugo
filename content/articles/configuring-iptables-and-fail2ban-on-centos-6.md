@@ -14,7 +14,10 @@ title : "Configuring IPTABLES and fail2ban on centOS 6"
 ---
 
 In this post I'll explain how to configure iptables along with fail2ban and how to start/stop these services without messing up your chains or configuration.
+
 Iptables should be included in your default Linux OS, and you can easily get fail2ban from standard repos. So, just enable the chains you need on `/etc/fail2ban/jail.local`. Copy the file from `/etc/fail2ban/jail.conf` if it doesn't exist. For example, if you want (you should) activate ssh jail, just add/uncomment this lines to the file:
+<!--more-->
+
 {{<highlight sh>}}
 [ssh-iptables]
 enabled = true

@@ -19,6 +19,8 @@ Cuando necesitas obtener ficheros remotos para manejar su contenido (ejemplo: fi
 $handle = fopen($filename, "r") or die('could not open .' $filename);
 {{</highlight>}}
 
+<!--more-->
+
 Si esta sentencia funciona de forma correcta, luego podremos utilizar el handle para procesar el fichero con distintas utilidades, como fgetcsv(). Es importante poder abrir ficheros con fopen porque muchas funciones utilizan un parámetro del tipo Resource en php, que es lo que nos devuelve fopen.
 Sin embargo, fopen puede fallar:
 

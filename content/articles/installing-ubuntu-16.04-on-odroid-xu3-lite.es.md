@@ -22,6 +22,8 @@ De aquí he tomado el fichero que me interesa, correspondiente a la versión com
 
 * [ubuntu-16.04-mate-odroid-xu3-20160708.img.xz](http://de.eu.odroid.in/ubuntu_16.04lts/ubuntu-16.04-mate-odroid-xu3-20160708.img.xz)
 
+<!--more-->
+
 ## Escribiendo la imagen en la placa odroid
 El siguiente paso será descomprimir la imagen, muy importante antes de proceder a escribirla en el módulo eMMC, para ello:
 [jag@2ndChance distros]$ unxz ubuntu-16.04-mate-odroid-xu3-20160708.img.xz

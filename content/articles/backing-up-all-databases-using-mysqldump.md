@@ -13,7 +13,10 @@ title : "Backing up all databases using mysqldump"
 
 ---
 In this post I'll explain how I backup all databases in servers I work with. When you face trouble with those servers it'll be pretty useful to have daily database dumps.
-So, I use mysqldump utiliy to backup database and an script I wrote myself to transfer files, which you can find here
+
+So, I use mysqldump utiliy to backup database and an script I wrote myself to transfer files, which you can find here.
+<!--more-->
+
 Backing up all databases with mysqldumpo is pretty easy, just use it in this way in bash:
 {{<highlight sh>}}
 mysqldump -uadmin -p`cat /etc/psa/.psa.shadow` --all-databases | zip > $1/all.sql.zip

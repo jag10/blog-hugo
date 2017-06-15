@@ -19,6 +19,8 @@ When you need to get remote files to handle its content (i.e. csv files) you may
 $handle = fopen($filename, "r") or die('could not open .' $filename);
 {{</highlight>}}
 
+<!--more-->
+
 If this sentence works, we could then use the handle to parse the file with different php functions like fgetcsv(). Usually, a lot of functions use a Resource param to handle files, so it's important to know how to get a handle from a file. Fopen gives us this functionality, but it can fail in some scenarios:
 
 * If the "allow_url_fopen" is disabled in php settings, we won't be able to open remote files

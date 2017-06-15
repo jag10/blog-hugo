@@ -14,7 +14,10 @@ title : "configuring a LAMP server on CentOS 6"
 ---
 
 In this first post I'll explain how I configurated my VPS to run a basic LAMP server with multiple php versions, compiled by myself. You can get your own cheap VPS (~3€) and test a lot of things.
+
 Firstly, we'll create our dir structure. I'll use jag.co as a domain for this example, you can choose the dir structure you want, but I recommend following this one:
+<!--more-->
+
 {{<highlight cirru>}}
 /
 /var/www/vhosts/jag.co

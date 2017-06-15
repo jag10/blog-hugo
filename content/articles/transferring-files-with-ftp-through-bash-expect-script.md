@@ -17,6 +17,8 @@ If you use to transfer backups through ftp, it can be very handy to write a bash
 {{<highlight sh>}}
 ./ftpConnect localFile remoteFile
 {{</highlight>}}
+<!--more-->
+
 In the script you'll need to define some data: your FTP server's IP and a valid user and password combination.
 {{<highlight bash>}}
 #!/bin/bash

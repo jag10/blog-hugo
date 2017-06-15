@@ -17,7 +17,9 @@ title : "Web development environment"
 
 In this post we'll configure an advanced web development environment. For that, we'll have our web hosted on a server (we will NOT use that server for development), and in our station we'll have a virtual machine. For this vm we'll use vagrant with the  scotch box, which allows us to host a web without extra work
 ## Prerequisites
-We'll use the following tecnologies for our environment. You should review them before going on:
+We'll use the following tecnologies for our environment. You should review them before going on.
+
+<!--more-->
 
 * Vagrant. Vagrant makes creating dev environments easy and fast
 * virtualbox. Vagrant uses vm and for that, it needs virtualbox as a dependency
