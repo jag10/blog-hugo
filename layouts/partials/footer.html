@@ -6,7 +6,8 @@
           <h2>Other posts</h2></div>
         <div class='widget-content popular-posts'>
           <ul>
-            {{ range (where .Site.Pages "Type" "articles") | shuffle | first 3 }}
+            {{ range (where .Site.Pages "Section" "articles") | shuffle | first 3 }}
+            {{ if isset .Params "article_image" }} {{/* fix a bug where /articles/ page was selected within range */}}
             <li>
               <div class='item-content'>
                 <div class='item-thumbnail'>
@@ -19,6 +20,7 @@
                 </div>
               </div>
             </li>
+            {{ end }}
             {{ end }}
           </ul>
         </div>
