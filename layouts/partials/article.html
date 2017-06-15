@@ -1,11 +1,11 @@
 <div class="post-container">
-  <div class="post-image-container">
+  {{/* <div class="post-image-container">
     {{ if not $.renderFull }}
     <a href="{{.content.URL}}">
       <img src="/articles/img/{{.content.Params.article_image}}" alt="{{ .content.Title }}" class="pulse-image">
     </a>
     {{ end }}
-  </div>
+  </div> */}}
   <div class="article_summary">
     <div class="article-date">
       <p class="day"><i class="fa fa-calendar"></i>{{ .content.Date.Format "2 Jan 2006" }}</p>
@@ -48,7 +48,7 @@
     {{ end }}
     <div class="article-footer">
       {{ if not $.renderFull }}
-      <a class="read-more-button pure-button" href="{{.content.URL}}">Read More</a> {{ end }}
+      <a class="read-more-button pure-button" href="{{.content.URL}}">Read the full article</a> {{ end }}
       {{ partial "share" .content}}
     </div>
 
