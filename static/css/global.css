@@ -2495,7 +2495,7 @@ article ul {
   margin-left: 20px;
 }
 
-#main article:not(:last-child) .post-container {
+#main article:not(:last-child) {
   margin-bottom: 40px;
 }
 
@@ -3199,6 +3199,10 @@ span.nt.fa-search {
 .sidebar-wrapper {
   padding: 0 10px;
   margin: 50px 0;
+}
+
+.home .sidebar-wrapper {
+  margin: 0px 0 115px 0px;
 }
 
 @media (min-width: 1200px) {

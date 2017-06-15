@@ -1,6 +1,6 @@
 {{/* {{ .Site | printf "%+v" }} */}}
 {{partial "head" .}} {{partial "header" (dict "content" . "renderTopImage" false)}}
-  <div class="main-container">
+  <div class="main-container home">
     <section id="main" class="pure-u-1 pure-u-md-3-4">
     {{ range (.Paginate (where .Data.Pages "Type" "articles")).Pages }}
       <article>
