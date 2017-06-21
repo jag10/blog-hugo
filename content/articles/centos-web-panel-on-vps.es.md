@@ -11,19 +11,19 @@ resources:
   - "Compiling PHP 7 on CentOS": "http://www.shaunfreeman.name/compiling-php-7-on-centos/"
 series : []
 tags : ["magento", "cwp", "php7"]
-title : "Centos web panel with php7 and mysql5.6"
+title : "Centos web panel con php7 y mysql5.6"
 
 ---
-## Installing CWP
-Firstly, we'll install centOS Web Panel, just follow the instructions in the CWP website: http://centos-webpanel.com/installation-instructions
+## Instalando CWP
+En primer lugar, vamos a instalar CWP, simplemente hay que seguir las instrucciones del sitio web de CWP: http://centos-webpanel.com/installation-instructions
 
-## Instaling mysql 5.6
-After a fresh install, we'll stop CWP to perform the mysqld update.
+## Instalando mysql 5.6
+Después de una instalación limpia, vamos a detener CWP para actualizar mysql.
 {{<highlight sh>}}
 service cwpsrv stop
 {{</highlight>}}
 
-Then, we'll install mysql server repo.
+Ahora vamos a instalar el repositorio de mysql
 <!--more-->
 
 {{<highlight sh>}}
@@ -33,7 +33,7 @@ yum localinstall mysql57-community-release-el6-7.noarch.rpm
 vim /etc/yum.repos.d/mysql-community.repo
 {{</highlight>}}
 
-Now we've installed mysql yum repository, we have to enable the version we want to install. In this case we're installing mysql 5.6, so the repo configuration file should look like this:
+Ahora que tenemos el repositorio, vamos a elegir qué versión queremos instalar. En este caso, vamos a instalar mysql 5.6, por lo que el fichero debe quedar así:
 {{<highlight sh>}}
 yum
 [mysql-connectors-community]
@@ -71,50 +71,47 @@ enabled=0
 gpgcheck=1
 gpgkey=file:/etc/pki/rpm-gpg/RPM-GPG-KEY-mysql
 {{</highlight>}}
-Now, to check we've enabled the correct repository, we have to use this command:
+Ahora, para comprobar que hemos activado el repositorio correcto, utilizaremos el siguiente comando:
 {{<highlight sh>}}
 yum repolist enabled | grep mysql
-That should return something like this:
+
 mysql-connectors-community MySQL Connectors Community
 mysql-tools-community MySQL Tools Community
 mysql56-community MySQL 5.6 Community Server
 {{</highlight>}}
 
-Now we can proceed with the update:
+Ahora podemos proceder con la actualización.
 {{<highlight sh>}}
 yum install mysql-community-server
 {{</highlight>}}
-In my case, mysqld broke after this, I couldn't start the mysqld service. I checked the log and found this error:
+En my caso, mysqld dejó de funcionar después de hacer esto. Analizando el log encontré este error:
 {{<highlight sh>}}
 ERROR] InnoDB: auto-extending data file ./ibdata1 is of a different size 640 pages (rounded down to MB) than specified in the .cnf file: initial 768 pages, max 0 (relevant if non-zero) pages!
 {{</highlight>}}
-The quickfix for this is to add the following line in the /etc/my.cnf, in the [mysqld] block:
+El quickfix para esto es añadir la siguiente línea en el fichero ``/etc/my.cnf``, en el bloque [mysqld]:
 {{<highlight sh>}}
 innodb_data_file_path = ibdata1:10M:autoextend
 {{</highlight>}}
 
-
-Now you can start mysqld:
+Ahora se puede iniciar mysqld.
 {{<highlight sh>}}
 service mysqld start
 {{</highlight>}}
 
-
-If the service starts, you should use this command to finish upgrade:
+Para terminar con la actualización:
 {{<highlight sh>}}
 mysql_upgrade
 {{</highlight>}}
 
-
-We're finished with the mysql server update, we can start CWP again:
+Ya hemos acabado con mysql, ahora podemos volver a iniciar CWP:
 {{<highlight sh>}}
 service cwpsrv start
 {{</highlight>}}
 
-## Configuring php7
+## Configurando php7
 
-Now your server should be accesible at: http://your.ip:2030
-Login into the panel with your root credentials and go to PHP Settings -> PHP selector. Firstly, we need to define the flags for the php version we're going to compile. You should add the following extension for php7 because it's needed in some platforms like magento:
+Ahora tu servidor debería ser accesible en http://your.ip:2030
+Identifícate en el panel con tus credenciales y ve a PHP Settings -> PHP selector. En primer lugar, hay que definir las flags para la versión php que vamos a compilar.
 {{<highlight sh>}}
 ./configure
 --prefix=/opt/alt/php7/usr
@@ -157,14 +154,14 @@ Login into the panel with your root credentials and go to PHP Settings -> PHP se
 --with-xsl
 {{</highlight>}}
 
- In case you want to use php 5.6, you should add the following flag:
+En caso de que quieras usar php 5.6, hay que añadir la siguiente flag:
  {{<highlight sh>}}
 --enable-intl
 {{</highlight>}}
 
-Now, you can click on 'Install dependencies' to install packages needed to compile PHP. After that, you can select php7 and compile it. When the process finishes, you can use php7 in your website adding the following line in your .htaccess:
+Ahora puedes hacer click en 'Install dependencies' para instalar las dependencias necesarias. Después de esto, se puede seleccionar php7 y compilarlo. Cuando el proceso termine, puedes usar php7 en tu sitio web añadiendo la siguiente línea en el .htaccess
 {{<highlight sh>}}
 AddHandler application/x-httpd-php7 .php
 {{</highlight>}}
 
-And you're done! Now you have a fresh server with php7 and mysql 5.6. Theese upgrades will give you a nice boost on performance.
+Y ya hemos terminado, ahora dispones de un servidor con php7 y msql5.6, lo que te dará un buen empujón en cuanto a rendimiento.
