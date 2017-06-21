@@ -76,7 +76,7 @@ languages:
     title:              "Arboleda"
     email:              "me@jarboleda.me"
     locale:             "es-ES"
-    description:        "site description goes here"
+    description:        "El blog de Jeferson Arboleda, ingeniero informático. El blog está enfocado en la mejora de mis habilidades y en la superación de los retos que encuentro en mi día a día"
     formspree:          "https://formspree.io/me@jarboleda.me"
     article_images :    "/content/articles/img/"
     menu:
@@ -108,7 +108,8 @@ languages:
         thumbnail:      'me2.min.png'
         images:
           - 'me2.png'
-        bio:            'John Connor is the son of Sarah Connor and Kyle Reese, and the leader of the worldwide human resistance...'
+        bio:            'Buscando un desafío :) | Actualmente estoy interesdo en [Docker](https://docker.com), [kubernetes](https://kubernetes.io/),
+                          e [IBM bluemix](https://www.ibm.com/cloud-computing/bluemix/)'
         email:          me@jarboleda.me
         social:
           github:       jag10
