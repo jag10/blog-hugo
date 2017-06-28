@@ -26,7 +26,9 @@ De aquí he tomado el fichero que me interesa, correspondiente a la versión com
 
 ## Escribiendo la imagen en la placa odroid
 El siguiente paso será descomprimir la imagen, muy importante antes de proceder a escribirla en el módulo eMMC, para ello:
+{{<highlight sh>}}
 [jag@2ndChance distros]$ unxz ubuntu-16.04-mate-odroid-xu3-20160708.img.xz
+{{</highlight>}}
 La manera más comoda de instalar la distro en la placa es utilizando el comando dd de linux:
 {{<highlight sh>}}
 [jag@2ndChance distros]$ sudo dd if=ubuntu-16.04-mate-odroid-xu3-20160708.img of=/dev/sdc bs=1M conv=fsync
