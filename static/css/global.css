@@ -3287,6 +3287,10 @@ span.nt.fa-search {
   color: #fff !important;
 }
 
+figcaption {
+  text-align: center;
+}
+
 code {
   background-color: #dedede;
   padding: 0 5px;
