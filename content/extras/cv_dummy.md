@@ -1,22 +1,22 @@
 +++
 #go to http://fontawesome.io/icons/ to change icons on skills and interests
-circled_photo = false
+circled_photo = true
 
-LinkedInID = "jeferson-arboleda-167429134"
-GitlabID = "jag7"
-GithubID = "jag10"
-TwitterID = "j_a_g_x"
-FacebookID = ""
+LinkedInID = "LinkedInID"
+GitlabID = "GitlabID"
+GithubID = "GithubID"
+TwitterID = "TwitterID"
+FacebookID = "FacebookID"
 
-Name = "Jeferson Arboleda"
-Username = "jarboleda"
+Name = "Homer Simpson"
+Username = "user"
 Hostname = "host"
 BlogURL = "//jarboleda.me"
-Email = "me@jarboleda.me"
+Email = "me@email.me"
 About = "Software Engineer"
-Location = "Madrid, Spain, Earth"
+Location = "City, Region, Country, Earth"
 #Avatar = "https://placehold.it/400x400"
-Avatar = "/img/mee.png"
+Avatar = "/extras/cv/img/homer.png"
 GoogleAnalytics = "GoogleAnalyticsID"
 
 Skills = [
