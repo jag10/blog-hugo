@@ -52,7 +52,7 @@ languages:
     authors:
       Jeferson:
         name:           Jeferson Arboleda
-        thumbnail:      'mee.png'
+        thumbnail:      'me.png'
         images:
           - 'me2.png'
         bio:            'Looking for a challenge :) | Currently interested in [Docker](https://docker.com), [kubernetes](https://kubernetes.io/),

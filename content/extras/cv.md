@@ -16,7 +16,7 @@ Email = "me@jarboleda.me"
 About = "Software Engineer"
 Location = "Madrid, Spain, Earth"
 #Avatar = "https://placehold.it/400x400"
-Avatar = "/img/mee.png"
+Avatar = "/img/me.png"
 GoogleAnalytics = "GoogleAnalyticsID"
 
 Skills = [
