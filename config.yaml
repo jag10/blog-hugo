@@ -1,4 +1,5 @@
 DefaultContentLanguage: "en"
+googleAnalytics:        "UA-101857703-1"
 menu:                   "main"
 taxonomies:
   tag:                  "tags"
@@ -40,14 +41,14 @@ languages:
     social:             #web social
       github:           jag10
       gitlab:           jag7
-      # facebook:         nozzleio
-      # facebook_admin:   '17807199'
+      # facebook:       nozzleio
+      # facebook_admin: '17807199'
       twitter:          j_a_g_x
-      # twitter_domain:   nozzle.io
-      # googleplus:       NozzleIo
-      # pinterest:        nozzleio
-      # instagram:        nozzleio
-      # youtube:          nozzleio
+      # twitter_domain: nozzle.io
+      # googleplus:     NozzleIo
+      # pinterest:      nozzleio
+      # instagram:      nozzleio
+      # youtube:        nozzleio
       linkedin:         "jeferson-arboleda-167429134"
     authors:
       Jeferson:
@@ -61,14 +62,14 @@ languages:
         social:
           github:       jag10
           gitlab:       jag7
-          # facebook:     killskynet
+          # facebook:   killskynet
           twitter:      j_a_g_x
-          # googleplus:   killskynet
-          # pinterest:    killskynet
-          # instagram:    killskynet
-          # youtube:      killskynet
+          # googleplus: killskynet
+          # pinterest:  killskynet
+          # instagram:  killskynet
+          # youtube:    killskynet
           linkedin:     167429134
-      # Sarah:            {}
+      # Sarah:          {}
   es:
     weight :            1
     languageName :      "Spanish"
@@ -101,7 +102,7 @@ languages:
       github:           jag10
       gitlab:           jag7
       twitter:          j_a_g_x
-      linkedin:         167429134
+      linkedin:         "jeferson-arboleda-167429134"
     authors:
       Jeferson:
         name:           Jeferson Arboleda
@@ -114,11 +115,11 @@ languages:
         social:
           github:       jag10
           twitter:      j_a_g_x
-          linkedin:     167429134
-      # Sarah:            {}
+          linkedin:     "jeferson-arboleda-167429134"
+      # Sarah:          {}
     taxonomies:
-      tag:                  "tags"
-      pinned:               "pinned"
-      serie:                "series"
-      project:              "project"
+      tag:              "tags"
+      pinned:           "pinned"
+      serie:            "series"
+      project:          "project"
 # pygmentsuseclasses:   true # see https://github.com/richleland/pygments-css
