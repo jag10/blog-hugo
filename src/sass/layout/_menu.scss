@@ -10,9 +10,9 @@ nav.top-menu {
   @extend .m-max-width;
   @extend .m-centered;
   -webkit-font-smoothing: antialiased;
-  height: 32px;
+  max-height: 32px;
   overflow: hidden;
-  transition: height 0.5s;
+  // transition: height 0.5s;
 }
 
 .custom-wrapper.open {
@@ -205,8 +205,15 @@ span.nt.fa-search {
     display: block;
   }
 
+  .menu-wrapper {
+    transform: scaleY(0.75);
+  }
+
   .menu-wrapper.open {
     height: auto;
+    max-height: initial;
+    transition: transform 0.3s ease-out;
+    transform: scale(1);
   }
 
   .menu-wrapper > div:first-child {

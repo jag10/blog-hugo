@@ -2880,9 +2880,8 @@ nav.top-menu {
 
 .menu-wrapper {
   -webkit-font-smoothing: antialiased;
-  height: 32px;
+  max-height: 32px;
   overflow: hidden;
-  transition: height 0.5s;
 }
 
 .custom-wrapper.open {
@@ -3066,8 +3065,19 @@ span.nt.fa-search {
     display: block;
   }
 
+  .menu-wrapper {
+    -webkit-transform: scaleY(0.75);
+            transform: scaleY(0.75);
+  }
+
   .menu-wrapper.open {
     height: auto;
+    max-height: initial;
+    transition: -webkit-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 
   .menu-wrapper > div:first-child {
