@@ -25,15 +25,15 @@ Skills = [
     ["HTML5", "85", "html5"],
 ]
 Career = [
-          ["Company1", "http://www.example.com", "Jul 2015 - Aug 2016", "SW engineer", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."],
-          ["Company2", "http://www.example.com", "Jul 2015 - Aug 2016", "HW engineer", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."],
+          ["TCSET", "http://www.tcset.com", "Jan 2016 - Sep 2016", "Lead developer", "Managed 5+ projects from requirements through successful deployment and maintenance."],
+          ["TCSET", "http://www.tcset.com", "Jul 2015 - Dec 2015", "Developer", "Assisted in the development of web (front end) and mobile apps for multiple clients."],
 ]
 Internships = [
-          ["Company2", "http://www.example.com", "Jan 2015 - Jun 2015", "IT support", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."],
+          ["TCSET", "http://www.tcset.com", "Jan 2015 - Jun 2015", "IT support", "Provided customer support and remote assistance"],
 ]
 Education = [
-          ["University1", "http://www.example.es/", "2011 - 2015", "Bachelor of Computer Science"],
-          ["University2", "http://www.example.es/", "2016-2017", "Master’s in Computer Science"],
+          ["UCLM", "https://www.uclm.es/", "2011 - 2015", "Degree in Computer Engineering"],
+          ["UCLM", "https://www.uclm.es/", "2016 - 2017", "Master in Computer Engineering"],
 ]
 Interests = [
           ["Sports", "futbol-o", ""],

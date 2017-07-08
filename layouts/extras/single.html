@@ -5,6 +5,7 @@
 		{{ partial "extras/head" . }}
 	</head>
 	<body>
+		<a class="github-fork-ribbon" href="/extras/cv/Jeferson_Arboleda_cv.pdf" title="Full version">Full version</a>
 		{{ partial "extras/header.html" . }}
 		<div class="main-container pure-g">
 			<aside class="pure-u-1 pure-u-md-1-3 sidebar-wrapper">
@@ -20,7 +21,7 @@
 								<i class="fa fa-briefcase" aria-hidden="true"></i>
 							</div>
 							<div class='pure-u-4-5 pure-u-md-11-12 article-content'>
-								<h3>Work Xperience</h3>
+								<h3>Work Experience</h3>
 								{{ range .Params.Career }}
                   <div class='job'>
   									<p class = 'role'>{{ index . 3 }}
