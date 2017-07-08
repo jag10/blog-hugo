@@ -14,7 +14,7 @@ languages:
     weight :            0
     languageName :      "English"
     baseURL:            "https://www.jarboleda.me"
-    title:              "Arboleda"
+    title:              "J. Arboleda"
     email:              "me@jarboleda.me"
     locale:             "en-US"
     description:        "The blog of Jeferson Arboleda, software engineer. It's focused on self improvement and overcoming challenges I find everyday"
@@ -74,7 +74,7 @@ languages:
     weight :            1
     languageName :      "Spanish"
     baseURL:            "https://www.jarboleda.me"
-    title:              "Arboleda"
+    title:              "J. Arboleda"
     email:              "me@jarboleda.me"
     locale:             "es-ES"
     description:        "El blog de Jeferson Arboleda, ingeniero informático. El blog está enfocado en la mejora de mis habilidades y en la superación de los retos que encuentro en mi día a día"
@@ -83,7 +83,7 @@ languages:
     menu:
       main:
       - Name:           "home"
-        URL:            "/es"
+        URL:            "/es/"
         weight:         1
       - Name:           "sobre mi"
         URL:            "/extras/cv/"
