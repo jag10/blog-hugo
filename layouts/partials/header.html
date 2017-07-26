@@ -12,7 +12,7 @@
           <div class="pure-menu pure-menu-horizontal custom-can-transform">
             <ul class="pure-menu-list float-left">
               {{ range .content.Site.Menus.main }}
-              <li class="pure-menu-item"><a class='pure-menu-link' href={{ .URL }}>{{ .Name }}</a></li>
+              <li class="pure-menu-item"><a target='' class='pure-menu-link' href={{ .URL }}>{{ .Name }}</a></li>
               {{end}}
               <li class='pure-menu-item lang_selector selected'>
                 {{ if eq .content.Lang "en" }}
