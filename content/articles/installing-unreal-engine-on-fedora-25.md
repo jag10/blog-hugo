@@ -4,7 +4,7 @@ author: Jeferson
 date: "2017-03-17T21:33:19+02:00"
 news_keywords: ["unrealengine", "fedora25"]
 pinned: "notpinned"
-project: "true"
+project: ""
 resources:
   - "Building UnrealEngine on linux": "https://wiki.unrealengine.com/Building_On_Linux"
   - "Running UnrealEngine on linux": "https://wiki.unrealengine.com/Running_On_Linux"
