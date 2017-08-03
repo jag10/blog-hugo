@@ -7,12 +7,12 @@ Hugo blog template
 [![Build Status][travis-image]][travis-url]
 [![Downloads Stats][npm-downloads]][npm-url] -->
 
-![hugo-blog](static/img/demo-blog.jpg)
+![hugo-blog](static/img/demo-blog.png)
 
 
 ## Installation
 
-You'll need [Hugo](https://gohugo.io/)
+You'll need [Hugo](https://gohugo.io/). You can use deploy.sh to deploy to github pages. [More info](https://gohugo.io/hosting-and-deployment/hosting-on-github/)
 ## Usage example
 ```sh
 $ hugohugo server --watch --verbose
