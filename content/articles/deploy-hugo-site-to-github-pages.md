@@ -65,3 +65,7 @@ This script will look into ``article_images_dir`` with a depth of 1 (these are
 Also, it will generate low quality versions for images in the ``article_images_dir`` directory
 with a depth of 2 (these are images used inside each post) and place them in a
 directory named ``min``.
+
+<br>
+There you go. It's fairly easy (and free :)) to deploy your blog to github, so
+go ahead and share your knowledge.

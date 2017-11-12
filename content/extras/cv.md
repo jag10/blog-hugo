@@ -25,6 +25,7 @@ Skills = [
     ["HTML5", "85", "html5"],
 ]
 Career = [
+          ["ALTEN", "http://www.alten.com", "Oct 2017 - Today", "Product Definition Analyst", "Product Definition Analyst for Amadeus (Nice)"],
           ["TCSET", "http://www.tcset.com", "Jan 2016 - Sep 2016", "Lead developer", "Managed 5+ projects from requirements through successful deployment and maintenance."],
           ["TCSET", "http://www.tcset.com", "Jul 2015 - Dec 2015", "Developer", "Assisted in the development of web (front end) and mobile apps for multiple clients."],
 ]

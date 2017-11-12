@@ -503,6 +503,7 @@ th {
     NOTE: Firefox (as of 25) does not currently support flex-wrap, so the
     `-moz-` prefix version is omitted.
     */
+  display: -webkit-flex;
   /* IE10 uses display: flexbox */
   display: -ms-flexbox;
   /* Prevents distributing space between rows */
@@ -3300,11 +3301,6 @@ figcaption {
   text-align: center;
 }
 
-code {
-  background-color: #dedede;
-  padding: 0 5px;
-}
-
 a {
   color: #1fac61;
   outline: 0;
@@ -3428,7 +3424,6 @@ h2[id] {
 
 pre code {
   line-height: 1.6em;
-  font-size: 12px;
 }
 
 pre {
