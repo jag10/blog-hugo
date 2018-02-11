@@ -34,7 +34,7 @@ Usaremos las siguientes tecnologías. Deberías revisarlas antes de seguir con e
 
 ## Instalando vagrant
 Bien, el primer paso es instalar vagrant con virtualbox. Vamos a ver los pasos necesarios en __Fedora__, pero para el resto de distribuciones es muy parecido. En primer lugar, hay que instalar el repositorio de virtualbox. Para ello:
-{{ < highlight sh > }}
+{{<highlight sh>}}
 cd /etc/yum.repos.d/
 wget http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
 #Instalamos las dependencias

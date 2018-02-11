@@ -13,7 +13,7 @@ languages:
   en:
     weight :            0
     languageName :      "English"
-    baseURL:            "https://www.jarboleda.me"
+    # baseURL:            "https://www.jarboleda.me"
     title:              "J. Arboleda"
     email:              "me@jarboleda.me"
     locale:             "en-US"
@@ -73,7 +73,7 @@ languages:
   es:
     weight :            1
     languageName :      "Spanish"
-    baseURL:            "https://www.jarboleda.me"
+    # baseURL:            "https://www.jarboleda.me"
     title:              "J. Arboleda"
     email:              "me@jarboleda.me"
     locale:             "es-ES"
