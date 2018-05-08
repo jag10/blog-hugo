@@ -6,128 +6,60 @@ news_keywords: ["job", "linkedin", "move"]
 pinned: pinned
 project: "false"
 resources:
-  - "Ethernet Shield": "https://www.arduino.cc/en/Main/ArduinoEthernetShieldV1"
-  - "Keypad Shield": "https://www.dfrobot.com/wiki/index.php/Arduino_LCD_KeyPad_Shield_(SKU:_DFR0009)"
+  - "Amadeus FR": "https://www.amadeus.fr"
 series: []
 tags: ["job", "linkedin", "move"]
 title: "Moving to France for work"
 ---
 
-Few months ago I moved to france for work reasons and I'd like to comment how's been the experience so far
+Few months ago I moved to france for work reasons and I'd like to share how's been the experience so far in this post.
 <br/><br/>
-{{< figure src="/articles/img/arduino-uno-lego-case.jpg" title="arduino uno lego case" alt="arduino uno lego case" >}}
+{{< figure src="/articles/img/moving-to-france-for-work.jpg" title="Côte d'Azur" alt="Côte d'Azur" >}}
 
 <!--more-->
 
-## Prerequisites
-I used:
+## Context
+First of all, I'll present my particular situation before moving:
 
-* Lego pieces
-* Arduino UNO R3
-* Ethernet Shield for Arduino UNO
-* Keypad Shield for Arduino UNO
+* Finishing my master in Computer Engineering
+* Looking for a job abroad
+* Wishing to learn a new language
+
+With these conditions, when I received an offer to work in France, it was really hard to say no :)
 
 ## Getting started
-In the figure below you'll see the components needed:
-<br/><br/>
-{{< figure src="/articles/img/arduino-uno-lego-case/min/1.jpg" title="step 1" alt="step 1" >}}
+First of all, you should check [YfEJ](http://ec.europa.eu/social/main.jsp?catId=1160).
+They can provide cash-help and also assistance to learn the language. Also, companies usually
+offer relocation help. In my case, this included:
 
-In the next photo you can see the ethernet shield attached to arduino UNO R3.
-<br/><br/>
-{{< figure src="/articles/img/arduino-uno-lego-case/min/2.jpg" title="step 2" alt="step 2" >}}
+* Plan a visit day with an agent to choose your home
+* Contracts assistance. This included:
+  - Rental contract
+  - Home insurance
+  - Bank account opening
+  - Electricity set up
 
-In the next photo you can see the pins used to avoid both shields using pin 10.
-<br/><br/>
-{{< figure src="/articles/img/arduino-uno-lego-case/min/3.jpg" title="step 3" alt="step 3" >}}
+## Company benefits
+First thing you need to do before moving is get to know how much your new company can help
+you with the process. This will make your life way easier, otherwise, you can be stuck
+with a bunch of legal procedures you don't know. This becomes critical when you
+don't master the local language.
 
-In the next photo you can see the full stack.
-<br/><br/>
-{{< figure src="/articles/img/arduino-uno-lego-case/min/4.jpg" title="step 4" alt="step 4" >}}
+## Choosing a home
+In my experience, it's very important that you know beforehand which flats they are going to show you.
+This way you can start thinking about it before you actually see the places. Things to take note about:
 
-## Building the base
-In the next photos you can see the floor of the lego case.
-<br/><br/>
-{{< figure src="/articles/img/arduino-uno-lego-case/min/5.jpg" title="step 5" alt="step 5" >}}
-<br/><br/>
-{{< figure src="/articles/img/arduino-uno-lego-case/min/6.jpg" title="step 6" alt="step 6" >}}
-<br/><br/>
-In the next photos you can see how the sides of the lego case are built.
-{{< figure src="/articles/img/arduino-uno-lego-case/min/7.jpg" title="step 7" alt="step 7" >}}
-<br/><br/>
-{{< figure src="/articles/img/arduino-uno-lego-case/min/8.jpg" title="step 8" alt="step 8" >}}
-<br/><br/>
-{{< figure src="/articles/img/arduino-uno-lego-case/min/9.jpg" title="step 9" alt="step 9" >}}
-<br/><br/>
-{{< figure src="/articles/img/arduino-uno-lego-case/min/10.jpg" title="step 10" alt="step 10" >}}
-<br/><br/>
-{{< figure src="/articles/img/arduino-uno-lego-case/min/11.jpg" title="step 11" alt="step 11" >}}
-<br/><br/>
-{{< figure src="/articles/img/arduino-uno-lego-case/min/12.jpg" title="step 12" alt="step 12" >}}
-<br/><br/>
-{{< figure src="/articles/img/arduino-uno-lego-case/min/13.jpg" title="step 13" alt="step 13" >}}
-<br/><br/>
-{{< figure src="/articles/img/arduino-uno-lego-case/min/14.jpg" title="step 14" alt="step 14" >}}
+* Does it include services?
+* Is it close to work/supermakets/bus stops?
+* Which home appliances does it include? Also, take note of the quality of the furniture
 
-## Inserting arduino UNO
-In the next photos you can see how the arduino UNO with Ethernet Shield is inserted.
-<br/><br/>
-{{< figure src="/articles/img/arduino-uno-lego-case/min/15.jpg" title="step 15" alt="step 15" >}}
-<br/><br/>
-{{< figure src="/articles/img/arduino-uno-lego-case/min/16.jpg" title="step 16" alt="step 16" >}}
+The place you choose to live in will be very important during your work abroad.
+You will spend a lot of time in it, so make your choice carefully.
 
-## Fixing arduino UNO to lego case
-In this step we'll fix the arduino UNO to the case so it doesn't move inside it.
-<br/><br/>
-{{< figure src="/articles/img/arduino-uno-lego-case/min/17.jpg" title="step 17" alt="step 17" >}}
-<br/><br/>
-{{< figure src="/articles/img/arduino-uno-lego-case/min/18.jpg" title="step 18" alt="step 18" >}}
-<br/><br/>
-{{< figure src="/articles/img/arduino-uno-lego-case/min/19.jpg" title="step 19" alt="step 19" >}}
-<br/><br/>
-{{< figure src="/articles/img/arduino-uno-lego-case/min/20.jpg" title="step 20" alt="step 20" >}}
-<br/><br/>
-{{< figure src="/articles/img/arduino-uno-lego-case/min/21.jpg" title="step 21" alt="step 21" >}}
-<br/><br/>
-{{< figure src="/articles/img/arduino-uno-lego-case/min/22.jpg" title="step 22" alt="step 22" >}}
-<br/><br/>
-{{< figure src="/articles/img/arduino-uno-lego-case/min/23.jpg" title="step 23" alt="step 23" >}}
-<br/><br/>
+## Moving
+In my case, what I did was moving with the basics and then arranging another trip
+to bring the rest of my stuff. This worked well for me because it allowed me to know
+exactly what I was needing in my new place.
 
-Finally, in this photo you can see the case from above without the Keypad Shield. You can see the pieces I used
-to fix the arduino.
-
-{{< figure src="/articles/img/arduino-uno-lego-case/min/33.png" title="arduino uno lego case (above)" alt="arduino uno lego case (above)" >}}
-
-## Finishing up
-In this step we'll add some decorations and supports for the case for an easier
-human - arduino interaction :)
-<br/><br/>
-{{< figure src="/articles/img/arduino-uno-lego-case/min/24.jpg" title="step 24" alt="step 24" >}}
-<br/><br/>
-{{< figure src="/articles/img/arduino-uno-lego-case/min/25.jpg" title="step 25" alt="step 25" >}}
-<br/><br/>
-{{< figure src="/articles/img/arduino-uno-lego-case/min/26.jpg" title="step 26" alt="step 26" >}}
-<br/><br/>
-{{< figure src="/articles/img/arduino-uno-lego-case/min/27.jpg" title="step 27" alt="step 27" >}}
-<br/><br/>
-{{< figure src="/articles/img/arduino-uno-lego-case/min/28.jpg" title="step 28" alt="step 28" >}}
-<br/><br/>
-{{< figure src="/articles/img/arduino-uno-lego-case/min/29.jpg" title="step 29" alt="step 29" >}}
-<br/><br/>
-{{< figure src="/articles/img/arduino-uno-lego-case/min/30.jpg" title="step 30" alt="step 30" >}}
-
-## Result
-And this is how it looks like:
-<br/><br/>
-{{< figure src="/articles/img/arduino-uno-lego-case/min/31.jpg" title="step 31" alt="step 31" >}}
-<br/><br/>
-
-In the next photo you can see the side, where I left space for the ports I needed (Ethernet & USB).
-<br/><br/>
-{{< figure src="/articles/img/arduino-uno-lego-case/min/34.jpg" title="arduino uno lego case (side)" alt="arduino uno lego case (side" >}}
-
-## Bonus
-From this case you can remove Ethernet Shield if you don't need an internet connection.
-Here's the result:
-<br/><br/>
-{{< figure src="/articles/img/arduino-uno-lego-case/min/32.jpg" title="step 32" alt="step 32" >}}
+## First day
+Try to make friends and enjoy your new job ;)

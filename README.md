@@ -15,13 +15,13 @@ Hugo blog template
 You'll need [Hugo](https://gohugo.io/). You can use deploy.sh to deploy to github pages. [More info](https://gohugo.io/hosting-and-deployment/hosting-on-github/)
 ## Usage example
 ```sh
-$ hugohugo server --watch --verbose
+$ hugohugo server --watch
 $ gulp
 ```
 
 ## Development setup
 
-You'll need [Hugo](https://gohugo.io/) and [gulp](https://gulpjs.com/) along with the required packages. 
+You'll need [Hugo](https://gohugo.io/) and [gulp](https://gulpjs.com/) along with the required packages.
 
 ## Credits
 * [Hugo](https://gohugo.io/)
