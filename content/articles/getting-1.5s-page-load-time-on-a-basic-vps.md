@@ -8,7 +8,7 @@ project : ""
 resources:
   - "Analyze Performance of your website on gtmetrix.com": "https://gtmetrix.com/"
   - "Check GZIP compression": "https://checkgzipcompression.com/"
-  - "GZIP compression checker": "http://www.websiteplanet.com/webtools/gzip-compression/ "
+  - "GZIP compression checker": "http://www.websiteplanet.com/webtools/gzip-compression/"
 series : []
 tags : ["performance", "vps", "processwire"]
 title : "Getting 1.5s page load time on a basic vps"
