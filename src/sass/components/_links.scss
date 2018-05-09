@@ -4,13 +4,14 @@ a {
   text-decoration: none;
 }
 
-a, a:visited, a:hover{
+a, a:visited, a:hover {
   text-decoration: none;
 }
 
 // Fix anchors on articles because of fixed header
 h2[id] {
-  padding-top: 34px;
-  margin-top: -1em;
-  display: inline-block; /* required for webkit browsers */
+  padding-top: 15px;
+  // margin-top: -1em;
+  display: inline-block;
+  /* required for webkit browsers */
 }

@@ -10,6 +10,7 @@
 .slick-slider {
   display: flex;
   align-items: center;
+
   /*position: relative;*/
 }
 
@@ -21,16 +22,15 @@
   height: auto !important;
 }
 
-.project_image{
+.project_image {
   // position: relative;
 }
 
-.arrow{
+.arrow {
   position: absolute;
   color: $details-color;
   font-size: 30px;
   z-index: 1;
-
 }
 
 .arrow-left {

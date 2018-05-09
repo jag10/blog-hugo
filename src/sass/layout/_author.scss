@@ -1,6 +1,7 @@
 .authorboxwrap {
   display: inline-block;
   width: 100%;
+
   // margin-bottom: 40px;
 }
 
@@ -68,6 +69,7 @@ img.author_avatar {
 .authorsocial a i {
   line-height: 25px;
 }
+
 @media only screen and (max-width: 900px) {
   .avatar-container {
     margin: 0 auto;

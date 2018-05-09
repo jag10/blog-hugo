@@ -15,20 +15,21 @@
 // extra margin needed for pagination
 .home .sidebar-wrapper {
   // padding: 0 10px;
-  margin: 0px 0 115px 0px;
+  margin: 0px 0 105px 0px;
 }
+
 @media (min-width: 1200px) {
   .sidebar-wrapper {
     padding: 0 0 0 20px;
   }
 }
 
-.sidebar>div:not(:last-child) {
-  margin-bottom: 40px;
+.sidebar > div:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .sidebar .widget {
-  background: top repeat-x white url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKUAAAAOAQMAAAB0Pk60AAAABlBMVEUAAAAAAAClZ7nPAAAAAnRSTlMAgJsrThgAAAAdSURBVBjTY5jkqYKBFBhUsAh7MGBRqjKBYcSZAACscGF+7a9QpwAAAABJRU5ErkJggg==');
+  background: top repeat-x white url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKUAAAAOAQMAAAB0Pk60AAAABlBMVEUAAAAAAAClZ7nPAAAAAnRSTlMAgJsrThgAAAAdSURBVBjTY5jkqYKBFBhUsAh7MGBRqjKBYcSZAACscGF+7a9QpwAAAABJRU5ErkJggg==");
 }
 
 .sidebar .widget-title {
@@ -40,6 +41,7 @@
 .sidebar .widget-title > h2 {
   // @extend .m-detail-background;
   @extend .m-uppercase;
+
   background-color: $menu-color;
   display: inline-block;
   height: 38px;
@@ -48,11 +50,13 @@
   color: #fff;
   font-weight: $bold;
   margin: 0;
+
   @include adjust-font-size-to(14px);
 }
 
 .popular-posts .item-content {
   @extend .m-uppercase;
+
   font-size: 12px;
   letter-spacing: 1px;
   margin: 15px 0;
@@ -110,6 +114,6 @@
 //   margin: 10px 0;
 // }
 
-.widget.currently-reading a>img{
+.widget.currently-reading a > img {
   @extend .m-centered;
 }

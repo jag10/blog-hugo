@@ -14,14 +14,14 @@ article ul {
 }
 
 #main article:not(:last-child) {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .post-image-container {
   overflow: hidden;
 }
 
-.post-container img{
+.post-container img {
   max-width: 100%;
 }
 
@@ -47,6 +47,7 @@ article ul {
 
 .article-date {
   @include adjust-font-size-to(12px);
+
   text-transform: uppercase;
   color: #222;
   float: left;
@@ -75,6 +76,7 @@ article ul {
 .article-footer .article-tags {
   float: left;
 }
+
 @media only screen and (max-width: 900px) {
   .article_summary {
     padding: 30px 20px;

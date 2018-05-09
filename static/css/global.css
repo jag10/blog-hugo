@@ -2496,7 +2496,7 @@ article ul {
 }
 
 #main article:not(:last-child) {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .post-image-container {
@@ -3212,7 +3212,7 @@ span.nt.fa-search {
 }
 
 .home .sidebar-wrapper {
-  margin: 0px 0 115px 0px;
+  margin: 0px 0 105px 0px;
 }
 
 @media (min-width: 1200px) {
@@ -3221,7 +3221,7 @@ span.nt.fa-search {
   }
 }
 .sidebar > div:not(:last-child) {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .sidebar .widget {
@@ -3312,8 +3312,7 @@ a, a:visited, a:hover {
 }
 
 h2[id] {
-  padding-top: 34px;
-  margin-top: -1em;
+  padding-top: 15px;
   display: inline-block;
   /* required for webkit browsers */
 }

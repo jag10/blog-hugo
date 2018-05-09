@@ -8,10 +8,13 @@ nav.top-menu {
 
 .menu-wrapper {
   @extend .m-max-width;
+
   @extend .m-centered;
+
   -webkit-font-smoothing: antialiased;
   max-height: 32px;
   overflow: hidden;
+
   // transition: height 0.5s;
 }
 
@@ -134,6 +137,7 @@ input#go {
 
 span.nt.fa-search {
   color: #fff;
+
   @extend .m-detail-background;
 }
 
@@ -160,7 +164,7 @@ span.nt.fa-search {
 
 .nt-search.nt-search-open .nt-search-input-wrap {
   width: 238px;
-  opacity: 1!important;
+  opacity: 1 !important;
 }
 
 .nt-search-open .nt.fa-search {
@@ -174,17 +178,19 @@ span.nt.fa-search {
 .pure-menu-link {
   font-family: $base-font;
   color: white;
+
   @include adjust-font-size-to(12px);
 }
 
 .pure-menu-item .fa,
 .pure-menu-link {
   color: white;
+
   @extend .m-uppercase;
 }
 
-.pure-menu-item .fa{
-   line-height: 32px;
+.pure-menu-item .fa {
+  line-height: 32px;
 }
 
 .pure-menu-active > .pure-menu-link,
@@ -194,9 +200,10 @@ span.nt.fa-search {
 }
 
 .lang_selector.selected {
-  @extend .m-detail-background
+  @extend .m-detail-background;
 }
- @media (max-width: 47.999em){
+
+@media (max-width: 47.999em) {
   .custom-menu-3 {
     text-align: left;
   }

@@ -11,13 +11,17 @@ footer span {
 
 .footer-container {
   @extend .m-max-width;
+
   @extend .m-centered;
+
   padding: 10px 0;
 }
 
 .footer-container h2 {
   @include adjust-font-size-to(16px);
+
   @extend .m-uppercase;
+
   font-weight: $light;
 }
 
@@ -146,5 +150,6 @@ footer span {
 
 footer .attribution_logo {
   @extend .m-centered;
+
   width: 80px;
 }

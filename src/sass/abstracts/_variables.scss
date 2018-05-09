@@ -1,23 +1,27 @@
 /* colors */
-$font-color             : #333;
-$body-color             : #dedede;
-$details-color          : #1fac61; // original: ff3030
-$menu-color             : #263238; // original: 222
-$footer-color           : #282828;
+$font-color: #333;
+$body-color: #dedede;
+$details-color: #1fac61;
+
+// original: ff3030
+$menu-color: #263238;
+
+// original: 222
+$footer-color: #282828;
 
 /* Font weights */
-$light                  : 100;
-$regular                : 400;
-$bold                   : 600;
+$light: 100;
+$regular: 400;
+$bold: 600;
 
 /* Fonts */
-$base-font              : 'lato';
-$base-font-weight       : $regular;
-$base-font-size         : 16px;
-$base-line-height       : 24px;
+$base-font: "lato";
+$base-font-weight: $regular;
+$base-font-size: 16px;
+$base-line-height: 24px;
 
 /* Headings */
-$heading-font-weight    : $bold;
+$heading-font-weight: $bold;
 
-$fa-base-color          : #555;
-$max-width              : 1200px;
+$fa-base-color: #555;
+$max-width: 1200px;

@@ -5,6 +5,7 @@
 
 pre code {
   line-height: 1.6em;
+
   // font-size: 12px;
 }
 
@@ -15,8 +16,9 @@ pre {
   color: #FFFFFF;
   font-family: monospace;
 }
+
 /* target IE7 and IE6 */
-*:first-child+html pre {
+*:first-child + html pre {
   padding-bottom: 2em;
   overflow-y: hidden;
   overflow: visible;
