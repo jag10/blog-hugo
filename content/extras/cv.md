@@ -13,20 +13,22 @@ Username = "jarboleda"
 Hostname = "host"
 BlogURL = "//jarboleda.me"
 Email = "me@jarboleda.me"
-About = "Software Engineer"
-Location = "Madrid, Spain, Earth"
+About = "Business Analyst"
+Location = "Nice, France, Planet Earth"
 #Avatar = "https://placehold.it/400x400"
 Avatar = "/img/me.png"
 GoogleAnalytics = "GoogleAnalyticsID"
 
 Skills = [
-    ["Team Work", "100", "users"],
-    ["Fedora", "95", "linux"],
-    ["HTML5", "85", "html5"],
+    ["Analysis", "90", "fa fa-chart-pie"],
+    ["Problem-Solving", "90", "fa fa-screwdriver"],
+    ["Team Work", "100", "fa fa-users"],
+    ["Unix", "90", "fab fa-linux"],
+
 ]
 Career = [
-          ["ALTEN", "http://www.alten.com", "Oct 2017 - Today", "Product Definition Analyst", "Product Definition Analyst for Amadeus (Nice)"],
-          ["TCSET", "http://www.tcset.com", "Jan 2016 - Sep 2016", "Lead developer", "Managed 5+ projects from requirements through successful deployment and maintenance."],
+          ["ALTEN", "http://www.alten.com", "Oct 2017 - Today", "Product Definition Analyst", "Product Definition Analyst for Amadeus (Nice). Worked in CAR product, being in direct contact with providers (i.e. Avis, Europcar) and customers (i.e. Expedia, BCD)"],
+          ["TCSET", "http://www.tcset.com", "Jan 2016 - Sep 2016", "Lead developer", "Managed several projects from requirements through successful deployment and maintenance."],
           ["TCSET", "http://www.tcset.com", "Jul 2015 - Dec 2015", "Developer", "Assisted in the development of web (front end) and mobile apps for multiple clients."],
 ]
 Internships = [
@@ -37,10 +39,10 @@ Education = [
           ["UCLM", "https://www.uclm.es/", "2016 - 2017", "Master in Computer Engineering"],
 ]
 Interests = [
-          ["Sports", "futbol-o", ""],
-          ["Books", "book", "https://www.goodreads.com/user"],
-          ["Tv Shows", "television", ""],
-          ["People", "users", ""],
+          ["Sports", "fa fa-futbol", ""],
+          ["Books", "fa fa-book", "https://www.goodreads.com/user"],
+          ["Tv Shows", "fa fa-tv", ""],
+          ["People", "fa fa-users", ""],
 ]
 
 +++

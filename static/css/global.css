@@ -3073,10 +3073,11 @@ span.nt.fa-search {
   margin: 0;
 }
 
-.nt.fa-search:before {
-  font-family: "FontAwesome";
-  content: '\f002';
+.pure-menu .fab {
   color: #fff;
+}
+
+.nt.fa-search:before {
   font-size: 14px;
 }
 
@@ -3595,7 +3596,7 @@ pre {
 }
 
 #footer .widget-social .btn-gplus:hover,
-.soc-sharing li .fa-google-plus:hover {
+.soc-sharing li .fa-google-plus-g:hover {
   background-color: #d53824;
 }
 
@@ -3625,17 +3626,17 @@ pre {
 }
 
 #footer .widget-social .btn-facebook:hover,
-.soc-sharing li .fa-facebook:hover {
+.soc-sharing li .fa-facebook-f:hover {
   background-color: #4a6d9d;
 }
 
 #footer .widget-social .btn-linkedin:hover,
-.soc-sharing li .fa-linkedin:hover {
+.soc-sharing li .fa-linkedin-in:hover {
   background-color: #0b7bb5;
 }
 
 #footer .widget-social .btn-pinterest:hover,
-.soc-sharing li .fa-pinterest:hover {
+.soc-sharing li .fa-pinterest-p:hover {
   background-color: #cb1f25;
 }
 

@@ -155,10 +155,11 @@ span.nt.fa-search {
   margin: 0;
 }
 
-.nt.fa-search:before {
-  font-family: "FontAwesome";
-  content: '\f002';
+.pure-menu .fab{
   color: #fff;
+}
+
+.nt.fa-search:before {
   font-size: 14px;
 }
 

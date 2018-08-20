@@ -2437,12 +2437,12 @@ a:link {
   text-decoration: none;
 }
 
-.fa {
+.fa, .fab, .far {
   margin: 10px;
   color: #222222;
 }
 
-.fa:not(.fa-2x) {
+.fa:not(.fa-2x), .fab:not(.fa-2x), .far:not(.fa-2x) {
   font-size: 28px;
 }
 
@@ -2485,6 +2485,14 @@ header .terminal {
 #main,
 .sidebar-wrapper {
   padding: 0 10px;
+}
+
+.fab {
+  color: #ccc;
+}
+
+.fab, .far {
+  margin: 10px;
 }
 
 .sidebar-info,
@@ -2579,6 +2587,11 @@ article {
 
 .role {
   font-weight: bold;
+}
+
+.far.fa-calendar-alt {
+  font-size: 30px;
+  margin: 5px;
 }
 
 .company,

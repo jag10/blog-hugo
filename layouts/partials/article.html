@@ -8,8 +8,8 @@
   </div> */}}
   <div class="article_summary">
     <div class="article-date">
-      <p class="day"><i class="fa fa-calendar"></i>{{ .content.Date.Format "2 Jan 2006" }}</p>
-      <p><i class="fa fa-clock-o"></i>{{ add .content.ReadingTime 1 }} min read  ~ {{ .content.FuzzyWordCount }} words</p>
+      <p class="day"><i class="far fa-calendar-alt"></i>{{ .content.Date.Format "2 Jan 2006" }}</p>
+      <p><i class="far fa-clock"></i>{{ add .content.ReadingTime 1 }} min read  ~ {{ .content.FuzzyWordCount }} words</p>
     </div>
     {{ with .content.Params.tags }}
     <div class="article-tags">
