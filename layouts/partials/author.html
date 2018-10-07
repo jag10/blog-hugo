@@ -7,7 +7,8 @@
       <h4 rel='author'>{{ $author.name }}</h4>
     </div>
     <div class='author_description_container'>
-      <p>{{ $author.bio | markdownify }}</p>
+      <p class= 'm-text-centered m-bold'>{{ $author.bio_title | markdownify }}</p>
+      <p>{{ $author.bio_summary | markdownify }}</p>
       <div class='authorsocial'>
         {{ with .Site.Params.social.linkedin }}
           <a href='https://www.linkedin.com/in/{{ . }}' target='_blank'><i class='fab fa-linkedin-in'></i></a>

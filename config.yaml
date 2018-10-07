@@ -56,8 +56,8 @@ languages:
         thumbnail:      'me.min.png'
         images:
           - 'me2.png'
-        bio:            'Amadeus Consultant located in Nice | Currently interested in [Docker](https://docker.com), [kubernetes](https://kubernetes.io/)
-                          and [IBM bluemix](https://www.ibm.com/cloud-computing/bluemix/)'
+        bio_title:      'Business Analyst'
+        bio_summary:     "Currently working for [Amadeus](https://amadeus.com/en) in Nice, Côte D'Azur."
         email:          me@jarboleda.me
         social:
           github:       jag10
@@ -109,8 +109,8 @@ languages:
         thumbnail:      'me.min.png'
         images:
           - 'me2.png'
-        bio:            'Buscando un desafío :) | Actualmente estoy interesdo en [Docker](https://docker.com), [kubernetes](https://kubernetes.io/),
-                          e [IBM bluemix](https://www.ibm.com/cloud-computing/bluemix/)'
+        bio_title:      'Business Analyst'
+        bio_summary:    "Actualmente trabajo para [Amadeus](https://amadeus.com/en) en Niza, Côte D'Azur."
         email:          me@jarboleda.me
         social:
           github:       jag10
