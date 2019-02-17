@@ -1,5 +1,5 @@
 ---
-article_image : "getting-1.5s-page-load-time-on-your-blog.png"
+article_image : "getting-0.5s-page-load-time-on-your-blog.png"
 author : "Jeferson"
 date : "2019-02-16T12:21:32+02:00"
 news_keywords : ["performance", "Hugo", "githubPages"]
@@ -12,12 +12,12 @@ resources:
   - "Cloudflare": "https://www.cloudflare.com/"
 series : []
 tags : ["performance", "Hugo", "github Pages", "CloudFlare"]
-title : "Getting 1.5s page load on your blog"
+title : "Getting 0.5s page load on your blog"
 
 ---
 In my previous [post](articles/getting-1.5s-page-load-time-on-a-basic-vps/) back in 2016 I got page load time down from 5s to 1.5, and here my objective is to get around 0.5s.
 <br /><br />
-{{< figure src="/articles/img/getting-1.5s-page-load-time-on-your-blog.png" title="jarboleda.me performance graphic" alt="jarboleda.me performance graphic" >}}
+{{< figure src="/articles/img/getting-0.5s-page-load-time-on-your-blog.png" title="jarboleda.me performance graphic" alt="jarboleda.me performance graphic" >}}
 
 For that purpose, I´ll be using the following technologies:
 
