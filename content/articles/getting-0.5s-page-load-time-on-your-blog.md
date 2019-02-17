@@ -12,7 +12,7 @@ resources:
   - "Cloudflare": "https://www.cloudflare.com/"
 series : []
 tags : ["performance", "Hugo", "github Pages", "CloudFlare"]
-title : "Getting 0.5s page load on your blog"
+title : "Getting 0.5s page load time on your blog"
 
 ---
 In my previous [post](articles/getting-1.5s-page-load-time-on-a-basic-vps/) back in 2016 I got page load time down from 5s to 1.5, and here my objective is to get around 0.5s.
