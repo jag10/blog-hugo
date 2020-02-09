@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ipv6 on J. Arboleda</title>
+    <link>https://www.jarboleda.me/tags/ipv6/</link>
+    <description>Recent content in ipv6 on J. Arboleda</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 11 Aug 2015 10:58:34 +0200</lastBuildDate>
+    
+	<atom:link href="https://www.jarboleda.me/tags/ipv6/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Facebook sharer and IPv6 issue</title>
+      <link>https://www.jarboleda.me/articles/facebook-sharer-and-ipv6-issue/</link>
+      <pubDate>Tue, 11 Aug 2015 10:58:34 +0200</pubDate>
+      
+      <guid>https://www.jarboleda.me/articles/facebook-sharer-and-ipv6-issue/</guid>
+      <description>&lt;p&gt;Last week all facebook buttons on domains on ALL of our servers stopped working. I always got a 404 response when facebook crawler tried to visit our domains. This happened in our 2 dedicated servers from 1and1. At first, my mates were trying to figure out if it was a joomla issue, but they finally couldn&amp;rsquo;t solve it, so they asked me to investigate it. My first thought was: you got a 404? let&amp;rsquo;s check logs for those domains and we&amp;rsquo;ll see what happens for sure. I checked those files and I couldn&amp;rsquo;t see any 404 error, the visit wasn&amp;rsquo;t even logged. Shit happens.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

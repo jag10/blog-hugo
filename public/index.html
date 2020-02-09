@@ -1,0 +1,793 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta name="generator" content="Hugo 0.64.0" />
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>J. Arboleda - J. Arboleda</title>
+    <meta name="description" content="The blog of Jeferson Arboleda, software engineer. It&#39;s focused on self improvement and overcoming challenges I find everyday">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+    	
+	<meta property="og:title" content="J. Arboleda" />
+	<meta property="og:description" content="" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://www.jarboleda.me/" />
+	
+	<meta property="og:updated_time" content="2019-02-16 12:21:32 &#43;0200 &#43;0200"/>
+	<meta property="og:locale" content="en-US" />
+	<meta property="og:site_name" content="J. Arboleda" />
+	
+	
+	
+	
+	
+	
+	
+    
+    <meta itemprop="name" content="J. Arboleda">
+    <meta itemprop="description" content="">
+    <meta name="author" content="Jeferson Arboleda">
+    
+    
+    
+    <meta itemprop="keywords" content="notpinned,pinned,,false,true,serie1,arduino,backup,backups,bash,case,centos6,cloudflare,curl,cwp,facebook,fail2ban,fedora25,fopen,ftp,github,github-pages,httpd,hugo,iptables,ipv6,job,lego,linkedin,magento,magento2,mate,move,mysql,mysqldump,nodejs,odroid,pages,performance,php,php7,piwik,plesk,processwire,reflectionmethod,sass,static,ubuntu,unrealengine,vagrant,vm,vps,zip," />
+    
+	
+	<meta name="twitter:card" content="summary"/>
+	
+	<meta name="twitter:title" content="J. Arboleda"/>
+	<meta name="twitter:description" content=""/>
+	<meta name="twitter:site" content="@j_a_g_x"/>
+	
+	<meta name="twitter:creator" content="@j_a_g_x"/>
+
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="/css/global.min.css" media="screen" rel="stylesheet" type="text/css" />
+  </head>
+ <body>
+  <header>
+    <nav class='top-menu'>
+      
+      <div class="menu-wrapper" id="menu">
+        <div class="pure-u-1 hidden">
+          <div class="pure-menu menu-toogle-container">
+            <a class="custom-toggle" id="toggle"><span class="bar"></span><span class="bar"></span></a>
+          </div>
+        </div>
+        <div class="pure-u-1">
+          <div class="pure-menu pure-menu-horizontal custom-can-transform">
+            <ul class="pure-menu-list float-left">
+              
+              <li class="pure-menu-item"><a target='' class='pure-menu-link' href=/>home</a></li>
+              
+              <li class="pure-menu-item"><a target='' class='pure-menu-link' href=/extras/cv/>about me</a></li>
+              
+              <li class="pure-menu-item"><a target='' class='pure-menu-link' href=/projects/>projects</a></li>
+              
+              <li class="pure-menu-item"><a target='' class='pure-menu-link' href=https://github.com/jag10>github</a></li>
+              
+              <li class="pure-menu-item"><a target='' class='pure-menu-link' href=https://gitlab.com/jag7>gitlab</a></li>
+              
+              <li class='pure-menu-item lang_selector selected'>
+                
+                <a class='pure-menu-link' href="#">English</a>
+                
+              </li>
+              <li class='pure-menu-item flag'><i class='fa fa-language' aria-hidden='true'></i></li>
+               
+              <li class='pure-menu-item lang_selector'>
+                <a class='pure-menu-link' href="/es/">spanish</a>
+              </li>
+               
+            </ul>
+            <div class="float-right">
+              <ul class="pure-menu-list">
+                
+                <li class="pure-menu-item social_menu_entry">
+                  <a href='https://www.linkedin.com/in/jeferson-arboleda-167429134' target='_blank'><i class='fab fa-linkedin-in'></i></a>
+                </li>
+                
+                
+                <li class="pure-menu-item social_menu_entry">
+                  <a href='https://github.com/jag10' target='_blank'><i class='fab fa-github'></i></a>
+                </li>
+                
+                
+                <li class="pure-menu-item social_menu_entry">
+                  <a href='https://gitlab.com/jag7' target='_blank'><i class='fab fa-gitlab'></i></a>
+                </li>
+                
+                
+                <li class="pure-menu-item social_menu_entry">
+                  <a href='https://twitter.com/j_a_g_x' target='_blank'><i class='fab fa-twitter'></i></a>
+                </li>
+                
+                <li class='pure-menu-item nt-search' id='nt-search'>
+                  <form action='/search/' id='searchform' method='get'>
+                    <div class='nt-search-input-wrap'>
+                      <input class='nt-search-input' id='s' name='q' placeholder='Search is disabled :(' type='text' value='' disabled />
+                    </div>
+                    <input class='nt-search-submit' id='go' type='submit' value='Search' />
+                    <span class='nt fas fa-search'></span>
+                  </form>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    
+  </header>
+
+  <div class="main-container home">
+    <section id="main" class="pure-u-1 pure-u-md-3-4">
+      
+      
+        
+      
+        
+          <article>
+            <div class="post-container">
+  
+  <div class="article_summary">
+    <div class="article-date">
+      <p class="day"><i class="far fa-calendar-alt"></i>16 Feb 2019</p>
+      <p><i class="far fa-clock"></i>3 min read  ~ 300 words</p>
+    </div>
+    
+    <div class="article-tags">
+      
+      <a href="#" rel="tag">performance</a> 
+      <a href="#" rel="tag">Hugo</a> 
+      <a href="#" rel="tag">github Pages</a> 
+      <a href="#" rel="tag">CloudFlare</a> 
+    </div>
+    
+    <div class="clearfix"></div>
+    
+    <a href="/articles/getting-0.5s-page-load-time-on-your-blog/" title="">
+      <h1 class="article_title title">Getting 0.5 seconds load time on your blog</h1>
+    </a>
+    
+    <div class="article_excerpt">
+      
+      <p><p>In my previous <a href="articles/getting-1.5s-page-load-time-on-a-basic-vps/">post</a> back in 2016 I got page load time down from 5s to 1.5, and here my objective is to get around 0.5s.
+<!-- raw HTML omitted --><!-- raw HTML omitted -->
+<figure>
+    <img src="/articles/img/getting-0.5s-page-load-time-on-your-blog.png"
+         alt="jarboleda.me performance graphic"/> <figcaption>
+            <h4>jarboleda.me performance graphic</h4>
+        </figcaption>
+</figure>
+</p>
+<p>For that purpose, I´ll be using the following technologies:</p>
+<ul>
+<li><a href="https://gohugo.io/">Hugo</a></li>
+<li><a href="https://pages.github.com/">Github Pages</a></li>
+<li><a href="https://www.cloudflare.com/">Cloudflare</a></li>
+</ul></p>
+      
+    </div>
+    <div class="clearfix"></div>
+    
+    <div class="article-footer">
+      
+      <a class="read-more-button pure-button" href="/articles/getting-0.5s-page-load-time-on-your-blog/">Read the full article</a> 
+      
+
+
+
+
+<div class="soc-sharing">
+  <ul class="article_share_items">
+    <li>
+      <a class="fab fa-linkedin-in" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.jarboleda.me/articles/getting-0.5s-page-load-time-on-your-blog/&amp;title=Getting%200.5%20seconds%20load%20time%20on%20your%20blog&amp;summary=%3cp%3eIn%20my%20previous%20%3ca%20href=%22articles/getting-1.5s-page-load-time-on-a-basic-vps/%22%3epost%3c/a%3e%20back%20in%202016%20I%20got%20page%20load%20time%20down%20from%205s%20to%201.5,%20and%20here%20my%20objective%20is%20to%20get%20around%200.5s.%0a%3c!--%20raw%20HTML%20omitted%20--%3e%3c!--%20raw%20HTML%20omitted%20--%3e%0a%3cfigure%3e%0a%20%20%20%20%3cimg%20src=%22/articles/img/getting-0.5s-page-load-time-on-your-blog.png%22%0a%20%20%20%20%20%20%20%20%20alt=%22jarboleda.me%20performance%20graphic%22/%3e%20%3cfigcaption%3e%0a%20%20%20%20%20%20%20%20%20%20%20%20%3ch4%3ejarboleda.me%20performance%20graphic%3c/h4%3e%0a%20%20%20%20%20%20%20%20%3c/figcaption%3e%0a%3c/figure%3e%0a%3c/p%3e%0a%3cp%3eFor%20that%20purpose,%20I%c2%b4ll%20be%20using%20the%20following%20technologies:%3c/p%3e%0a%3cul%3e%0a%3cli%3e%3ca%20href=%22https://gohugo.io/%22%3eHugo%3c/a%3e%3c/li%3e%0a%3cli%3e%3ca%20href=%22https://pages.github.com/%22%3eGithub%20Pages%3c/a%3e%3c/li%3e%0a%3cli%3e%3ca%20href=%22https://www.cloudflare.com/%22%3eCloudflare%3c/a%3e%3c/li%3e%0a%3c/ul%3e&amp;source=J.%20Arboleda" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-twitter" href="http://twitter.com/share?text=Getting%200.5%20seconds%20load%20time%20on%20your%20blog&amp;url=https://www.jarboleda.me/articles/getting-0.5s-page-load-time-on-your-blog/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-facebook-f" href="https://www.facebook.com/sharer/sharer.php?u=https://www.jarboleda.me/articles/getting-0.5s-page-load-time-on-your-blog/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-google-plus-g" href="https://plus.google.com/share?url=https://www.jarboleda.me/articles/getting-0.5s-page-load-time-on-your-blog/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-pinterest-p" href="https://pinterest.com/pin/create/button/?url=https://www.jarboleda.me/articles/getting-0.5s-page-load-time-on-your-blog/&amp;media=%3cnil%3egetting-0.5s-page-load-time-on-your-blog.png&amp;description=%3cp%3eIn%20my%20previous%20%3ca%20href=%22articles/getting-1.5s-page-load-time-on-a-basic-vps/%22%3epost%3c/a%3e%20back%20in%202016%20I%20got%20page%20load%20time%20down%20from%205s%20to%201.5,%20and%20here%20my%20objective%20is%20to%20get%20around%200.5s.%0a%3c!--%20raw%20HTML%20omitted%20--%3e%3c!--%20raw%20HTML%20omitted%20--%3e%0a%3cfigure%3e%0a%20%20%20%20%3cimg%20src=%22/articles/img/getting-0.5s-page-load-time-on-your-blog.png%22%0a%20%20%20%20%20%20%20%20%20alt=%22jarboleda.me%20performance%20graphic%22/%3e%20%3cfigcaption%3e%0a%20%20%20%20%20%20%20%20%20%20%20%20%3ch4%3ejarboleda.me%20performance%20graphic%3c/h4%3e%0a%20%20%20%20%20%20%20%20%3c/figcaption%3e%0a%3c/figure%3e%0a%3c/p%3e%0a%3cp%3eFor%20that%20purpose,%20I%c2%b4ll%20be%20using%20the%20following%20technologies:%3c/p%3e%0a%3cul%3e%0a%3cli%3e%3ca%20href=%22https://gohugo.io/%22%3eHugo%3c/a%3e%3c/li%3e%0a%3cli%3e%3ca%20href=%22https://pages.github.com/%22%3eGithub%20Pages%3c/a%3e%3c/li%3e%0a%3cli%3e%3ca%20href=%22https://www.cloudflare.com/%22%3eCloudflare%3c/a%3e%3c/li%3e%0a%3c/ul%3e" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+  </ul>
+</div>
+
+    </div>
+    <div class='post-footer'>
+      
+    </div>
+  </div>
+</div>
+
+          </article>
+        
+      
+        
+          <article>
+            <div class="post-container">
+  
+  <div class="article_summary">
+    <div class="article-date">
+      <p class="day"><i class="far fa-calendar-alt"></i>10 Feb 2018</p>
+      <p><i class="far fa-clock"></i>3 min read  ~ 400 words</p>
+    </div>
+    
+    <div class="article-tags">
+      
+      <a href="#" rel="tag">job</a> 
+      <a href="#" rel="tag">linkedin</a> 
+      <a href="#" rel="tag">move</a> 
+    </div>
+    
+    <div class="clearfix"></div>
+    
+    <a href="/articles/moving-to-france-for-work/" title="">
+      <h1 class="article_title title">Moving to France for work</h1>
+    </a>
+    
+    <div class="article_excerpt">
+      
+      <p><p>Few months ago I moved to france for work reasons and I&rsquo;d like to share how&rsquo;s been the experience so far in this post.
+<!-- raw HTML omitted --><!-- raw HTML omitted -->
+<figure>
+    <img src="/articles/img/moving-to-france-for-work.jpg"
+         alt="Côte d&#39;Azur"/> <figcaption>
+            <h4>Côte d&#39;Azur</h4>
+        </figcaption>
+</figure>
+</p></p>
+      
+    </div>
+    <div class="clearfix"></div>
+    
+    <div class="article-footer">
+      
+      <a class="read-more-button pure-button" href="/articles/moving-to-france-for-work/">Read the full article</a> 
+      
+
+
+
+
+<div class="soc-sharing">
+  <ul class="article_share_items">
+    <li>
+      <a class="fab fa-linkedin-in" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.jarboleda.me/articles/moving-to-france-for-work/&amp;title=Moving%20to%20France%20for%20work&amp;summary=%3cp%3eFew%20months%20ago%20I%20moved%20to%20france%20for%20work%20reasons%20and%20I&amp;rsquo;d%20like%20to%20share%20how&amp;rsquo;s%20been%20the%20experience%20so%20far%20in%20this%20post.%0a%3c!--%20raw%20HTML%20omitted%20--%3e%3c!--%20raw%20HTML%20omitted%20--%3e%0a%3cfigure%3e%0a%20%20%20%20%3cimg%20src=%22/articles/img/moving-to-france-for-work.jpg%22%0a%20%20%20%20%20%20%20%20%20alt=%22C%c3%b4te%20d&amp;#39;Azur%22/%3e%20%3cfigcaption%3e%0a%20%20%20%20%20%20%20%20%20%20%20%20%3ch4%3eC%c3%b4te%20d&amp;#39;Azur%3c/h4%3e%0a%20%20%20%20%20%20%20%20%3c/figcaption%3e%0a%3c/figure%3e%0a%3c/p%3e&amp;source=J.%20Arboleda" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-twitter" href="http://twitter.com/share?text=Moving%20to%20France%20for%20work&amp;url=https://www.jarboleda.me/articles/moving-to-france-for-work/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-facebook-f" href="https://www.facebook.com/sharer/sharer.php?u=https://www.jarboleda.me/articles/moving-to-france-for-work/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-google-plus-g" href="https://plus.google.com/share?url=https://www.jarboleda.me/articles/moving-to-france-for-work/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-pinterest-p" href="https://pinterest.com/pin/create/button/?url=https://www.jarboleda.me/articles/moving-to-france-for-work/&amp;media=%3cnil%3emoving-to-france-for-work.jpg&amp;description=%3cp%3eFew%20months%20ago%20I%20moved%20to%20france%20for%20work%20reasons%20and%20I&amp;rsquo;d%20like%20to%20share%20how&amp;rsquo;s%20been%20the%20experience%20so%20far%20in%20this%20post.%0a%3c!--%20raw%20HTML%20omitted%20--%3e%3c!--%20raw%20HTML%20omitted%20--%3e%0a%3cfigure%3e%0a%20%20%20%20%3cimg%20src=%22/articles/img/moving-to-france-for-work.jpg%22%0a%20%20%20%20%20%20%20%20%20alt=%22C%c3%b4te%20d&amp;#39;Azur%22/%3e%20%3cfigcaption%3e%0a%20%20%20%20%20%20%20%20%20%20%20%20%3ch4%3eC%c3%b4te%20d&amp;#39;Azur%3c/h4%3e%0a%20%20%20%20%20%20%20%20%3c/figcaption%3e%0a%3c/figure%3e%0a%3c/p%3e" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+  </ul>
+</div>
+
+    </div>
+    <div class='post-footer'>
+      
+    </div>
+  </div>
+</div>
+
+          </article>
+        
+      
+        
+          <article>
+            <div class="post-container">
+  
+  <div class="article_summary">
+    <div class="article-date">
+      <p class="day"><i class="far fa-calendar-alt"></i>13 Aug 2017</p>
+      <p><i class="far fa-clock"></i>3 min read  ~ 400 words</p>
+    </div>
+    
+    <div class="article-tags">
+      
+      <a href="#" rel="tag">hugo</a> 
+      <a href="#" rel="tag">static</a> 
+      <a href="#" rel="tag">github</a> 
+      <a href="#" rel="tag">pages</a> 
+    </div>
+    
+    <div class="clearfix"></div>
+    
+    <a href="/articles/deploy-hugo-site-to-github-pages/" title="">
+      <h1 class="article_title title">Deploying a hugo site to github pages</h1>
+    </a>
+    
+    <div class="article_excerpt">
+      
+      <p><p>In this post we&rsquo;ll see how to deploy a static site built with hugo to github pages.
+For this task, we&rsquo;ll use a couple of bash scripts that will:</p>
+<ul>
+<li>Commit changes and push them to github.</li>
+<li>Generate thumbnails and low quality versions of the images used in the blog so it loads faster.</li>
+</ul></p>
+      
+    </div>
+    <div class="clearfix"></div>
+    
+    <div class="article-footer">
+      
+      <a class="read-more-button pure-button" href="/articles/deploy-hugo-site-to-github-pages/">Read the full article</a> 
+      
+
+
+
+
+<div class="soc-sharing">
+  <ul class="article_share_items">
+    <li>
+      <a class="fab fa-linkedin-in" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.jarboleda.me/articles/deploy-hugo-site-to-github-pages/&amp;title=Deploying%20a%20hugo%20site%20to%20github%20pages&amp;summary=%3cp%3eIn%20this%20post%20we&amp;rsquo;ll%20see%20how%20to%20deploy%20a%20static%20site%20built%20with%20hugo%20to%20github%20pages.%0aFor%20this%20task,%20we&amp;rsquo;ll%20use%20a%20couple%20of%20bash%20scripts%20that%20will:%3c/p%3e%0a%3cul%3e%0a%3cli%3eCommit%20changes%20and%20push%20them%20to%20github.%3c/li%3e%0a%3cli%3eGenerate%20thumbnails%20and%20low%20quality%20versions%20of%20the%20images%20used%20in%20the%20blog%20so%20it%20loads%20faster.%3c/li%3e%0a%3c/ul%3e&amp;source=J.%20Arboleda" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-twitter" href="http://twitter.com/share?text=Deploying%20a%20hugo%20site%20to%20github%20pages&amp;url=https://www.jarboleda.me/articles/deploy-hugo-site-to-github-pages/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-facebook-f" href="https://www.facebook.com/sharer/sharer.php?u=https://www.jarboleda.me/articles/deploy-hugo-site-to-github-pages/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-google-plus-g" href="https://plus.google.com/share?url=https://www.jarboleda.me/articles/deploy-hugo-site-to-github-pages/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-pinterest-p" href="https://pinterest.com/pin/create/button/?url=https://www.jarboleda.me/articles/deploy-hugo-site-to-github-pages/&amp;media=%3cnil%3edeploy-hugo-site-to-github-pages.jpg&amp;description=%3cp%3eIn%20this%20post%20we&amp;rsquo;ll%20see%20how%20to%20deploy%20a%20static%20site%20built%20with%20hugo%20to%20github%20pages.%0aFor%20this%20task,%20we&amp;rsquo;ll%20use%20a%20couple%20of%20bash%20scripts%20that%20will:%3c/p%3e%0a%3cul%3e%0a%3cli%3eCommit%20changes%20and%20push%20them%20to%20github.%3c/li%3e%0a%3cli%3eGenerate%20thumbnails%20and%20low%20quality%20versions%20of%20the%20images%20used%20in%20the%20blog%20so%20it%20loads%20faster.%3c/li%3e%0a%3c/ul%3e" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+  </ul>
+</div>
+
+    </div>
+    <div class='post-footer'>
+      
+    </div>
+  </div>
+</div>
+
+          </article>
+        
+      
+        
+          <article>
+            <div class="post-container">
+  
+  <div class="article_summary">
+    <div class="article-date">
+      <p class="day"><i class="far fa-calendar-alt"></i>25 Jun 2017</p>
+      <p><i class="far fa-clock"></i>3 min read  ~ 400 words</p>
+    </div>
+    
+    <div class="article-tags">
+      
+      <a href="#" rel="tag">arduino</a> 
+      <a href="#" rel="tag">lego</a> 
+      <a href="#" rel="tag">case</a> 
+    </div>
+    
+    <div class="clearfix"></div>
+    
+    <a href="/articles/arduino-uno-lego-case/" title="">
+      <h1 class="article_title title">Arduino UNO R3 lego case</h1>
+    </a>
+    
+    <div class="article_excerpt">
+      
+      <p><p>In the following photo you can see the result of the case I built for this project.
+<!-- raw HTML omitted --><!-- raw HTML omitted -->
+<figure>
+    <img src="/articles/img/arduino-uno-lego-case.jpg"
+         alt="arduino uno lego case"/> <figcaption>
+            <h4>arduino uno lego case</h4>
+        </figcaption>
+</figure>
+</p></p>
+      
+    </div>
+    <div class="clearfix"></div>
+    
+    <div class="article-footer">
+      
+      <a class="read-more-button pure-button" href="/articles/arduino-uno-lego-case/">Read the full article</a> 
+      
+
+
+
+
+<div class="soc-sharing">
+  <ul class="article_share_items">
+    <li>
+      <a class="fab fa-linkedin-in" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.jarboleda.me/articles/arduino-uno-lego-case/&amp;title=Arduino%20UNO%20R3%20lego%20case&amp;summary=%3cp%3eIn%20the%20following%20photo%20you%20can%20see%20the%20result%20of%20the%20case%20I%20built%20for%20this%20project.%0a%3c!--%20raw%20HTML%20omitted%20--%3e%3c!--%20raw%20HTML%20omitted%20--%3e%0a%3cfigure%3e%0a%20%20%20%20%3cimg%20src=%22/articles/img/arduino-uno-lego-case.jpg%22%0a%20%20%20%20%20%20%20%20%20alt=%22arduino%20uno%20lego%20case%22/%3e%20%3cfigcaption%3e%0a%20%20%20%20%20%20%20%20%20%20%20%20%3ch4%3earduino%20uno%20lego%20case%3c/h4%3e%0a%20%20%20%20%20%20%20%20%3c/figcaption%3e%0a%3c/figure%3e%0a%3c/p%3e&amp;source=J.%20Arboleda" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-twitter" href="http://twitter.com/share?text=Arduino%20UNO%20R3%20lego%20case&amp;url=https://www.jarboleda.me/articles/arduino-uno-lego-case/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-facebook-f" href="https://www.facebook.com/sharer/sharer.php?u=https://www.jarboleda.me/articles/arduino-uno-lego-case/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-google-plus-g" href="https://plus.google.com/share?url=https://www.jarboleda.me/articles/arduino-uno-lego-case/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-pinterest-p" href="https://pinterest.com/pin/create/button/?url=https://www.jarboleda.me/articles/arduino-uno-lego-case/&amp;media=%3cnil%3earduino-uno-lego-case.jpg&amp;description=%3cp%3eIn%20the%20following%20photo%20you%20can%20see%20the%20result%20of%20the%20case%20I%20built%20for%20this%20project.%0a%3c!--%20raw%20HTML%20omitted%20--%3e%3c!--%20raw%20HTML%20omitted%20--%3e%0a%3cfigure%3e%0a%20%20%20%20%3cimg%20src=%22/articles/img/arduino-uno-lego-case.jpg%22%0a%20%20%20%20%20%20%20%20%20alt=%22arduino%20uno%20lego%20case%22/%3e%20%3cfigcaption%3e%0a%20%20%20%20%20%20%20%20%20%20%20%20%3ch4%3earduino%20uno%20lego%20case%3c/h4%3e%0a%20%20%20%20%20%20%20%20%3c/figcaption%3e%0a%3c/figure%3e%0a%3c/p%3e" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+  </ul>
+</div>
+
+    </div>
+    <div class='post-footer'>
+      
+    </div>
+  </div>
+</div>
+
+          </article>
+        
+      
+      
+
+<ul class="pagination">
+    
+    <li class="page-item">
+        <a href="/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+    </li>
+    
+    <li class="page-item disabled">
+    <a  class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item active"><a class="page-link" href="/">1</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/page/2/">2</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/page/3/">3</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item disabled"><span aria-hidden="true">&nbsp;&hellip;&nbsp;</span></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/page/5/">5</a></li>
+    
+    
+    <li class="page-item">
+    <a href="/page/2/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+    </li>
+    
+    <li class="page-item">
+        <a href="/page/5/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    </li>
+    
+</ul>
+
+
+    </section><aside class='sidebar-wrapper pure-u-1 pure-u-md-1-4 sticky'>
+      
+<div class='sidebar'>
+  
+
+<div class='authorboxwrap'>
+<h4>Author</h4>
+    <div class='avatar-container'>
+      <img alt="author's photo" class='author_avatar' width='160' height='136' src="/img/me.min.png"  />
+      <h4 rel='author'>Jeferson Arboleda</h4>
+    </div>
+    <div class='author_description_container'>
+      <p class= 'm-text-centered m-bold'>Business Analyst</p>
+      <p>Currently working for <a href="https://amadeus.com/en">Amadeus</a> in Nice, Côte D&rsquo;Azur.</p>
+      <div class='authorsocial'>
+        
+          <a href='https://www.linkedin.com/in/jeferson-arboleda-167429134' target='_blank'><i class='fab fa-linkedin-in'></i></a>
+        
+        
+          <a href='https://github.com/jag10' target='_blank'><i class='fab fa-github'></i></a>
+        
+        
+          <a href='https://gitlab.com/jag7' target='_blank'><i class='fab fa-gitlab'></i></a>
+        
+        
+          <a href='https://twitter.com/j_a_g_x' target='_blank'><i class='fab fa-twitter'></i></a>
+        
+      </div>
+    </div>
+</div>
+
+  
+  <div class='widget currently-reading'>
+  <div class="widget-title">
+    <h2>Currently Reading</h2></div>
+  <div class='widget-content'>
+    <div class="loading-basic">
+      <div class="loading-bar"></div>
+      <div class="loading-bar"></div>
+      <div class="loading-bar"></div>
+      <div class="loading-bar"></div>
+    </div>
+    <div id="gr_updates_widget">
+      <iframe id="gr_iframe" src="" width="100%" height="330"></iframe>
+      
+      <a href="https://www.goodreads.com/">
+        <img with="139" height="31" alt="Goodreads: Book reviews, recommendations, and discussion" src="/img/goodreads-logo.png" />
+      </a>
+    </div>
+  </div>
+</div>
+
+  <div class='widget popular-posts'>
+  <div class="widget-title"><h2>Pinned posts</h2></div>
+  <div class='widget-content popular-posts'>
+    <ul>
+    
+        <li>
+          <div class='item-content'>
+            <div class='item-thumbnail'>
+              <a href='/articles/moving-to-france-for-work/'>
+                <img alt='Moving to France for work' width='72' height='72' src="/articles/img/thumbs/moving-to-france-for-work.jpg" />
+              </a>
+            </div>
+            <div class='item-title'>
+              <a href='/articles/moving-to-france-for-work/' class="mostVisitedLink">Moving to France for work
+                <span class="detail-span">[0]</span>
+              </a>
+            </div>
+          </div>
+          <div style='clear: both;'></div>
+        </li>
+      
+        <li>
+          <div class='item-content'>
+            <div class='item-thumbnail'>
+              <a href='/articles/arduino-uno-lego-case/'>
+                <img alt='Arduino UNO R3 lego case' width='72' height='72' src="/articles/img/thumbs/arduino-uno-lego-case.jpg" />
+              </a>
+            </div>
+            <div class='item-title'>
+              <a href='/articles/arduino-uno-lego-case/' class="mostVisitedLink">Arduino UNO R3 lego case
+                <span class="detail-span">[0]</span>
+              </a>
+            </div>
+          </div>
+          <div style='clear: both;'></div>
+        </li>
+      
+        <li>
+          <div class='item-content'>
+            <div class='item-thumbnail'>
+              <a href='/articles/web-development-environment/'>
+                <img alt='Web development environment' width='72' height='72' src="/articles/img/thumbs/web-development-environment.jpg" />
+              </a>
+            </div>
+            <div class='item-title'>
+              <a href='/articles/web-development-environment/' class="mostVisitedLink">Web development environment
+                <span class="detail-span">[0]</span>
+              </a>
+            </div>
+          </div>
+          <div style='clear: both;'></div>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+</div>
+
+
+    </aside>
+    <div class='clearfix'></div>
+  </div>
+  <footer>
+  <div class='footer-container'>
+    <div class='pure-u-1 pure-u-md-1-3'>
+      <div class='widget popular-posts'>
+        <div class="widget-title">
+          <h2>Other posts</h2></div>
+        <div class='widget-content popular-posts'>
+          <ul>
+            
+             
+            <li>
+              <div class='item-content'>
+                <div class='item-thumbnail'>
+                  <a href='/articles/configuring-iptables-and-fail2ban-on-centos-6/' target='_blank'>
+                    <img alt='Configuring IPTABLES and fail2ban on centOS 6' width='72' height='72' src="/articles/img/thumbs/configuring-iptables-and-fail2ban-on-centos-6.jpg" />
+                  </a>
+                </div>
+                <div class='item-title'>
+                  <a href='/articles/configuring-iptables-and-fail2ban-on-centos-6/' class="mostVisitedLink">Configuring IPTABLES and fail2ban on centOS 6</a>
+                </div>
+              </div>
+            </li>
+            
+            
+             
+            <li>
+              <div class='item-content'>
+                <div class='item-thumbnail'>
+                  <a href='/articles/configuring-a-lamp-server-on-centos-6/' target='_blank'>
+                    <img alt='configuring a LAMP server on CentOS 6' width='72' height='72' src="/articles/img/thumbs/configuring-a-lamp-server-on-centos-6.jpg" />
+                  </a>
+                </div>
+                <div class='item-title'>
+                  <a href='/articles/configuring-a-lamp-server-on-centos-6/' class="mostVisitedLink">configuring a LAMP server on CentOS 6</a>
+                </div>
+              </div>
+            </li>
+            
+            
+             
+            <li>
+              <div class='item-content'>
+                <div class='item-thumbnail'>
+                  <a href='/articles/centos-web-panel-on-vps/' target='_blank'>
+                    <img alt='Centos web panel with php7 and mysql5.6' width='72' height='72' src="/articles/img/thumbs/installing-centos-web-panel-on-vps.jpg" />
+                  </a>
+                </div>
+                <div class='item-title'>
+                  <a href='/articles/centos-web-panel-on-vps/' class="mostVisitedLink">Centos web panel with php7 and mysql5.6</a>
+                </div>
+              </div>
+            </li>
+            
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class='pure-u-1 pure-u-md-1-3'>
+      <div class='widget ContactForm'>
+        <h2 class='title'>Contact me</h2>
+        <a class="email" href="mailto:me@jarboleda.me">me@jarboleda.me</a>
+        <div class='contact-form-widget'>
+          <div class='form'>
+            <form name='contact-form' action="https://formspree.io/me@jarboleda.me" method="POST">
+              <p>Name</p>
+              <input class='contact-form-name' name='name' size='30' type='text' value='' />
+              <p>Email<span>*</span></p>
+              <input class='contact-form-email' name='name="_replyto"' size='30' type='text' value='' />
+              <p>Message<span>*</span></p>
+              <p><textarea class='contact-form-email-message' cols='29' name='email-message' rows='5'></textarea></p>
+              <input class='contact-form-button contact-form-button-submit' type='submit' value='Send' />
+              <div style='text-align: center; max-width: 222px; width: 100%'>
+                <p class='contact-form-error-message'></p>
+                <p class='contact-form-success-message'></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class='footer-credits'>
+    <div class='footer_social-icons'>
+      <ul>
+        
+        <li>
+          <a class="btn-linkedin" href='https://www.linkedin.com/in/jeferson-arboleda-167429134' target='_blank'><i class='fab fa-linkedin-in'></i></a>
+        </li>
+        
+        
+        <li>
+          <a class="btn-github" href='https://github.com/jag10' target='_blank'><i class='fab fa-github'></i></a>
+        </li>
+        
+        
+        <li>
+          <a class="btn-gitlab" href='https://gitlab.com/jag7' target='_blank'><i class='fab fa-gitlab'></i></a>
+        </li>
+        
+        
+        <li>
+          <a class="btn-twitter" href='https://twitter.com/j_a_g_x' target='_blank'><i class='fab fa-twitter'></i></a>
+        </li>
+        
+      </ul>
+    </div>
+    <div class='clr'></div>
+    <p>Copyright &#169; 2020
+      <a href=''></a>
+    </p>
+    <p class='attribution'>Powered by</p>
+    <a href='https://gohugo.io/' target="_blank" >
+      <img with="80" height="21" alt="hugo logo" class='attribution_logo' src="/img/hugo-logo.png" />
+    </a>
+  </div>
+</footer>
+
+<script defer src='/js/main.min.js' type='text/javascript'></script>
+
+<script type="text/javascript">
+  window.cookieconsent_options = {
+    "message": "jarboleda.me uses cookies to ensure you get the best experience.",
+    "dismiss": "Ok",
+    "learnMore": "More info",
+    "link": null,
+    "theme": "light-bottom"
+  };
+</script>
+<script defer type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js"></script>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-101857703-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+</body>
+</html>
+

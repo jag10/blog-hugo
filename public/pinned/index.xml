@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pinned on J. Arboleda</title>
+    <link>https://www.jarboleda.me/pinned/</link>
+    <description>Recent content in Pinned on J. Arboleda</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 16 Feb 2019 12:21:32 +0200</lastBuildDate>
+    
+	<atom:link href="https://www.jarboleda.me/pinned/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>notpinned</title>
+      <link>https://www.jarboleda.me/pinned/notpinned/</link>
+      <pubDate>Sat, 16 Feb 2019 12:21:32 +0200</pubDate>
+      
+      <guid>https://www.jarboleda.me/pinned/notpinned/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pinned</title>
+      <link>https://www.jarboleda.me/pinned/pinned/</link>
+      <pubDate>Sat, 10 Feb 2018 13:39:56 +0200</pubDate>
+      
+      <guid>https://www.jarboleda.me/pinned/pinned/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

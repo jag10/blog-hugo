@@ -1,0 +1,507 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>J. Arboleda - Zipping and unzipping websites with php</title>
+    <meta name="description" content="The blog of Jeferson Arboleda, software engineer. It&#39;s focused on self improvement and overcoming challenges I find everyday">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+    	
+	<meta property="og:title" content="Zipping and unzipping websites with php" />
+	<meta property="og:description" content="Sometimes you need to work with only FTP access, and it takes a lot of time to backup a website through FTP because usually there are a lot of files and listing them is a long process. I made these php scripts to avoid wasting time when I only have FTP access. For example, when a mate wants to work on a website but he/she want to backup it up first just in case they break something. They use these scripts below:" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://www.jarboleda.me/articles/zipping-and-unzipping-websites-with-php/" />
+	<meta property="og:image" content="/articles/img/zipping-and-unzipping-websites-with-php.png" />
+	<meta property="og:updated_time" content="2015-08-24 11:00:53 &#43;0200 CEST"/>
+	<meta property="og:locale" content="en-US" />
+	<meta property="og:site_name" content="J. Arboleda" />
+	
+	
+	<meta property="article:published_time" content="2015-08-24 11:00:53 &#43;0200 CEST" />
+	<meta property="article:modified_time" content="2015-08-24 11:00:53 &#43;0200 CEST" />
+	<meta property="article:section" content="articles" />
+	<meta property="article:tag" content="php" />
+	<meta property="article:tag" content="backup" />
+	<meta property="article:tag" content="zip" />
+	
+	
+    
+    <meta itemprop="name" content="Zipping and unzipping websites with php">
+    <meta itemprop="description" content="Sometimes you need to work with only FTP access, and it takes a lot of time to backup a website through FTP because usually there are a lot of files and listing them is a long process. I made these php scripts to avoid wasting time when I only have FTP access. For example, when a mate wants to work on a website but he/she want to backup it up first just in case they break something. They use these scripts below:">
+    <meta name="author" content="Jeferson Arboleda">
+    
+    <meta itemprop="image" content="zipping-and-unzipping-websites-with-php.png">
+    
+    <meta itemprop="keywords" content="notpinned,pinned,,false,true,serie1,arduino,backup,backups,bash,case,centos6,cloudflare,curl,cwp,facebook,fail2ban,fedora25,fopen,ftp,github,github-pages,httpd,hugo,iptables,ipv6,job,lego,linkedin,magento,magento2,mate,move,mysql,mysqldump,nodejs,odroid,pages,performance,php,php7,piwik,plesk,processwire,reflectionmethod,sass,static,ubuntu,unrealengine,vagrant,vm,vps,zip," />
+    <meta itemprop="wordCount" content="474">
+	
+	<meta name="twitter:card" content="summary_large_image"/>
+	<meta name="twitter:image:src" content="/articles/img/zipping-and-unzipping-websites-with-php.png"/>
+	
+	<meta name="twitter:title" content="Zipping and unzipping websites with php"/>
+	<meta name="twitter:description" content="Sometimes you need to work with only FTP access, and it takes a lot of time to backup a website through FTP because usually there are a lot of files and listing them is a long process. I made these php scripts to avoid wasting time when I only have FTP access. For example, when a mate wants to work on a website but he/she want to backup it up first just in case they break something. They use these scripts below:"/>
+	<meta name="twitter:site" content="@j_a_g_x"/>
+	
+	<meta name="twitter:creator" content="@j_a_g_x"/>
+
+
+	<meta name="news_keywords" content="php,backup,zip" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="/css/global.min.css" media="screen" rel="stylesheet" type="text/css" />
+  </head>
+ <body>
+  <header>
+    <nav class='top-menu'>
+      
+      <div class="menu-wrapper" id="menu">
+        <div class="pure-u-1 hidden">
+          <div class="pure-menu menu-toogle-container">
+            <a class="custom-toggle" id="toggle"><span class="bar"></span><span class="bar"></span></a>
+          </div>
+        </div>
+        <div class="pure-u-1">
+          <div class="pure-menu pure-menu-horizontal custom-can-transform">
+            <ul class="pure-menu-list float-left">
+              
+              <li class="pure-menu-item"><a target='' class='pure-menu-link' href=/>home</a></li>
+              
+              <li class="pure-menu-item"><a target='' class='pure-menu-link' href=/extras/cv/>about me</a></li>
+              
+              <li class="pure-menu-item"><a target='' class='pure-menu-link' href=/projects/>projects</a></li>
+              
+              <li class="pure-menu-item"><a target='' class='pure-menu-link' href=https://github.com/jag10>github</a></li>
+              
+              <li class="pure-menu-item"><a target='' class='pure-menu-link' href=https://gitlab.com/jag7>gitlab</a></li>
+              
+              <li class='pure-menu-item lang_selector selected'>
+                
+                <a class='pure-menu-link' href="#">English</a>
+                
+              </li>
+              <li class='pure-menu-item flag'><i class='fa fa-language' aria-hidden='true'></i></li>
+              
+            </ul>
+            <div class="float-right">
+              <ul class="pure-menu-list">
+                
+                <li class="pure-menu-item social_menu_entry">
+                  <a href='https://www.linkedin.com/in/jeferson-arboleda-167429134' target='_blank'><i class='fab fa-linkedin-in'></i></a>
+                </li>
+                
+                
+                <li class="pure-menu-item social_menu_entry">
+                  <a href='https://github.com/jag10' target='_blank'><i class='fab fa-github'></i></a>
+                </li>
+                
+                
+                <li class="pure-menu-item social_menu_entry">
+                  <a href='https://gitlab.com/jag7' target='_blank'><i class='fab fa-gitlab'></i></a>
+                </li>
+                
+                
+                <li class="pure-menu-item social_menu_entry">
+                  <a href='https://twitter.com/j_a_g_x' target='_blank'><i class='fab fa-twitter'></i></a>
+                </li>
+                
+                <li class='pure-menu-item nt-search' id='nt-search'>
+                  <form action='/search/' id='searchform' method='get'>
+                    <div class='nt-search-input-wrap'>
+                      <input class='nt-search-input' id='s' name='q' placeholder='Search is disabled :(' type='text' value='' disabled />
+                    </div>
+                    <input class='nt-search-submit' id='go' type='submit' value='Search' />
+                    <span class='nt fas fa-search'></span>
+                  </form>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    
+  </header>
+
+  <div class="main-container">
+    <section id="main" class="pure-u-1 pure-u-md-3-4">
+      <article>
+        <div class="post-container">
+  
+  <div class="article_summary">
+    <div class="article-date">
+      <p class="day"><i class="far fa-calendar-alt"></i>24 Aug 2015</p>
+      <p><i class="far fa-clock"></i>4 min read  ~ 500 words</p>
+    </div>
+    
+    <div class="article-tags">
+      
+      <a href="#" rel="tag">php</a> 
+      <a href="#" rel="tag">backup</a> 
+      <a href="#" rel="tag">zip</a> 
+    </div>
+    
+    <div class="clearfix"></div>
+    
+    <h1 class="article_title title">Zipping and unzipping websites with php</h1>
+    
+    <div class="article_excerpt">
+      
+      <p><p>Sometimes you need to work with only FTP access, and it takes a lot of time to backup a website through FTP because usually there are a lot of files and listing them is a long process. I made these php scripts to avoid wasting time when I only have FTP access. For example, when a mate wants to work on a website but he/she want to backup it up first just in case they break something. They use these scripts below:</p>
+<h2 id="zipping-files">Zipping files</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+$zip <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">ZipArchive</span>();
+
+<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>$zip<span style="color:#f92672">-&amp;</span><span style="color:#a6e22e">gt</span>;<span style="color:#a6e22e">open</span>(<span style="color:#e6db74">&#34;data1.zip&#34;</span>, <span style="color:#a6e22e">ZIPARCHIVE</span><span style="color:#f92672">::</span><span style="color:#a6e22e">CREATE</span>)) {
+	<span style="color:#66d9ef">die</span> (<span style="color:#e6db74">&#34;&amp;lt;p class=&#39;error&#39;&amp;gt;Couldn&#39;t create the file&amp;lt;/p&amp;gt;&#34;</span>);
+}
+
+$iterator <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">RecursiveIteratorIterator</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">RecursiveDirectoryIterator</span>(<span style="color:#e6db74">&#34;.&#34;</span>));
+
+$path_parts <span style="color:#f92672">=</span> <span style="color:#a6e22e">pathinfo</span>(<span style="color:#66d9ef">__FILE__</span>);
+$script_path <span style="color:#f92672">=</span> $path_parts[<span style="color:#e6db74">&#39;dirname&#39;</span>] <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;/&#39;</span><span style="color:#f92672">.</span> $path_parts[<span style="color:#e6db74">&#39;basename&#39;</span>];
+<span style="color:#66d9ef">foreach</span> ($iterator <span style="color:#66d9ef">as</span> $key<span style="color:#f92672">=&amp;</span><span style="color:#a6e22e">gt</span>;$value) {
+	<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">is_file</span>($key) <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">amp</span>;<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">amp</span>; <span style="color:#a6e22e">realpath</span>($key) <span style="color:#f92672">!=</span> $script_path){ <span style="color:#75715e">// don&#39;t include this file
+</span><span style="color:#75715e"></span>		$zip<span style="color:#f92672">-&amp;</span><span style="color:#a6e22e">gt</span>;<span style="color:#a6e22e">addFile</span>($key, $key) <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">die</span> (<span style="color:#e6db74">&#34;&amp;lt;p class=&#39;error&#39;&amp;gt;ERROR: Couldn&#39;t add file: </span><span style="color:#e6db74">$key</span><span style="color:#e6db74">&amp;lt;/p&amp;gt;&#34;</span>);
+		<span style="color:#66d9ef">echo</span> $key <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;&amp;lt;br&amp;gt;&#39;</span>;
+	}
+}
+
+$zip<span style="color:#f92672">-&amp;</span><span style="color:#a6e22e">gt</span>;<span style="color:#a6e22e">close</span>() <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">die</span> (<span style="color:#e6db74">&#34;&amp;lt;p class=&#39;error&#39;&amp;gt;ERROR: Couldn&#39;t save the file&amp;lt;/p&amp;gt;&#34;</span>);
+
+<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;&amp;lt;h1&amp;gt;OK.&amp;lt;/h1&amp;gt;&#34;</span>;
+<span style="color:#75715e">?&gt;</span>
+</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">style</span>&gt;
+	<span style="color:#f92672">h1</span>{
+		<span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">absolute</span>;
+		<span style="color:#66d9ef">top</span>: <span style="color:#ae81ff">0</span>;
+		<span style="color:#66d9ef">right</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>;
+		<span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>;
+		<span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#148BA5</span>;
+	}
+
+	.<span style="color:#a6e22e">error</span>{
+		<span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">red</span>;
+	}
+&lt;/<span style="color:#f92672">style</span>&gt;</code></pre></div>
+<p>This script will take all the content in the current directory, iterate directories recursively and create a file named &ldquo;data1.zip&rdquo;. There you have it.</p>
+<h2 id="checking-the-result">Checking the result</h2>
+<p>It&rsquo;s is important to make sure all files are included, you don&rsquo;t want to trust in your backups just to find later that they aren&rsquo;t 100% correct. Let&rsquo;s check it. How could we do that? We&rsquo;re going to use our beloved terminal for this task. We&rsquo;ll compare the number of files in both zip.file and the directory we zipped.
+Look at this:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$zipinfo /var/www/vhosts/jglab.me/httpdocs/data1.zip | grep files
+<span style="color:#ae81ff">10132</span> files, <span style="color:#ae81ff">129117030</span> bytes uncompressed, <span style="color:#ae81ff">50698507</span> bytes compressed:  60.7%
+$find /var/www/vhosts/jglab.me/httpdocs/ -type f | wc -l
+<span style="color:#ae81ff">10134</span></code></pre></div></p>
+<p>Our zip contains 10132 files, and find command says there are 10124 in our directory, which makes sense: there were 10132 files before we started, then we added the script zip.php (which doesn&rsquo;t zip itself) and it output data1.zip file, adding up to 10134 files.</p>
+<h2 id="unzipping-files">Unzipping files</h2>
+<p>Sometimes we also need to unzip files with FTP access. The next script will take care of that:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+$file <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;data.zip&#39;</span>;
+
+$path <span style="color:#f92672">=</span> <span style="color:#a6e22e">pathinfo</span>(<span style="color:#a6e22e">realpath</span>($file), <span style="color:#a6e22e">PATHINFO_DIRNAME</span>);
+
+<span style="color:#75715e">//$path .= &#39;/subdir&#39;;
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span><span style="color:#a6e22e">file_exists</span>($path)){
+	<span style="color:#a6e22e">mkdir</span>($path, <span style="color:#ae81ff">0755</span>, <span style="color:#66d9ef">true</span>);
+}
+
+$zip <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">ZipArchive</span>;
+$res <span style="color:#f92672">=</span> $zip<span style="color:#f92672">-&amp;</span><span style="color:#a6e22e">gt</span>;<span style="color:#a6e22e">open</span>($file);
+<span style="color:#66d9ef">if</span> ($res <span style="color:#f92672">===</span> <span style="color:#66d9ef">TRUE</span>) {
+  <span style="color:#75715e">// extract it to the path we determined above
+</span><span style="color:#75715e"></span>  $zip<span style="color:#f92672">-&amp;</span><span style="color:#a6e22e">gt</span>;<span style="color:#a6e22e">extractTo</span>($path);
+  $zip<span style="color:#f92672">-&amp;</span><span style="color:#a6e22e">gt</span>;<span style="color:#a6e22e">close</span>();
+  <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">$file</span><span style="color:#e6db74"> extracted to </span><span style="color:#e6db74">$path</span><span style="color:#e6db74">&#34;</span>;
+} <span style="color:#66d9ef">else</span> {
+  <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;Couldn&#39;t open </span><span style="color:#e6db74">$file</span><span style="color:#e6db74">&#34;</span>;
+}
+<span style="color:#75715e">?&gt;</span>
+</code></pre></div></p>
+<p>The script takes the file &ldquo;data.zip&rdquo; in the current dir and extract its contents to the current dir. You can specify a subdir uncommenting the line $path .= &lsquo;/subdir&rsquo;;
+You should delete these scripts as soon as you use them, they could break your website if someone discovers them.</p>
+<h2 id="bonus">Bonus</h2>
+<p>If you surf the internet you&rsquo;ll find php scripts to backup databases as well. You can find some links in Resources.</p></p>
+      
+    </div>
+    <div class="clearfix"></div>
+    
+    <div class="article_resources">
+      <h2>Resources</h2>
+      <ul>
+        
+        <li>
+          
+          <a target="_blank" href="http://davidwalsh.name/backup-mysql-database-php">Backup mysql db</a> 
+        </li>
+        
+        <li>
+          
+          <a target="_blank" href="https://help.1and1.com/hosting-c37630/scripts-and-programming-languages-c85099/php-c37728/importing-and-exporting-mysql-databases-using-php-a595887.html">1and1 help center</a> 
+        </li>
+        
+      </ul>
+    </div>
+    
+    <div class="article-footer">
+      
+      
+
+
+
+
+<div class="soc-sharing">
+  <ul class="article_share_items">
+    <li>
+      <a class="fab fa-linkedin-in" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.jarboleda.me/articles/zipping-and-unzipping-websites-with-php/&amp;title=Zipping%20and%20unzipping%20websites%20with%20php&amp;summary=%3cp%3eSometimes%20you%20need%20to%20work%20with%20only%20FTP%20access,%20and%20it%20takes%20a%20lot%20of%20time%20to%20backup%20a%20website%20through%20FTP%20because%20usually%20there%20are%20a%20lot%20of%20files%20and%20listing%20them%20is%20a%20long%20process.%20I%20made%20these%20php%20scripts%20to%20avoid%20wasting%20time%20when%20I%20only%20have%20FTP%20access.%20For%20example,%20when%20a%20mate%20wants%20to%20work%20on%20a%20website%20but%20he/she%20want%20to%20backup%20it%20up%20first%20just%20in%20case%20they%20break%20something.%20They%20use%20these%20scripts%20below:%3c/p%3e&amp;source=J.%20Arboleda" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-twitter" href="http://twitter.com/share?text=Zipping%20and%20unzipping%20websites%20with%20php&amp;url=https://www.jarboleda.me/articles/zipping-and-unzipping-websites-with-php/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-facebook-f" href="https://www.facebook.com/sharer/sharer.php?u=https://www.jarboleda.me/articles/zipping-and-unzipping-websites-with-php/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-google-plus-g" href="https://plus.google.com/share?url=https://www.jarboleda.me/articles/zipping-and-unzipping-websites-with-php/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-pinterest-p" href="https://pinterest.com/pin/create/button/?url=https://www.jarboleda.me/articles/zipping-and-unzipping-websites-with-php/&amp;media=%3cnil%3ezipping-and-unzipping-websites-with-php.png&amp;description=%3cp%3eSometimes%20you%20need%20to%20work%20with%20only%20FTP%20access,%20and%20it%20takes%20a%20lot%20of%20time%20to%20backup%20a%20website%20through%20FTP%20because%20usually%20there%20are%20a%20lot%20of%20files%20and%20listing%20them%20is%20a%20long%20process.%20I%20made%20these%20php%20scripts%20to%20avoid%20wasting%20time%20when%20I%20only%20have%20FTP%20access.%20For%20example,%20when%20a%20mate%20wants%20to%20work%20on%20a%20website%20but%20he/she%20want%20to%20backup%20it%20up%20first%20just%20in%20case%20they%20break%20something.%20They%20use%20these%20scripts%20below:%3c/p%3e" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+  </ul>
+</div>
+
+    </div>
+    <div class='post-footer'>
+      
+       <div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+var disqus_shortname = 'jarboleda-me';
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://jarboleda-me.disqus.com/embed.js';
+s.async = true; 
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+     
+    </div>
+  </div>
+</div>
+
+      </article>
+    </section><aside class='sidebar-wrapper pure-u-1 pure-u-md-1-4 sticky'>
+      
+<div class='sidebar'>
+  
+
+<div class='authorboxwrap'>
+<h4>Author</h4>
+    <div class='avatar-container'>
+      <img alt="author's photo" class='author_avatar' width='160' height='136' src="/img/me.min.png"  />
+      <h4 rel='author'>Jeferson Arboleda</h4>
+    </div>
+    <div class='author_description_container'>
+      <p class= 'm-text-centered m-bold'>Business Analyst</p>
+      <p>Currently working for <a href="https://amadeus.com/en">Amadeus</a> in Nice, Côte D&rsquo;Azur.</p>
+      <div class='authorsocial'>
+        
+          <a href='https://www.linkedin.com/in/jeferson-arboleda-167429134' target='_blank'><i class='fab fa-linkedin-in'></i></a>
+        
+        
+          <a href='https://github.com/jag10' target='_blank'><i class='fab fa-github'></i></a>
+        
+        
+          <a href='https://gitlab.com/jag7' target='_blank'><i class='fab fa-gitlab'></i></a>
+        
+        
+          <a href='https://twitter.com/j_a_g_x' target='_blank'><i class='fab fa-twitter'></i></a>
+        
+      </div>
+    </div>
+</div>
+
+  
+  <h4>On This Page</h4>
+  <div class='table_of_contents'>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#zipping-files">Zipping files</a></li>
+    <li><a href="#checking-the-result">Checking the result</a></li>
+    <li><a href="#unzipping-files">Unzipping files</a></li>
+    <li><a href="#bonus">Bonus</a></li>
+  </ul>
+</nav>
+  </div>
+  
+</div>
+
+
+    </aside>
+    <div class='clearfix'></div>
+  </div>
+<footer>
+  <div class='footer-container'>
+    <div class='pure-u-1 pure-u-md-1-3'>
+      <div class='widget popular-posts'>
+        <div class="widget-title">
+          <h2>Other posts</h2></div>
+        <div class='widget-content popular-posts'>
+          <ul>
+            
+             
+            <li>
+              <div class='item-content'>
+                <div class='item-thumbnail'>
+                  <a href='/articles/getting-0.5s-page-load-time-on-your-blog/' target='_blank'>
+                    <img alt='Getting 0.5 seconds load time on your blog' width='72' height='72' src="/articles/img/thumbs/getting-0.5s-page-load-time-on-your-blog.png" />
+                  </a>
+                </div>
+                <div class='item-title'>
+                  <a href='/articles/getting-0.5s-page-load-time-on-your-blog/' class="mostVisitedLink">Getting 0.5 seconds load time on your blog</a>
+                </div>
+              </div>
+            </li>
+            
+            
+             
+            <li>
+              <div class='item-content'>
+                <div class='item-thumbnail'>
+                  <a href='/articles/authenticating-users-in-joomla-with-curl/' target='_blank'>
+                    <img alt='Authenticating users with cURL' width='72' height='72' src="/articles/img/thumbs/authenticating-users-in-joomla-with-curl.jpg" />
+                  </a>
+                </div>
+                <div class='item-title'>
+                  <a href='/articles/authenticating-users-in-joomla-with-curl/' class="mostVisitedLink">Authenticating users with cURL</a>
+                </div>
+              </div>
+            </li>
+            
+            
+             
+            <li>
+              <div class='item-content'>
+                <div class='item-thumbnail'>
+                  <a href='/articles/getting-an-objects-methods/' target='_blank'>
+                    <img alt='Getting an object&#39;s (reflected) methods' width='72' height='72' src="/articles/img/thumbs/getting-an-objects-methods.jpg" />
+                  </a>
+                </div>
+                <div class='item-title'>
+                  <a href='/articles/getting-an-objects-methods/' class="mostVisitedLink">Getting an object&#39;s (reflected) methods</a>
+                </div>
+              </div>
+            </li>
+            
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class='pure-u-1 pure-u-md-1-3'>
+      <div class='widget ContactForm'>
+        <h2 class='title'>Contact me</h2>
+        <a class="email" href="mailto:me@jarboleda.me">me@jarboleda.me</a>
+        <div class='contact-form-widget'>
+          <div class='form'>
+            <form name='contact-form' action="https://formspree.io/me@jarboleda.me" method="POST">
+              <p>Name</p>
+              <input class='contact-form-name' name='name' size='30' type='text' value='' />
+              <p>Email<span>*</span></p>
+              <input class='contact-form-email' name='name="_replyto"' size='30' type='text' value='' />
+              <p>Message<span>*</span></p>
+              <p><textarea class='contact-form-email-message' cols='29' name='email-message' rows='5'></textarea></p>
+              <input class='contact-form-button contact-form-button-submit' type='submit' value='Send' />
+              <div style='text-align: center; max-width: 222px; width: 100%'>
+                <p class='contact-form-error-message'></p>
+                <p class='contact-form-success-message'></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class='footer-credits'>
+    <div class='footer_social-icons'>
+      <ul>
+        
+        <li>
+          <a class="btn-linkedin" href='https://www.linkedin.com/in/jeferson-arboleda-167429134' target='_blank'><i class='fab fa-linkedin-in'></i></a>
+        </li>
+        
+        
+        <li>
+          <a class="btn-github" href='https://github.com/jag10' target='_blank'><i class='fab fa-github'></i></a>
+        </li>
+        
+        
+        <li>
+          <a class="btn-gitlab" href='https://gitlab.com/jag7' target='_blank'><i class='fab fa-gitlab'></i></a>
+        </li>
+        
+        
+        <li>
+          <a class="btn-twitter" href='https://twitter.com/j_a_g_x' target='_blank'><i class='fab fa-twitter'></i></a>
+        </li>
+        
+      </ul>
+    </div>
+    <div class='clr'></div>
+    <p>Copyright &#169; 2020
+      <a href=''></a>
+    </p>
+    <p class='attribution'>Powered by</p>
+    <a href='https://gohugo.io/' target="_blank" >
+      <img with="80" height="21" alt="hugo logo" class='attribution_logo' src="/img/hugo-logo.png" />
+    </a>
+  </div>
+</footer>
+
+<script defer src='/js/main.min.js' type='text/javascript'></script>
+
+<script type="text/javascript">
+  window.cookieconsent_options = {
+    "message": "jarboleda.me uses cookies to ensure you get the best experience.",
+    "dismiss": "Ok",
+    "learnMore": "More info",
+    "link": null,
+    "theme": "light-bottom"
+  };
+</script>
+<script defer type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js"></script>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-101857703-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+</body>
+</html>
+

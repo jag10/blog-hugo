@@ -1,0 +1,614 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>J. Arboleda - Web development environment</title>
+    <meta name="description" content="The blog of Jeferson Arboleda, software engineer. It&#39;s focused on self improvement and overcoming challenges I find everyday">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+    	
+	<meta property="og:title" content="Web development environment" />
+	<meta property="og:description" content="In this post we&rsquo;ll configure an advanced web development environment. For that, we&rsquo;ll have our web hosted on a server (we will NOT use that server for development), and in our station we&rsquo;ll have a virtual machine. For this vm we&rsquo;ll use vagrant with the  scotch box, which allows us to host a web without extra work
+Prerequisites
+We&rsquo;ll use the following tecnologies for our environment. You should review them before going on." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://www.jarboleda.me/articles/web-development-environment/" />
+	<meta property="og:image" content="/articles/img/web-development-environment.jpg" />
+	<meta property="og:updated_time" content="2016-07-27 13:50:40 &#43;0200 CEST"/>
+	<meta property="og:locale" content="en-US" />
+	<meta property="og:site_name" content="J. Arboleda" />
+	
+	
+	<meta property="article:published_time" content="2016-07-27 13:50:40 &#43;0200 CEST" />
+	<meta property="article:modified_time" content="2016-07-27 13:50:40 &#43;0200 CEST" />
+	<meta property="article:section" content="articles" />
+	<meta property="article:tag" content="sass" />
+	<meta property="article:tag" content="vagrant" />
+	<meta property="article:tag" content="nodejs" />
+	
+	
+    
+    <meta itemprop="name" content="Web development environment">
+    <meta itemprop="description" content="In this post we&rsquo;ll configure an advanced web development environment. For that, we&rsquo;ll have our web hosted on a server (we will NOT use that server for development), and in our station we&rsquo;ll have a virtual machine. For this vm we&rsquo;ll use vagrant with the  scotch box, which allows us to host a web without extra work
+Prerequisites
+We&rsquo;ll use the following tecnologies for our environment. You should review them before going on.">
+    <meta name="author" content="Jeferson Arboleda">
+    
+    <meta itemprop="image" content="web-development-environment.jpg">
+    
+    <meta itemprop="keywords" content="notpinned,pinned,,false,true,serie1,arduino,backup,backups,bash,case,centos6,cloudflare,curl,cwp,facebook,fail2ban,fedora25,fopen,ftp,github,github-pages,httpd,hugo,iptables,ipv6,job,lego,linkedin,magento,magento2,mate,move,mysql,mysqldump,nodejs,odroid,pages,performance,php,php7,piwik,plesk,processwire,reflectionmethod,sass,static,ubuntu,unrealengine,vagrant,vm,vps,zip," />
+    <meta itemprop="wordCount" content="1136">
+	
+	<meta name="twitter:card" content="summary_large_image"/>
+	<meta name="twitter:image:src" content="/articles/img/web-development-environment.jpg"/>
+	
+	<meta name="twitter:title" content="Web development environment"/>
+	<meta name="twitter:description" content="In this post we&rsquo;ll configure an advanced web development environment. For that, we&rsquo;ll have our web hosted on a server (we will NOT use that server for development), and in our station we&rsquo;ll have a virtual machine. For this vm we&rsquo;ll use vagrant with the  scotch box, which allows us to host a web without extra work
+Prerequisites
+We&rsquo;ll use the following tecnologies for our environment. You should review them before going on."/>
+	<meta name="twitter:site" content="@j_a_g_x"/>
+	
+	<meta name="twitter:creator" content="@j_a_g_x"/>
+
+
+	<meta name="news_keywords" content="sass,vagrant,nodejs" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="/css/global.min.css" media="screen" rel="stylesheet" type="text/css" />
+  </head>
+ <body>
+  <header>
+    <nav class='top-menu'>
+      
+      <div class="menu-wrapper" id="menu">
+        <div class="pure-u-1 hidden">
+          <div class="pure-menu menu-toogle-container">
+            <a class="custom-toggle" id="toggle"><span class="bar"></span><span class="bar"></span></a>
+          </div>
+        </div>
+        <div class="pure-u-1">
+          <div class="pure-menu pure-menu-horizontal custom-can-transform">
+            <ul class="pure-menu-list float-left">
+              
+              <li class="pure-menu-item"><a target='' class='pure-menu-link' href=/>home</a></li>
+              
+              <li class="pure-menu-item"><a target='' class='pure-menu-link' href=/extras/cv/>about me</a></li>
+              
+              <li class="pure-menu-item"><a target='' class='pure-menu-link' href=/projects/>projects</a></li>
+              
+              <li class="pure-menu-item"><a target='' class='pure-menu-link' href=https://github.com/jag10>github</a></li>
+              
+              <li class="pure-menu-item"><a target='' class='pure-menu-link' href=https://gitlab.com/jag7>gitlab</a></li>
+              
+              <li class='pure-menu-item lang_selector selected'>
+                
+                <a class='pure-menu-link' href="#">English</a>
+                
+              </li>
+              <li class='pure-menu-item flag'><i class='fa fa-language' aria-hidden='true'></i></li>
+               
+              <li class='pure-menu-item lang_selector'>
+                <a class='pure-menu-link' href="/es/articles/web-development-environment/">spanish </a>
+              </li>
+               
+            </ul>
+            <div class="float-right">
+              <ul class="pure-menu-list">
+                
+                <li class="pure-menu-item social_menu_entry">
+                  <a href='https://www.linkedin.com/in/jeferson-arboleda-167429134' target='_blank'><i class='fab fa-linkedin-in'></i></a>
+                </li>
+                
+                
+                <li class="pure-menu-item social_menu_entry">
+                  <a href='https://github.com/jag10' target='_blank'><i class='fab fa-github'></i></a>
+                </li>
+                
+                
+                <li class="pure-menu-item social_menu_entry">
+                  <a href='https://gitlab.com/jag7' target='_blank'><i class='fab fa-gitlab'></i></a>
+                </li>
+                
+                
+                <li class="pure-menu-item social_menu_entry">
+                  <a href='https://twitter.com/j_a_g_x' target='_blank'><i class='fab fa-twitter'></i></a>
+                </li>
+                
+                <li class='pure-menu-item nt-search' id='nt-search'>
+                  <form action='/search/' id='searchform' method='get'>
+                    <div class='nt-search-input-wrap'>
+                      <input class='nt-search-input' id='s' name='q' placeholder='Search is disabled :(' type='text' value='' disabled />
+                    </div>
+                    <input class='nt-search-submit' id='go' type='submit' value='Search' />
+                    <span class='nt fas fa-search'></span>
+                  </form>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    
+  </header>
+
+  <div class="main-container">
+    <section id="main" class="pure-u-1 pure-u-md-3-4">
+      <article>
+        <div class="post-container">
+  
+  <div class="article_summary">
+    <div class="article-date">
+      <p class="day"><i class="far fa-calendar-alt"></i>27 Jul 2016</p>
+      <p><i class="far fa-clock"></i>7 min read  ~ 1200 words</p>
+    </div>
+    
+    <div class="article-tags">
+      
+      <a href="#" rel="tag">sass</a> 
+      <a href="#" rel="tag">vagrant</a> 
+      <a href="#" rel="tag">nodejs</a> 
+    </div>
+    
+    <div class="clearfix"></div>
+    
+    <h1 class="article_title title">Web development environment</h1>
+    
+    <div class="article_excerpt">
+      
+      <p><p>In this post we&rsquo;ll configure an advanced web development environment. For that, we&rsquo;ll have our web hosted on a server (we will NOT use that server for development), and in our station we&rsquo;ll have a virtual machine. For this vm we&rsquo;ll use vagrant with the  scotch box, which allows us to host a web without extra work</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>We&rsquo;ll use the following tecnologies for our environment. You should review them before going on.</p>
+<ul>
+<li>Vagrant. Vagrant makes creating dev environments easy and fast</li>
+<li>virtualbox. Vagrant uses vm and for that, it needs virtualbox as a dependency</li>
+<li>nodejs. nodejs gives us the environment to run the dev utilities</li>
+<li>npm. npm lets us install the packages we need for development</li>
+<li>adminer. Adminer is a lightweight phpmyadmin. The main advantage is that we only need one .php file to use it.</li>
+<li>sass. Sass is a css extension which allows us to create more efficient css code, making our code more maintanable</li>
+<li>compass. Compass is a css framework which uses sass</li>
+<li>gulp (autoprefixer, cleanCSS, uglify, etc.) Gulp allows us to automatize tasks</li>
+<li>livereload. With livereload we&rsquo;ll be able to reload automatically the browser when we make changes on sass, js or .php files</li>
+<li>git</li>
+</ul>
+<h2 id="installing-vagrant">Installing vagrant</h2>
+<p>Well, the first thing we need to do is install vagrant with virtualbox. Here I&rsquo;ll show you how to do it on Fedora, but it&rsquo;s almost the same on other distros. In first place, we have to install dropbox repo:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cd /etc/yum.repos.d/
+wget http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
+<span style="color:#75715e">#Instalamos las dependencias</span>
+dnf install binutils gcc make patch libgomp glibc-headers glibc-devel kernel-headers kernel-devel dkms</code></pre></div>
+Next, we&rsquo;ll install virtualbox. I had to install 5.0 versión, because vagrant isn&rsquo;t fully compatible with virtualbox 5.1
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">dnf install VirtualBox-5.0</code></pre></div>
+Now we&rsquo;ll install vagrant:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">dnf install vagrant</code></pre></div>
+The next step consists on going to <a href="https://box.scotch.io/">scotch&rsquo;s web</a> and install his box:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">mdir -p ~/vagrant/dev
+cd ~/vagrant/dev/
+git clone https://github.com/scotch-io/scotch-box.git my-project
+vagrant up --provider<span style="color:#f92672">=</span>virtualbox</code></pre></div>
+The first time we execute vagrant up it&rsquo;ll have to download the box image and will take its time. Once the machine is installed, we should be able to see it on http://192.168.33.10/
+Ok, now we have our virtual environment, the next step is to host our website on the virtual machine. For that, we&rsquo;ll migrate files (using zip for example), and the database. We need to export the db as a .sql file. We can do that with phpmyadmin or in a terminal, type:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">mysqldump -u db_username -p db_name &gt; db_name.sql</code></pre></div>
+By default, scotchbox makes the dir where we installed the vm (~/vagrant/dev) shared with the vm on /var/www, so we can unzip the web files there. We&rsquo;ll have to import the database too. For that, we can use adminer:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cd ~/vagrant/dev/public/
+wget https://www.adminer.org/static/download/4.2.5/adminer-4.2.5.php</code></pre></div></p>
+<p>If the database dump is larger than 2M, we need to edit the file /etc/php5/apache2/php.ini and modify the upload_max_filesize directive (256M for example). Once the web is migrated, we should check the .htaccess file in case we need to make any modification (disable ssl, for example). Also, we have to modify the connection data for the database:</p>
+<ul>
+<li>Key	          Value</li>
+<li>Database Name	scotchbox</li>
+<li>Database User	root</li>
+<li>Database Password	root</li>
+<li>Database Host	localhost</li>
+</ul>
+<p>We can also log in adminer and create a new database.</p>
+<h2 id="dir-structure">Dir structure</h2>
+<p>The dir structure I use for development is the following:
+<pre><code class="language-cirru" data-lang="cirru">/templates/
+|-- css < Here we'll save the global.min.css used in production (and any other, if needed)
+|-- fonts < well, fonts
+|-- img < images used in the template
+|-- js < .min.js files used in production
+|-- lib < libraries needed in the template
+|-- node_modules < nodejs modules used
+|-- partials < These files contain some parts of the template itself (widgets, comments...)
+|-- src < source code
+|----sass < sass files
+|------modules < sass utilites, they don't output any css code (variables, placeholders...)
+|------partials < partial sass files (menu.sass, article.sass,...)
+|------vendor < 3rd party libraries (bootstrap, purecss, foundation...)
+|----js < source js files
+.php < templates (header.php, footer.php. etc.)</code></pre></p>
+<h2 id="automating-tasks">Automating tasks</h2>
+<p>Now we have the dev environment prepared, the next step is to use gulp and compass in order to automatize some tasks like compile sass or minify js files. For that, we need to install ruby in the virtual machine:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">vagrant ssh
+su root
+apt-get install ruby
+gem update --system
+gem install compass</code></pre></div>
+Then, we&rsquo;ll install nodejs and npm (using official repos fedora/ubuntu)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">apt-get install nodejs npm</code></pre></div>
+Now we can install and configure gulp:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cd ~/vagrant/dev/
+npm init
+npm install --global gulp-cli
+npm install --save-dev gulp
+compass create &lt;project_name&gt;</code></pre></div></p>
+<p>Ok, now we have gulp and compass. Now we need to tell gulp which tasks we want to automatize. For that, we have to use a gulpfile.js in our project. Here is the one I use, you can modify it to fit your needs. This file:</p>
+<ul>
+<li>Imports neeeded deps</li>
+<li>Sets the directories which will contain our scss and js files</li>
+<li>Creates the css task, which compiles scss files with sass, uses autoprefixer for back compatibility and then saves a regular css file and a .min.css production version</li>
+<li>Creates js tasks which concatenates all js files and generates regular version and minified version (.min.js)</li>
+<li>Creates &lsquo;live&rsquo; task, which watches scss and js files to compile when needed, and then watch .php, .css and .js files to autoreload the browser when needed</li>
+</ul>
+<p>Here is the gulpfile.js, before using it you have to install the needed deps:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npm install --save-dev gulp gulp-compass gulp-autoprefixer gulp-rename gulp-clean-css gulp-uglify gulp-concat gulp-livereload gulp-plumber gulp-path</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">gulp</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp&#39;</span>),
+    <span style="color:#a6e22e">compass</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp-compass&#39;</span>),
+    <span style="color:#a6e22e">autoprefixer</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp-autoprefixer&#39;</span>),
+    <span style="color:#a6e22e">rename</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp-rename&#39;</span>),
+    <span style="color:#75715e">// minifycss = require(&#39;gulp-minify-css&#39;),
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">cleanCSS</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp-clean-css&#39;</span>);
+    <span style="color:#a6e22e">uglify</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp-uglify&#39;</span>),
+    <span style="color:#a6e22e">concat</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp-concat&#39;</span>)
+    <span style="color:#a6e22e">livereload</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp-livereload&#39;</span>)
+    <span style="color:#a6e22e">plumber</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp-plumber&#39;</span>),
+    <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;path&#39;</span>);
+
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sass_dir</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;./src/sass/**/*.scss&#39;</span>,
+    <span style="color:#a6e22e">js_dir</span>   <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;./src/js/**/*.js&#39;</span>;
+
+<span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">task</span>(<span style="color:#e6db74">&#39;default&#39;</span>, <span style="color:#66d9ef">function</span>() {
+  <span style="color:#75715e">// place code for your default task here
+</span><span style="color:#75715e"></span>});
+
+<span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">task</span>(<span style="color:#e6db74">&#39;live&#39;</span>, <span style="color:#66d9ef">function</span>(){
+  <span style="color:#a6e22e">livereload</span>.<span style="color:#a6e22e">listen</span>();
+  <span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">watch</span>(<span style="color:#a6e22e">sass_dir</span>, [<span style="color:#e6db74">&#39;css&#39;</span>]);
+  <span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">watch</span>(<span style="color:#a6e22e">js_dir</span>, [<span style="color:#e6db74">&#39;js&#39;</span>]);
+
+  <span style="color:#75715e">//reload when a template file, the minified css, or the minified js file changes
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">watch</span>([<span style="color:#e6db74">&#39;partials/*.php&#39;</span>, <span style="color:#e6db74">&#39;*.php&#39;</span>, <span style="color:#e6db74">&#39;css/*.css&#39;</span>, <span style="color:#e6db74">&#39;js/*.js&#39;</span>], <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">event</span>) {
+    <span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">src</span>(<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">path</span>)
+      .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">plumber</span>())
+      .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">livereload</span>())
+  });
+});
+
+<span style="color:#75715e">// sass
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">task</span>(<span style="color:#e6db74">&#39;css&#39;</span>, <span style="color:#66d9ef">function</span>() {
+  <span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">src</span>(<span style="color:#a6e22e">sass_dir</span>)
+  .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">plumber</span>())
+  .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">compass</span>({
+    <span style="color:#a6e22e">config_file</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;./config.rb&#39;</span>,
+    <span style="color:#a6e22e">css</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;css&#39;</span>,
+    <span style="color:#a6e22e">sass</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;src/sass&#39;</span>
+  }))
+  .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">autoprefixer</span>({
+    <span style="color:#75715e">// browsers: [&#39;last 5 versions&#39;],
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">browsers</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;&gt; 1%&#39;</span>],
+    <span style="color:#a6e22e">remove</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+  }))
+  .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">dest</span>(<span style="color:#e6db74">&#39;./css&#39;</span>))
+  .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">rename</span>({ <span style="color:#a6e22e">suffix</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;.min&#39;</span> }))
+  .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">cleanCSS</span>())
+  .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">dest</span>(<span style="color:#e6db74">&#39;./css&#39;</span>));
+});
+
+<span style="color:#75715e">//js
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">task</span>(<span style="color:#e6db74">&#39;js&#39;</span>, <span style="color:#66d9ef">function</span>() {
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">src</span>(<span style="color:#a6e22e">js_dir</span>)
+  	.<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">concat</span>(<span style="color:#e6db74">&#39;main.js&#39;</span>))
+  	.<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">dest</span>(<span style="color:#e6db74">&#39;js/&#39;</span>))
+  	.<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">rename</span>({ <span style="color:#a6e22e">suffix</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;.min&#39;</span> }))
+  	.<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">uglify</span>())
+  	.<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">dest</span>(<span style="color:#e6db74">&#39;js/&#39;</span>));
+});
+</code></pre></div></p>
+<p>Since we are working on a vm, livereload extension won&rsquo;t detect the livereload server because it&rsquo;ll look for it on localhost:35729. To solve this, we need to redirect theport to our vm. For that:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">ssh</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">L</span> <span style="color:#ae81ff">35729</span><span style="color:#f92672">:</span><span style="color:#ae81ff">192.168</span><span style="color:#ae81ff">.33</span><span style="color:#ae81ff">.10</span><span style="color:#f92672">:</span><span style="color:#ae81ff">35729</span> <span style="color:#a6e22e">vagrant</span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#ae81ff">192.168</span><span style="color:#ae81ff">.33</span><span style="color:#ae81ff">.10</span>
+</code></pre></div>
+Now we are set, we can use gulp to automatize tasks. From our project directory:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">gulp</span> <span style="color:#a6e22e">live</span>
+</code></pre></div></p>
+<p>Ok, now we can modify code on ~/vagrant/dev and watch the changes automatically on Chrome (using the livereload chrome extension). This gives us an agile development environment, where we can develop without touching the live site
+Now, with git, you can work in the best way you feel comfortable. Personally, I use 3 &ldquo;infinite&rdquo; branches:</p>
+<ul>
+<li>master. Code used in the production server</li>
+<li>staging. Here I include production files before going live on master. I don&rsquo;t include any source code (sass, gulpfile.js, etc.).</li>
+<li>dev. Here I have all source code, including sass files, gulpfile, nodejs modules, etc.
+This repo doesn&rsquo;t contain the whole website, only the directory I use for the theme/plugin I&rsquo;m working on</li>
+</ul>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>nodejs, npm, gulp, livereload&hellip; all these packages should be installed on the virtual machine, although you can install them in the real machine too, except the livereload extension, which has to be on the server (virtual machine)</li>
+</ul></p>
+      
+    </div>
+    <div class="clearfix"></div>
+    
+    <div class="article_resources">
+      <h2>Resources</h2>
+      <ul>
+        
+        <li>
+          
+          <a target="_blank" href="https://www.if-not-true-then-false.com/2010/install-virtualbox-with-yum-on-fedora-centos-red-hat-rhel/">VirtualBox 5.1 on Fedora 25/24, CentOS/RHEL 7.3/6.9/5.11</a> 
+        </li>
+        
+        <li>
+          
+          <a target="_blank" href="https://box.scotch.io/">Scotch box</a> 
+        </li>
+        
+        <li>
+          
+          <a target="_blank" href="https://www.adminer.org/static/download/4.2.5/adminer-4.2.5.php">adminer on adminer.org</a> 
+        </li>
+        
+      </ul>
+    </div>
+    
+    <div class="article-footer">
+      
+      
+
+
+
+
+<div class="soc-sharing">
+  <ul class="article_share_items">
+    <li>
+      <a class="fab fa-linkedin-in" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.jarboleda.me/articles/web-development-environment/&amp;title=Web%20development%20environment&amp;summary=%3cp%3eIn%20this%20post%20we&amp;rsquo;ll%20configure%20an%20advanced%20web%20development%20environment.%20For%20that,%20we&amp;rsquo;ll%20have%20our%20web%20hosted%20on%20a%20server%20%28we%20will%20NOT%20use%20that%20server%20for%20development%29,%20and%20in%20our%20station%20we&amp;rsquo;ll%20have%20a%20virtual%20machine.%20For%20this%20vm%20we&amp;rsquo;ll%20use%20vagrant%20with%20the%20%20scotch%20box,%20which%20allows%20us%20to%20host%20a%20web%20without%20extra%20work%3c/p%3e%0a%3ch2%20id=%22prerequisites%22%3ePrerequisites%3c/h2%3e%0a%3cp%3eWe&amp;rsquo;ll%20use%20the%20following%20tecnologies%20for%20our%20environment.%20You%20should%20review%20them%20before%20going%20on.%3c/p%3e&amp;source=J.%20Arboleda" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-twitter" href="http://twitter.com/share?text=Web%20development%20environment&amp;url=https://www.jarboleda.me/articles/web-development-environment/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-facebook-f" href="https://www.facebook.com/sharer/sharer.php?u=https://www.jarboleda.me/articles/web-development-environment/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-google-plus-g" href="https://plus.google.com/share?url=https://www.jarboleda.me/articles/web-development-environment/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-pinterest-p" href="https://pinterest.com/pin/create/button/?url=https://www.jarboleda.me/articles/web-development-environment/&amp;media=%3cnil%3eweb-development-environment.jpg&amp;description=%3cp%3eIn%20this%20post%20we&amp;rsquo;ll%20configure%20an%20advanced%20web%20development%20environment.%20For%20that,%20we&amp;rsquo;ll%20have%20our%20web%20hosted%20on%20a%20server%20%28we%20will%20NOT%20use%20that%20server%20for%20development%29,%20and%20in%20our%20station%20we&amp;rsquo;ll%20have%20a%20virtual%20machine.%20For%20this%20vm%20we&amp;rsquo;ll%20use%20vagrant%20with%20the%20%20scotch%20box,%20which%20allows%20us%20to%20host%20a%20web%20without%20extra%20work%3c/p%3e%0a%3ch2%20id=%22prerequisites%22%3ePrerequisites%3c/h2%3e%0a%3cp%3eWe&amp;rsquo;ll%20use%20the%20following%20tecnologies%20for%20our%20environment.%20You%20should%20review%20them%20before%20going%20on.%3c/p%3e" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+  </ul>
+</div>
+
+    </div>
+    <div class='post-footer'>
+      
+       <div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+var disqus_shortname = 'jarboleda-me';
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://jarboleda-me.disqus.com/embed.js';
+s.async = true; 
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+     
+    </div>
+  </div>
+</div>
+
+      </article>
+    </section><aside class='sidebar-wrapper pure-u-1 pure-u-md-1-4 sticky'>
+      
+<div class='sidebar'>
+  
+
+<div class='authorboxwrap'>
+<h4>Author</h4>
+    <div class='avatar-container'>
+      <img alt="author's photo" class='author_avatar' width='160' height='136' src="/img/me.min.png"  />
+      <h4 rel='author'>Jeferson Arboleda</h4>
+    </div>
+    <div class='author_description_container'>
+      <p class= 'm-text-centered m-bold'>Business Analyst</p>
+      <p>Currently working for <a href="https://amadeus.com/en">Amadeus</a> in Nice, Côte D&rsquo;Azur.</p>
+      <div class='authorsocial'>
+        
+          <a href='https://www.linkedin.com/in/jeferson-arboleda-167429134' target='_blank'><i class='fab fa-linkedin-in'></i></a>
+        
+        
+          <a href='https://github.com/jag10' target='_blank'><i class='fab fa-github'></i></a>
+        
+        
+          <a href='https://gitlab.com/jag7' target='_blank'><i class='fab fa-gitlab'></i></a>
+        
+        
+          <a href='https://twitter.com/j_a_g_x' target='_blank'><i class='fab fa-twitter'></i></a>
+        
+      </div>
+    </div>
+</div>
+
+  
+  <h4>On This Page</h4>
+  <div class='table_of_contents'>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#installing-vagrant">Installing vagrant</a></li>
+    <li><a href="#dir-structure">Dir structure</a></li>
+    <li><a href="#automating-tasks">Automating tasks</a></li>
+    <li><a href="#notes">Notes</a></li>
+  </ul>
+</nav>
+  </div>
+  
+</div>
+
+
+    </aside>
+    <div class='clearfix'></div>
+  </div>
+<footer>
+  <div class='footer-container'>
+    <div class='pure-u-1 pure-u-md-1-3'>
+      <div class='widget popular-posts'>
+        <div class="widget-title">
+          <h2>Other posts</h2></div>
+        <div class='widget-content popular-posts'>
+          <ul>
+            
+             
+            <li>
+              <div class='item-content'>
+                <div class='item-thumbnail'>
+                  <a href='/articles/getting-1.5s-page-load-time-on-a-basic-vps/' target='_blank'>
+                    <img alt='Getting 1.5s page load time on a basic vps' width='72' height='72' src="/articles/img/thumbs/getting-1.5s-page-load-time-on-a-basic-vps.png" />
+                  </a>
+                </div>
+                <div class='item-title'>
+                  <a href='/articles/getting-1.5s-page-load-time-on-a-basic-vps/' class="mostVisitedLink">Getting 1.5s page load time on a basic vps</a>
+                </div>
+              </div>
+            </li>
+            
+            
+             
+            <li>
+              <div class='item-content'>
+                <div class='item-thumbnail'>
+                  <a href='/articles/configuring-iptables-and-fail2ban-on-centos-6/' target='_blank'>
+                    <img alt='Configuring IPTABLES and fail2ban on centOS 6' width='72' height='72' src="/articles/img/thumbs/configuring-iptables-and-fail2ban-on-centos-6.jpg" />
+                  </a>
+                </div>
+                <div class='item-title'>
+                  <a href='/articles/configuring-iptables-and-fail2ban-on-centos-6/' class="mostVisitedLink">Configuring IPTABLES and fail2ban on centOS 6</a>
+                </div>
+              </div>
+            </li>
+            
+            
+             
+            <li>
+              <div class='item-content'>
+                <div class='item-thumbnail'>
+                  <a href='/articles/getting-0.5s-page-load-time-on-your-blog/' target='_blank'>
+                    <img alt='Getting 0.5 seconds load time on your blog' width='72' height='72' src="/articles/img/thumbs/getting-0.5s-page-load-time-on-your-blog.png" />
+                  </a>
+                </div>
+                <div class='item-title'>
+                  <a href='/articles/getting-0.5s-page-load-time-on-your-blog/' class="mostVisitedLink">Getting 0.5 seconds load time on your blog</a>
+                </div>
+              </div>
+            </li>
+            
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class='pure-u-1 pure-u-md-1-3'>
+      <div class='widget ContactForm'>
+        <h2 class='title'>Contact me</h2>
+        <a class="email" href="mailto:me@jarboleda.me">me@jarboleda.me</a>
+        <div class='contact-form-widget'>
+          <div class='form'>
+            <form name='contact-form' action="https://formspree.io/me@jarboleda.me" method="POST">
+              <p>Name</p>
+              <input class='contact-form-name' name='name' size='30' type='text' value='' />
+              <p>Email<span>*</span></p>
+              <input class='contact-form-email' name='name="_replyto"' size='30' type='text' value='' />
+              <p>Message<span>*</span></p>
+              <p><textarea class='contact-form-email-message' cols='29' name='email-message' rows='5'></textarea></p>
+              <input class='contact-form-button contact-form-button-submit' type='submit' value='Send' />
+              <div style='text-align: center; max-width: 222px; width: 100%'>
+                <p class='contact-form-error-message'></p>
+                <p class='contact-form-success-message'></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class='footer-credits'>
+    <div class='footer_social-icons'>
+      <ul>
+        
+        <li>
+          <a class="btn-linkedin" href='https://www.linkedin.com/in/jeferson-arboleda-167429134' target='_blank'><i class='fab fa-linkedin-in'></i></a>
+        </li>
+        
+        
+        <li>
+          <a class="btn-github" href='https://github.com/jag10' target='_blank'><i class='fab fa-github'></i></a>
+        </li>
+        
+        
+        <li>
+          <a class="btn-gitlab" href='https://gitlab.com/jag7' target='_blank'><i class='fab fa-gitlab'></i></a>
+        </li>
+        
+        
+        <li>
+          <a class="btn-twitter" href='https://twitter.com/j_a_g_x' target='_blank'><i class='fab fa-twitter'></i></a>
+        </li>
+        
+      </ul>
+    </div>
+    <div class='clr'></div>
+    <p>Copyright &#169; 2020
+      <a href=''></a>
+    </p>
+    <p class='attribution'>Powered by</p>
+    <a href='https://gohugo.io/' target="_blank" >
+      <img with="80" height="21" alt="hugo logo" class='attribution_logo' src="/img/hugo-logo.png" />
+    </a>
+  </div>
+</footer>
+
+<script defer src='/js/main.min.js' type='text/javascript'></script>
+
+<script type="text/javascript">
+  window.cookieconsent_options = {
+    "message": "jarboleda.me uses cookies to ensure you get the best experience.",
+    "dismiss": "Ok",
+    "learnMore": "More info",
+    "link": null,
+    "theme": "light-bottom"
+  };
+</script>
+<script defer type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js"></script>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-101857703-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+</body>
+</html>
+

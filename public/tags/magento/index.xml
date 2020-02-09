@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>magento on J. Arboleda</title>
+    <link>https://www.jarboleda.me/tags/magento/</link>
+    <description>Recent content in magento on J. Arboleda</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 24 Mar 2016 12:28:50 +0200</lastBuildDate>
+    
+	<atom:link href="https://www.jarboleda.me/tags/magento/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Centos web panel with php7 and mysql5.6</title>
+      <link>https://www.jarboleda.me/articles/centos-web-panel-on-vps/</link>
+      <pubDate>Thu, 24 Mar 2016 12:28:50 +0200</pubDate>
+      
+      <guid>https://www.jarboleda.me/articles/centos-web-panel-on-vps/</guid>
+      <description>&lt;h2 id=&#34;installing-cwp&#34;&gt;Installing CWP&lt;/h2&gt;
+&lt;p&gt;Firstly, we&amp;rsquo;ll install centOS Web Panel, just follow the instructions in the CWP website: &lt;a href=&#34;http://centos-webpanel.com/installation-instructions&#34;&gt;http://centos-webpanel.com/installation-instructions&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;instaling-mysql-56&#34;&gt;Instaling mysql 5.6&lt;/h2&gt;
+&lt;p&gt;After a fresh install, we&amp;rsquo;ll stop CWP to perform the mysqld update.
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;service cwpsrv stop&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;Then, we&amp;rsquo;ll install mysql server repo.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

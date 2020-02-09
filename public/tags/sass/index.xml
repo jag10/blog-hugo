@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sass on J. Arboleda</title>
+    <link>https://www.jarboleda.me/tags/sass/</link>
+    <description>Recent content in sass on J. Arboleda</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 27 Jul 2016 13:50:40 +0200</lastBuildDate>
+    
+	<atom:link href="https://www.jarboleda.me/tags/sass/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Web development environment</title>
+      <link>https://www.jarboleda.me/articles/web-development-environment/</link>
+      <pubDate>Wed, 27 Jul 2016 13:50:40 +0200</pubDate>
+      
+      <guid>https://www.jarboleda.me/articles/web-development-environment/</guid>
+      <description>&lt;p&gt;In this post we&amp;rsquo;ll configure an advanced web development environment. For that, we&amp;rsquo;ll have our web hosted on a server (we will NOT use that server for development), and in our station we&amp;rsquo;ll have a virtual machine. For this vm we&amp;rsquo;ll use vagrant with the  scotch box, which allows us to host a web without extra work&lt;/p&gt;
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
+&lt;p&gt;We&amp;rsquo;ll use the following tecnologies for our environment. You should review them before going on.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

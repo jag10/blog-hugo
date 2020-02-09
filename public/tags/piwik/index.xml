@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>piwik on J. Arboleda</title>
+    <link>https://www.jarboleda.me/tags/piwik/</link>
+    <description>Recent content in piwik on J. Arboleda</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 01 May 2016 12:37:41 +0200</lastBuildDate>
+    
+	<atom:link href="https://www.jarboleda.me/tags/piwik/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Using piwik&#39;s API locally with ProcessWire</title>
+      <link>https://www.jarboleda.me/articles/using-piwik-api-locally-with-pw/</link>
+      <pubDate>Sun, 01 May 2016 12:37:41 +0200</pubDate>
+      
+      <guid>https://www.jarboleda.me/articles/using-piwik-api-locally-with-pw/</guid>
+      <description>&lt;p&gt;To track jglab.me visits I use Piwik. Why? The main reason is because it allows to keep info private, moreover, Piwik offers a powerful API which can be queried locally, and that is important for performance as we can obtain stats about the website without having to query external server. To make local queries I use the following class:&lt;/p&gt;
+&lt;h2 id=&#34;show-me-the-code&#34;&gt;Show me the code&lt;/h2&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

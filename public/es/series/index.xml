@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Series on J. Arboleda</title>
+    <link>https://www.jarboleda.me/es/series/</link>
+    <description>Recent content in Series on J. Arboleda</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 17 Mar 2017 21:33:19 +0200</lastBuildDate>
+    
+	<atom:link href="https://www.jarboleda.me/es/series/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>serie1</title>
+      <link>https://www.jarboleda.me/es/series/serie1/</link>
+      <pubDate>Fri, 17 Mar 2017 21:33:19 +0200</pubDate>
+      
+      <guid>https://www.jarboleda.me/es/series/serie1/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

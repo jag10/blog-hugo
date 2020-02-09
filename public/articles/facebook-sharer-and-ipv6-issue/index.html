@@ -1,0 +1,423 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>J. Arboleda - Facebook sharer and IPv6 issue</title>
+    <meta name="description" content="The blog of Jeferson Arboleda, software engineer. It&#39;s focused on self improvement and overcoming challenges I find everyday">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+    	
+	<meta property="og:title" content="Facebook sharer and IPv6 issue" />
+	<meta property="og:description" content="Last week all facebook buttons on domains on ALL of our servers stopped working. I always got a 404 response when facebook crawler tried to visit our domains. This happened in our 2 dedicated servers from 1and1. At first, my mates were trying to figure out if it was a joomla issue, but they finally couldn&rsquo;t solve it, so they asked me to investigate it. My first thought was: you got a 404? let&rsquo;s check logs for those domains and we&rsquo;ll see what happens for sure. I checked those files and I couldn&rsquo;t see any 404 error, the visit wasn&rsquo;t even logged. Shit happens." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://www.jarboleda.me/articles/facebook-sharer-and-ipv6-issue/" />
+	<meta property="og:image" content="/articles/img/facebook-sharer-and-ipv6-issue.png" />
+	<meta property="og:updated_time" content="2015-08-11 10:58:34 &#43;0200 CEST"/>
+	<meta property="og:locale" content="en-US" />
+	<meta property="og:site_name" content="J. Arboleda" />
+	
+	
+	<meta property="article:published_time" content="2015-08-11 10:58:34 &#43;0200 CEST" />
+	<meta property="article:modified_time" content="2015-08-11 10:58:34 &#43;0200 CEST" />
+	<meta property="article:section" content="articles" />
+	<meta property="article:tag" content="facebook" />
+	<meta property="article:tag" content="ipv6" />
+	<meta property="article:tag" content="plesk" />
+	
+	
+    
+    <meta itemprop="name" content="Facebook sharer and IPv6 issue">
+    <meta itemprop="description" content="Last week all facebook buttons on domains on ALL of our servers stopped working. I always got a 404 response when facebook crawler tried to visit our domains. This happened in our 2 dedicated servers from 1and1. At first, my mates were trying to figure out if it was a joomla issue, but they finally couldn&rsquo;t solve it, so they asked me to investigate it. My first thought was: you got a 404? let&rsquo;s check logs for those domains and we&rsquo;ll see what happens for sure. I checked those files and I couldn&rsquo;t see any 404 error, the visit wasn&rsquo;t even logged. Shit happens.">
+    <meta name="author" content="Jeferson Arboleda">
+    
+    <meta itemprop="image" content="facebook-sharer-and-ipv6-issue.png">
+    
+    <meta itemprop="keywords" content="notpinned,pinned,,false,true,serie1,arduino,backup,backups,bash,case,centos6,cloudflare,curl,cwp,facebook,fail2ban,fedora25,fopen,ftp,github,github-pages,httpd,hugo,iptables,ipv6,job,lego,linkedin,magento,magento2,mate,move,mysql,mysqldump,nodejs,odroid,pages,performance,php,php7,piwik,plesk,processwire,reflectionmethod,sass,static,ubuntu,unrealengine,vagrant,vm,vps,zip," />
+    <meta itemprop="wordCount" content="509">
+	
+	<meta name="twitter:card" content="summary_large_image"/>
+	<meta name="twitter:image:src" content="/articles/img/facebook-sharer-and-ipv6-issue.png"/>
+	
+	<meta name="twitter:title" content="Facebook sharer and IPv6 issue"/>
+	<meta name="twitter:description" content="Last week all facebook buttons on domains on ALL of our servers stopped working. I always got a 404 response when facebook crawler tried to visit our domains. This happened in our 2 dedicated servers from 1and1. At first, my mates were trying to figure out if it was a joomla issue, but they finally couldn&rsquo;t solve it, so they asked me to investigate it. My first thought was: you got a 404? let&rsquo;s check logs for those domains and we&rsquo;ll see what happens for sure. I checked those files and I couldn&rsquo;t see any 404 error, the visit wasn&rsquo;t even logged. Shit happens."/>
+	<meta name="twitter:site" content="@j_a_g_x"/>
+	
+	<meta name="twitter:creator" content="@j_a_g_x"/>
+
+
+	<meta name="news_keywords" content="facebook,ipv6,plesk" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="/css/global.min.css" media="screen" rel="stylesheet" type="text/css" />
+  </head>
+ <body>
+  <header>
+    <nav class='top-menu'>
+      
+      <div class="menu-wrapper" id="menu">
+        <div class="pure-u-1 hidden">
+          <div class="pure-menu menu-toogle-container">
+            <a class="custom-toggle" id="toggle"><span class="bar"></span><span class="bar"></span></a>
+          </div>
+        </div>
+        <div class="pure-u-1">
+          <div class="pure-menu pure-menu-horizontal custom-can-transform">
+            <ul class="pure-menu-list float-left">
+              
+              <li class="pure-menu-item"><a target='' class='pure-menu-link' href=/>home</a></li>
+              
+              <li class="pure-menu-item"><a target='' class='pure-menu-link' href=/extras/cv/>about me</a></li>
+              
+              <li class="pure-menu-item"><a target='' class='pure-menu-link' href=/projects/>projects</a></li>
+              
+              <li class="pure-menu-item"><a target='' class='pure-menu-link' href=https://github.com/jag10>github</a></li>
+              
+              <li class="pure-menu-item"><a target='' class='pure-menu-link' href=https://gitlab.com/jag7>gitlab</a></li>
+              
+              <li class='pure-menu-item lang_selector selected'>
+                
+                <a class='pure-menu-link' href="#">English</a>
+                
+              </li>
+              <li class='pure-menu-item flag'><i class='fa fa-language' aria-hidden='true'></i></li>
+              
+            </ul>
+            <div class="float-right">
+              <ul class="pure-menu-list">
+                
+                <li class="pure-menu-item social_menu_entry">
+                  <a href='https://www.linkedin.com/in/jeferson-arboleda-167429134' target='_blank'><i class='fab fa-linkedin-in'></i></a>
+                </li>
+                
+                
+                <li class="pure-menu-item social_menu_entry">
+                  <a href='https://github.com/jag10' target='_blank'><i class='fab fa-github'></i></a>
+                </li>
+                
+                
+                <li class="pure-menu-item social_menu_entry">
+                  <a href='https://gitlab.com/jag7' target='_blank'><i class='fab fa-gitlab'></i></a>
+                </li>
+                
+                
+                <li class="pure-menu-item social_menu_entry">
+                  <a href='https://twitter.com/j_a_g_x' target='_blank'><i class='fab fa-twitter'></i></a>
+                </li>
+                
+                <li class='pure-menu-item nt-search' id='nt-search'>
+                  <form action='/search/' id='searchform' method='get'>
+                    <div class='nt-search-input-wrap'>
+                      <input class='nt-search-input' id='s' name='q' placeholder='Search is disabled :(' type='text' value='' disabled />
+                    </div>
+                    <input class='nt-search-submit' id='go' type='submit' value='Search' />
+                    <span class='nt fas fa-search'></span>
+                  </form>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    
+  </header>
+
+  <div class="main-container">
+    <section id="main" class="pure-u-1 pure-u-md-3-4">
+      <article>
+        <div class="post-container">
+  
+  <div class="article_summary">
+    <div class="article-date">
+      <p class="day"><i class="far fa-calendar-alt"></i>11 Aug 2015</p>
+      <p><i class="far fa-clock"></i>4 min read  ~ 600 words</p>
+    </div>
+    
+    <div class="article-tags">
+      
+      <a href="#" rel="tag">facebook</a> 
+      <a href="#" rel="tag">ipv6</a> 
+      <a href="#" rel="tag">plesk</a> 
+    </div>
+    
+    <div class="clearfix"></div>
+    
+    <h1 class="article_title title">Facebook sharer and IPv6 issue</h1>
+    
+    <div class="article_excerpt">
+      
+      <p><p>Last week all facebook buttons on domains on ALL of our servers stopped working. I always got a 404 response when facebook crawler tried to visit our domains. This happened in our 2 dedicated servers from 1and1. At first, my mates were trying to figure out if it was a joomla issue, but they finally couldn&rsquo;t solve it, so they asked me to investigate it. My first thought was: you got a 404? let&rsquo;s check logs for those domains and we&rsquo;ll see what happens for sure. I checked those files and I couldn&rsquo;t see any 404 error, the visit wasn&rsquo;t even logged. Shit happens.</p>
+<p>So, I started surfing the internet, just to find that 404 error from facebook crawler is really common and has multiple causes. After some hours investigating, I remembered I had work to do, so I let this issue apart. The next day I just saw it. The visit wasn&rsquo;t logged in the domain log BUT it should be logged somewhere else, it just had to be. I headed for server general log, (under /var/log) and I spotted it right there. Ok, that was a start. Then I tried to visit the link myself with curl and surprisingly, I got a 200 answer, everything ok.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">2001:8d8:90b:c900::2a:19d1 - - <span style="color:#f92672">[</span>29/Jul/2015:17:44:55 +0200<span style="color:#f92672">]</span> <span style="color:#e6db74">&#34;GET /hello.html HTTP/1.0&#34;</span> <span style="color:#ae81ff">404</span> <span style="color:#ae81ff">1208</span> <span style="color:#e6db74">&#34;-&#34;</span> <span style="color:#e6db74">&#34;facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)&#34;</span>
+2001:8d8:90b:c900::2a:19d1 - - <span style="color:#f92672">[</span>29/Jul/2015:17:49:39 +0200<span style="color:#f92672">]</span> <span style="color:#e6db74">&#34;GET /hello.html HTTP/1.0&#34;</span> <span style="color:#ae81ff">200</span> <span style="color:#ae81ff">384</span> <span style="color:#e6db74">&#34;-&#34;</span> <span style="color:#e6db74">&#34;curl/7.19.7 (x86_64-redhat-linux-gnu) libcurl/7.19.7 NSS/3.16.1 Basic ECC zlib/1.2.3 libidn/1.18 libssh2/1.4.2&#34;</span></code></pre></div>
+Ok, that was weird. First thing I noticed, no matter if I used curl or facebook crawler, the same ipv6 was logged, and actually was the IP given for the server. Then I remembered nginx, it acts as a reverse proxy, so that explained the ips issue. Next step was disabling nginx, just to see real IPs. I got this:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">2a03:2880:2110:dff3:face:b00c:0:1 - - <span style="color:#f92672">[</span>29/Jul/2015:17:55:11 +0200<span style="color:#f92672">]</span> <span style="color:#e6db74">&#34;GET /hello.html HTTP/1.1&#34;</span> <span style="color:#ae81ff">404</span> <span style="color:#ae81ff">1208</span> <span style="color:#e6db74">&#34;-&#34;</span> <span style="color:#e6db74">&#34;facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)&#34;</span>
+84.x.x.x- - <span style="color:#f92672">[</span>29/Jul/2015:17:54:52 +0200<span style="color:#f92672">]</span> <span style="color:#e6db74">&#34;GET /hello.html HTTP/1.1&#34;</span> <span style="color:#ae81ff">200</span> <span style="color:#ae81ff">361</span> <span style="color:#e6db74">&#34;-&#34;</span> <span style="color:#e6db74">&#34;curl/7.19.7 (x86_64-redhat-linux-gnu) libcurl/7.19.7 NSS/3.16.1 Basic ECC zlib/1.2.3 libidn/1.18 libssh2/1.4.2&#34;</span></code></pre></div></p>
+<p>&ldquo;GET /hello.html &hellip;&rdquo; in each request, yet one of them gave 404 and the other one gave 200. Only thing which changed was the ip, so I thought it had to be an ipv6 issue.
+NOTE: all 200 answers were logged correctly in the domain&rsquo;s log, but the 404 were logged in the general server log.
+Next step: check apache configuration for the domain. And I found the problem there, our virtual hosts weren&rsquo;t listening in the ipv6 address, that&rsquo;s why it never found anything, the ipv6 didn&rsquo;t match any virtualhost, so it went directly to default site, and obviously, it couldn&rsquo;t find anything there.
+Now, the solution is pretty simple in plesk. You go to domain -&gt; hosting configuration and you can enable ipv6 support. After that, everything was working like a charm. Easy solution, but the problem was hard to spot.</p>
+<h2 id="tldr">TL;DR</h2>
+<p>Enable ipv6 for your domains, you can do it through Plesk or through apache conf files. It is very simple, just add the ipv6 like the ipv4 is configurated for each virtualhost.</p></p>
+      
+    </div>
+    <div class="clearfix"></div>
+    
+    <div class="article_resources">
+      <h2>Resources</h2>
+      <ul>
+        
+        <li>
+          
+          <a target="_blank" href="https://ip6.nl/">IPv6 - Are you connected?</a> 
+        </li>
+        
+      </ul>
+    </div>
+    
+    <div class="article-footer">
+      
+      
+
+
+
+
+<div class="soc-sharing">
+  <ul class="article_share_items">
+    <li>
+      <a class="fab fa-linkedin-in" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.jarboleda.me/articles/facebook-sharer-and-ipv6-issue/&amp;title=Facebook%20sharer%20and%20IPv6%20issue&amp;summary=%3cp%3eLast%20week%20all%20facebook%20buttons%20on%20domains%20on%20ALL%20of%20our%20servers%20stopped%20working.%20I%20always%20got%20a%20404%20response%20when%20facebook%20crawler%20tried%20to%20visit%20our%20domains.%20This%20happened%20in%20our%202%20dedicated%20servers%20from%201and1.%20At%20first,%20my%20mates%20were%20trying%20to%20figure%20out%20if%20it%20was%20a%20joomla%20issue,%20but%20they%20finally%20couldn&amp;rsquo;t%20solve%20it,%20so%20they%20asked%20me%20to%20investigate%20it.%20My%20first%20thought%20was:%20you%20got%20a%20404?%20let&amp;rsquo;s%20check%20logs%20for%20those%20domains%20and%20we&amp;rsquo;ll%20see%20what%20happens%20for%20sure.%20I%20checked%20those%20files%20and%20I%20couldn&amp;rsquo;t%20see%20any%20404%20error,%20the%20visit%20wasn&amp;rsquo;t%20even%20logged.%20Shit%20happens.%3c/p%3e&amp;source=J.%20Arboleda" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-twitter" href="http://twitter.com/share?text=Facebook%20sharer%20and%20IPv6%20issue&amp;url=https://www.jarboleda.me/articles/facebook-sharer-and-ipv6-issue/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-facebook-f" href="https://www.facebook.com/sharer/sharer.php?u=https://www.jarboleda.me/articles/facebook-sharer-and-ipv6-issue/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-google-plus-g" href="https://plus.google.com/share?url=https://www.jarboleda.me/articles/facebook-sharer-and-ipv6-issue/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-pinterest-p" href="https://pinterest.com/pin/create/button/?url=https://www.jarboleda.me/articles/facebook-sharer-and-ipv6-issue/&amp;media=%3cnil%3efacebook-sharer-and-ipv6-issue.png&amp;description=%3cp%3eLast%20week%20all%20facebook%20buttons%20on%20domains%20on%20ALL%20of%20our%20servers%20stopped%20working.%20I%20always%20got%20a%20404%20response%20when%20facebook%20crawler%20tried%20to%20visit%20our%20domains.%20This%20happened%20in%20our%202%20dedicated%20servers%20from%201and1.%20At%20first,%20my%20mates%20were%20trying%20to%20figure%20out%20if%20it%20was%20a%20joomla%20issue,%20but%20they%20finally%20couldn&amp;rsquo;t%20solve%20it,%20so%20they%20asked%20me%20to%20investigate%20it.%20My%20first%20thought%20was:%20you%20got%20a%20404?%20let&amp;rsquo;s%20check%20logs%20for%20those%20domains%20and%20we&amp;rsquo;ll%20see%20what%20happens%20for%20sure.%20I%20checked%20those%20files%20and%20I%20couldn&amp;rsquo;t%20see%20any%20404%20error,%20the%20visit%20wasn&amp;rsquo;t%20even%20logged.%20Shit%20happens.%3c/p%3e" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+  </ul>
+</div>
+
+    </div>
+    <div class='post-footer'>
+      
+       <div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+var disqus_shortname = 'jarboleda-me';
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://jarboleda-me.disqus.com/embed.js';
+s.async = true; 
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+     
+    </div>
+  </div>
+</div>
+
+      </article>
+    </section><aside class='sidebar-wrapper pure-u-1 pure-u-md-1-4 sticky'>
+      
+<div class='sidebar'>
+  
+
+<div class='authorboxwrap'>
+<h4>Author</h4>
+    <div class='avatar-container'>
+      <img alt="author's photo" class='author_avatar' width='160' height='136' src="/img/me.min.png"  />
+      <h4 rel='author'>Jeferson Arboleda</h4>
+    </div>
+    <div class='author_description_container'>
+      <p class= 'm-text-centered m-bold'>Business Analyst</p>
+      <p>Currently working for <a href="https://amadeus.com/en">Amadeus</a> in Nice, Côte D&rsquo;Azur.</p>
+      <div class='authorsocial'>
+        
+          <a href='https://www.linkedin.com/in/jeferson-arboleda-167429134' target='_blank'><i class='fab fa-linkedin-in'></i></a>
+        
+        
+          <a href='https://github.com/jag10' target='_blank'><i class='fab fa-github'></i></a>
+        
+        
+          <a href='https://gitlab.com/jag7' target='_blank'><i class='fab fa-gitlab'></i></a>
+        
+        
+          <a href='https://twitter.com/j_a_g_x' target='_blank'><i class='fab fa-twitter'></i></a>
+        
+      </div>
+    </div>
+</div>
+
+  
+  <h4>On This Page</h4>
+  <div class='table_of_contents'>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#tldr">TL;DR</a></li>
+  </ul>
+</nav>
+  </div>
+  
+</div>
+
+
+    </aside>
+    <div class='clearfix'></div>
+  </div>
+<footer>
+  <div class='footer-container'>
+    <div class='pure-u-1 pure-u-md-1-3'>
+      <div class='widget popular-posts'>
+        <div class="widget-title">
+          <h2>Other posts</h2></div>
+        <div class='widget-content popular-posts'>
+          <ul>
+            
+             
+            <li>
+              <div class='item-content'>
+                <div class='item-thumbnail'>
+                  <a href='/articles/fixing-corrupted-partition-on-virtual-machine/' target='_blank'>
+                    <img alt='Fixing a corrupted partition on a virtual machine' width='72' height='72' src="/articles/img/thumbs/fixing-corrupted-partition-on-virtual-machine.jpg" />
+                  </a>
+                </div>
+                <div class='item-title'>
+                  <a href='/articles/fixing-corrupted-partition-on-virtual-machine/' class="mostVisitedLink">Fixing a corrupted partition on a virtual machine</a>
+                </div>
+              </div>
+            </li>
+            
+            
+            
+            
+             
+            <li>
+              <div class='item-content'>
+                <div class='item-thumbnail'>
+                  <a href='/articles/installing-unreal-engine-on-fedora-25/' target='_blank'>
+                    <img alt='installing unreal engine on fedora 25' width='72' height='72' src="/articles/img/thumbs/unreal_engine.min.jpg" />
+                  </a>
+                </div>
+                <div class='item-title'>
+                  <a href='/articles/installing-unreal-engine-on-fedora-25/' class="mostVisitedLink">installing unreal engine on fedora 25</a>
+                </div>
+              </div>
+            </li>
+            
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class='pure-u-1 pure-u-md-1-3'>
+      <div class='widget ContactForm'>
+        <h2 class='title'>Contact me</h2>
+        <a class="email" href="mailto:me@jarboleda.me">me@jarboleda.me</a>
+        <div class='contact-form-widget'>
+          <div class='form'>
+            <form name='contact-form' action="https://formspree.io/me@jarboleda.me" method="POST">
+              <p>Name</p>
+              <input class='contact-form-name' name='name' size='30' type='text' value='' />
+              <p>Email<span>*</span></p>
+              <input class='contact-form-email' name='name="_replyto"' size='30' type='text' value='' />
+              <p>Message<span>*</span></p>
+              <p><textarea class='contact-form-email-message' cols='29' name='email-message' rows='5'></textarea></p>
+              <input class='contact-form-button contact-form-button-submit' type='submit' value='Send' />
+              <div style='text-align: center; max-width: 222px; width: 100%'>
+                <p class='contact-form-error-message'></p>
+                <p class='contact-form-success-message'></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class='footer-credits'>
+    <div class='footer_social-icons'>
+      <ul>
+        
+        <li>
+          <a class="btn-linkedin" href='https://www.linkedin.com/in/jeferson-arboleda-167429134' target='_blank'><i class='fab fa-linkedin-in'></i></a>
+        </li>
+        
+        
+        <li>
+          <a class="btn-github" href='https://github.com/jag10' target='_blank'><i class='fab fa-github'></i></a>
+        </li>
+        
+        
+        <li>
+          <a class="btn-gitlab" href='https://gitlab.com/jag7' target='_blank'><i class='fab fa-gitlab'></i></a>
+        </li>
+        
+        
+        <li>
+          <a class="btn-twitter" href='https://twitter.com/j_a_g_x' target='_blank'><i class='fab fa-twitter'></i></a>
+        </li>
+        
+      </ul>
+    </div>
+    <div class='clr'></div>
+    <p>Copyright &#169; 2020
+      <a href=''></a>
+    </p>
+    <p class='attribution'>Powered by</p>
+    <a href='https://gohugo.io/' target="_blank" >
+      <img with="80" height="21" alt="hugo logo" class='attribution_logo' src="/img/hugo-logo.png" />
+    </a>
+  </div>
+</footer>
+
+<script defer src='/js/main.min.js' type='text/javascript'></script>
+
+<script type="text/javascript">
+  window.cookieconsent_options = {
+    "message": "jarboleda.me uses cookies to ensure you get the best experience.",
+    "dismiss": "Ok",
+    "learnMore": "More info",
+    "link": null,
+    "theme": "light-bottom"
+  };
+</script>
+<script defer type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js"></script>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-101857703-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+</body>
+</html>
+

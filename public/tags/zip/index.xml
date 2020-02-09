@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>zip on J. Arboleda</title>
+    <link>https://www.jarboleda.me/tags/zip/</link>
+    <description>Recent content in zip on J. Arboleda</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 24 Aug 2015 11:00:53 +0200</lastBuildDate>
+    
+	<atom:link href="https://www.jarboleda.me/tags/zip/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Zipping and unzipping websites with php</title>
+      <link>https://www.jarboleda.me/articles/zipping-and-unzipping-websites-with-php/</link>
+      <pubDate>Mon, 24 Aug 2015 11:00:53 +0200</pubDate>
+      
+      <guid>https://www.jarboleda.me/articles/zipping-and-unzipping-websites-with-php/</guid>
+      <description>&lt;p&gt;Sometimes you need to work with only FTP access, and it takes a lot of time to backup a website through FTP because usually there are a lot of files and listing them is a long process. I made these php scripts to avoid wasting time when I only have FTP access. For example, when a mate wants to work on a website but he/she want to backup it up first just in case they break something. They use these scripts below:&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

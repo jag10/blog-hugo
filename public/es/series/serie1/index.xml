@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>serie1 on J. Arboleda</title>
+    <link>https://www.jarboleda.me/es/series/serie1/</link>
+    <description>Recent content in serie1 on J. Arboleda</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 17 Mar 2017 21:33:19 +0200</lastBuildDate>
+    
+	<atom:link href="https://www.jarboleda.me/es/series/serie1/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Instalando unreal engine en fedora 25</title>
+      <link>https://www.jarboleda.me/es/articles/installing-unreal-engine-on-fedora-25/</link>
+      <pubDate>Fri, 17 Mar 2017 21:33:19 +0200</pubDate>
+      
+      <guid>https://www.jarboleda.me/es/articles/installing-unreal-engine-on-fedora-25/</guid>
+      <description>&lt;h2 id=&#34;enlazando-github-con-epicgames&#34;&gt;Enlazando GitHub con EpicGames&lt;/h2&gt;
+&lt;p&gt;Primero, hay que registrarse en gihhub y luego asociar la cuenta de github con la de epic games:
+&lt;a href=&#34;https://www.unrealengine.com/ue4-on-github&#34;&gt;https://www.unrealengine.com/ue4-on-github&lt;/a&gt;
+Entonces deberías recibir un email confirmando que te has unido a la organización Epic Games. Una vez lo recibas, podrás clonar el código fuente del Unreal Engine.
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;git clone https://github.com/EpicGames/UnrealEngine.git
+cd UnrealEngine/
+./Setup.sh
+./GenerateProjectFiles.sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

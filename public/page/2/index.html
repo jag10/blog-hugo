@@ -1,0 +1,844 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta name="generator" content="Hugo 0.64.0" />
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>J. Arboleda - J. Arboleda</title>
+    <meta name="description" content="The blog of Jeferson Arboleda, software engineer. It&#39;s focused on self improvement and overcoming challenges I find everyday">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+    	
+	<meta property="og:title" content="J. Arboleda" />
+	<meta property="og:description" content="" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://www.jarboleda.me/" />
+	
+	<meta property="og:updated_time" content="2019-02-16 12:21:32 &#43;0200 &#43;0200"/>
+	<meta property="og:locale" content="en-US" />
+	<meta property="og:site_name" content="J. Arboleda" />
+	
+	
+	
+	
+	
+	
+	
+    
+    <meta itemprop="name" content="J. Arboleda">
+    <meta itemprop="description" content="">
+    <meta name="author" content="Jeferson Arboleda">
+    
+    
+    
+    <meta itemprop="keywords" content="notpinned,pinned,,false,true,serie1,arduino,backup,backups,bash,case,centos6,cloudflare,curl,cwp,facebook,fail2ban,fedora25,fopen,ftp,github,github-pages,httpd,hugo,iptables,ipv6,job,lego,linkedin,magento,magento2,mate,move,mysql,mysqldump,nodejs,odroid,pages,performance,php,php7,piwik,plesk,processwire,reflectionmethod,sass,static,ubuntu,unrealengine,vagrant,vm,vps,zip," />
+    
+	
+	<meta name="twitter:card" content="summary"/>
+	
+	<meta name="twitter:title" content="J. Arboleda"/>
+	<meta name="twitter:description" content=""/>
+	<meta name="twitter:site" content="@j_a_g_x"/>
+	
+	<meta name="twitter:creator" content="@j_a_g_x"/>
+
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="/css/global.min.css" media="screen" rel="stylesheet" type="text/css" />
+  </head>
+ <body>
+  <header>
+    <nav class='top-menu'>
+      
+      <div class="menu-wrapper" id="menu">
+        <div class="pure-u-1 hidden">
+          <div class="pure-menu menu-toogle-container">
+            <a class="custom-toggle" id="toggle"><span class="bar"></span><span class="bar"></span></a>
+          </div>
+        </div>
+        <div class="pure-u-1">
+          <div class="pure-menu pure-menu-horizontal custom-can-transform">
+            <ul class="pure-menu-list float-left">
+              
+              <li class="pure-menu-item"><a target='' class='pure-menu-link' href=/>home</a></li>
+              
+              <li class="pure-menu-item"><a target='' class='pure-menu-link' href=/extras/cv/>about me</a></li>
+              
+              <li class="pure-menu-item"><a target='' class='pure-menu-link' href=/projects/>projects</a></li>
+              
+              <li class="pure-menu-item"><a target='' class='pure-menu-link' href=https://github.com/jag10>github</a></li>
+              
+              <li class="pure-menu-item"><a target='' class='pure-menu-link' href=https://gitlab.com/jag7>gitlab</a></li>
+              
+              <li class='pure-menu-item lang_selector selected'>
+                
+                <a class='pure-menu-link' href="#">English</a>
+                
+              </li>
+              <li class='pure-menu-item flag'><i class='fa fa-language' aria-hidden='true'></i></li>
+               
+              <li class='pure-menu-item lang_selector'>
+                <a class='pure-menu-link' href="/es/">spanish</a>
+              </li>
+               
+            </ul>
+            <div class="float-right">
+              <ul class="pure-menu-list">
+                
+                <li class="pure-menu-item social_menu_entry">
+                  <a href='https://www.linkedin.com/in/jeferson-arboleda-167429134' target='_blank'><i class='fab fa-linkedin-in'></i></a>
+                </li>
+                
+                
+                <li class="pure-menu-item social_menu_entry">
+                  <a href='https://github.com/jag10' target='_blank'><i class='fab fa-github'></i></a>
+                </li>
+                
+                
+                <li class="pure-menu-item social_menu_entry">
+                  <a href='https://gitlab.com/jag7' target='_blank'><i class='fab fa-gitlab'></i></a>
+                </li>
+                
+                
+                <li class="pure-menu-item social_menu_entry">
+                  <a href='https://twitter.com/j_a_g_x' target='_blank'><i class='fab fa-twitter'></i></a>
+                </li>
+                
+                <li class='pure-menu-item nt-search' id='nt-search'>
+                  <form action='/search/' id='searchform' method='get'>
+                    <div class='nt-search-input-wrap'>
+                      <input class='nt-search-input' id='s' name='q' placeholder='Search is disabled :(' type='text' value='' disabled />
+                    </div>
+                    <input class='nt-search-submit' id='go' type='submit' value='Search' />
+                    <span class='nt fas fa-search'></span>
+                  </form>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    
+  </header>
+
+  <div class="main-container home">
+    <section id="main" class="pure-u-1 pure-u-md-3-4">
+      
+      
+        
+          <article>
+            <div class="post-container">
+  
+  <div class="article_summary">
+    <div class="article-date">
+      <p class="day"><i class="far fa-calendar-alt"></i>17 Mar 2017</p>
+      <p><i class="far fa-clock"></i>2 min read  ~ 200 words</p>
+    </div>
+    
+    <div class="article-tags">
+      
+      <a href="#" rel="tag">unrealengine</a> 
+      <a href="#" rel="tag">fedora25</a> 
+    </div>
+    
+    <div class="clearfix"></div>
+    
+    <a href="/articles/installing-unreal-engine-on-fedora-25/" title="">
+      <h1 class="article_title title">installing unreal engine on fedora 25</h1>
+    </a>
+    
+    <div class="article_excerpt">
+      
+      <p><h2 id="linking-github-with-epicgames">Linking GitHub with EpicGames</h2>
+<p>In this article you&rsquo;ll find a way to get unreal engine and make it work on fedora 25. Firstly, you need to signup in github and then link your github account with your epic games account:
+<a href="https://www.unrealengine.com/ue4-on-github">https://www.unrealengine.com/ue4-on-github</a>
+Then you should receive an email confirming you joined up to the epic games organization. Once you receive it, you can clone the source code of unreal engine:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git clone https://github.com/EpicGames/UnrealEngine.git
+cd UnrealEngine/
+./Setup.sh
+./GenerateProjectFiles.sh</code></pre></div></p></p>
+      
+    </div>
+    <div class="clearfix"></div>
+    
+    <div class="article-footer">
+      
+      <a class="read-more-button pure-button" href="/articles/installing-unreal-engine-on-fedora-25/">Read the full article</a> 
+      
+
+
+
+
+<div class="soc-sharing">
+  <ul class="article_share_items">
+    <li>
+      <a class="fab fa-linkedin-in" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.jarboleda.me/articles/installing-unreal-engine-on-fedora-25/&amp;title=installing%20unreal%20engine%20on%20fedora%2025&amp;summary=%3ch2%20id=%22linking-github-with-epicgames%22%3eLinking%20GitHub%20with%20EpicGames%3c/h2%3e%0a%3cp%3eIn%20this%20article%20you&amp;rsquo;ll%20find%20a%20way%20to%20get%20unreal%20engine%20and%20make%20it%20work%20on%20fedora%2025.%20Firstly,%20you%20need%20to%20signup%20in%20github%20and%20then%20link%20your%20github%20account%20with%20your%20epic%20games%20account:%0a%3ca%20href=%22https://www.unrealengine.com/ue4-on-github%22%3ehttps://www.unrealengine.com/ue4-on-github%3c/a%3e%0aThen%20you%20should%20receive%20an%20email%20confirming%20you%20joined%20up%20to%20the%20epic%20games%20organization.%20Once%20you%20receive%20it,%20you%20can%20clone%20the%20source%20code%20of%20unreal%20engine:%0a%3cdiv%20class=%22highlight%22%3e%3cpre%20style=%22color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4%22%3e%3ccode%20class=%22language-sh%22%20data-lang=%22sh%22%3egit%20clone%20https://github.com/EpicGames/UnrealEngine.git%0acd%20UnrealEngine/%0a./Setup.sh%0a./GenerateProjectFiles.sh%3c/code%3e%3c/pre%3e%3c/div%3e%3c/p%3e&amp;source=J.%20Arboleda" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-twitter" href="http://twitter.com/share?text=installing%20unreal%20engine%20on%20fedora%2025&amp;url=https://www.jarboleda.me/articles/installing-unreal-engine-on-fedora-25/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-facebook-f" href="https://www.facebook.com/sharer/sharer.php?u=https://www.jarboleda.me/articles/installing-unreal-engine-on-fedora-25/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-google-plus-g" href="https://plus.google.com/share?url=https://www.jarboleda.me/articles/installing-unreal-engine-on-fedora-25/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-pinterest-p" href="https://pinterest.com/pin/create/button/?url=https://www.jarboleda.me/articles/installing-unreal-engine-on-fedora-25/&amp;media=%3cnil%3eunreal_engine.min.jpg&amp;description=%3ch2%20id=%22linking-github-with-epicgames%22%3eLinking%20GitHub%20with%20EpicGames%3c/h2%3e%0a%3cp%3eIn%20this%20article%20you&amp;rsquo;ll%20find%20a%20way%20to%20get%20unreal%20engine%20and%20make%20it%20work%20on%20fedora%2025.%20Firstly,%20you%20need%20to%20signup%20in%20github%20and%20then%20link%20your%20github%20account%20with%20your%20epic%20games%20account:%0a%3ca%20href=%22https://www.unrealengine.com/ue4-on-github%22%3ehttps://www.unrealengine.com/ue4-on-github%3c/a%3e%0aThen%20you%20should%20receive%20an%20email%20confirming%20you%20joined%20up%20to%20the%20epic%20games%20organization.%20Once%20you%20receive%20it,%20you%20can%20clone%20the%20source%20code%20of%20unreal%20engine:%0a%3cdiv%20class=%22highlight%22%3e%3cpre%20style=%22color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4%22%3e%3ccode%20class=%22language-sh%22%20data-lang=%22sh%22%3egit%20clone%20https://github.com/EpicGames/UnrealEngine.git%0acd%20UnrealEngine/%0a./Setup.sh%0a./GenerateProjectFiles.sh%3c/code%3e%3c/pre%3e%3c/div%3e%3c/p%3e" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+  </ul>
+</div>
+
+    </div>
+    <div class='post-footer'>
+      
+    </div>
+  </div>
+</div>
+
+          </article>
+        
+      
+        
+          <article>
+            <div class="post-container">
+  
+  <div class="article_summary">
+    <div class="article-date">
+      <p class="day"><i class="far fa-calendar-alt"></i>28 Jul 2016</p>
+      <p><i class="far fa-clock"></i>2 min read  ~ 200 words</p>
+    </div>
+    
+    <div class="article-tags">
+      
+      <a href="#" rel="tag">vagrant</a> 
+      <a href="#" rel="tag">vm</a> 
+      <a href="#" rel="tag">ubuntu</a> 
+    </div>
+    
+    <div class="clearfix"></div>
+    
+    <a href="/articles/fixing-corrupted-partition-on-virtual-machine/" title="">
+      <h1 class="article_title title">Fixing a corrupted partition on a virtual machine</h1>
+    </a>
+    
+    <div class="article_excerpt">
+      
+      <p><p>If you ever find the following error while using vagrant or simply when booting a virtual machine, we&rsquo;ll later see how to solve it.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">Couldn<span style="color:#960050;background-color:#1e0010">&#39;</span>t remount RDWR because of unprocessed orphan inode list.</code></pre></div>
+Download an Ubuntu ISO
+Boot the virtualmachine from the ISO file: Settings -&gt; Storage -&gt; Add CD/DVD Device -&gt; Choose disk</p></p>
+      
+    </div>
+    <div class="clearfix"></div>
+    
+    <div class="article-footer">
+      
+      <a class="read-more-button pure-button" href="/articles/fixing-corrupted-partition-on-virtual-machine/">Read the full article</a> 
+      
+
+
+
+
+<div class="soc-sharing">
+  <ul class="article_share_items">
+    <li>
+      <a class="fab fa-linkedin-in" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.jarboleda.me/articles/fixing-corrupted-partition-on-virtual-machine/&amp;title=Fixing%20a%20corrupted%20partition%20on%20a%20virtual%20machine&amp;summary=%3cp%3eIf%20you%20ever%20find%20the%20following%20error%20while%20using%20vagrant%20or%20simply%20when%20booting%20a%20virtual%20machine,%20we&amp;rsquo;ll%20later%20see%20how%20to%20solve%20it.%0a%3cdiv%20class=%22highlight%22%3e%3cpre%20style=%22color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4%22%3e%3ccode%20class=%22language-sh%22%20data-lang=%22sh%22%3eCouldn%3cspan%20style=%22color:#960050;background-color:#1e0010%22%3e&amp;#39;%3c/span%3et%20remount%20RDWR%20because%20of%20unprocessed%20orphan%20inode%20list.%3c/code%3e%3c/pre%3e%3c/div%3e%0aDownload%20an%20Ubuntu%20ISO%0aBoot%20the%20virtualmachine%20from%20the%20ISO%20file:%20Settings%20-&amp;gt;%20Storage%20-&amp;gt;%20Add%20CD/DVD%20Device%20-&amp;gt;%20Choose%20disk%3c/p%3e&amp;source=J.%20Arboleda" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-twitter" href="http://twitter.com/share?text=Fixing%20a%20corrupted%20partition%20on%20a%20virtual%20machine&amp;url=https://www.jarboleda.me/articles/fixing-corrupted-partition-on-virtual-machine/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-facebook-f" href="https://www.facebook.com/sharer/sharer.php?u=https://www.jarboleda.me/articles/fixing-corrupted-partition-on-virtual-machine/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-google-plus-g" href="https://plus.google.com/share?url=https://www.jarboleda.me/articles/fixing-corrupted-partition-on-virtual-machine/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-pinterest-p" href="https://pinterest.com/pin/create/button/?url=https://www.jarboleda.me/articles/fixing-corrupted-partition-on-virtual-machine/&amp;media=%3cnil%3efixing-corrupted-partition-on-virtual-machine.jpg&amp;description=%3cp%3eIf%20you%20ever%20find%20the%20following%20error%20while%20using%20vagrant%20or%20simply%20when%20booting%20a%20virtual%20machine,%20we&amp;rsquo;ll%20later%20see%20how%20to%20solve%20it.%0a%3cdiv%20class=%22highlight%22%3e%3cpre%20style=%22color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4%22%3e%3ccode%20class=%22language-sh%22%20data-lang=%22sh%22%3eCouldn%3cspan%20style=%22color:#960050;background-color:#1e0010%22%3e&amp;#39;%3c/span%3et%20remount%20RDWR%20because%20of%20unprocessed%20orphan%20inode%20list.%3c/code%3e%3c/pre%3e%3c/div%3e%0aDownload%20an%20Ubuntu%20ISO%0aBoot%20the%20virtualmachine%20from%20the%20ISO%20file:%20Settings%20-&amp;gt;%20Storage%20-&amp;gt;%20Add%20CD/DVD%20Device%20-&amp;gt;%20Choose%20disk%3c/p%3e" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+  </ul>
+</div>
+
+    </div>
+    <div class='post-footer'>
+      
+    </div>
+  </div>
+</div>
+
+          </article>
+        
+      
+        
+          <article>
+            <div class="post-container">
+  
+  <div class="article_summary">
+    <div class="article-date">
+      <p class="day"><i class="far fa-calendar-alt"></i>27 Jul 2016</p>
+      <p><i class="far fa-clock"></i>7 min read  ~ 1200 words</p>
+    </div>
+    
+    <div class="article-tags">
+      
+      <a href="#" rel="tag">sass</a> 
+      <a href="#" rel="tag">vagrant</a> 
+      <a href="#" rel="tag">nodejs</a> 
+    </div>
+    
+    <div class="clearfix"></div>
+    
+    <a href="/articles/web-development-environment/" title="">
+      <h1 class="article_title title">Web development environment</h1>
+    </a>
+    
+    <div class="article_excerpt">
+      
+      <p><p>In this post we&rsquo;ll configure an advanced web development environment. For that, we&rsquo;ll have our web hosted on a server (we will NOT use that server for development), and in our station we&rsquo;ll have a virtual machine. For this vm we&rsquo;ll use vagrant with the  scotch box, which allows us to host a web without extra work</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>We&rsquo;ll use the following tecnologies for our environment. You should review them before going on.</p></p>
+      
+    </div>
+    <div class="clearfix"></div>
+    
+    <div class="article-footer">
+      
+      <a class="read-more-button pure-button" href="/articles/web-development-environment/">Read the full article</a> 
+      
+
+
+
+
+<div class="soc-sharing">
+  <ul class="article_share_items">
+    <li>
+      <a class="fab fa-linkedin-in" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.jarboleda.me/articles/web-development-environment/&amp;title=Web%20development%20environment&amp;summary=%3cp%3eIn%20this%20post%20we&amp;rsquo;ll%20configure%20an%20advanced%20web%20development%20environment.%20For%20that,%20we&amp;rsquo;ll%20have%20our%20web%20hosted%20on%20a%20server%20%28we%20will%20NOT%20use%20that%20server%20for%20development%29,%20and%20in%20our%20station%20we&amp;rsquo;ll%20have%20a%20virtual%20machine.%20For%20this%20vm%20we&amp;rsquo;ll%20use%20vagrant%20with%20the%20%20scotch%20box,%20which%20allows%20us%20to%20host%20a%20web%20without%20extra%20work%3c/p%3e%0a%3ch2%20id=%22prerequisites%22%3ePrerequisites%3c/h2%3e%0a%3cp%3eWe&amp;rsquo;ll%20use%20the%20following%20tecnologies%20for%20our%20environment.%20You%20should%20review%20them%20before%20going%20on.%3c/p%3e&amp;source=J.%20Arboleda" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-twitter" href="http://twitter.com/share?text=Web%20development%20environment&amp;url=https://www.jarboleda.me/articles/web-development-environment/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-facebook-f" href="https://www.facebook.com/sharer/sharer.php?u=https://www.jarboleda.me/articles/web-development-environment/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-google-plus-g" href="https://plus.google.com/share?url=https://www.jarboleda.me/articles/web-development-environment/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-pinterest-p" href="https://pinterest.com/pin/create/button/?url=https://www.jarboleda.me/articles/web-development-environment/&amp;media=%3cnil%3eweb-development-environment.jpg&amp;description=%3cp%3eIn%20this%20post%20we&amp;rsquo;ll%20configure%20an%20advanced%20web%20development%20environment.%20For%20that,%20we&amp;rsquo;ll%20have%20our%20web%20hosted%20on%20a%20server%20%28we%20will%20NOT%20use%20that%20server%20for%20development%29,%20and%20in%20our%20station%20we&amp;rsquo;ll%20have%20a%20virtual%20machine.%20For%20this%20vm%20we&amp;rsquo;ll%20use%20vagrant%20with%20the%20%20scotch%20box,%20which%20allows%20us%20to%20host%20a%20web%20without%20extra%20work%3c/p%3e%0a%3ch2%20id=%22prerequisites%22%3ePrerequisites%3c/h2%3e%0a%3cp%3eWe&amp;rsquo;ll%20use%20the%20following%20tecnologies%20for%20our%20environment.%20You%20should%20review%20them%20before%20going%20on.%3c/p%3e" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+  </ul>
+</div>
+
+    </div>
+    <div class='post-footer'>
+      
+    </div>
+  </div>
+</div>
+
+          </article>
+        
+      
+        
+          <article>
+            <div class="post-container">
+  
+  <div class="article_summary">
+    <div class="article-date">
+      <p class="day"><i class="far fa-calendar-alt"></i>18 Jul 2016</p>
+      <p><i class="far fa-clock"></i>4 min read  ~ 600 words</p>
+    </div>
+    
+    <div class="article-tags">
+      
+      <a href="#" rel="tag">ubuntu</a> 
+      <a href="#" rel="tag">odroid</a> 
+      <a href="#" rel="tag">mate</a> 
+    </div>
+    
+    <div class="clearfix"></div>
+    
+    <a href="/articles/installing-ubuntu-16.04-on-odroid-xu3-lite/" title="">
+      <h1 class="article_title title">Installing ubuntu 16.04 on odroid xu3 lite</h1>
+    </a>
+    
+    <div class="article_excerpt">
+      
+      <p><h2 id="choosing-an-image">Choosing an image</h2>
+<p>Ubuntu 16.04 mate has just been released by odroid team, including support for xu3/xu4 boards and their lite versions. In this case we&rsquo;re going to test Ubuntu 16.04 on odroid xu3 lite, which is the board I own. We&rsquo;ll install it on an eMMC module, which is something like an small ssd (not really the same, eMMC isn&rsquo;t as fast as ssd is). This module will give us a boost on performance, although we can also install Ubuntu on a SD card (class 10).
+Firslty, we need to download the image we want to install:
+<a href="http://de.eu.odroid.in/ubuntu_16.04lts/">http://de.eu.odroid.in/ubuntu_16.04lts/</a>
+From the list above I took the image I was looking for, which is the complete version for odroid xu3:</p>
+<ul>
+<li><a href="http://de.eu.odroid.in/ubuntu_16.04lts/ubuntu-16.04-mate-odroid-xu3-20160708.img.xz">ubuntu-16.04-mate-odroid-xu3-20160708.img.xz</a></li>
+</ul></p>
+      
+    </div>
+    <div class="clearfix"></div>
+    
+    <div class="article-footer">
+      
+      <a class="read-more-button pure-button" href="/articles/installing-ubuntu-16.04-on-odroid-xu3-lite/">Read the full article</a> 
+      
+
+
+
+
+<div class="soc-sharing">
+  <ul class="article_share_items">
+    <li>
+      <a class="fab fa-linkedin-in" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.jarboleda.me/articles/installing-ubuntu-16.04-on-odroid-xu3-lite/&amp;title=Installing%20ubuntu%2016.04%20on%20odroid%20xu3%20lite&amp;summary=%3ch2%20id=%22choosing-an-image%22%3eChoosing%20an%20image%3c/h2%3e%0a%3cp%3eUbuntu%2016.04%20mate%20has%20just%20been%20released%20by%20odroid%20team,%20including%20support%20for%20xu3/xu4%20boards%20and%20their%20lite%20versions.%20In%20this%20case%20we&amp;rsquo;re%20going%20to%20test%20Ubuntu%2016.04%20on%20odroid%20xu3%20lite,%20which%20is%20the%20board%20I%20own.%20We&amp;rsquo;ll%20install%20it%20on%20an%20eMMC%20module,%20which%20is%20something%20like%20an%20small%20ssd%20%28not%20really%20the%20same,%20eMMC%20isn&amp;rsquo;t%20as%20fast%20as%20ssd%20is%29.%20This%20module%20will%20give%20us%20a%20boost%20on%20performance,%20although%20we%20can%20also%20install%20Ubuntu%20on%20a%20SD%20card%20%28class%2010%29.%0aFirslty,%20we%20need%20to%20download%20the%20image%20we%20want%20to%20install:%0a%3ca%20href=%22http://de.eu.odroid.in/ubuntu_16.04lts/%22%3ehttp://de.eu.odroid.in/ubuntu_16.04lts/%3c/a%3e%0aFrom%20the%20list%20above%20I%20took%20the%20image%20I%20was%20looking%20for,%20which%20is%20the%20complete%20version%20for%20odroid%20xu3:%3c/p%3e%0a%3cul%3e%0a%3cli%3e%3ca%20href=%22http://de.eu.odroid.in/ubuntu_16.04lts/ubuntu-16.04-mate-odroid-xu3-20160708.img.xz%22%3eubuntu-16.04-mate-odroid-xu3-20160708.img.xz%3c/a%3e%3c/li%3e%0a%3c/ul%3e&amp;source=J.%20Arboleda" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-twitter" href="http://twitter.com/share?text=Installing%20ubuntu%2016.04%20on%20odroid%20xu3%20lite&amp;url=https://www.jarboleda.me/articles/installing-ubuntu-16.04-on-odroid-xu3-lite/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-facebook-f" href="https://www.facebook.com/sharer/sharer.php?u=https://www.jarboleda.me/articles/installing-ubuntu-16.04-on-odroid-xu3-lite/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-google-plus-g" href="https://plus.google.com/share?url=https://www.jarboleda.me/articles/installing-ubuntu-16.04-on-odroid-xu3-lite/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-pinterest-p" href="https://pinterest.com/pin/create/button/?url=https://www.jarboleda.me/articles/installing-ubuntu-16.04-on-odroid-xu3-lite/&amp;media=%3cnil%3einstalling-ubuntu-16.04-on-odroid-xu3-lite.jpg&amp;description=%3ch2%20id=%22choosing-an-image%22%3eChoosing%20an%20image%3c/h2%3e%0a%3cp%3eUbuntu%2016.04%20mate%20has%20just%20been%20released%20by%20odroid%20team,%20including%20support%20for%20xu3/xu4%20boards%20and%20their%20lite%20versions.%20In%20this%20case%20we&amp;rsquo;re%20going%20to%20test%20Ubuntu%2016.04%20on%20odroid%20xu3%20lite,%20which%20is%20the%20board%20I%20own.%20We&amp;rsquo;ll%20install%20it%20on%20an%20eMMC%20module,%20which%20is%20something%20like%20an%20small%20ssd%20%28not%20really%20the%20same,%20eMMC%20isn&amp;rsquo;t%20as%20fast%20as%20ssd%20is%29.%20This%20module%20will%20give%20us%20a%20boost%20on%20performance,%20although%20we%20can%20also%20install%20Ubuntu%20on%20a%20SD%20card%20%28class%2010%29.%0aFirslty,%20we%20need%20to%20download%20the%20image%20we%20want%20to%20install:%0a%3ca%20href=%22http://de.eu.odroid.in/ubuntu_16.04lts/%22%3ehttp://de.eu.odroid.in/ubuntu_16.04lts/%3c/a%3e%0aFrom%20the%20list%20above%20I%20took%20the%20image%20I%20was%20looking%20for,%20which%20is%20the%20complete%20version%20for%20odroid%20xu3:%3c/p%3e%0a%3cul%3e%0a%3cli%3e%3ca%20href=%22http://de.eu.odroid.in/ubuntu_16.04lts/ubuntu-16.04-mate-odroid-xu3-20160708.img.xz%22%3eubuntu-16.04-mate-odroid-xu3-20160708.img.xz%3c/a%3e%3c/li%3e%0a%3c/ul%3e" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+  </ul>
+</div>
+
+    </div>
+    <div class='post-footer'>
+      
+    </div>
+  </div>
+</div>
+
+          </article>
+        
+      
+        
+          <article>
+            <div class="post-container">
+  
+  <div class="article_summary">
+    <div class="article-date">
+      <p class="day"><i class="far fa-calendar-alt"></i>17 Jul 2016</p>
+      <p><i class="far fa-clock"></i>3 min read  ~ 400 words</p>
+    </div>
+    
+    <div class="article-tags">
+      
+      <a href="#" rel="tag">curl</a> 
+      <a href="#" rel="tag">php</a> 
+      <a href="#" rel="tag">fopen</a> 
+    </div>
+    
+    <div class="clearfix"></div>
+    
+    <a href="/articles/how-to-handle-remote-resources-with-curl/" title="">
+      <h1 class="article_title title">How to handle remote resources with curl</h1>
+    </a>
+    
+    <div class="article_excerpt">
+      
+      <p><h2 id="the-problem">The problem</h2>
+<p>When you need to get remote files to handle its content (i.e. csv files) you may find out that accesing them isn&rsquo;t as easy as using fopen:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+$handle <span style="color:#f92672">=</span> <span style="color:#a6e22e">fopen</span>($filename, <span style="color:#e6db74">&#34;r&#34;</span>) <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#39;could not open .&#39;</span> $filename);
+</code></pre></div></p></p>
+      
+    </div>
+    <div class="clearfix"></div>
+    
+    <div class="article-footer">
+      
+      <a class="read-more-button pure-button" href="/articles/how-to-handle-remote-resources-with-curl/">Read the full article</a> 
+      
+
+
+
+
+<div class="soc-sharing">
+  <ul class="article_share_items">
+    <li>
+      <a class="fab fa-linkedin-in" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.jarboleda.me/articles/how-to-handle-remote-resources-with-curl/&amp;title=How%20to%20handle%20remote%20resources%20with%20curl&amp;summary=%3ch2%20id=%22the-problem%22%3eThe%20problem%3c/h2%3e%0a%3cp%3eWhen%20you%20need%20to%20get%20remote%20files%20to%20handle%20its%20content%20%28i.e.%20csv%20files%29%20you%20may%20find%20out%20that%20accesing%20them%20isn&amp;rsquo;t%20as%20easy%20as%20using%20fopen:%0a%3cdiv%20class=%22highlight%22%3e%3cpre%20style=%22color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4%22%3e%3ccode%20class=%22language-php%22%20data-lang=%22php%22%3e%3cspan%20style=%22color:#75715e%22%3e&amp;lt;?php%3c/span%3e%0a$handle%20%3cspan%20style=%22color:#f92672%22%3e=%3c/span%3e%20%3cspan%20style=%22color:#a6e22e%22%3efopen%3c/span%3e%28$filename,%20%3cspan%20style=%22color:#e6db74%22%3e&amp;#34;r&amp;#34;%3c/span%3e%29%20%3cspan%20style=%22color:#66d9ef%22%3eor%3c/span%3e%20%3cspan%20style=%22color:#66d9ef%22%3edie%3c/span%3e%28%3cspan%20style=%22color:#e6db74%22%3e&amp;#39;could%20not%20open%20.&amp;#39;%3c/span%3e%20$filename%29;%0a%3c/code%3e%3c/pre%3e%3c/div%3e%3c/p%3e&amp;source=J.%20Arboleda" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-twitter" href="http://twitter.com/share?text=How%20to%20handle%20remote%20resources%20with%20curl&amp;url=https://www.jarboleda.me/articles/how-to-handle-remote-resources-with-curl/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-facebook-f" href="https://www.facebook.com/sharer/sharer.php?u=https://www.jarboleda.me/articles/how-to-handle-remote-resources-with-curl/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-google-plus-g" href="https://plus.google.com/share?url=https://www.jarboleda.me/articles/how-to-handle-remote-resources-with-curl/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-pinterest-p" href="https://pinterest.com/pin/create/button/?url=https://www.jarboleda.me/articles/how-to-handle-remote-resources-with-curl/&amp;media=%3cnil%3ehow-to-handle-remote-resources-with-curl.png&amp;description=%3ch2%20id=%22the-problem%22%3eThe%20problem%3c/h2%3e%0a%3cp%3eWhen%20you%20need%20to%20get%20remote%20files%20to%20handle%20its%20content%20%28i.e.%20csv%20files%29%20you%20may%20find%20out%20that%20accesing%20them%20isn&amp;rsquo;t%20as%20easy%20as%20using%20fopen:%0a%3cdiv%20class=%22highlight%22%3e%3cpre%20style=%22color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4%22%3e%3ccode%20class=%22language-php%22%20data-lang=%22php%22%3e%3cspan%20style=%22color:#75715e%22%3e&amp;lt;?php%3c/span%3e%0a$handle%20%3cspan%20style=%22color:#f92672%22%3e=%3c/span%3e%20%3cspan%20style=%22color:#a6e22e%22%3efopen%3c/span%3e%28$filename,%20%3cspan%20style=%22color:#e6db74%22%3e&amp;#34;r&amp;#34;%3c/span%3e%29%20%3cspan%20style=%22color:#66d9ef%22%3eor%3c/span%3e%20%3cspan%20style=%22color:#66d9ef%22%3edie%3c/span%3e%28%3cspan%20style=%22color:#e6db74%22%3e&amp;#39;could%20not%20open%20.&amp;#39;%3c/span%3e%20$filename%29;%0a%3c/code%3e%3c/pre%3e%3c/div%3e%3c/p%3e" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+  </ul>
+</div>
+
+    </div>
+    <div class='post-footer'>
+      
+    </div>
+  </div>
+</div>
+
+          </article>
+        
+      
+      
+
+<ul class="pagination">
+    
+    <li class="page-item">
+        <a href="/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+    </li>
+    
+    <li class="page-item">
+    <a href="/" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/">1</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item active"><a class="page-link" href="/page/2/">2</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/page/3/">3</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item disabled"><span aria-hidden="true">&nbsp;&hellip;&nbsp;</span></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/page/5/">5</a></li>
+    
+    
+    <li class="page-item">
+    <a href="/page/3/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+    </li>
+    
+    <li class="page-item">
+        <a href="/page/5/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    </li>
+    
+</ul>
+
+
+    </section><aside class='sidebar-wrapper pure-u-1 pure-u-md-1-4 sticky'>
+      
+<div class='sidebar'>
+  
+
+<div class='authorboxwrap'>
+<h4>Author</h4>
+    <div class='avatar-container'>
+      <img alt="author's photo" class='author_avatar' width='160' height='136' src="/img/me.min.png"  />
+      <h4 rel='author'>Jeferson Arboleda</h4>
+    </div>
+    <div class='author_description_container'>
+      <p class= 'm-text-centered m-bold'>Business Analyst</p>
+      <p>Currently working for <a href="https://amadeus.com/en">Amadeus</a> in Nice, Côte D&rsquo;Azur.</p>
+      <div class='authorsocial'>
+        
+          <a href='https://www.linkedin.com/in/jeferson-arboleda-167429134' target='_blank'><i class='fab fa-linkedin-in'></i></a>
+        
+        
+          <a href='https://github.com/jag10' target='_blank'><i class='fab fa-github'></i></a>
+        
+        
+          <a href='https://gitlab.com/jag7' target='_blank'><i class='fab fa-gitlab'></i></a>
+        
+        
+          <a href='https://twitter.com/j_a_g_x' target='_blank'><i class='fab fa-twitter'></i></a>
+        
+      </div>
+    </div>
+</div>
+
+  
+  <div class='widget currently-reading'>
+  <div class="widget-title">
+    <h2>Currently Reading</h2></div>
+  <div class='widget-content'>
+    <div class="loading-basic">
+      <div class="loading-bar"></div>
+      <div class="loading-bar"></div>
+      <div class="loading-bar"></div>
+      <div class="loading-bar"></div>
+    </div>
+    <div id="gr_updates_widget">
+      <iframe id="gr_iframe" src="" width="100%" height="330"></iframe>
+      
+      <a href="https://www.goodreads.com/">
+        <img with="139" height="31" alt="Goodreads: Book reviews, recommendations, and discussion" src="/img/goodreads-logo.png" />
+      </a>
+    </div>
+  </div>
+</div>
+
+  <div class='widget popular-posts'>
+  <div class="widget-title"><h2>Pinned posts</h2></div>
+  <div class='widget-content popular-posts'>
+    <ul>
+    
+        <li>
+          <div class='item-content'>
+            <div class='item-thumbnail'>
+              <a href='/articles/moving-to-france-for-work/'>
+                <img alt='Moving to France for work' width='72' height='72' src="/articles/img/thumbs/moving-to-france-for-work.jpg" />
+              </a>
+            </div>
+            <div class='item-title'>
+              <a href='/articles/moving-to-france-for-work/' class="mostVisitedLink">Moving to France for work
+                <span class="detail-span">[0]</span>
+              </a>
+            </div>
+          </div>
+          <div style='clear: both;'></div>
+        </li>
+      
+        <li>
+          <div class='item-content'>
+            <div class='item-thumbnail'>
+              <a href='/articles/arduino-uno-lego-case/'>
+                <img alt='Arduino UNO R3 lego case' width='72' height='72' src="/articles/img/thumbs/arduino-uno-lego-case.jpg" />
+              </a>
+            </div>
+            <div class='item-title'>
+              <a href='/articles/arduino-uno-lego-case/' class="mostVisitedLink">Arduino UNO R3 lego case
+                <span class="detail-span">[0]</span>
+              </a>
+            </div>
+          </div>
+          <div style='clear: both;'></div>
+        </li>
+      
+        <li>
+          <div class='item-content'>
+            <div class='item-thumbnail'>
+              <a href='/articles/web-development-environment/'>
+                <img alt='Web development environment' width='72' height='72' src="/articles/img/thumbs/web-development-environment.jpg" />
+              </a>
+            </div>
+            <div class='item-title'>
+              <a href='/articles/web-development-environment/' class="mostVisitedLink">Web development environment
+                <span class="detail-span">[0]</span>
+              </a>
+            </div>
+          </div>
+          <div style='clear: both;'></div>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+</div>
+
+
+    </aside>
+    <div class='clearfix'></div>
+  </div>
+  <footer>
+  <div class='footer-container'>
+    <div class='pure-u-1 pure-u-md-1-3'>
+      <div class='widget popular-posts'>
+        <div class="widget-title">
+          <h2>Other posts</h2></div>
+        <div class='widget-content popular-posts'>
+          <ul>
+            
+             
+            <li>
+              <div class='item-content'>
+                <div class='item-thumbnail'>
+                  <a href='/articles/deploy-hugo-site-to-github-pages/' target='_blank'>
+                    <img alt='Deploying a hugo site to github pages' width='72' height='72' src="/articles/img/thumbs/deploy-hugo-site-to-github-pages.jpg" />
+                  </a>
+                </div>
+                <div class='item-title'>
+                  <a href='/articles/deploy-hugo-site-to-github-pages/' class="mostVisitedLink">Deploying a hugo site to github pages</a>
+                </div>
+              </div>
+            </li>
+            
+            
+             
+            <li>
+              <div class='item-content'>
+                <div class='item-thumbnail'>
+                  <a href='/articles/backing-up-all-databases-using-mysqldump/' target='_blank'>
+                    <img alt='Backing up all databases using mysqldump' width='72' height='72' src="/articles/img/thumbs/backing-up-all-databases-using-mysqldump.png" />
+                  </a>
+                </div>
+                <div class='item-title'>
+                  <a href='/articles/backing-up-all-databases-using-mysqldump/' class="mostVisitedLink">Backing up all databases using mysqldump</a>
+                </div>
+              </div>
+            </li>
+            
+            
+             
+            <li>
+              <div class='item-content'>
+                <div class='item-thumbnail'>
+                  <a href='/articles/installing-magento2-on-cwp/' target='_blank'>
+                    <img alt='Installing magento2 on cwp' width='72' height='72' src="/articles/img/thumbs/installing-magento2-on-cwp.jpg" />
+                  </a>
+                </div>
+                <div class='item-title'>
+                  <a href='/articles/installing-magento2-on-cwp/' class="mostVisitedLink">Installing magento2 on cwp</a>
+                </div>
+              </div>
+            </li>
+            
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class='pure-u-1 pure-u-md-1-3'>
+      <div class='widget ContactForm'>
+        <h2 class='title'>Contact me</h2>
+        <a class="email" href="mailto:me@jarboleda.me">me@jarboleda.me</a>
+        <div class='contact-form-widget'>
+          <div class='form'>
+            <form name='contact-form' action="https://formspree.io/me@jarboleda.me" method="POST">
+              <p>Name</p>
+              <input class='contact-form-name' name='name' size='30' type='text' value='' />
+              <p>Email<span>*</span></p>
+              <input class='contact-form-email' name='name="_replyto"' size='30' type='text' value='' />
+              <p>Message<span>*</span></p>
+              <p><textarea class='contact-form-email-message' cols='29' name='email-message' rows='5'></textarea></p>
+              <input class='contact-form-button contact-form-button-submit' type='submit' value='Send' />
+              <div style='text-align: center; max-width: 222px; width: 100%'>
+                <p class='contact-form-error-message'></p>
+                <p class='contact-form-success-message'></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class='footer-credits'>
+    <div class='footer_social-icons'>
+      <ul>
+        
+        <li>
+          <a class="btn-linkedin" href='https://www.linkedin.com/in/jeferson-arboleda-167429134' target='_blank'><i class='fab fa-linkedin-in'></i></a>
+        </li>
+        
+        
+        <li>
+          <a class="btn-github" href='https://github.com/jag10' target='_blank'><i class='fab fa-github'></i></a>
+        </li>
+        
+        
+        <li>
+          <a class="btn-gitlab" href='https://gitlab.com/jag7' target='_blank'><i class='fab fa-gitlab'></i></a>
+        </li>
+        
+        
+        <li>
+          <a class="btn-twitter" href='https://twitter.com/j_a_g_x' target='_blank'><i class='fab fa-twitter'></i></a>
+        </li>
+        
+      </ul>
+    </div>
+    <div class='clr'></div>
+    <p>Copyright &#169; 2020
+      <a href=''></a>
+    </p>
+    <p class='attribution'>Powered by</p>
+    <a href='https://gohugo.io/' target="_blank" >
+      <img with="80" height="21" alt="hugo logo" class='attribution_logo' src="/img/hugo-logo.png" />
+    </a>
+  </div>
+</footer>
+
+<script defer src='/js/main.min.js' type='text/javascript'></script>
+
+<script type="text/javascript">
+  window.cookieconsent_options = {
+    "message": "jarboleda.me uses cookies to ensure you get the best experience.",
+    "dismiss": "Ok",
+    "learnMore": "More info",
+    "link": null,
+    "theme": "light-bottom"
+  };
+</script>
+<script defer type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js"></script>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-101857703-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+</body>
+</html>
+

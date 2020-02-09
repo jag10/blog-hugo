@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vagrant on J. Arboleda</title>
+    <link>https://www.jarboleda.me/es/tags/vagrant/</link>
+    <description>Recent content in vagrant on J. Arboleda</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 28 Jul 2016 14:07:04 +0200</lastBuildDate>
+    
+	<atom:link href="https://www.jarboleda.me/es/tags/vagrant/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Arreglando una partición corrupta de una máquina virtual</title>
+      <link>https://www.jarboleda.me/es/articles/fixing-corrupted-partition-on-virtual-machine/</link>
+      <pubDate>Thu, 28 Jul 2016 14:07:04 +0200</pubDate>
+      
+      <guid>https://www.jarboleda.me/es/articles/fixing-corrupted-partition-on-virtual-machine/</guid>
+      <description>&lt;h2 id=&#34;detección-del-error&#34;&gt;Detección del error&lt;/h2&gt;
+&lt;p&gt;Si alguna vez encuentras el siguiente error al utilizar vagrant o simplemente al arrancar una máquina virtual, más abajo veremos cómo solucionarlo:
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;Couldn&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;t remount RDWR because of unprocessed orphan inode list.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;h2 id=&#34;solución&#34;&gt;Solución&lt;/h2&gt;
+&lt;p&gt;Descargar ISO de ubuntu&lt;/p&gt;
+&lt;p&gt;Arrancar la máquina virtual con la ISO: Settings -&amp;gt; Storage -&amp;gt; Add CD/DVD Device -&amp;gt; Choose disk&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Entorno para desarrollo web</title>
+      <link>https://www.jarboleda.me/es/articles/web-development-environment/</link>
+      <pubDate>Wed, 27 Jul 2016 13:50:40 +0200</pubDate>
+      
+      <guid>https://www.jarboleda.me/es/articles/web-development-environment/</guid>
+      <description>&lt;p&gt;En este post vamos a ver un entorno avanzado de desarrollo web. Tendremos nuestra web alojada en un servidor (que NO utilizaremos para nada durante el desarrollo), y en nuestra máquina local tendremos una máquina virtual para el sitio web en el que estemos trabajando. Para la máquina virtual utilizaremos vagrant con el stack de &lt;a href=&#34;https://box.scotch.io/&#34;&gt;scotch&lt;/a&gt;, que nos viene preparado para montar directamente el sitio web sin trabajo extra.&lt;/p&gt;
+&lt;h2 id=&#34;requisitos-previos&#34;&gt;Requisitos previos&lt;/h2&gt;
+&lt;p&gt;Usaremos las siguientes tecnologías. Deberías revisarlas antes de seguir con el artículo.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

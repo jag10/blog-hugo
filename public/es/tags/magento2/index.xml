@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>magento2 on J. Arboleda</title>
+    <link>https://www.jarboleda.me/es/tags/magento2/</link>
+    <description>Recent content in magento2 on J. Arboleda</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 24 Mar 2016 12:34:39 +0200</lastBuildDate>
+    
+	<atom:link href="https://www.jarboleda.me/es/tags/magento2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Instalando magento2 en cwp</title>
+      <link>https://www.jarboleda.me/es/articles/installing-magento2-on-cwp/</link>
+      <pubDate>Thu, 24 Mar 2016 12:34:39 +0200</pubDate>
+      
+      <guid>https://www.jarboleda.me/es/articles/installing-magento2-on-cwp/</guid>
+      <description>&lt;h2 id=&#34;empezando&#34;&gt;Empezando&lt;/h2&gt;
+&lt;p&gt;En este post explicaré cómo instalar magento2 sobre Centos Web Panel, utilizando php7 y mysql 5.6. Para empezar, tenemos que compilar php con las extensiones que magento2 necesita. Con el siguiente comando podremos configurar php7 para luego compilarlo y conseguir que funcione con magento2.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>curl on J. Arboleda</title>
+    <link>https://www.jarboleda.me/tags/curl/</link>
+    <description>Recent content in curl on J. Arboleda</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 17 Jul 2016 13:34:28 +0200</lastBuildDate>
+    
+	<atom:link href="https://www.jarboleda.me/tags/curl/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to handle remote resources with curl</title>
+      <link>https://www.jarboleda.me/articles/how-to-handle-remote-resources-with-curl/</link>
+      <pubDate>Sun, 17 Jul 2016 13:34:28 +0200</pubDate>
+      
+      <guid>https://www.jarboleda.me/articles/how-to-handle-remote-resources-with-curl/</guid>
+      <description>&lt;h2 id=&#34;the-problem&#34;&gt;The problem&lt;/h2&gt;
+&lt;p&gt;When you need to get remote files to handle its content (i.e. csv files) you may find out that accesing them isn&amp;rsquo;t as easy as using fopen:
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;?php&lt;/span&gt;
+$handle &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fopen&lt;/span&gt;($filename, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;r&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;or&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;die&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;could not open .&amp;#39;&lt;/span&gt; $filename);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Authenticating users with cURL</title>
+      <link>https://www.jarboleda.me/articles/authenticating-users-in-joomla-with-curl/</link>
+      <pubDate>Sat, 16 Jan 2016 11:07:16 +0200</pubDate>
+      
+      <guid>https://www.jarboleda.me/articles/authenticating-users-in-joomla-with-curl/</guid>
+      <description>&lt;p&gt;In this post I&amp;rsquo;ll explain how to log in a user with cURL. This can be useful if you want to integrate joomla login with an external app. For example, you could have a dual installation of wordpress and joomla and use wordpress joomla to log in joomla users as well.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

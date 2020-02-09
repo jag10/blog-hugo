@@ -1,0 +1,502 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>J. Arboleda - Installing ubuntu 16.04 on odroid xu3 lite</title>
+    <meta name="description" content="The blog of Jeferson Arboleda, software engineer. It&#39;s focused on self improvement and overcoming challenges I find everyday">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+    	
+	<meta property="og:title" content="Installing ubuntu 16.04 on odroid xu3 lite" />
+	<meta property="og:description" content="Choosing an image
+Ubuntu 16.04 mate has just been released by odroid team, including support for xu3/xu4 boards and their lite versions. In this case we&rsquo;re going to test Ubuntu 16.04 on odroid xu3 lite, which is the board I own. We&rsquo;ll install it on an eMMC module, which is something like an small ssd (not really the same, eMMC isn&rsquo;t as fast as ssd is). This module will give us a boost on performance, although we can also install Ubuntu on a SD card (class 10).
+Firslty, we need to download the image we want to install:
+http://de.eu.odroid.in/ubuntu_16.04lts/
+From the list above I took the image I was looking for, which is the complete version for odroid xu3:
+
+ubuntu-16.04-mate-odroid-xu3-20160708.img.xz
+" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://www.jarboleda.me/articles/installing-ubuntu-16.04-on-odroid-xu3-lite/" />
+	<meta property="og:image" content="/articles/img/installing-ubuntu-16.04-on-odroid-xu3-lite.jpg" />
+	<meta property="og:updated_time" content="2016-07-18 13:37:52 &#43;0200 CEST"/>
+	<meta property="og:locale" content="en-US" />
+	<meta property="og:site_name" content="J. Arboleda" />
+	
+	
+	<meta property="article:published_time" content="2016-07-18 13:37:52 &#43;0200 CEST" />
+	<meta property="article:modified_time" content="2016-07-18 13:37:52 &#43;0200 CEST" />
+	<meta property="article:section" content="articles" />
+	<meta property="article:tag" content="ubuntu" />
+	<meta property="article:tag" content="odroid" />
+	<meta property="article:tag" content="mate" />
+	
+	
+    
+    <meta itemprop="name" content="Installing ubuntu 16.04 on odroid xu3 lite">
+    <meta itemprop="description" content="Choosing an image
+Ubuntu 16.04 mate has just been released by odroid team, including support for xu3/xu4 boards and their lite versions. In this case we&rsquo;re going to test Ubuntu 16.04 on odroid xu3 lite, which is the board I own. We&rsquo;ll install it on an eMMC module, which is something like an small ssd (not really the same, eMMC isn&rsquo;t as fast as ssd is). This module will give us a boost on performance, although we can also install Ubuntu on a SD card (class 10).
+Firslty, we need to download the image we want to install:
+http://de.eu.odroid.in/ubuntu_16.04lts/
+From the list above I took the image I was looking for, which is the complete version for odroid xu3:
+
+ubuntu-16.04-mate-odroid-xu3-20160708.img.xz
+">
+    <meta name="author" content="Jeferson Arboleda">
+    
+    <meta itemprop="image" content="installing-ubuntu-16.04-on-odroid-xu3-lite.jpg">
+    
+    <meta itemprop="keywords" content="notpinned,pinned,,false,true,serie1,arduino,backup,backups,bash,case,centos6,cloudflare,curl,cwp,facebook,fail2ban,fedora25,fopen,ftp,github,github-pages,httpd,hugo,iptables,ipv6,job,lego,linkedin,magento,magento2,mate,move,mysql,mysqldump,nodejs,odroid,pages,performance,php,php7,piwik,plesk,processwire,reflectionmethod,sass,static,ubuntu,unrealengine,vagrant,vm,vps,zip," />
+    <meta itemprop="wordCount" content="574">
+	
+	<meta name="twitter:card" content="summary_large_image"/>
+	<meta name="twitter:image:src" content="/articles/img/installing-ubuntu-16.04-on-odroid-xu3-lite.jpg"/>
+	
+	<meta name="twitter:title" content="Installing ubuntu 16.04 on odroid xu3 lite"/>
+	<meta name="twitter:description" content="Choosing an image
+Ubuntu 16.04 mate has just been released by odroid team, including support for xu3/xu4 boards and their lite versions. In this case we&rsquo;re going to test Ubuntu 16.04 on odroid xu3 lite, which is the board I own. We&rsquo;ll install it on an eMMC module, which is something like an small ssd (not really the same, eMMC isn&rsquo;t as fast as ssd is). This module will give us a boost on performance, although we can also install Ubuntu on a SD card (class 10).
+Firslty, we need to download the image we want to install:
+http://de.eu.odroid.in/ubuntu_16.04lts/
+From the list above I took the image I was looking for, which is the complete version for odroid xu3:
+
+ubuntu-16.04-mate-odroid-xu3-20160708.img.xz
+"/>
+	<meta name="twitter:site" content="@j_a_g_x"/>
+	
+	<meta name="twitter:creator" content="@j_a_g_x"/>
+
+
+	<meta name="news_keywords" content="ubuntu,odroid,mate" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="/css/global.min.css" media="screen" rel="stylesheet" type="text/css" />
+  </head>
+ <body>
+  <header>
+    <nav class='top-menu'>
+      
+      <div class="menu-wrapper" id="menu">
+        <div class="pure-u-1 hidden">
+          <div class="pure-menu menu-toogle-container">
+            <a class="custom-toggle" id="toggle"><span class="bar"></span><span class="bar"></span></a>
+          </div>
+        </div>
+        <div class="pure-u-1">
+          <div class="pure-menu pure-menu-horizontal custom-can-transform">
+            <ul class="pure-menu-list float-left">
+              
+              <li class="pure-menu-item"><a target='' class='pure-menu-link' href=/>home</a></li>
+              
+              <li class="pure-menu-item"><a target='' class='pure-menu-link' href=/extras/cv/>about me</a></li>
+              
+              <li class="pure-menu-item"><a target='' class='pure-menu-link' href=/projects/>projects</a></li>
+              
+              <li class="pure-menu-item"><a target='' class='pure-menu-link' href=https://github.com/jag10>github</a></li>
+              
+              <li class="pure-menu-item"><a target='' class='pure-menu-link' href=https://gitlab.com/jag7>gitlab</a></li>
+              
+              <li class='pure-menu-item lang_selector selected'>
+                
+                <a class='pure-menu-link' href="#">English</a>
+                
+              </li>
+              <li class='pure-menu-item flag'><i class='fa fa-language' aria-hidden='true'></i></li>
+               
+              <li class='pure-menu-item lang_selector'>
+                <a class='pure-menu-link' href="/es/articles/installing-ubuntu-16.04-on-odroid-xu3-lite/">spanish </a>
+              </li>
+               
+            </ul>
+            <div class="float-right">
+              <ul class="pure-menu-list">
+                
+                <li class="pure-menu-item social_menu_entry">
+                  <a href='https://www.linkedin.com/in/jeferson-arboleda-167429134' target='_blank'><i class='fab fa-linkedin-in'></i></a>
+                </li>
+                
+                
+                <li class="pure-menu-item social_menu_entry">
+                  <a href='https://github.com/jag10' target='_blank'><i class='fab fa-github'></i></a>
+                </li>
+                
+                
+                <li class="pure-menu-item social_menu_entry">
+                  <a href='https://gitlab.com/jag7' target='_blank'><i class='fab fa-gitlab'></i></a>
+                </li>
+                
+                
+                <li class="pure-menu-item social_menu_entry">
+                  <a href='https://twitter.com/j_a_g_x' target='_blank'><i class='fab fa-twitter'></i></a>
+                </li>
+                
+                <li class='pure-menu-item nt-search' id='nt-search'>
+                  <form action='/search/' id='searchform' method='get'>
+                    <div class='nt-search-input-wrap'>
+                      <input class='nt-search-input' id='s' name='q' placeholder='Search is disabled :(' type='text' value='' disabled />
+                    </div>
+                    <input class='nt-search-submit' id='go' type='submit' value='Search' />
+                    <span class='nt fas fa-search'></span>
+                  </form>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    
+  </header>
+
+  <div class="main-container">
+    <section id="main" class="pure-u-1 pure-u-md-3-4">
+      <article>
+        <div class="post-container">
+  
+  <div class="article_summary">
+    <div class="article-date">
+      <p class="day"><i class="far fa-calendar-alt"></i>18 Jul 2016</p>
+      <p><i class="far fa-clock"></i>4 min read  ~ 600 words</p>
+    </div>
+    
+    <div class="article-tags">
+      
+      <a href="#" rel="tag">ubuntu</a> 
+      <a href="#" rel="tag">odroid</a> 
+      <a href="#" rel="tag">mate</a> 
+    </div>
+    
+    <div class="clearfix"></div>
+    
+    <h1 class="article_title title">Installing ubuntu 16.04 on odroid xu3 lite</h1>
+    
+    <div class="article_excerpt">
+      
+      <p><h2 id="choosing-an-image">Choosing an image</h2>
+<p>Ubuntu 16.04 mate has just been released by odroid team, including support for xu3/xu4 boards and their lite versions. In this case we&rsquo;re going to test Ubuntu 16.04 on odroid xu3 lite, which is the board I own. We&rsquo;ll install it on an eMMC module, which is something like an small ssd (not really the same, eMMC isn&rsquo;t as fast as ssd is). This module will give us a boost on performance, although we can also install Ubuntu on a SD card (class 10).
+Firslty, we need to download the image we want to install:
+<a href="http://de.eu.odroid.in/ubuntu_16.04lts/">http://de.eu.odroid.in/ubuntu_16.04lts/</a>
+From the list above I took the image I was looking for, which is the complete version for odroid xu3:</p>
+<ul>
+<li><a href="http://de.eu.odroid.in/ubuntu_16.04lts/ubuntu-16.04-mate-odroid-xu3-20160708.img.xz">ubuntu-16.04-mate-odroid-xu3-20160708.img.xz</a></li>
+</ul>
+<h2 id="writing-the-image-on-odroid-board">Writing the image on odroid board</h2>
+<p>The next step will be to uncompress the image. This is very important because if we try to write a compressed image into the eMMC module, it won&rsquo;t work at all. So, to uncompress it, use the following command:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#f92672">[</span>jag@2ndChance distros<span style="color:#f92672">]</span>$ unxz ubuntu-16.04-mate-odroid-xu3-20160708.img.xz</code></pre></div>
+Ok, now we are ready to install the linux image. The easiest way to do it is using the dd command:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#f92672">[</span>jag@2ndChance distros<span style="color:#f92672">]</span>$ sudo dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>ubuntu-16.04-mate-odroid-xu3-20160708.img of<span style="color:#f92672">=</span>/dev/sdc bs<span style="color:#f92672">=</span>1M conv<span style="color:#f92672">=</span>fsync
+<span style="color:#f92672">[</span>jag@2ndChance distros<span style="color:#f92672">]</span>$ sync
+<span style="color:#f92672">[</span>jag@2ndChance distros<span style="color:#f92672">]</span>$ sync
+<span style="color:#f92672">[</span>jag@2ndChance distros<span style="color:#f92672">]</span>$ sync
+<span style="color:#f92672">[</span>jag@2ndChance distros<span style="color:#f92672">]</span>$ sync</code></pre></div></p>
+<h2 id="checking-the-result">Checking the result</h2>
+<p>It is very important to use the sync command multiple times after dd so we make sure we flush all the cache content and write the complete image into the eMMC module.
+Now we need to verify the image was correctly written into the eMMC module, we&rsquo;ll use the dd command again:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#f92672">[</span>jag@2ndChance distros<span style="color:#f92672">]</span>$ sudo dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>/dev/sdc bs<span style="color:#f92672">=</span><span style="color:#ae81ff">512</span> count<span style="color:#f92672">=</span><span style="color:#66d9ef">$((</span><span style="color:#e6db74">`</span>stat -c%s ubuntu-16.04-mate-odroid-xu3-20160708.img<span style="color:#e6db74">`</span><span style="color:#f92672">/</span><span style="color:#ae81ff">512</span><span style="color:#66d9ef">))</span> | md5sum
+<span style="color:#f92672">[</span>sudo<span style="color:#f92672">]</span> password <span style="color:#66d9ef">for</span> jag:
+8968192+0 registros leídos
+8968192+0 registros escritos
+<span style="color:#ae81ff">4591714304</span> bytes <span style="color:#f92672">(</span>4,6 GB<span style="color:#f92672">)</span> copiados, 106,332 s, 43,2 MB/s
+ff988a4039d9bcd6978910447930f5d5 -
+<span style="color:#f92672">[</span>jag@2ndChance distros<span style="color:#f92672">]</span>$ dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>ubuntu-16.04-mate-odroid-xu3-20160708.img bs<span style="color:#f92672">=</span><span style="color:#ae81ff">512</span> count<span style="color:#f92672">=</span><span style="color:#66d9ef">$((</span><span style="color:#e6db74">`</span>stat -c%s ubuntu-16.04-mate-odroid-xu3-20160708.img<span style="color:#e6db74">`</span><span style="color:#f92672">/</span><span style="color:#ae81ff">512</span><span style="color:#66d9ef">))</span> | md5sum
+8968192+0 registros leídos
+8968192+0 registros escritos
+<span style="color:#ae81ff">4591714304</span> bytes <span style="color:#f92672">(</span>4,6 GB<span style="color:#f92672">)</span> copiadosff988a4039d9bcd6978910447930f5d5 -
+, 26,0306 s, <span style="color:#ae81ff">176</span> MB/s
+<span style="color:#f92672">[</span>jag@2ndChance distros<span style="color:#f92672">]</span>$</code></pre></div></p>
+<p>We we did with the first command is writing the content of the eMMC module (/dev/sdc) into stdout, piping that output into md5sum command, which gives us the md5 for the content of the eMMC module. With the second command, we read the image from local disk and write it into stdout to pipe it into md5sum, this gives us the md5 for the image we downloaded. Now we can compare both md5 values to check if they are the same,
+As you can see, md5 hashes are the same, so everything is ok.
+If everything worked out, we&rsquo;ll be able to connect to the board with an ssh connection. In my case I have a static IP assigned for my board, but if you don&rsquo;t know which IP has your odroid, you&rsquo;ll have to log in the router and check it out. You can also use utilities like nmap to discover new devices on the local network. Once we know the IP for the board, we can log in with the following credentials:
+root:odroid</p>
+<p>I&rsquo;ve been testing Ubuntu on the board and the first impression was really good. They&rsquo;ve solved some issues with the hdmi output. In previous versions I had a lot of trouble to make it work, but now it was Plug &amp; Play. On the other hand, I&rsquo;ve detected an issue with Ethernet connection, which doesn&rsquo;t work always as expected.</p>
+<h2 id="update">UPDATE</h2>
+<ul>
+<li>After some updates and checking the wires, the Ethernet connection works just fine.</li>
+</ul></p>
+      
+    </div>
+    <div class="clearfix"></div>
+    
+    <div class="article_resources">
+      <h2>Resources</h2>
+      <ul>
+        
+        <li>
+          
+          <a target="_blank" href="http://de.eu.odroid.in/ubuntu_16.04lts/">Ubuntu ISOs for odroid xu3 lite</a> 
+        </li>
+        
+        <li>
+          
+          <a target="_blank" href="http://odroid.com/dokuwiki/doku.php?id=en:odroid_flashing_tools">odroid flashing tools</a> 
+        </li>
+        
+        <li>
+          
+          <a target="_blank" href="https://linux.die.net/man/1/dd">dd on linux.die.net</a> 
+        </li>
+        
+      </ul>
+    </div>
+    
+    <div class="article-footer">
+      
+      
+
+
+
+
+<div class="soc-sharing">
+  <ul class="article_share_items">
+    <li>
+      <a class="fab fa-linkedin-in" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.jarboleda.me/articles/installing-ubuntu-16.04-on-odroid-xu3-lite/&amp;title=Installing%20ubuntu%2016.04%20on%20odroid%20xu3%20lite&amp;summary=%3ch2%20id=%22choosing-an-image%22%3eChoosing%20an%20image%3c/h2%3e%0a%3cp%3eUbuntu%2016.04%20mate%20has%20just%20been%20released%20by%20odroid%20team,%20including%20support%20for%20xu3/xu4%20boards%20and%20their%20lite%20versions.%20In%20this%20case%20we&amp;rsquo;re%20going%20to%20test%20Ubuntu%2016.04%20on%20odroid%20xu3%20lite,%20which%20is%20the%20board%20I%20own.%20We&amp;rsquo;ll%20install%20it%20on%20an%20eMMC%20module,%20which%20is%20something%20like%20an%20small%20ssd%20%28not%20really%20the%20same,%20eMMC%20isn&amp;rsquo;t%20as%20fast%20as%20ssd%20is%29.%20This%20module%20will%20give%20us%20a%20boost%20on%20performance,%20although%20we%20can%20also%20install%20Ubuntu%20on%20a%20SD%20card%20%28class%2010%29.%0aFirslty,%20we%20need%20to%20download%20the%20image%20we%20want%20to%20install:%0a%3ca%20href=%22http://de.eu.odroid.in/ubuntu_16.04lts/%22%3ehttp://de.eu.odroid.in/ubuntu_16.04lts/%3c/a%3e%0aFrom%20the%20list%20above%20I%20took%20the%20image%20I%20was%20looking%20for,%20which%20is%20the%20complete%20version%20for%20odroid%20xu3:%3c/p%3e%0a%3cul%3e%0a%3cli%3e%3ca%20href=%22http://de.eu.odroid.in/ubuntu_16.04lts/ubuntu-16.04-mate-odroid-xu3-20160708.img.xz%22%3eubuntu-16.04-mate-odroid-xu3-20160708.img.xz%3c/a%3e%3c/li%3e%0a%3c/ul%3e&amp;source=J.%20Arboleda" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-twitter" href="http://twitter.com/share?text=Installing%20ubuntu%2016.04%20on%20odroid%20xu3%20lite&amp;url=https://www.jarboleda.me/articles/installing-ubuntu-16.04-on-odroid-xu3-lite/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-facebook-f" href="https://www.facebook.com/sharer/sharer.php?u=https://www.jarboleda.me/articles/installing-ubuntu-16.04-on-odroid-xu3-lite/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-google-plus-g" href="https://plus.google.com/share?url=https://www.jarboleda.me/articles/installing-ubuntu-16.04-on-odroid-xu3-lite/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-pinterest-p" href="https://pinterest.com/pin/create/button/?url=https://www.jarboleda.me/articles/installing-ubuntu-16.04-on-odroid-xu3-lite/&amp;media=%3cnil%3einstalling-ubuntu-16.04-on-odroid-xu3-lite.jpg&amp;description=%3ch2%20id=%22choosing-an-image%22%3eChoosing%20an%20image%3c/h2%3e%0a%3cp%3eUbuntu%2016.04%20mate%20has%20just%20been%20released%20by%20odroid%20team,%20including%20support%20for%20xu3/xu4%20boards%20and%20their%20lite%20versions.%20In%20this%20case%20we&amp;rsquo;re%20going%20to%20test%20Ubuntu%2016.04%20on%20odroid%20xu3%20lite,%20which%20is%20the%20board%20I%20own.%20We&amp;rsquo;ll%20install%20it%20on%20an%20eMMC%20module,%20which%20is%20something%20like%20an%20small%20ssd%20%28not%20really%20the%20same,%20eMMC%20isn&amp;rsquo;t%20as%20fast%20as%20ssd%20is%29.%20This%20module%20will%20give%20us%20a%20boost%20on%20performance,%20although%20we%20can%20also%20install%20Ubuntu%20on%20a%20SD%20card%20%28class%2010%29.%0aFirslty,%20we%20need%20to%20download%20the%20image%20we%20want%20to%20install:%0a%3ca%20href=%22http://de.eu.odroid.in/ubuntu_16.04lts/%22%3ehttp://de.eu.odroid.in/ubuntu_16.04lts/%3c/a%3e%0aFrom%20the%20list%20above%20I%20took%20the%20image%20I%20was%20looking%20for,%20which%20is%20the%20complete%20version%20for%20odroid%20xu3:%3c/p%3e%0a%3cul%3e%0a%3cli%3e%3ca%20href=%22http://de.eu.odroid.in/ubuntu_16.04lts/ubuntu-16.04-mate-odroid-xu3-20160708.img.xz%22%3eubuntu-16.04-mate-odroid-xu3-20160708.img.xz%3c/a%3e%3c/li%3e%0a%3c/ul%3e" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+  </ul>
+</div>
+
+    </div>
+    <div class='post-footer'>
+      
+       <div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+var disqus_shortname = 'jarboleda-me';
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://jarboleda-me.disqus.com/embed.js';
+s.async = true; 
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+     
+    </div>
+  </div>
+</div>
+
+      </article>
+    </section><aside class='sidebar-wrapper pure-u-1 pure-u-md-1-4 sticky'>
+      
+<div class='sidebar'>
+  
+
+<div class='authorboxwrap'>
+<h4>Author</h4>
+    <div class='avatar-container'>
+      <img alt="author's photo" class='author_avatar' width='160' height='136' src="/img/me.min.png"  />
+      <h4 rel='author'>Jeferson Arboleda</h4>
+    </div>
+    <div class='author_description_container'>
+      <p class= 'm-text-centered m-bold'>Business Analyst</p>
+      <p>Currently working for <a href="https://amadeus.com/en">Amadeus</a> in Nice, Côte D&rsquo;Azur.</p>
+      <div class='authorsocial'>
+        
+          <a href='https://www.linkedin.com/in/jeferson-arboleda-167429134' target='_blank'><i class='fab fa-linkedin-in'></i></a>
+        
+        
+          <a href='https://github.com/jag10' target='_blank'><i class='fab fa-github'></i></a>
+        
+        
+          <a href='https://gitlab.com/jag7' target='_blank'><i class='fab fa-gitlab'></i></a>
+        
+        
+          <a href='https://twitter.com/j_a_g_x' target='_blank'><i class='fab fa-twitter'></i></a>
+        
+      </div>
+    </div>
+</div>
+
+  
+  <h4>On This Page</h4>
+  <div class='table_of_contents'>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#choosing-an-image">Choosing an image</a></li>
+    <li><a href="#writing-the-image-on-odroid-board">Writing the image on odroid board</a></li>
+    <li><a href="#checking-the-result">Checking the result</a></li>
+    <li><a href="#update">UPDATE</a></li>
+  </ul>
+</nav>
+  </div>
+  
+</div>
+
+
+    </aside>
+    <div class='clearfix'></div>
+  </div>
+<footer>
+  <div class='footer-container'>
+    <div class='pure-u-1 pure-u-md-1-3'>
+      <div class='widget popular-posts'>
+        <div class="widget-title">
+          <h2>Other posts</h2></div>
+        <div class='widget-content popular-posts'>
+          <ul>
+            
+             
+            <li>
+              <div class='item-content'>
+                <div class='item-thumbnail'>
+                  <a href='/articles/fixing-corrupted-partition-on-virtual-machine/' target='_blank'>
+                    <img alt='Fixing a corrupted partition on a virtual machine' width='72' height='72' src="/articles/img/thumbs/fixing-corrupted-partition-on-virtual-machine.jpg" />
+                  </a>
+                </div>
+                <div class='item-title'>
+                  <a href='/articles/fixing-corrupted-partition-on-virtual-machine/' class="mostVisitedLink">Fixing a corrupted partition on a virtual machine</a>
+                </div>
+              </div>
+            </li>
+            
+            
+             
+            <li>
+              <div class='item-content'>
+                <div class='item-thumbnail'>
+                  <a href='/articles/installing-magento2-on-cwp/' target='_blank'>
+                    <img alt='Installing magento2 on cwp' width='72' height='72' src="/articles/img/thumbs/installing-magento2-on-cwp.jpg" />
+                  </a>
+                </div>
+                <div class='item-title'>
+                  <a href='/articles/installing-magento2-on-cwp/' class="mostVisitedLink">Installing magento2 on cwp</a>
+                </div>
+              </div>
+            </li>
+            
+            
+             
+            <li>
+              <div class='item-content'>
+                <div class='item-thumbnail'>
+                  <a href='/articles/facebook-sharer-and-ipv6-issue/' target='_blank'>
+                    <img alt='Facebook sharer and IPv6 issue' width='72' height='72' src="/articles/img/thumbs/facebook-sharer-and-ipv6-issue.png" />
+                  </a>
+                </div>
+                <div class='item-title'>
+                  <a href='/articles/facebook-sharer-and-ipv6-issue/' class="mostVisitedLink">Facebook sharer and IPv6 issue</a>
+                </div>
+              </div>
+            </li>
+            
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class='pure-u-1 pure-u-md-1-3'>
+      <div class='widget ContactForm'>
+        <h2 class='title'>Contact me</h2>
+        <a class="email" href="mailto:me@jarboleda.me">me@jarboleda.me</a>
+        <div class='contact-form-widget'>
+          <div class='form'>
+            <form name='contact-form' action="https://formspree.io/me@jarboleda.me" method="POST">
+              <p>Name</p>
+              <input class='contact-form-name' name='name' size='30' type='text' value='' />
+              <p>Email<span>*</span></p>
+              <input class='contact-form-email' name='name="_replyto"' size='30' type='text' value='' />
+              <p>Message<span>*</span></p>
+              <p><textarea class='contact-form-email-message' cols='29' name='email-message' rows='5'></textarea></p>
+              <input class='contact-form-button contact-form-button-submit' type='submit' value='Send' />
+              <div style='text-align: center; max-width: 222px; width: 100%'>
+                <p class='contact-form-error-message'></p>
+                <p class='contact-form-success-message'></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class='footer-credits'>
+    <div class='footer_social-icons'>
+      <ul>
+        
+        <li>
+          <a class="btn-linkedin" href='https://www.linkedin.com/in/jeferson-arboleda-167429134' target='_blank'><i class='fab fa-linkedin-in'></i></a>
+        </li>
+        
+        
+        <li>
+          <a class="btn-github" href='https://github.com/jag10' target='_blank'><i class='fab fa-github'></i></a>
+        </li>
+        
+        
+        <li>
+          <a class="btn-gitlab" href='https://gitlab.com/jag7' target='_blank'><i class='fab fa-gitlab'></i></a>
+        </li>
+        
+        
+        <li>
+          <a class="btn-twitter" href='https://twitter.com/j_a_g_x' target='_blank'><i class='fab fa-twitter'></i></a>
+        </li>
+        
+      </ul>
+    </div>
+    <div class='clr'></div>
+    <p>Copyright &#169; 2020
+      <a href=''></a>
+    </p>
+    <p class='attribution'>Powered by</p>
+    <a href='https://gohugo.io/' target="_blank" >
+      <img with="80" height="21" alt="hugo logo" class='attribution_logo' src="/img/hugo-logo.png" />
+    </a>
+  </div>
+</footer>
+
+<script defer src='/js/main.min.js' type='text/javascript'></script>
+
+<script type="text/javascript">
+  window.cookieconsent_options = {
+    "message": "jarboleda.me uses cookies to ensure you get the best experience.",
+    "dismiss": "Ok",
+    "learnMore": "More info",
+    "link": null,
+    "theme": "light-bottom"
+  };
+</script>
+<script defer type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js"></script>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-101857703-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+</body>
+</html>
+

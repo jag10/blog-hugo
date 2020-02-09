@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mysqldump on J. Arboleda</title>
+    <link>https://www.jarboleda.me/es/tags/mysqldump/</link>
+    <description>Recent content in mysqldump on J. Arboleda</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 30 Aug 2015 11:05:36 +0200</lastBuildDate>
+    
+	<atom:link href="https://www.jarboleda.me/es/tags/mysqldump/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Haciendo un backup de todas las BD usando mysqldump</title>
+      <link>https://www.jarboleda.me/es/articles/backing-up-all-databases-using-mysqldump/</link>
+      <pubDate>Sun, 30 Aug 2015 11:05:36 +0200</pubDate>
+      
+      <guid>https://www.jarboleda.me/es/articles/backing-up-all-databases-using-mysqldump/</guid>
+      <description>&lt;p&gt;En este post vamos a ver como hacer un backup de todas las bases de datos, tomando como ejemplo uno de los servidores con los que actualmente trabajo. Así, si surge algún problema con el servidor podremos disponer de un backup reciente.&lt;/p&gt;
+&lt;p&gt;Para ello, utilizo la utilidad mysqldump y un script para transferir los ficheros a un servidor ftp.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

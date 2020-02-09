@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vps on J. Arboleda</title>
+    <link>https://www.jarboleda.me/tags/vps/</link>
+    <description>Recent content in vps on J. Arboleda</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 27 Feb 2016 12:21:32 +0200</lastBuildDate>
+    
+	<atom:link href="https://www.jarboleda.me/tags/vps/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Getting 1.5s page load time on a basic vps</title>
+      <link>https://www.jarboleda.me/articles/getting-1.5s-page-load-time-on-a-basic-vps/</link>
+      <pubDate>Sat, 27 Feb 2016 12:21:32 +0200</pubDate>
+      
+      <guid>https://www.jarboleda.me/articles/getting-1.5s-page-load-time-on-a-basic-vps/</guid>
+      <description>&lt;h2 id=&#34;the-problem&#34;&gt;The problem&lt;/h2&gt;
+&lt;p&gt;As you can see on the graphics, I had 5s load time for my home page, which is kind of basic. It wasn&amp;rsquo;t that bad if you look at the packages my server runs: gitlab, Roundcube&amp;rsquo;s webmail, sentora (open source control panel) and piwik (stats management).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Those 11s peaks you see there were produced while I was doing load tests on my server.&lt;/p&gt;
+&lt;p&gt;My environment&amp;rsquo;s specs are:&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

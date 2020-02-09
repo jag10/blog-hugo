@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fedora25 on J. Arboleda</title>
+    <link>https://www.jarboleda.me/tags/fedora25/</link>
+    <description>Recent content in fedora25 on J. Arboleda</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 17 Mar 2017 21:33:19 +0200</lastBuildDate>
+    
+	<atom:link href="https://www.jarboleda.me/tags/fedora25/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>installing unreal engine on fedora 25</title>
+      <link>https://www.jarboleda.me/articles/installing-unreal-engine-on-fedora-25/</link>
+      <pubDate>Fri, 17 Mar 2017 21:33:19 +0200</pubDate>
+      
+      <guid>https://www.jarboleda.me/articles/installing-unreal-engine-on-fedora-25/</guid>
+      <description>&lt;h2 id=&#34;linking-github-with-epicgames&#34;&gt;Linking GitHub with EpicGames&lt;/h2&gt;
+&lt;p&gt;In this article you&amp;rsquo;ll find a way to get unreal engine and make it work on fedora 25. Firstly, you need to signup in github and then link your github account with your epic games account:
+&lt;a href=&#34;https://www.unrealengine.com/ue4-on-github&#34;&gt;https://www.unrealengine.com/ue4-on-github&lt;/a&gt;
+Then you should receive an email confirming you joined up to the epic games organization. Once you receive it, you can clone the source code of unreal engine:
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;git clone https://github.com/EpicGames/UnrealEngine.git
+cd UnrealEngine/
+./Setup.sh
+./GenerateProjectFiles.sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

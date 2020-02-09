@@ -1,0 +1,451 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>J. Arboleda - Backing up all databases using mysqldump</title>
+    <meta name="description" content="The blog of Jeferson Arboleda, software engineer. It&#39;s focused on self improvement and overcoming challenges I find everyday">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+    	
+	<meta property="og:title" content="Backing up all databases using mysqldump" />
+	<meta property="og:description" content="In this post I&rsquo;ll explain how I backup all databases in servers I work with. When you face trouble with those servers it&rsquo;ll be pretty useful to have daily database dumps.
+So, I use mysqldump utiliy to backup database and an script I wrote myself to transfer files, which you can find here." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://www.jarboleda.me/articles/backing-up-all-databases-using-mysqldump/" />
+	<meta property="og:image" content="/articles/img/backing-up-all-databases-using-mysqldump.png" />
+	<meta property="og:updated_time" content="2015-08-30 11:05:36 &#43;0200 CEST"/>
+	<meta property="og:locale" content="en-US" />
+	<meta property="og:site_name" content="J. Arboleda" />
+	
+	
+	<meta property="article:published_time" content="2015-08-30 11:05:36 &#43;0200 CEST" />
+	<meta property="article:modified_time" content="2015-08-30 11:05:36 &#43;0200 CEST" />
+	<meta property="article:section" content="articles" />
+	<meta property="article:tag" content="mysqldump" />
+	<meta property="article:tag" content="bash" />
+	
+	
+    
+    <meta itemprop="name" content="Backing up all databases using mysqldump">
+    <meta itemprop="description" content="In this post I&rsquo;ll explain how I backup all databases in servers I work with. When you face trouble with those servers it&rsquo;ll be pretty useful to have daily database dumps.
+So, I use mysqldump utiliy to backup database and an script I wrote myself to transfer files, which you can find here.">
+    <meta name="author" content="Jeferson Arboleda">
+    
+    <meta itemprop="image" content="backing-up-all-databases-using-mysqldump.png">
+    
+    <meta itemprop="keywords" content="notpinned,pinned,,false,true,serie1,arduino,backup,backups,bash,case,centos6,cloudflare,curl,cwp,facebook,fail2ban,fedora25,fopen,ftp,github,github-pages,httpd,hugo,iptables,ipv6,job,lego,linkedin,magento,magento2,mate,move,mysql,mysqldump,nodejs,odroid,pages,performance,php,php7,piwik,plesk,processwire,reflectionmethod,sass,static,ubuntu,unrealengine,vagrant,vm,vps,zip," />
+    <meta itemprop="wordCount" content="424">
+	
+	<meta name="twitter:card" content="summary_large_image"/>
+	<meta name="twitter:image:src" content="/articles/img/backing-up-all-databases-using-mysqldump.png"/>
+	
+	<meta name="twitter:title" content="Backing up all databases using mysqldump"/>
+	<meta name="twitter:description" content="In this post I&rsquo;ll explain how I backup all databases in servers I work with. When you face trouble with those servers it&rsquo;ll be pretty useful to have daily database dumps.
+So, I use mysqldump utiliy to backup database and an script I wrote myself to transfer files, which you can find here."/>
+	<meta name="twitter:site" content="@j_a_g_x"/>
+	
+	<meta name="twitter:creator" content="@j_a_g_x"/>
+
+
+	<meta name="news_keywords" content="mysqldump,bash" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="/css/global.min.css" media="screen" rel="stylesheet" type="text/css" />
+  </head>
+ <body>
+  <header>
+    <nav class='top-menu'>
+      
+      <div class="menu-wrapper" id="menu">
+        <div class="pure-u-1 hidden">
+          <div class="pure-menu menu-toogle-container">
+            <a class="custom-toggle" id="toggle"><span class="bar"></span><span class="bar"></span></a>
+          </div>
+        </div>
+        <div class="pure-u-1">
+          <div class="pure-menu pure-menu-horizontal custom-can-transform">
+            <ul class="pure-menu-list float-left">
+              
+              <li class="pure-menu-item"><a target='' class='pure-menu-link' href=/>home</a></li>
+              
+              <li class="pure-menu-item"><a target='' class='pure-menu-link' href=/extras/cv/>about me</a></li>
+              
+              <li class="pure-menu-item"><a target='' class='pure-menu-link' href=/projects/>projects</a></li>
+              
+              <li class="pure-menu-item"><a target='' class='pure-menu-link' href=https://github.com/jag10>github</a></li>
+              
+              <li class="pure-menu-item"><a target='' class='pure-menu-link' href=https://gitlab.com/jag7>gitlab</a></li>
+              
+              <li class='pure-menu-item lang_selector selected'>
+                
+                <a class='pure-menu-link' href="#">English</a>
+                
+              </li>
+              <li class='pure-menu-item flag'><i class='fa fa-language' aria-hidden='true'></i></li>
+               
+              <li class='pure-menu-item lang_selector'>
+                <a class='pure-menu-link' href="/es/articles/backing-up-all-databases-using-mysqldump/">spanish </a>
+              </li>
+               
+            </ul>
+            <div class="float-right">
+              <ul class="pure-menu-list">
+                
+                <li class="pure-menu-item social_menu_entry">
+                  <a href='https://www.linkedin.com/in/jeferson-arboleda-167429134' target='_blank'><i class='fab fa-linkedin-in'></i></a>
+                </li>
+                
+                
+                <li class="pure-menu-item social_menu_entry">
+                  <a href='https://github.com/jag10' target='_blank'><i class='fab fa-github'></i></a>
+                </li>
+                
+                
+                <li class="pure-menu-item social_menu_entry">
+                  <a href='https://gitlab.com/jag7' target='_blank'><i class='fab fa-gitlab'></i></a>
+                </li>
+                
+                
+                <li class="pure-menu-item social_menu_entry">
+                  <a href='https://twitter.com/j_a_g_x' target='_blank'><i class='fab fa-twitter'></i></a>
+                </li>
+                
+                <li class='pure-menu-item nt-search' id='nt-search'>
+                  <form action='/search/' id='searchform' method='get'>
+                    <div class='nt-search-input-wrap'>
+                      <input class='nt-search-input' id='s' name='q' placeholder='Search is disabled :(' type='text' value='' disabled />
+                    </div>
+                    <input class='nt-search-submit' id='go' type='submit' value='Search' />
+                    <span class='nt fas fa-search'></span>
+                  </form>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    
+  </header>
+
+  <div class="main-container">
+    <section id="main" class="pure-u-1 pure-u-md-3-4">
+      <article>
+        <div class="post-container">
+  
+  <div class="article_summary">
+    <div class="article-date">
+      <p class="day"><i class="far fa-calendar-alt"></i>30 Aug 2015</p>
+      <p><i class="far fa-clock"></i>3 min read  ~ 500 words</p>
+    </div>
+    
+    <div class="article-tags">
+      
+      <a href="#" rel="tag">mysqldump</a> 
+      <a href="#" rel="tag">bash</a> 
+    </div>
+    
+    <div class="clearfix"></div>
+    
+    <h1 class="article_title title">Backing up all databases using mysqldump</h1>
+    
+    <div class="article_excerpt">
+      
+      <p><p>In this post I&rsquo;ll explain how I backup all databases in servers I work with. When you face trouble with those servers it&rsquo;ll be pretty useful to have daily database dumps.</p>
+<p>So, I use mysqldump utiliy to backup database and an script I wrote myself to transfer files, which you can find here.</p>
+<p>Backing up all databases with mysqldumpo is pretty easy, just use it in this way in bash:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">mysqldump -uadmin -p<span style="color:#e6db74">`</span>cat /etc/psa/.psa.shadow<span style="color:#e6db74">`</span> --all-databases | zip &gt; $1/all.sql.zip</code></pre></div></p>
+<p>You can change the -p parameter to use another password. I use that file as plesk stores its password there, but you can change it. The last part is also very important, you should always zip the .sql file as you can save up to 90% disk space. For example, some databases backups are 250Mb when zipped, but when you extract the .sql file you will face a ~2.5 Gb text file.
+With the following script you can backup your database and transfer it to your FTP server, storing it into /aaa.bbb.ccc.ddd/ directory, or wherever you want.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/sh
+</span><span style="color:#75715e"></span>
+tempDir<span style="color:#f92672">=</span>$1
+
+date<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>date +%y%m%d-%H%M<span style="color:#66d9ef">)</span>
+mysqldump -uadmin -p<span style="color:#e6db74">`</span>cat /etc/psa/.psa.shadow<span style="color:#e6db74">`</span> --all-databases | zip &gt; $tempDir/all.sql.zip
+
+/script/ftpConnect.sh $tempDir/all.sql.zip /aaa.bbb.ccc.ddd/_bbdd/$date.sql.zip</code></pre></div>
+As I said, your .sql files will be huge, so you&rsquo;ll need a way to split it into different .sql, each one containing an individual database. We&rsquo;ll use a bash script for this task too:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/sh
+</span><span style="color:#75715e"></span>file<span style="color:#f92672">=</span>$1
+
+unzip -p $file | cat &gt; ALL_DATABASES.sql
+
+csplit --digits<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span> --quiet --prefix<span style="color:#f92672">=</span>outfile ALL_DATABASES.sql <span style="color:#e6db74">&#39;/Current Database/&#39;</span> <span style="color:#e6db74">&#39;{*}&#39;</span>
+
+files<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;outfile.*&#39;</span>
+regex<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Current Database: `(.*)`&#39;</span>
+
+<span style="color:#66d9ef">for</span> i in <span style="color:#66d9ef">$(</span>ls | grep <span style="color:#e6db74">&#39;outfile&#39;</span><span style="color:#66d9ef">)</span>
+<span style="color:#66d9ef">do</span>
+	name<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>head $i | egrep -o <span style="color:#e6db74">&#34;</span>$regex<span style="color:#e6db74">&#34;</span> | awk -F <span style="color:#e6db74">&#39;`&#39;</span> <span style="color:#e6db74">&#39;{print $2}&#39;</span><span style="color:#66d9ef">)</span>
+	echo <span style="color:#e6db74">&#34;</span>$i<span style="color:#e6db74">: </span>$name<span style="color:#e6db74">&#34;</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> ! -f $name <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+	    mv $i $name
+    <span style="color:#66d9ef">else</span>
+        number<span style="color:#f92672">=</span>$RANDOM
+        let <span style="color:#e6db74">&#34;number %= 10&#34;</span>
+        mv $i $name$number
+    <span style="color:#66d9ef">fi</span>
+<span style="color:#66d9ef">done</span></code></pre></div></p>
+<p>Ok, with this script we&rsquo;re unzipping the mysqldump file and splitting it into different files using the separator <code>Current Database</code>, the {*} part is just telling csplit to split the file in as many parts as needed because by default it&rsquo;ll split it in two files. The next part renames the output files to make it easy to find an individual database.</p>
+<p>Sometimes I find trouble when using this script, because (I don&rsquo;t really know why) mysqldump writes twice the Current Database part for the same db, so you can find that mv command overwrites a database.</p>
+<p>Also, you need to review the outfile000 since it&rsquo;ll containg some headers which should be included in each database before importing them. You can do this with bash too, I just haven&rsquo;t done it yet.</p></p>
+      
+    </div>
+    <div class="clearfix"></div>
+    
+    <div class="article_resources">
+      <h2>Resources</h2>
+      <ul>
+        
+        <li>
+          
+          <a target="_blank" href="https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html">mysqldump on dev.mysql.com</a> 
+        </li>
+        
+      </ul>
+    </div>
+    
+    <div class="article-footer">
+      
+      
+
+
+
+
+<div class="soc-sharing">
+  <ul class="article_share_items">
+    <li>
+      <a class="fab fa-linkedin-in" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.jarboleda.me/articles/backing-up-all-databases-using-mysqldump/&amp;title=Backing%20up%20all%20databases%20using%20mysqldump&amp;summary=%3cp%3eIn%20this%20post%20I&amp;rsquo;ll%20explain%20how%20I%20backup%20all%20databases%20in%20servers%20I%20work%20with.%20When%20you%20face%20trouble%20with%20those%20servers%20it&amp;rsquo;ll%20be%20pretty%20useful%20to%20have%20daily%20database%20dumps.%3c/p%3e%0a%3cp%3eSo,%20I%20use%20mysqldump%20utiliy%20to%20backup%20database%20and%20an%20script%20I%20wrote%20myself%20to%20transfer%20files,%20which%20you%20can%20find%20here.%3c/p%3e&amp;source=J.%20Arboleda" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-twitter" href="http://twitter.com/share?text=Backing%20up%20all%20databases%20using%20mysqldump&amp;url=https://www.jarboleda.me/articles/backing-up-all-databases-using-mysqldump/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-facebook-f" href="https://www.facebook.com/sharer/sharer.php?u=https://www.jarboleda.me/articles/backing-up-all-databases-using-mysqldump/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-google-plus-g" href="https://plus.google.com/share?url=https://www.jarboleda.me/articles/backing-up-all-databases-using-mysqldump/" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fab fa-pinterest-p" href="https://pinterest.com/pin/create/button/?url=https://www.jarboleda.me/articles/backing-up-all-databases-using-mysqldump/&amp;media=%3cnil%3ebacking-up-all-databases-using-mysqldump.png&amp;description=%3cp%3eIn%20this%20post%20I&amp;rsquo;ll%20explain%20how%20I%20backup%20all%20databases%20in%20servers%20I%20work%20with.%20When%20you%20face%20trouble%20with%20those%20servers%20it&amp;rsquo;ll%20be%20pretty%20useful%20to%20have%20daily%20database%20dumps.%3c/p%3e%0a%3cp%3eSo,%20I%20use%20mysqldump%20utiliy%20to%20backup%20database%20and%20an%20script%20I%20wrote%20myself%20to%20transfer%20files,%20which%20you%20can%20find%20here.%3c/p%3e" onclick="window.open(this.href, 'windowName', 'width=550, height=600, left=24, top=24, scrollbars, resizable'); return false" rel="nofollow" target="_blank"></a>
+    </li>
+  </ul>
+</div>
+
+    </div>
+    <div class='post-footer'>
+      
+       <div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+var disqus_shortname = 'jarboleda-me';
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://jarboleda-me.disqus.com/embed.js';
+s.async = true; 
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+     
+    </div>
+  </div>
+</div>
+
+      </article>
+    </section><aside class='sidebar-wrapper pure-u-1 pure-u-md-1-4 sticky'>
+      
+<div class='sidebar'>
+  
+
+<div class='authorboxwrap'>
+<h4>Author</h4>
+    <div class='avatar-container'>
+      <img alt="author's photo" class='author_avatar' width='160' height='136' src="/img/me.min.png"  />
+      <h4 rel='author'>Jeferson Arboleda</h4>
+    </div>
+    <div class='author_description_container'>
+      <p class= 'm-text-centered m-bold'>Business Analyst</p>
+      <p>Currently working for <a href="https://amadeus.com/en">Amadeus</a> in Nice, Côte D&rsquo;Azur.</p>
+      <div class='authorsocial'>
+        
+          <a href='https://www.linkedin.com/in/jeferson-arboleda-167429134' target='_blank'><i class='fab fa-linkedin-in'></i></a>
+        
+        
+          <a href='https://github.com/jag10' target='_blank'><i class='fab fa-github'></i></a>
+        
+        
+          <a href='https://gitlab.com/jag7' target='_blank'><i class='fab fa-gitlab'></i></a>
+        
+        
+          <a href='https://twitter.com/j_a_g_x' target='_blank'><i class='fab fa-twitter'></i></a>
+        
+      </div>
+    </div>
+</div>
+
+  
+  <h4>On This Page</h4>
+  <div class='table_of_contents'>
+    <nav id="TableOfContents"></nav>
+  </div>
+  
+</div>
+
+
+    </aside>
+    <div class='clearfix'></div>
+  </div>
+<footer>
+  <div class='footer-container'>
+    <div class='pure-u-1 pure-u-md-1-3'>
+      <div class='widget popular-posts'>
+        <div class="widget-title">
+          <h2>Other posts</h2></div>
+        <div class='widget-content popular-posts'>
+          <ul>
+            
+             
+            <li>
+              <div class='item-content'>
+                <div class='item-thumbnail'>
+                  <a href='/articles/moving-to-france-for-work/' target='_blank'>
+                    <img alt='Moving to France for work' width='72' height='72' src="/articles/img/thumbs/moving-to-france-for-work.jpg" />
+                  </a>
+                </div>
+                <div class='item-title'>
+                  <a href='/articles/moving-to-france-for-work/' class="mostVisitedLink">Moving to France for work</a>
+                </div>
+              </div>
+            </li>
+            
+            
+             
+            <li>
+              <div class='item-content'>
+                <div class='item-thumbnail'>
+                  <a href='/articles/centos-web-panel-on-vps/' target='_blank'>
+                    <img alt='Centos web panel with php7 and mysql5.6' width='72' height='72' src="/articles/img/thumbs/installing-centos-web-panel-on-vps.jpg" />
+                  </a>
+                </div>
+                <div class='item-title'>
+                  <a href='/articles/centos-web-panel-on-vps/' class="mostVisitedLink">Centos web panel with php7 and mysql5.6</a>
+                </div>
+              </div>
+            </li>
+            
+            
+            
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class='pure-u-1 pure-u-md-1-3'>
+      <div class='widget ContactForm'>
+        <h2 class='title'>Contact me</h2>
+        <a class="email" href="mailto:me@jarboleda.me">me@jarboleda.me</a>
+        <div class='contact-form-widget'>
+          <div class='form'>
+            <form name='contact-form' action="https://formspree.io/me@jarboleda.me" method="POST">
+              <p>Name</p>
+              <input class='contact-form-name' name='name' size='30' type='text' value='' />
+              <p>Email<span>*</span></p>
+              <input class='contact-form-email' name='name="_replyto"' size='30' type='text' value='' />
+              <p>Message<span>*</span></p>
+              <p><textarea class='contact-form-email-message' cols='29' name='email-message' rows='5'></textarea></p>
+              <input class='contact-form-button contact-form-button-submit' type='submit' value='Send' />
+              <div style='text-align: center; max-width: 222px; width: 100%'>
+                <p class='contact-form-error-message'></p>
+                <p class='contact-form-success-message'></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class='footer-credits'>
+    <div class='footer_social-icons'>
+      <ul>
+        
+        <li>
+          <a class="btn-linkedin" href='https://www.linkedin.com/in/jeferson-arboleda-167429134' target='_blank'><i class='fab fa-linkedin-in'></i></a>
+        </li>
+        
+        
+        <li>
+          <a class="btn-github" href='https://github.com/jag10' target='_blank'><i class='fab fa-github'></i></a>
+        </li>
+        
+        
+        <li>
+          <a class="btn-gitlab" href='https://gitlab.com/jag7' target='_blank'><i class='fab fa-gitlab'></i></a>
+        </li>
+        
+        
+        <li>
+          <a class="btn-twitter" href='https://twitter.com/j_a_g_x' target='_blank'><i class='fab fa-twitter'></i></a>
+        </li>
+        
+      </ul>
+    </div>
+    <div class='clr'></div>
+    <p>Copyright &#169; 2020
+      <a href=''></a>
+    </p>
+    <p class='attribution'>Powered by</p>
+    <a href='https://gohugo.io/' target="_blank" >
+      <img with="80" height="21" alt="hugo logo" class='attribution_logo' src="/img/hugo-logo.png" />
+    </a>
+  </div>
+</footer>
+
+<script defer src='/js/main.min.js' type='text/javascript'></script>
+
+<script type="text/javascript">
+  window.cookieconsent_options = {
+    "message": "jarboleda.me uses cookies to ensure you get the best experience.",
+    "dismiss": "Ok",
+    "learnMore": "More info",
+    "link": null,
+    "theme": "light-bottom"
+  };
+</script>
+<script defer type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js"></script>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-101857703-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+</body>
+</html>
+
