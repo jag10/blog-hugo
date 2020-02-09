@@ -14,7 +14,7 @@ Hostname = "host"
 BlogURL = "//jarboleda.me"
 Email = "me@jarboleda.me"
 About = "Business Analyst"
-Location = "Nice, France, Planet Earth"
+Location = "Nice, France"
 #Avatar = "https://placehold.it/400x400"
 Avatar = "/img/me.png"
 GoogleAnalytics = "GoogleAnalyticsID"
@@ -27,12 +27,11 @@ Skills = [
 
 ]
 Career = [
-          ["ALTEN", "http://www.alten.com", "Oct 2017 - Today", "Product Definition Analyst", "Product Definition Analyst for Amadeus (Nice). Worked in CAR product, being in direct contact with providers (i.e. Avis, Europcar) and customers (i.e. Expedia, BCD)"],
-          ["TCSET", "http://www.tcset.com", "Jan 2016 - Sep 2016", "Lead developer", "Managed several projects from requirements through successful deployment and maintenance."],
-          ["TCSET", "http://www.tcset.com", "Jul 2015 - Dec 2015", "Developer", "Assisted in the development of web (front end) and mobile apps for multiple clients."],
+          ["ALTEN", "http://www.alten.com", "Oct 2017 - Today", "Product Definition Analyst", "Worked in CAR product, integrating new customers (Expedia, Priceline) in the Amadeus portfolio."],
+          ["TCSET", "http://www.tcset.com", "Jun 2015 - Sep 2016", "Lead developer", "Managed the full cycle of multiple eCommerce projects, from gathering requirements to maintenance."]
 ]
 Internships = [
-          ["TCSET", "http://www.tcset.com", "Jan 2015 - Jun 2015", "IT support", "Provided customer support and remote assistance"],
+          ["TCSET", "http://www.tcset.com", "Jan 2015 - Jun 2015", "IT operations", "Helped in managing domains owned by the company (100+) and migrations between services providers."],
 ]
 Education = [
           ["UCLM", "https://www.uclm.es/", "2011 - 2015", "Degree in Computer Engineering"],

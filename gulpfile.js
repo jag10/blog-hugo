@@ -30,7 +30,7 @@ gulp.task('live', function() {
 
 // sass
 gulp.task('css', function() {
-  gulp.src(sass_dir)
+   return gulp.src(sass_dir)
     .pipe(plumber())
     .pipe(compass({
       config_file: './config.rb',

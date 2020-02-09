@@ -2568,16 +2568,17 @@ article {
 
 .role {
   font-weight: bold;
+  font-size: 0.8em;
 }
 
 .far.fa-calendar-alt {
-  font-size: 30px;
+  font-size: 20px;
   margin: 5px;
 }
 
 .company,
 .date-range {
-  font-size: 0.7em;
+  font-size: 0.8em;
 }
 
 .job-description {

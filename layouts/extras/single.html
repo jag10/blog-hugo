@@ -27,7 +27,7 @@
                       <i class="far fa-calendar-alt" aria-hidden="true"></i>
                       <span class='date-range'>{{ index . 2 }}</span>
                     </p>
-  									<p class= 'job-description'>{{ index . 4 }}</p>
+  									<p class= 'job-description'>{{ safeHTML (index . 4) }}</p>
                   </div>
 								{{ end }}
 							</div>
@@ -41,8 +41,11 @@
 							<div class='pure-u-4-5 pure-u-md-11-12 article-content'>
 								<h3>Internships</h3>
 								{{ range .Params.Internships }}
-									<p class = 'role'>{{ index . 3 }}<a href='{{ index . 1 }}' class='company'> @{{ index . 0 }}</a></p>
-									<p class='date-range'>{{ index . 2 }}</p>
+									<p class = 'role'>{{ index . 3 }}
+										<a href='{{ index . 1 }}' class='company'> @{{ index . 0 }}</a>
+										<i class="far fa-calendar-alt" aria-hidden="true"></i>
+										<span class='date-range'>{{ index . 2 }}</span>
+									</p>
 									<p class= 'job-description'>{{ index . 4 }}</p>
 								{{ end }}
 							</div>
