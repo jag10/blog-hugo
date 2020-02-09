@@ -2,10 +2,13 @@
 {{partial "head" .}} {{partial "header" (dict "content" . "renderTopImage" false)}}
   <div class="main-container home">
     <section id="main" class="pure-u-1 pure-u-md-3-4">
-    {{ range (.Paginate (where .Data.Pages "Type" "articles")).Pages }}
-      <article>
-        {{partial "article" (dict "content" .)}}
-      </article>
+      {{ $paginator := .Paginate (where .Site.Pages "Type" "articles") }}
+      {{ range $paginator.Pages }}
+        {{ if .IsPage }}
+          <article>
+            {{partial "article" (dict "content" .)}}
+          </article>
+        {{end}}
       {{ end }}
       {{ template "_internal/pagination.html" . }}
     </section><aside class='sidebar-wrapper pure-u-1 pure-u-md-1-4 sticky'>

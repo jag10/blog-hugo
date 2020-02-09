@@ -27,7 +27,7 @@
     {{ end}}
     <div class="article_excerpt">
       {{ if not $.renderFull }}
-      <p>{{.content.Summary | markdownify}}</p>
+      <p>{{.content.Summary}}</p>
       {{ else }}
       <p>{{.content.Content}}</p>
       {{ end }}
@@ -51,7 +51,6 @@
       <a class="read-more-button pure-button" href="{{.content.URL}}">Read the full article</a> {{ end }}
       {{ partial "share" .content}}
     </div>
-
     <div class='post-footer'>
       {{ if $.renderFull }}
        {{ partial "disqus.html" .content}}
