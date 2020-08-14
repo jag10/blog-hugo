@@ -2,13 +2,13 @@
 #go to http://fontawesome.io/icons/ to change icons on skills and interests
 circled_photo = false
 
-LinkedInID = "jeferson-arboleda-167429134"
+LinkedInID = "jefferson-arboleda/"
 GitlabID = "jag7"
 GithubID = "jag10"
 TwitterID = "j_a_g_x"
 FacebookID = ""
 
-Name = "Jeferson Arboleda"
+Name = "Jefferson Arboleda"
 Username = "jarboleda"
 Hostname = "host"
 BlogURL = "//jarboleda.me"
