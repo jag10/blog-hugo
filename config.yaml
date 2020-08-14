@@ -17,7 +17,7 @@ languages:
     title:              "J. Arboleda"
     email:              "me@jarboleda.me"
     locale:             "en-US"
-    description:        "The blog of Jeferson Arboleda, software engineer. It's focused on self improvement and overcoming challenges I find everyday"
+    description:        "The blog of Jefferson Arboleda, software engineer. It's focused on self improvement and overcoming challenges I find everyday"
     formspree:          "https://formspree.io/me@jarboleda.me"
     article_images :    "/content/articles/img/"
     menu:
@@ -49,10 +49,10 @@ languages:
       # pinterest:      nozzleio
       # instagram:      nozzleio
       # youtube:        nozzleio
-      linkedin:         "jeferson-arboleda-167429134"
+      linkedin:         "jefferson-arboleda/"
     authors:
       Jeferson:
-        name:           Jeferson Arboleda
+        name:           Jefferson Arboleda
         thumbnail:      'me.min.png'
         images:
           - 'me2.png'
@@ -77,7 +77,7 @@ languages:
     title:              "J. Arboleda"
     email:              "me@jarboleda.me"
     locale:             "es-ES"
-    description:        "El blog de Jeferson Arboleda, ingeniero informático. El blog está enfocado en la mejora de mis habilidades y en la superación de los retos que encuentro en mi día a día"
+    description:        "El blog de Jefferson Arboleda, ingeniero informático. El blog está enfocado en la mejora de mis habilidades y en la superación de los retos que encuentro en mi día a día"
     formspree:          "https://formspree.io/me@jarboleda.me"
     article_images :    "/content/articles/img/"
     menu:
@@ -102,10 +102,10 @@ languages:
       github:           jag10
       gitlab:           jag7
       twitter:          j_a_g_x
-      linkedin:         "jeferson-arboleda-167429134"
+      linkedin:         "jefferson-arboleda/"
     authors:
       Jeferson:
-        name:           Jeferson Arboleda
+        name:           Jefferson Arboleda
         thumbnail:      'me.min.png'
         images:
           - 'me2.png'
@@ -115,8 +115,8 @@ languages:
         social:
           github:       jag10
           twitter:      j_a_g_x
-          linkedin:     "jeferson-arboleda-167429134"
-      # Sarah:          {}
+          linkedin:     "jefferson-arboleda/"
+      # Silvia:          {}
     taxonomies:
       tag:              "tags"
       pinned:           "pinned"
