@@ -1,7 +1,7 @@
 <div class="post-container">
   {{/* <div class="post-image-container">
     {{ if not $.renderFull }}
-    <a href="{{.content.URL}}">
+    <a href="{{.content.Permalink}}">
       <img src="/articles/img/{{.content.Params.article_image}}" alt="{{ .content.Title }}" class="pulse-image">
     </a>
     {{ end }}
@@ -19,7 +19,7 @@
     {{ end }}
     <div class="clearfix"></div>
     {{ if not $.renderFull }}
-    <a href="{{ .content.URL }}" title="{{ .Title }}">
+    <a href="{{ .content.Permalink }}" title="{{ .Title }}">
       <h1 class="article_title title">{{ .content.Title }}</h1>
     </a>
     {{ else }}
@@ -48,7 +48,7 @@
     {{ end }}
     <div class="article-footer">
       {{ if not $.renderFull }}
-      <a class="read-more-button pure-button" href="{{.content.URL}}">Read the full article</a> {{ end }}
+      <a class="read-more-button pure-button" href="{{.content.Permalink}}">Read the full article</a> {{ end }}
       {{ partial "share" .content}}
     </div>
     <div class='post-footer'>

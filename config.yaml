@@ -6,6 +6,10 @@ taxonomies:
   pinned:               "pinned"
   serie:                "series"
   project:              "project"
+disableKinds:
+  - taxonomy
+  - taxonomyTerm
+  - section
 paginate:               5
 baseURL:                "https://www.jarboleda.me"
 MetaDataFormat:         "YAML"

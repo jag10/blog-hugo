@@ -11,12 +11,12 @@
             <li>
               <div class='item-content'>
                 <div class='item-thumbnail'>
-                  <a href='{{ .URL }}' target='_blank'>
+                  <a href='{{ .Permalink }}' target='_blank'>
                     <img alt='{{ .Title }}' width='72' height='72' src="/articles/img/thumbs/{{ .Params.article_image }}" />
                   </a>
                 </div>
                 <div class='item-title'>
-                  <a href='{{ .URL }}' class="mostVisitedLink">{{ .Title }}</a>
+                  <a href='{{ .Permalink }}' class="mostVisitedLink">{{ .Title }}</a>
                 </div>
               </div>
             </li>
