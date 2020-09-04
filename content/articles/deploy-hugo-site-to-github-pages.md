@@ -12,7 +12,7 @@ tags : ["hugo", "static", "github", "pages"]
 title : "Deploying a hugo site to github pages"
 ---
 
-Having a static website has great advantages overdynamic websites: they are inherently
+Having a static website has great advantages over dynamic websites: they are inherently
 more secure, faster and reliable.
 
 On top of that, hosting will be less expensive and even free, depending on the platform
