@@ -1,10 +1,10 @@
 	<!-- Required Open Graph Info -->
 	<meta property="og:title" content="{{ .Title }}" />
-	<meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ end }}{{ end }}" />
+	<meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}Jeff's website{{ end }}{{ end }}" />
 	<meta property="og:type" content="{{ if .Params.type }}{{ .Params.type }}{{ else }}website{{ end }}" />
 	<meta property="og:url" content="{{ .Permalink }}" />
 	{{ if isset .Params "article_image" }}<meta property="og:image" content="{{ .Site.Params.baseURL }}/articles/img/{{.Params.article_image}}" />
-	{{ else }}<meta property='og:image' content="{{ .Permalink }}img/jarboleda.me-min.png"/>
+	{{ else }}<meta property='og:image' content="/img/jarboleda.me-min.jpg"/>
 	{{ end -}}
 
 	<!-- Optional Open Graph Markup -->

@@ -12,13 +12,18 @@ tags : ["hugo", "static", "github", "pages"]
 title : "Deploying a hugo site to github pages"
 ---
 
+Having a static website has great advantages overdynamic websites: they are inherently
+more secure, faster and reliable.
+
+On top of that, hosting will be less expensive and even free, depending on the platform
+you are using.
+
+<!--more-->
 In this post we'll see how to deploy a static site built with hugo to github pages.
 For this task, we'll use a couple of bash scripts that will:
 
 * Commit changes and push them to github.
 * Generate thumbnails and low quality versions of the images used in the blog so it loads faster.
-
-<!--more-->
 
 ## Setting up github pages
 Firstly, you should head to hugo site. More precisely to [this link](https://gohugo.io/hosting-and-deployment/hosting-on-github/#host-github-user-or-organization-pages).
