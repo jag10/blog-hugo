@@ -9,8 +9,8 @@ var gulp = require('gulp'),
   uglify = require('gulp-uglify'),
   concat = require('gulp-concat'),
   livereload = require('gulp-livereload'),
-  plumber = require('gulp-plumber'),
-  path = require('path');
+  plumber = require('gulp-plumber');
+  // path = require('path');
 
 var sass_dir = './src/sass/**/*.scss',
   js_dir = './src/js/**/*.js';
