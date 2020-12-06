@@ -11,6 +11,7 @@ article h3::before {
 article ul {
   list-style: square;
   margin-left: 20px;
+  color: $font-color;
 }
 
 #main article:not(:last-child) {
@@ -34,7 +35,7 @@ article ul {
 }
 
 .post-container {
-  background-color: white;
+  background-color: $post-container-color;
 }
 
 .article_summary {

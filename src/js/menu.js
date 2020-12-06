@@ -2,7 +2,7 @@ jQuery(document).ready(function($) {
   /*
    * Expandable Search Bar
    */
-  var $ntsearch = $('#nt-search'),
+  var $ntsearch = jQuery('#nt-search'),
     $ntsearchinput = $ntsearch.find('input.nt-search-input'),
     $body = $('html,body'),
     openSearch = function() {

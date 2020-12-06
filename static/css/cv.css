@@ -1,4 +1,5 @@
 /* colors */
+/* DARK MODE */
 /* Font weights */
 /* Fonts */
 /* Headings */
@@ -7,7 +8,7 @@
 }
 
 .m-detail-background {
-  background-color: #1fac61 !important;
+  background-color: #008148 !important;
 }
 
 .m-max-width {
@@ -2636,7 +2637,7 @@ article {
   /* Add a bit of padding to give some substance outside the "stitching" */
   padding: .38em 0;
   /* Set the base colour */
-  background-color: #1fac61;
+  background-color: #008148;
   /* Set a gradient: transparent black at the top to almost-transparent black at the bottom */
   background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.15));
   /* Add a drop shadow */

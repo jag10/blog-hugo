@@ -1,13 +1,20 @@
 /* colors */
 $font-color: #333;
 $body-color: #dedede;
-$details-color: #1fac61;
+$post-container-color: #fff;
+$base-color: #263238;
+$details-color: #008148;
+$footer-color: #263238;
+// candidates: 1fac61, 008148
 
-// original: ff3030
-$menu-color: #263238;
+/* DARK MODE */
+// $font-color: #a1a1a6;
+// $body-color: #2b2e30;
+// $post-container-color: #181a1b;
+// $base-color: #1e282d;
+// $details-color: #008148;
+// $footer-color: #1e282d;
 
-// original: 222
-$footer-color: #282828;
 
 /* Font weights */
 $light: 100;

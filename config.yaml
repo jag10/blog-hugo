@@ -6,10 +6,6 @@ taxonomies:
   pinned:               "pinned"
   serie:                "series"
   project:              "project"
-disableKinds:
-  - taxonomy
-  - taxonomyTerm
-  - section
 paginate:               5
 baseURL:                "https://www.jarboleda.me"
 MetaDataFormat:         "YAML"
@@ -60,8 +56,9 @@ languages:
         thumbnail:      'me.min.png'
         images:
           - 'me2.png'
-        bio_title:      'Business Analyst'
-        bio_summary:     "Currently working for [Amadeus](https://amadeus.com/en) in Nice, Côte D'Azur."
+        bio_title:      'Business Development Manager'
+        # bio_summary:     "I recruit and manage consultants to develop [Alten's](https://alten.com/) Business in Madrid."
+        bio_summary:    'I help [Alten](https://alten.com/) develop its IT business in Madrid.'
         email:          me@jarboleda.me
         social:
           github:       jag10
@@ -113,8 +110,8 @@ languages:
         thumbnail:      'me.min.png'
         images:
           - 'me2.png'
-        bio_title:      'Business Analyst'
-        bio_summary:    "Actualmente trabajo para [Amadeus](https://amadeus.com/en) en Niza, Côte D'Azur."
+        bio_title:      'Business Development Manager'
+        bio_summary:    "Recluto y gestiono consultores para desarrollar los negocios de [Alten](https://alten.com/) en Madrid."
         email:          me@jarboleda.me
         social:
           github:       jag10

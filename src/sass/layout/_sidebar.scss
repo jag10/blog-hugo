@@ -39,24 +39,17 @@
 }
 
 .sidebar .widget-title > h2 {
-  // @extend .m-detail-background;
   @extend .m-uppercase;
-
-  background-color: $menu-color;
+  background-color: $base-color;
   display: inline-block;
-  height: 38px;
-  line-height: 38px;
-  padding: 10px 20px;
+  padding: 7px 20px;
   color: #fff;
-  font-weight: $bold;
-  margin: 0;
-
+  font-weight: $regular;
   @include adjust-font-size-to(14px);
 }
 
 .popular-posts .item-content {
   @extend .m-uppercase;
-
   font-size: 12px;
   letter-spacing: 1px;
   margin: 15px 0;
@@ -113,6 +106,10 @@
 //   @extend .m-bold;
 //   margin: 10px 0;
 // }
+
+.widget.currently-reading {
+  background-color: $post-container-color;
+}
 
 .widget.currently-reading a > img {
   @extend .m-centered;

@@ -4,7 +4,7 @@ h1 {
   @extend .m-uppercase;
 
   font-weight: $bold;
-  color: black;
+  color: $font-color;
 }
 
 h2 {
@@ -13,7 +13,7 @@ h2 {
   @extend .m-uppercase;
 
   font-weight: $bold;
-  color: black;
+  color: $font-color;
 
   // margin: 0.33em 0;
   // border-bottom: 1px solid $details-color;
@@ -21,7 +21,7 @@ h2 {
 }
 
 h4 {
-  color: #222;
+  color: $font-color;
   font-weight: 400;
   letter-spacing: 1.5px;
   font-size: 12px;

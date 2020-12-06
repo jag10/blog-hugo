@@ -2,7 +2,7 @@ nav.top-menu {
   position: fixed;
   width: 100%;
   z-index: 20;
-  background-color: $menu-color;
+  background-color: $base-color;
   border-top: 2px solid $details-color;
 }
 
@@ -19,7 +19,7 @@ nav.top-menu {
 }
 
 .custom-wrapper.open {
-  height: 14em;
+  // height: 14em;
 }
 
 .custom-menu-3 {
@@ -83,6 +83,10 @@ div#nt-search {
   z-index: 10;
   margin-top: 0;
   line-height: 1;
+}
+
+.nt-search-input::placeholder {
+  color: #fff;
 }
 
 .nt-search-input-wrap {
@@ -179,7 +183,6 @@ span.nt.fa-search {
 .pure-menu-link {
   font-family: $base-font;
   color: white;
-
   @include adjust-font-size-to(12px);
 }
 
@@ -220,8 +223,9 @@ span.nt.fa-search {
   .menu-wrapper.open {
     height: auto;
     max-height: initial;
-    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease;
     transform: scale(1);
+    transform-origin: top;
   }
 
   .menu-wrapper > div:first-child {

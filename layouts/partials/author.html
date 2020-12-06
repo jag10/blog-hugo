@@ -1,14 +1,14 @@
 {{/* TODO: get author from authors array with .Params.author as index */}}
 {{ $author := .Site.Params.authors.jeferson }}
 <div class='authorboxwrap'>
-<h4>Author</h4>
+<!-- <h4>Author</h4> -->
     <div class='avatar-container'>
       <img alt="author's photo" class='author_avatar' width='160' height='136' src="/img/{{ $author.thumbnail }}"  />
       <h4 rel='author'>{{ $author.name }}</h4>
     </div>
     <div class='author_description_container'>
-      <p class= 'm-text-centered m-bold'>{{ $author.bio_title | markdownify }}</p>
-      <p>{{ $author.bio_summary | markdownify }}</p>
+      <p class= 'm-text-centered bio_title'>{{ $author.bio_title | markdownify }}</p>
+      <p class= 'm-text-centered'>{{ $author.bio_summary | markdownify }}</p>
       <div class='authorsocial'>
         {{ with .Site.Params.social.linkedin }}
           <a href='https://www.linkedin.com/in/{{ . }}' target='_blank'><i class='fab fa-linkedin-in'></i></a>

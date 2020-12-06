@@ -16,9 +16,10 @@ $('a[href*="#"]')
       // Does a scroll target exist?
       if (target.length) {
         // Only prevent default if animation is actually gonna happen
+        // -40 to give space for top menu
         event.preventDefault();
         $('html, body').animate({
-          scrollTop: target.offset().top
+          scrollTop: target.offset().top - 40
         }, 500, function() {
           // Callback after animation
           // Must change focus!
