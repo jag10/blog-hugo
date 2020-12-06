@@ -2831,14 +2831,6 @@ footer label {
   border: none;
 }
 
-.footer-credits a {
-  color: #008148;
-}
-
-.footer-credits a:hover {
-  color: #333;
-}
-
 .footer_social-icons {
   width: 100%;
   text-align: center;
