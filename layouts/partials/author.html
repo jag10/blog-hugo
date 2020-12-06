@@ -11,23 +11,23 @@
       <p class= 'm-text-centered'>{{ $author.bio_summary | markdownify }}</p>
       <div class='authorsocial'>
         {{ with .Site.Params.social.linkedin }}
-          <a rel="noopener" href='https://www.linkedin.com/in/{{ . }}' target='_blank'>
+          <a rel="noopener" aria-label="LinkedIn" href='https://www.linkedin.com/in/{{ . }}' target='_blank'>
             <i class='fab fa-linkedin-in'></i>
           </a>
         {{ end }}
         {{ with .Site.Params.social.github }}
-          <a rel="noopener" href='https://github.com/{{ . }}' target='_blank'><i class='fab fa-github'>
-            </i>
+          <a rel="noopener" aria-label="Github" href='https://github.com/{{ . }}' target='_blank'>
+            <i class='fab fa-github'></i>
           </a>
         {{ end }}
         {{ with .Site.Params.social.gitlab }}
-          <a rel="noopener" href='https://gitlab.com/{{ . }}' target='_blank'><i class='fab fa-gitlab'>
-            </i>
+          <a rel="noopener" aria-label="Gitlab" href='https://gitlab.com/{{ . }}' target='_blank'>
+            <i class='fab fa-gitlab'></i>
           </a>
         {{ end }}
         {{ with .Site.Params.social.twitter }}
-          <a rel="noopener" href='https://twitter.com/{{ . }}' target='_blank'><i class='fab fa-twitter'>
-            </i>
+          <a rel="noopener" aria-label="Twitter" href='https://twitter.com/{{ . }}' target='_blank'>
+            <i class='fab fa-twitter'></i>
           </a>
         {{ end }}
       </div>

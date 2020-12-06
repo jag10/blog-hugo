@@ -1,14 +1,9 @@
 # blog-hugo
 Hugo blog template
 # blog-hugo
-> BHugo blog template ! [Demo](https://www.jarboleda.me)
-
-<!-- [![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url] -->
+> Hugo blog template ! [Demo](https://www.jarboleda.me)
 
 ![hugo-blog](static/img/demo-blog.png)
-
 
 ## Installation
 
@@ -25,6 +20,12 @@ You'll need [Hugo](https://gohugo.io/) and [gulp](https://gulpjs.com/) along wit
 
 ## Credits
 * [Hugo](https://gohugo.io/)
+
+## Optimizations
+* [Lighthouse “Links do not have a discernible name”](https://stackoverflow.com/questions/51683761/how-to-fix-lighthouse-links-do-not-have-a-discernible-name)
+* [Lighthouse “Pre-load webfonts”] (https://support.google.com/webmasters/thread/6664618?hl=en)
+* [Lighthouse “Pre-load webfonts (mozilla)”] (https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content#Cross-origin_fetches)
+
 
 ## Meta
 

@@ -14,7 +14,9 @@ title: "Moving to France for work"
 
 Few months ago I moved to france for work reasons and I'd like to share how's been the experience so far in this post.
 <br/><br/>
-{{< figure src="/articles/img/moving-to-france-for-work.jpg" title="Côte d'Azur" alt="Côte d'Azur" >}}
+{{< figure src="/articles/img/moving-to-france-for-work.jpg"
+title="Côte d'Azur" alt="Côte d'Azur"
+width="780" height="439">}}
 
 <!--more-->
 

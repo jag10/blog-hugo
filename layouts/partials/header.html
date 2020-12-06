@@ -32,24 +32,24 @@
               <ul class="pure-menu-list">
                 {{ with .content.Site.Params.social.linkedin }}
                 <li class="pure-menu-item social_menu_entry">
-                  <a rel="noopener" href='https://www.linkedin.com/in/{{ . }}' target='_blank'>
+                  <a rel="noopener" aria-label="LinkedIn" href='https://www.linkedin.com/in/{{ . }}' target='_blank'>
                     <i aria-hidden="true" class='fab fa-linkedin-in'></i>
                   </a>
                 </li>
                 {{ end }}
                 {{ with .content.Site.Params.social.github }}
                 <li class="pure-menu-item social_menu_entry">
-                  <a rel="noopener" href='https://github.com/{{ . }}' target='_blank'><i class='fab fa-github'></i></a>
+                  <a rel="noopener" aria-label="Github" href='https://github.com/{{ . }}' target='_blank'><i class='fab fa-github'></i></a>
                 </li>
                 {{ end }}
                 {{ with .content.Site.Params.social.gitlab }}
                 <li class="pure-menu-item social_menu_entry">
-                  <a rel="noopener" href='https://gitlab.com/{{ . }}' target='_blank'><i class='fab fa-gitlab'></i></a>
+                  <a rel="noopener" aria-label="Gitlab" href='https://gitlab.com/{{ . }}' target='_blank'><i class='fab fa-gitlab'></i></a>
                 </li>
                 {{ end }}
                 {{ with .content.Site.Params.social.twitter }}
                 <li class="pure-menu-item social_menu_entry">
-                  <a rel="noopener" href='https://twitter.com/{{ . }}' target='_blank'><i class='fab fa-twitter'></i></a>
+                  <a rel="noopener" aria-label="Twitter" href='https://twitter.com/{{ . }}' target='_blank'><i class='fab fa-twitter'></i></a>
                 </li>
                 {{ end }}
                 <li class='pure-menu-item nt-search' id='nt-search'>
@@ -58,7 +58,7 @@
                       <input class='nt-search-input' id='s' name='q' placeholder='Search is disabled :(' type='text' value='' disabled />
                     </div>
                     <input class='nt-search-submit' id='go' type='submit' value='Search' />
-                    <label for='q'> <span class='nt fas fa-search'></span></label>
+                    <label for='s'><span class='nt fas fa-search'></span></label>
                   </form>
                 </li>
               </ul>
