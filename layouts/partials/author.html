@@ -11,16 +11,24 @@
       <p class= 'm-text-centered'>{{ $author.bio_summary | markdownify }}</p>
       <div class='authorsocial'>
         {{ with .Site.Params.social.linkedin }}
-          <a href='https://www.linkedin.com/in/{{ . }}' target='_blank'><i class='fab fa-linkedin-in'></i></a>
+          <a rel="noopener" href='https://www.linkedin.com/in/{{ . }}' target='_blank'>
+            <i class='fab fa-linkedin-in'></i>
+          </a>
         {{ end }}
         {{ with .Site.Params.social.github }}
-          <a href='https://github.com/{{ . }}' target='_blank'><i class='fab fa-github'></i></a>
+          <a rel="noopener" href='https://github.com/{{ . }}' target='_blank'><i class='fab fa-github'>
+            </i>
+          </a>
         {{ end }}
         {{ with .Site.Params.social.gitlab }}
-          <a href='https://gitlab.com/{{ . }}' target='_blank'><i class='fab fa-gitlab'></i></a>
+          <a rel="noopener" href='https://gitlab.com/{{ . }}' target='_blank'><i class='fab fa-gitlab'>
+            </i>
+          </a>
         {{ end }}
         {{ with .Site.Params.social.twitter }}
-          <a href='https://twitter.com/{{ . }}' target='_blank'><i class='fab fa-twitter'></i></a>
+          <a rel="noopener" href='https://twitter.com/{{ . }}' target='_blank'><i class='fab fa-twitter'>
+            </i>
+          </a>
         {{ end }}
       </div>
     </div>

@@ -2801,9 +2801,14 @@ footer label {
 
 .footer-credits a,
 .footer-credits p,
-.footer-credits span {
+.footer-credits span,
+.footer-credits img {
   color: #333;
   text-align: center;
+}
+
+.footer-credits a {
+  display: block;
 }
 
 .footer-container .popular-posts .item-title a {
