@@ -54,7 +54,7 @@ $params = $method->getParameters();
 ## Ejemplo práctico
 Vamos a ver un ejemplo práctico en la plataforma ProcessWire. Queremos obtener datos acerca del usuario actual, sin embargo las propiedades que indica la documentación no son suficientes:
 
-![pw cheatsheet](/articles/img/getting-an-objects-methods-1.png)
+![pw cheatsheet](/articles/img/min/getting-an-objects-methods-1.png)
 
 Si listamos los métodos del objeto $user, veremos algo así:
 {{<highlight php>}}

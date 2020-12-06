@@ -33,7 +33,7 @@ My environment's specs are:
 ## Stats before tuning up
 This were my stats before tuning up ProcessWire:
 performance before tuning up
-![performance before tuning up](/articles/img/getting-1.5s-page-load-time-on-a-basic-vps-1.png)
+![performance before tuning up](/articles/img/min/getting-1.5s-page-load-time-on-a-basic-vps-1.png)
 First thing I did was go to gtmetrix.com to find out why my site was slow. These were the firsts conclusions:
 
 * Optimizing images is important to save bandwidth. ProcessWire is great for this as it allows to resize images in an easy way. For example, for the images on each blog post, I used the 'size' method on image files to resize the image: echo $post->post_image->size(573, 0, array('quality' :> 70))->url; That simple line outputs the post image, resized and with a quality of 70% (yup, PW is awesome).
@@ -51,4 +51,4 @@ These modifications allowed my server to load the page in 3s, which was good but
 * The label cloud works in a similiar way, it looks for every label on posts and then finds out which ones are the most popular. I setted this template's cache to 1 day.
 
 These last improvements resulted into a huge performance boost, making my homepage load in just 1.5s. This is pretty impressive for a 3€/month VPS. This is why I love ProcessWire. It's simple, easy to use, yet very powerful and very fast.
-![performance after tuning up](/articles/img/getting-1.5s-page-load-time-on-a-basic-vps-2.png)
+![performance after tuning up](/articles/img/min/getting-1.5s-page-load-time-on-a-basic-vps-2.png)

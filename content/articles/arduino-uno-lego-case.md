@@ -15,7 +15,7 @@ title: "Arduino UNO R3 lego case"
 
 In the following photo you can see the result of the case I built for this project.
 <br/><br/>
-{{< figure src="/articles/img/arduino-uno-lego-case.jpg"
+{{< figure src="/articles/img/min/arduino-uno-lego-case.jpg"
 title="arduino uno lego case" alt="arduino uno lego case"
 width="780" height="450" >}}
 

@@ -17,9 +17,9 @@ title : "Getting 0.5 seconds load time on your blog"
 ---
 In my previous [post](articles/getting-1.5s-page-load-time-on-a-basic-vps/) back in 2016 I got page load time down from 5s to 1.5, and here my objective is to get around 0.5s.
 <br /><br />
-{{< figure src="/articles/img/getting-0.5s-page-load-time-on-your-blog.png"
+{{< figure src="/articles/img/min/getting-0.5s-page-load-time-on-your-blog.png"
 title="jarboleda.me performance graphic" alt="jarboleda.me performance graphic"
-width="780" height="310" 
+width="780" height="310"
 >}}
 
 For that purpose, I´ll be using the following technologies:
@@ -31,7 +31,7 @@ For that purpose, I´ll be using the following technologies:
 <!--more-->
 
 ## Stats before tuning up
-![performance after tuning up](/articles/img/getting-1.5s-page-load-time-on-a-basic-vps-2.png)
+![performance after tuning up](/articles/img/min/getting-1.5s-page-load-time-on-a-basic-vps-2.png)
 On top of previous optimizations, I decided to go for a static website, after all, most of my content is static. The only exception is the sidebar, but we'll get to that later
 
 ## Actions taken
