@@ -2807,7 +2807,7 @@ footer label {
   text-align: center;
 }
 
-.footer-credits a {
+.footer-credits a.attribution_hugo {
   display: block;
 }
 

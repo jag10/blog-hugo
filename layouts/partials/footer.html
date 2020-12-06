@@ -1,3 +1,4 @@
+<!-- {{ .Site.BaseURL | printf "%+v" }} -->
 <footer>
   <div class='footer-container'>
     <div class='pure-u-1 pure-u-md-1-3'>
@@ -77,10 +78,10 @@
     </div>
     <div class='clr'></div>
     <p>Copyright &#169; {{ now.Year }}
-      <a href='{{ .Site.Params.baseURL }}'>{{ .Site.Params.baseURL }}</a>
+      <a href='{{ .Site.BaseURL }}'>{{ .Site.BaseURL }}</a>
     </p>
     <p class='attribution'>Powered by</p>
-    <a href='https://gohugo.io/' target="_blank" >
+    <a class='attribution_hugo' rel="noopener" href='https://gohugo.io/' target="_blank" >
       <img class="lazyload" with="80" height="21" alt="hugo logo" class='attribution_logo' data-src="/img/hugo-logo.png" />
     </a>
   </div>
