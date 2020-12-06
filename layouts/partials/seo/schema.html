@@ -1,6 +1,7 @@
     <!-- Schema.org markup -->
     <meta itemprop="name" content="{{ .Title }}">
     <meta itemprop="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ end }}{{ end }}">
+    <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ end }}{{ end }}">
     {{ $author := .Site.Params.authors.jeferson -}}
     {{ with $author.name }}<meta name="author" content="{{ . }}">{{ end }}
     <!-- Output images -->
