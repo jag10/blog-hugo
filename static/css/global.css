@@ -2779,8 +2779,9 @@ footer {
 footer a,
 footer h2,
 footer p,
-footer span {
-  color: white;
+footer span,
+footer label {
+  color: #fff;
 }
 
 .footer-container {
@@ -2814,13 +2815,14 @@ footer span {
 }
 
 .ContactForm .email, .ContactForm span {
-  color: #008148;
+  color: #bdccd3;
+  text-transform: lowercase;
 }
 
 .footer-container input,
 .footer-container textarea {
   background-color: #304047;
-  color: #819ca9;
+  color: #fafbfc;
   border: none;
 }
 

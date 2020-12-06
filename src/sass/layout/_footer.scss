@@ -5,8 +5,9 @@ footer {
 footer a,
 footer h2,
 footer p,
-footer span {
-  color: white;
+footer span,
+footer label {
+  color: #fff;
 }
 
 .footer-container {
@@ -46,13 +47,15 @@ footer span {
 }
 
 .ContactForm .email, .ContactForm span {
-  color: $details-color;
+  color: lighten($footer-color, 60);
+  // font-weight: $bold;
+  text-transform: lowercase;
 }
 
 .footer-container input,
 .footer-container textarea {
   background-color: lighten($footer-color, 5);
-  color: lighten($footer-color, 40);
+  color: lighten($footer-color, 80);
   border: none;
 }
 
