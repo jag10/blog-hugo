@@ -12,7 +12,7 @@
               <div class='item-content'>
                 <div class='item-thumbnail'>
                   <a href='{{ .Permalink }}' target='_blank'>
-                    <img alt='{{ .Title }}' width='72' height='72' src="/articles/img/thumbs/{{ .Params.article_image }}" />
+                    <img class="lazyload" alt='{{ .Title }}' width='72' height='72' data-src="/articles/img/thumbs/{{ .Params.article_image }}" />
                   </a>
                 </div>
                 <div class='item-title'>
@@ -82,11 +82,11 @@
     </p>
     <p class='attribution'>Powered by</p>
     <a href='https://gohugo.io/' target="_blank" >
-      <img with="80" height="21" alt="hugo logo" class='attribution_logo' src="/img/hugo-logo.png" />
+      <img class="lazyload" with="80" height="21" alt="hugo logo" class='attribution_logo' data-src="/img/hugo-logo.png" />
     </a>
   </div>
 </footer>
-
+<script defer src="https://kit.fontawesome.com/f17c0ef8e6.js" crossorigin="anonymous"></script>
 <script defer src='/js/main.min.js' type='text/javascript'></script>
 <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
 <script type="text/javascript">
