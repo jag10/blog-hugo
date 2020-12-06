@@ -22,6 +22,6 @@ for i in $(find $article_images_dir -maxdepth 2 -mindepth 2 -type f \( -name "*.
   thumbs_dir=$dirname"/min/"
   if [ "$i" -nt "$thumbs_dir$filename" ] || [ ! -f "$thumbs_dir$filename" ] || [ "$force" = true ]; then
     echo "converting $i";
-    convert "$i" -scale 800 -quality 100 "$thumbs_dir$filename";
+    convert -strip -interlace Plane -gaussian-blur 0.05 "$i" -scale 780 -quality 85 "$thumbs_dir$filename";
   fi
 done;

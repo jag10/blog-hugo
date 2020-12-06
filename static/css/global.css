@@ -2831,6 +2831,10 @@ footer label {
   border: none;
 }
 
+.footer-credits a {
+  text-decoration: underline;
+}
+
 .footer_social-icons {
   width: 100%;
   text-align: center;

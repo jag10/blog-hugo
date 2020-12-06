@@ -25,7 +25,7 @@ You'll need [Hugo](https://gohugo.io/) and [gulp](https://gulpjs.com/) along wit
 * [Lighthouse “Links do not have a discernible name”](https://stackoverflow.com/questions/51683761/how-to-fix-lighthouse-links-do-not-have-a-discernible-name)
 * [Lighthouse “Pre-load webfonts”] (https://support.google.com/webmasters/thread/6664618?hl=en)
 * [Lighthouse “Pre-load webfonts (mozilla)”] (https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content#Cross-origin_fetches)
-
+* [Compress images] (https://stackoverflow.com/questions/7261855/recommendation-for-compressing-jpg-files-with-imagemagick)
 
 ## Meta
 
