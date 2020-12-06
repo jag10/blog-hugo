@@ -9,6 +9,7 @@ resources : []
 series : []
 tags : []
 title : "temp: KPIs and how they can change your business"
+draft : true
 ---
 
 todo: Intro
