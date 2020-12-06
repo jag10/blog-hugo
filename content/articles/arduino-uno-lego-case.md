@@ -17,7 +17,7 @@ In the following photo you can see the result of the case I built for this proje
 <br/><br/>
 {{< figure src="/articles/img/min/arduino-uno-lego-case.jpg"
 title="arduino uno lego case" alt="arduino uno lego case"
-width="780" height="450" >}}
+width="780" height="439" >}}
 
 <!--more-->
 
