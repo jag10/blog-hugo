@@ -12,9 +12,15 @@
   box-sizing: border-box;
 }
 
+// https://stackoverflow.com/questions/8635799/overflow-xhidden-still-can-scroll
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body {
   background-color: $body-color;
-  overflow-x: hidden;
+  position:relative; // https://stackoverflow.com/questions/8635799/overflow-xhidden-still-can-scroll
 }
 
 .clearfix {

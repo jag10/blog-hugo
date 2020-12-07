@@ -2500,9 +2500,14 @@ p {
   box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body {
   background-color: #dedede;
-  overflow-x: hidden;
+  position: relative;
 }
 
 .clearfix {
