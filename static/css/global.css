@@ -2502,6 +2502,7 @@ p {
 
 body {
   background-color: #dedede;
+  overflow-x: hidden;
 }
 
 .clearfix {
@@ -3205,6 +3206,11 @@ span.nt.fa-search {
   background-color: #008148;
 }
 
+@media only screen and (max-width: 640px) {
+  .pagination li a {
+    padding: 5px 9px;
+  }
+}
 .projects-container img {
   width: 100%;
   opacity: 0.8;
