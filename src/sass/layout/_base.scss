@@ -14,7 +14,7 @@
 
 // https://stackoverflow.com/questions/8635799/overflow-xhidden-still-can-scroll
 html, body {
-  overflow-x: hidden;
+  // overflow-x: hidden; breaks sidebar scrolling
   width: 100%;
 }
 
