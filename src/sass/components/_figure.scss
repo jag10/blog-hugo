@@ -1,3 +1,10 @@
 figcaption {
   text-align: center;
 }
+
+@media only screen and (max-width: 900px) {
+  .post-container img {
+    width: 100%;
+    height: auto;
+  }
+}

@@ -29,3 +29,17 @@
 .article-tags a:nth-child(n+4) {
   display: none;
 }
+
+@media only screen and (max-width: 640px) {
+  .article-tags {
+    display: block;
+    // float: left;
+    margin: 10px 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .article-tags {
+    float: left;
+  }
+}

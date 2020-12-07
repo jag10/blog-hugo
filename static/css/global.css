@@ -2596,6 +2596,16 @@ article ul {
   .article_summary {
     padding: 30px 20px;
   }
+
+  .read-more-button {
+    display: block;
+  }
+
+  .soc-sharing {
+    text-align: center;
+    margin-top: 10px;
+    float: none !important;
+  }
 }
 .authorboxwrap {
   display: inline-block;
@@ -3341,6 +3351,12 @@ figcaption {
   text-align: center;
 }
 
+@media only screen and (max-width: 900px) {
+  .post-container img {
+    width: 100%;
+    height: auto;
+  }
+}
 a {
   color: #008148;
   outline: 0;
@@ -3660,6 +3676,17 @@ pre {
   display: none;
 }
 
+@media only screen and (max-width: 640px) {
+  .article-tags {
+    display: block;
+    margin: 10px 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .article-tags {
+    float: left;
+  }
+}
 h1 {
   font-size: 1.875em;
   line-height: 1.6em;

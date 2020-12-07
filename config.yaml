@@ -58,7 +58,7 @@ languages:
           - 'me2.png'
         bio_title:      'Business Development Manager'
         # bio_summary:     "I recruit and manage consultants to develop [Alten's](https://alten.com/) Business in Madrid."
-        bio_summary:    'I help Alten develop its IT business in Madrid.'
+        bio_summary:    'Helping Alten develop its IT business in Madrid.'
         email:          me@jarboleda.me
         social:
           github:       jag10
