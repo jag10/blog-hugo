@@ -3261,6 +3261,11 @@ span.nt.fa-search {
   top: 50px;
 }
 
+@media only screen and (max-width: 640px) {
+  .sticky {
+    position: inherit;
+  }
+}
 .sidebar h4 {
   text-align: center;
 }
