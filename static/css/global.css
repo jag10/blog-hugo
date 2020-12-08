@@ -3266,6 +3266,8 @@ span.nt.fa-search {
 @media only screen and (max-width: 640px) {
   .sticky {
     position: inherit;
+    padding-top: 20px !important;
+    border-top: 2px dotted #263238;
   }
 
   .home .sidebar-wrapper {

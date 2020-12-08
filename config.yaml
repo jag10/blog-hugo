@@ -26,7 +26,7 @@ languages:
         URL:            "/"
         weight:         1
       - Name:           "about me"
-        URL:            "/extras/cv/"
+        URL:            "/about/me/"
         weight:         2
       - Name:           "projects"
         URL:            "/projects/"
@@ -87,7 +87,7 @@ languages:
         URL:            "/es/"
         weight:         1
       - Name:           "sobre mi"
-        URL:            "/extras/cv/"
+        URL:            "/about/me/"
         weight:         2
       - Name:           "proyectos"
         URL:            "/projects/"

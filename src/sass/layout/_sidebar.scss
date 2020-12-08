@@ -6,6 +6,8 @@
 @media only screen and (max-width: 640px) {
   .sticky {
     position: inherit;
+    padding-top: 20px !important;
+    border-top: 2px dotted $base-color;
   }
 
   .home .sidebar-wrapper {
