@@ -17,6 +17,13 @@ $ gulp
 ## Development setup
 
 You'll need [Hugo](https://gohugo.io/) and [gulp](https://gulpjs.com/) along with the required packages.
+Update dependencies:
+```sh
+$ npm install -g npm-check-updates
+$ npm-check-updates -u
+$ rm -fr node_modules
+$ npm install
+```
 
 ## Credits
 * [Hugo](https://gohugo.io/)

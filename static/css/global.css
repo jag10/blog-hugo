@@ -3002,7 +3002,7 @@ div#nt-search {
   line-height: 1;
 }
 
-.nt-search-input::-ms-input-placeholder {
+.nt-search-input:-ms-input-placeholder {
   color: #fff;
 }
 

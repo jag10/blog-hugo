@@ -39,7 +39,7 @@ gulp.task('css', function() {
     }))
     .pipe(autoprefixer({
       // browsers: ['last 5 versions'],
-      browsers: ['> 1%'],
+      overrideBrowserslist: ['> 1%'],
       remove: true,
     }))
     .pipe(gulp.dest('./static/css/'))
