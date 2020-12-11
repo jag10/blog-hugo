@@ -46,7 +46,9 @@ gulp.task('css', function() {
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(cleanCSS())
+    .pipe(cleanCSS({
+      level: 2
+    }))
     .pipe(gulp.dest('./static/css/'));
 });
 
