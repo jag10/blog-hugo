@@ -15,7 +15,11 @@ The other route you can take is to spend extra time doing everything manually an
 Then, the 4 most popular ways to install a separate version of Ruby are:
 
 If you don't need more than one version of Ruby at the same time (besides the one that came with macOS)
-Homebrew - once it's installed, install ruby with brew install ruby, then update your PATH by running echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.bash_profile, followed by source ~/.bash_profile
+
+Homebrew - once it's installed, install ruby with brew install ruby, then update your PATH by running 
+echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.bash_profile
+followed by
+source ~/.bash_profile
 To check that you're now using the non-system version of Ruby, you can run the following commands:
 
 which ruby
