@@ -29,10 +29,10 @@ For that purpose, I used the following technologies:
 
 * [Hugo - Static website generator.](https://gohugo.io/)
 * [Github Pages - Static website hosting.](https://pages.github.com/)
+<!--more-->
 * [Cloudflare - CDN & Network protection.](https://www.cloudflare.com/)
 * [Imagemagick - Image compresion service.](https://imagemagick.org/script/download.php#macosx)
 * [Lazysizes - To lazy load non-critical images.](https://github.com/aFarkas/lazysizes)
-<!--more-->
 * [Lighthouse - Open-source, automated tool for measuring the quality of web pages.](https://developers.google.com/web/tools/lighthouse)
 * [Gtmetrix - Service that analyzes a page's speed performance.](https://gtmetrix.com/)
 
