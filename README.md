@@ -23,6 +23,7 @@ $ npm install -g npm-check-updates
 $ npm-check-updates -u
 $ rm -fr node_modules
 $ npm install
+$ ncu -u # check dependabot security alerts
 ```
 
 ## Credits

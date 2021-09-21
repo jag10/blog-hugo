@@ -753,7 +753,6 @@ this the same font stack that Normalize.css sets for the `body`.
   cursor: pointer;
   -webkit-user-drag: none;
   -webkit-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   box-sizing: border-box;
 }
