@@ -49,7 +49,7 @@ languages:
       # pinterest:      nozzleio
       # instagram:      nozzleio
       # youtube:        nozzleio
-      linkedin:         "jefferson-arboleda/"
+      linkedin:         "jefferson-arboleda"
     authors:
       Jeferson:
         name:           Jefferson Arboleda
@@ -58,7 +58,7 @@ languages:
           - 'me2.png'
         bio_title:      'Business Development Manager'
         # bio_summary:     "I recruit and manage consultants to develop [Alten's](https://alten.com/) Business in Madrid."
-        bio_summary:    'Helping Alten develop its IT business in Madrid.'
+        bio_summary:    'IT business development in Madrid for ALTEN'
         email:          me@jarboleda.me
         social:
           github:       jag10
@@ -69,7 +69,7 @@ languages:
           # pinterest:  killskynet
           # instagram:  killskynet
           # youtube:    killskynet
-          linkedin:     167429134
+          linkedin:     jefferson-arboleda
       # Sarah:          {}
   es:
     weight :            1

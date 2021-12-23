@@ -2665,8 +2665,15 @@ img.author_avatar {
 }
 
 .authorsocial {
-  margin: 10px 0 0;
   text-align: center;
+}
+
+.authorcertifications {
+  text-align: center;
+}
+
+.authorcertifications img {
+  vertical-align: middle;
 }
 
 .authorsocial a {
@@ -2674,12 +2681,9 @@ img.author_avatar {
   width: 25px;
   height: 25px;
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
   color: #FFF;
-  position: relative;
   margin-right: 2px;
-  background: #263238;
-  padding: 1px 0;
   border-radius: 2px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -2687,6 +2691,10 @@ img.author_avatar {
 
 .authorsocial a i {
   line-height: 25px;
+}
+
+.authorsocial img {
+  vertical-align: text-top;
 }
 
 @media only screen and (max-width: 900px) {

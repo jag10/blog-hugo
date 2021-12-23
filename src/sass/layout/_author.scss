@@ -49,10 +49,18 @@ img.author_avatar {
   color: #fff;
 }
 
-
 .authorsocial {
-  margin: 10px 0 0;
+  // margin: 10px 0;
   text-align: center;
+}
+
+.authorcertifications {
+  // margin: 10px 0;
+  text-align: center;
+}
+
+.authorcertifications img{
+  vertical-align: middle;
 }
 
 .authorsocial a {
@@ -60,13 +68,9 @@ img.author_avatar {
   width: 25px;
   height: 25px;
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
   color: #FFF;
-  position: relative;
   margin-right: 2px;
-  background: $base-color;
-  // border: 1px solid $details-color;
-  padding: 1px 0;
   border-radius: 2px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -75,6 +79,20 @@ img.author_avatar {
 .authorsocial a i {
   line-height: 25px;
 }
+
+.authorsocial img {
+  vertical-align: text-top;
+}
+
+// .authorcertifications {
+//   margin-top: 5px;
+//   text-align: center;
+//   border-radius: 10px
+// }
+//
+// .authorcertifications img{
+//   vertical-align: middle;
+// }
 
 @media only screen and (max-width: 900px) {
   .avatar-container {

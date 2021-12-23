@@ -9,6 +9,14 @@
     <div class='author_description_container'>
       <p class= 'm-text-centered bio_title'>{{ $author.bio_title | markdownify }}</p>
       <p class= 'm-text-centered'>{{ $author.bio_summary | markdownify }}</p>
+      <div class='authorcertifications' style="text-align='center'">
+        <a rel="noopener" aria-label="MS DA-100" href='https://www.credly.com/badges/61607538-4cf5-46f2-b0a2-d60a494c46ac/public_url' target='_blank'>
+          <img height="24px" width="24px" src="/img/ms-da.png"></img>
+        </a>
+        <a rel="noopener" aria-label="PSPO I" href='https://www.credly.com/badges/5ba7f4c9-2c97-47a3-9bb5-1901fc7e2dd5/public_url' target='_blank'>
+          <img height="24px" width="24px" src="/img/pspo.png"></img>
+        </a>
+      </div>
       <div class='authorsocial'>
         {{ with .Site.Params.social.linkedin }}
           <a rel="noopener" aria-label="LinkedIn" href='https://www.linkedin.com/in/{{ . }}' target='_blank'>
